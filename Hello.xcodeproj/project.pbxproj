@@ -390,6 +390,7 @@
 		B30625C51CAA2F3E008B0ABD /* NSString+MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B30625C41CAA2F3E008B0ABD /* NSString+MLLabel.m */; };
 		B30625C81CAA5A61008B0ABD /* FriendBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */; };
 		B31B04071C98FA3F00C6E080 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B04061C98FA3F00C6E080 /* AVFoundation.framework */; };
+		B32C90381CABA2AD00869A53 /* FriendGridImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32C90371CABA2AD00869A53 /* FriendGridImageView.m */; };
 		B38556961CA8D5B800B276C1 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B385568B1CA8D5B800B276C1 /* MLLabel.m */; };
 		B38556971CA8D5B800B276C1 /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B385568D1CA8D5B800B276C1 /* MLLinkLabel.m */; };
 		B385569A1CA8DB6800B276C1 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38556991CA8DB6800B276C1 /* FriendsViewController.m */; };
@@ -1073,6 +1074,8 @@
 		B30625C61CAA5A61008B0ABD /* FriendBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendBaseCell.h; sourceTree = "<group>"; };
 		B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendBaseCell.m; sourceTree = "<group>"; };
 		B31B04061C98FA3F00C6E080 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B32C90361CABA2AD00869A53 /* FriendGridImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendGridImageView.h; sourceTree = "<group>"; };
+		B32C90371CABA2AD00869A53 /* FriendGridImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendGridImageView.m; sourceTree = "<group>"; };
 		B385568A1CA8D5B800B276C1 /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabel.h; sourceTree = "<group>"; };
 		B385568B1CA8D5B800B276C1 /* MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabel.m; sourceTree = "<group>"; };
 		B385568C1CA8D5B800B276C1 /* MLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkLabel.h; sourceTree = "<group>"; };
@@ -1320,6 +1323,8 @@
 				B38556991CA8DB6800B276C1 /* FriendsViewController.m */,
 				B30625C61CAA5A61008B0ABD /* FriendBaseCell.h */,
 				B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */,
+				B32C90361CABA2AD00869A53 /* FriendGridImageView.h */,
+				B32C90371CABA2AD00869A53 /* FriendGridImageView.m */,
 			);
 			name = "朋友圈";
 			sourceTree = "<group>";
@@ -3023,6 +3028,7 @@
 				82DE25341B40E770000A5963 /* XMPPParser.m in Sources */,
 				82DE25411B40E770000A5963 /* DDFileLogger.m in Sources */,
 				82DE25281B40E770000A5963 /* XMPPSCRAMSHA1Authentication.m in Sources */,
+				B32C90381CABA2AD00869A53 /* FriendGridImageView.m in Sources */,
 				82DE25241B40E770000A5963 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				82801BD11B32954300AB8B9B /* HelloDataDelegate.m in Sources */,
 				821671A41B3949380099A38D /* AFNetworkReachabilityManager.m in Sources */,

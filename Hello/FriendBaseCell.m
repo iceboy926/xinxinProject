@@ -8,12 +8,29 @@
 
 #import "FriendBaseCell.h"
 #import "AsynImageView.h"
+#import "MLLinkLabel.h"
+#import "FriendGridImageView.h"
 
 @interface FriendBaseCell()
 
 @property (nonatomic, strong) AsynImageView *userAvartImage;
 
 @property (nonatomic, strong) UIButton *userAvartbtn;
+
+@property (nonatomic, strong) MLLinkLabel *userNickLabel;
+
+@property (nonatomic, strong) UILabel  *titleLabel;
+
+@property (nonatomic, strong) MLLinkLabel *contentTextLabel;
+
+@property (nonatomic, strong) FriendGridImageView *gridImageView;
+
+@property (nonatomic, strong) UILabel *locationLabel;
+
+@property (nonatomic, strong) UILabel *timeLabel;
+
+@property (nonatomic ,strong) UIButton *likeCommentBtn;ß
+
 
 @end
 
@@ -25,10 +42,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self)
     {
-        
+        [self InitBaseCell];
     }
     
     return self;
+}
+
+
+-(void)InitBaseCell
+{
+    
 }
 
 @end
