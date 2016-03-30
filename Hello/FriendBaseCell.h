@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+#define UserNickFont [UIFont systemFontOfSize:16]
+#define TitleLabelFont [UIFont systemFontOfSize:13]
+#define LocationLabelFont [UIFont systemFontOfSize:10]
+#define TimeLabelFont [UIFont systemFontOfSize:12]
+
+
+
+@protocol FriendBaseCellDelegate <NSObject>
+
+-(void)onClickUserAvart:(NSInteger)userID;
+
+@end
+
 @interface FriendBaseCell : UITableViewCell
+
+@property (nonatomic, strong)UIView *bodyView;
+
+@property (nonatomic, weak) id<FriendBaseCellDelegate> delegate;
 
 @end

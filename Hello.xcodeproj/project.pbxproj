@@ -391,6 +391,13 @@
 		B30625C81CAA5A61008B0ABD /* FriendBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */; };
 		B31B04071C98FA3F00C6E080 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B04061C98FA3F00C6E080 /* AVFoundation.framework */; };
 		B32C90381CABA2AD00869A53 /* FriendGridImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32C90371CABA2AD00869A53 /* FriendGridImageView.m */; };
+		B32C903F1CABB29600869A53 /* LikeCmtBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C90391CABB29600869A53 /* LikeCmtBg@2x.png */; };
+		B32C90401CABB29600869A53 /* LikeCmtBg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C903A1CABB29600869A53 /* LikeCmtBg@3x.png */; };
+		B32C90411CABB29600869A53 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C903B1CABB29600869A53 /* AlbumOperateMore@2x.png */; };
+		B32C90421CABB29600869A53 /* AlbumOperateMore@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C903C1CABB29600869A53 /* AlbumOperateMore@3x.png */; };
+		B32C90431CABB29600869A53 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C903D1CABB29600869A53 /* AlbumOperateMoreHL@2x.png */; };
+		B32C90441CABB29600869A53 /* AlbumOperateMoreHL@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32C903E1CABB29600869A53 /* AlbumOperateMoreHL@3x.png */; };
+		B32C90491CABB55100869A53 /* FriendBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B32C90481CABB55100869A53 /* FriendBaseModel.m */; };
 		B38556961CA8D5B800B276C1 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B385568B1CA8D5B800B276C1 /* MLLabel.m */; };
 		B38556971CA8D5B800B276C1 /* MLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B385568D1CA8D5B800B276C1 /* MLLinkLabel.m */; };
 		B385569A1CA8DB6800B276C1 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38556991CA8DB6800B276C1 /* FriendsViewController.m */; };
@@ -1076,6 +1083,14 @@
 		B31B04061C98FA3F00C6E080 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B32C90361CABA2AD00869A53 /* FriendGridImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendGridImageView.h; sourceTree = "<group>"; };
 		B32C90371CABA2AD00869A53 /* FriendGridImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendGridImageView.m; sourceTree = "<group>"; };
+		B32C90391CABB29600869A53 /* LikeCmtBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LikeCmtBg@2x.png"; sourceTree = "<group>"; };
+		B32C903A1CABB29600869A53 /* LikeCmtBg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LikeCmtBg@3x.png"; sourceTree = "<group>"; };
+		B32C903B1CABB29600869A53 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
+		B32C903C1CABB29600869A53 /* AlbumOperateMore@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@3x.png"; sourceTree = "<group>"; };
+		B32C903D1CABB29600869A53 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
+		B32C903E1CABB29600869A53 /* AlbumOperateMoreHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@3x.png"; sourceTree = "<group>"; };
+		B32C90471CABB55100869A53 /* FriendBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendBaseModel.h; sourceTree = "<group>"; };
+		B32C90481CABB55100869A53 /* FriendBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendBaseModel.m; sourceTree = "<group>"; };
 		B385568A1CA8D5B800B276C1 /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabel.h; sourceTree = "<group>"; };
 		B385568B1CA8D5B800B276C1 /* MLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabel.m; sourceTree = "<group>"; };
 		B385568C1CA8D5B800B276C1 /* MLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLinkLabel.h; sourceTree = "<group>"; };
@@ -1319,12 +1334,10 @@
 		8223EE111BD61C4A00AD39B0 /* 朋友圈 */ = {
 			isa = PBXGroup;
 			children = (
+				B32C90461CABB50C00869A53 /* Model */,
+				B32C90451CABB4FE00869A53 /* View */,
 				B38556981CA8DB6800B276C1 /* FriendsViewController.h */,
 				B38556991CA8DB6800B276C1 /* FriendsViewController.m */,
-				B30625C61CAA5A61008B0ABD /* FriendBaseCell.h */,
-				B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */,
-				B32C90361CABA2AD00869A53 /* FriendGridImageView.h */,
-				B32C90371CABA2AD00869A53 /* FriendGridImageView.m */,
 			);
 			name = "朋友圈";
 			sourceTree = "<group>";
@@ -1535,6 +1548,12 @@
 		82B613001B302196007E6D42 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B32C90391CABB29600869A53 /* LikeCmtBg@2x.png */,
+				B32C903A1CABB29600869A53 /* LikeCmtBg@3x.png */,
+				B32C903B1CABB29600869A53 /* AlbumOperateMore@2x.png */,
+				B32C903C1CABB29600869A53 /* AlbumOperateMore@3x.png */,
+				B32C903D1CABB29600869A53 /* AlbumOperateMoreHL@2x.png */,
+				B32C903E1CABB29600869A53 /* AlbumOperateMoreHL@3x.png */,
 				82F1E0171BCE42FC007B034C /* card_icon_attention@2x.png */,
 				82F1E0151BCE42F9007B034C /* card_icon_addattention@2x.png */,
 				82CE98531B5CD3FF00F39662 /* cute_boy_1.png */,
@@ -2680,6 +2699,26 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		B32C90451CABB4FE00869A53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B30625C61CAA5A61008B0ABD /* FriendBaseCell.h */,
+				B30625C71CAA5A61008B0ABD /* FriendBaseCell.m */,
+				B32C90361CABA2AD00869A53 /* FriendGridImageView.h */,
+				B32C90371CABA2AD00869A53 /* FriendGridImageView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B32C90461CABB50C00869A53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B32C90471CABB55100869A53 /* FriendBaseModel.h */,
+				B32C90481CABB55100869A53 /* FriendBaseModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B38556751CA8D5A700B276C1 /* MLLable */ = {
 			isa = PBXGroup;
 			children = (
@@ -2809,6 +2848,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32C90411CABB29600869A53 /* AlbumOperateMore@2x.png in Resources */,
 				CCAB98FC1BDA378E004C321D /* shake_match.wav in Resources */,
 				CCAB99061BDDC30F004C321D /* Shake_Logo_Female_Up@2x.png in Resources */,
 				CCAB98FD1BDA378E004C321D /* shake_nomatch.wav in Resources */,
@@ -2858,6 +2898,8 @@
 				82CE986B1B5CD3FF00F39662 /* cute_boy_9.png in Resources */,
 				8234556E1B842B05002A36D6 /* sinaweibo.png in Resources */,
 				82C1F9B01B8F04C100F2356B /* FindViewController.xib in Resources */,
+				B32C90441CABB29600869A53 /* AlbumOperateMoreHL@3x.png in Resources */,
+				B32C90431CABB29600869A53 /* AlbumOperateMoreHL@2x.png in Resources */,
 				82B612E41B2FBC61007E6D42 /* Images.xcassets in Resources */,
 				82E470021B4BAAFF00EC1A59 /* operationbox_text@2x.png in Resources */,
 				8234557D1B848933002A36D6 /* qq2@2x.png in Resources */,
@@ -2873,6 +2915,7 @@
 				82E4707C1B4F621600EC1A59 /* 007.png in Resources */,
 				82CE98671B5CD3FF00F39662 /* cute_boy_5.png in Resources */,
 				82E470721B4F61DE00EC1A59 /* 002.png in Resources */,
+				B32C90401CABB29600869A53 /* LikeCmtBg@3x.png in Resources */,
 				821739901BD09E0400DF4174 /* ff_IconShowAlbum.png in Resources */,
 				822E57281B58E63F0062DF7E /* chat_bottom_smile_normal.png in Resources */,
 				822E572E1B58E7D40062DF7E /* chat_bottom_sound_nor.png in Resources */,
@@ -2935,9 +2978,11 @@
 				822E56F61B5796B20062DF7E /* map_located@2x.png in Resources */,
 				82CE98711B5CD3FF00F39662 /* cute_boy_15.png in Resources */,
 				822E57251B58E3460062DF7E /* chat_bottom_nor.png in Resources */,
+				B32C90421CABB29600869A53 /* AlbumOperateMore@3x.png in Resources */,
 				822E57061B58AEEA0062DF7E /* addmore_4.png in Resources */,
 				82E46FFA1B4B6F6800EC1A59 /* Icon@2x.png in Resources */,
 				82E470001B4BA72400EC1A59 /* LoginGreenBigBtn@2x.png in Resources */,
+				B32C903F1CABB29600869A53 /* LikeCmtBg@2x.png in Resources */,
 				822E57041B58AEEA0062DF7E /* addmore_2.png in Resources */,
 				82CE98641B5CD3FF00F39662 /* cute_boy_2.png in Resources */,
 				82CE986F1B5CD3FF00F39662 /* cute_boy_13.png in Resources */,
@@ -3187,6 +3232,7 @@
 				82DE269E1B412926000A5963 /* XMPPMessage+XEP_0085.m in Sources */,
 				82BC960F1BB4ECE8008CA418 /* HomeUserInfoViewController.m in Sources */,
 				B30625B51CAA2E6C008B0ABD /* NSAttributedString+MLExpression.m in Sources */,
+				B32C90491CABB55100869A53 /* FriendBaseModel.m in Sources */,
 				82C1F9BE1B8F142000F2356B /* HomeCellFrame.m in Sources */,
 				82DE253A1B40E770000A5963 /* XMPPIDTracker.m in Sources */,
 				82C1F9901B8EBB5F00F2356B /* MainTabBarViewController.m in Sources */,
