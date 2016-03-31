@@ -12,6 +12,7 @@
 
 +(CGFloat)getHeight:(NSMutableArray *)images srcImage:(NSMutableArray *)srcImages oneImageWidth:(CGFloat)oneImageWidth oneImageHeight:(CGFloat)oneImageHeight;
 
+-(void)updatewithImage:(NSMutableArray *)thumbImages srcImage:(NSMutableArray *)srcImages oneImageWidth:(CGFloat)oneImageWidth oneImageHeight:(CGFloat)oneImageHeight;
 
 
 @end
