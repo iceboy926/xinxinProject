@@ -9,12 +9,19 @@
 #import "FriendBaseCell.h"
 #import "AsynImageView.h"
 #import "MLLinkLabel.h"
+#import "MLLabel+Size.h"
 #import "FriendGridImageView.h"
 #import "FriendBaseModel.h"
 
 #define margin 15
 #define padding 10
 #define avartsize 40
+
+#define BodyMaxWidth (MAX_WIDTH - avartsize - 3*margin)
+
+#define GridMaxWidth (BodyMaxWidth*0.85)
+
+#define UserNickMaxWidth 150
 
 
 @interface FriendBaseCell()
@@ -88,27 +95,102 @@
         _userNickLabel.numberOfLines = 1;
         _userNickLabel.adjustsFontSizeToFitWidth = NO;
         
+        _userNickLabel.dataDetectorTypes = MLDataDetectorTypeAll;
+        _userNickLabel.allowLineBreakInsideLinks = NO;
+        _userNickLabel.linkTextAttributes = nil;
+        _userNickLabel.activeLinkTextAttributes = nil;
+        _userNickLabel.lineHeightMultiple = 1.0;
         
         [self.contentView addSubview:_userNickLabel];
+    }
+    
+    if(nil == _titleLabel)
+    {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _titleLabel.textColor = [UIColor lightGrayColor];
+        _titleLabel.font = TitleLabelFont;
+        
+        [self.contentView addSubview:_titleLabel];
         
     }
     
+    if(nil == _bodyView)
+    {
+        x = CGRectGetMaxX(_userAvartImage.frame) + margin;
+        y = 40;
+        width = BodyMaxWidth;
+        height = 1;
+        
+        _bodyView = [[UIView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        
+        [self.contentView addSubview:_bodyView];
+    }
+    
+    if(nil == _contentTextLabel)
+    {
+        _contentTextLabel = [[MLLinkLabel alloc] initWithFrame:CGRectZero];
+        _contentTextLabel.font = TextFont;
+        _contentTextLabel.numberOfLines = 0; //multi line
+        _contentTextLabel.adjustsFontSizeToFitWidth = NO;
+        _contentTextLabel.textInsets = UIEdgeInsetsZero;
+        
+        _contentTextLabel.dataDetectorTypes = MLDataDetectorTypeAll;
+        _contentTextLabel.allowLineBreakInsideLinks = NO;
+        _contentTextLabel.linkTextAttributes = nil;
+        _contentTextLabel.activeLinkTextAttributes = nil;
+        _contentTextLabel.lineHeightMultiple = 1.2f;
+        _contentTextLabel.linkTextAttributes = @{NSForegroundColorAttributeName: HighLightTextColor};
+        
+        [_bodyView addSubview:_contentTextLabel];
+    }
+    
+    if(nil == _gridImageView)
+    {
+        _gridImageView = [[FriendGridImageView alloc] initWithFrame:CGRectMake(0, 0, GridMaxWidth, GridMaxWidth)];
+        
+        [_bodyView addSubview:_gridImageView];
+    }
     
     
+    if(nil == _locationLabel)
+    {
+        _locationLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _locationLabel.textColor = LocationTextColor;
+        _locationLabel.font = LocationLabelFont;
+        _locationLabel.hidden = YES;
+        
+        [self.contentView addSubview:_locationLabel];
+        
+    }
+    
+    if(nil == _timeLabel)
+    {
+        _timeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _timeLabel.textColor = [UIColor lightGrayColor];
+        _timeLabel.font = TimeLabelFont;
+        _timeLabel.hidden = YES;
+        
+        [self.contentView addSubview:_timeLabel];
+    }
+    
+    if(nil == _likeCommentBtn)
+    {
+        _likeCommentBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+        _likeCommentBtn.hidden = YES;
+        [_likeCommentBtn setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
+        [_likeCommentBtn setImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] forState:UIControlStateHighlighted];
+        [_likeCommentBtn addTarget:self action:@selector(onClickLikeCommentBtn:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.contentView addSubview:_likeCommentBtn];
+    }
+
     
 }
 
 
 
-
-
-
-
-
-
-
 /**
- *   delegate
+ *
  *
  *  @param sender
  */
@@ -121,5 +203,57 @@
     }
     
 }
+
+
+/**
+ *  <#Description#>
+ */
+
+-(void)onClickLikeCommentBtn:(id)sender
+{
+    
+    
+}
+
+-(void)updateWithBaseModel:(FriendBaseModel *)ModelItem
+{
+    self.BaseModel = ModelItem;
+    
+    [_userAvartImage showImage:ModelItem.strAvartUrl];
+    
+    NSAttributedString *nickName = [[NSAttributedString alloc] initWithString:ModelItem.strNick];
+    
+    CGSize textsize = [MLLinkLabel getViewSize:nickName maxWidth:UserNickMaxWidth font:UserNickFont lineHeight:1.0 lines:1];
+    
+    CGFloat x, y, width, height;
+    
+    x = CGRectGetMaxX(_userAvartImage.frame) + margin;
+    y = CGRectGetMinY(_userAvartImage.frame) + 2;
+    width = textsize.width;
+    height = textsize.height;
+    
+    _userNickLabel.frame = CGRectMake(x, y, width, height);
+    _userNickLabel.attributedText = nickName;
+    
+    x = CGRectGetMaxX(_userNickLabel.frame) + padding;
+    width = MAX_WIDTH - x - margin;
+    _titleLabel.frame = CGRectMake(x, y, width, height);
+    _titleLabel.text = ModelItem.strTitle;
+    
+    
+    
+    
+}
+
+-(CGFloat)getCellHeight:(FriendBaseModel *)ModelItem
+{
+    CGFloat modelHeight = 0.0;
+    
+    
+    
+    return modelHeight;
+}
+
+
 
 @end
