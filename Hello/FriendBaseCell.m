@@ -219,8 +219,12 @@
 {
     self.BaseModel = ModelItem;
     
+    //useravart
     [_userAvartImage showImage:ModelItem.strAvartUrl];
     
+    
+    
+    //nick
     NSAttributedString *nickName = [[NSAttributedString alloc] initWithString:ModelItem.strNick];
     
     CGSize textsize = [MLLinkLabel getViewSize:nickName maxWidth:UserNickMaxWidth font:UserNickFont lineHeight:1.0 lines:1];
@@ -235,12 +239,41 @@
     _userNickLabel.frame = CGRectMake(x, y, width, height);
     _userNickLabel.attributedText = nickName;
     
+    
+    //title
     x = CGRectGetMaxX(_userNickLabel.frame) + padding;
     width = MAX_WIDTH - x - margin;
     _titleLabel.frame = CGRectMake(x, y, width, height);
     _titleLabel.text = ModelItem.strTitle;
     
     
+
+    //contentText
+    
+    NSAttributedString *contentText = [[NSAttributedString alloc] initWithString:ModelItem.strContentText];
+    
+    textsize = [MLLinkLabel getViewSize:contentText maxWidth:BodyMaxWidth font:TextFont lineHeight:1.2f lines:0];
+    _contentTextLabel.attributedText = contentText;
+    _contentTextLabel.frame = CGRectMake(0, 0, BodyMaxWidth, textsize.height);
+    
+    //gridImage
+    
+    
+    
+    
+    //body
+    
+    
+    
+    
+    //location
+    
+    
+    
+    //time
+    
+    
+    //like comment
     
     
 }

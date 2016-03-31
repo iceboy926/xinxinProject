@@ -22,13 +22,21 @@
 
 @property (nonatomic, strong) NSString *strTitle;
 
+@property (nonatomic, strong) NSString *strContentText;
+
+@property (nonatomic, strong) NSMutableArray *thumbImageArray;
+
+@property (nonatomic, strong) NSMutableArray *srcImageArray;
+
+@property (nonatomic, assign) CGFloat  width;
+
+@property (nonatomic, assign) CGFloat  height;
+
 @property (nonatomic, strong) NSString *strLocation;
 
 @property (nonatomic, assign) long long time;
 
-@property (nonatomic, strong) NSString *strContentText;
 
-@property (nonatomic, strong) NSMutableArray *imageArray;
 
 
 @end

@@ -18,7 +18,9 @@
         
         _strContentText = @"";
         
-        _imageArray = [NSMutableArray array];
+        _thumbImageArray = [NSMutableArray array];
+        
+        _srcImageArray = [NSMutableArray array];
         
     }
     

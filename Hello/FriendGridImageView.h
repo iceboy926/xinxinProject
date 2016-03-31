@@ -10,4 +10,8 @@
 
 @interface FriendGridImageView : UIView
 
++(CGFloat)getHeight:(NSMutableArray *)images srcImage:(NSMutableArray *)srcImages oneImageWidth:(CGFloat)oneImageWidth oneImageHeight:(CGFloat)oneImageHeight;
+
+
+
 @end
