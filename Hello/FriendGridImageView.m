@@ -65,4 +65,26 @@
     
 }
 
+
+-(void)onClickImage:(UIGestureRecognizer *)gesture
+{
+    
+}
+
+
++(CGFloat)getHeight:(NSMutableArray *)images MaxWidth:(CGFloat)maxwidth oneImageWidth:(CGFloat)oneImageWidth oneImageHeight:(CGFloat)oneImageHeight
+{
+    CGFloat retHeight = 0.0;
+    
+    
+    
+    return retHeight;
+}
+
+
+-(void)updatewithImage:(NSMutableArray *)thumbImages srcImage:(NSMutableArray *)srcImages oneImageWidth:(CGFloat)oneImageWidth oneImageHeight:(CGFloat)oneImageHeight
+{
+    
+}
+
 @end

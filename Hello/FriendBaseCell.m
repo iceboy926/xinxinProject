@@ -21,6 +21,8 @@
 
 #define GridMaxWidth (BodyMaxWidth*0.85)
 
+#define TextImageSpace 10
+
 #define UserNickMaxWidth 150
 
 
@@ -256,17 +258,38 @@
     _contentTextLabel.attributedText = contentText;
     _contentTextLabel.frame = CGRectMake(0, 0, BodyMaxWidth, textsize.height);
     
+    
+    
+    
+    
     //gridImage
     
+    CGFloat gridImageHeight = [FriendGridImageView getHeight:ModelItem.thumbImageArray MaxWidth:GridMaxWidth oneImageWidth:ModelItem.width oneImageHeight:ModelItem.height];
+    
+    x = _gridImageView.frame.origin.x;
+    y = CGRectGetMaxY(_contentTextLabel.frame) + TextImageSpace;
+    width = _gridImageView.frame.size.width;
+    height = gridImageHeight;
+    
+    _gridImageView.frame = CGRectMake(x, y, width, height);
+    
+    [_gridImageView updatewithImage:ModelItem.thumbImageArray srcImage:ModelItem.srcImageArray oneImageWidth:ModelItem.width oneImageHeight:ModelItem.height];
     
     
     
     //body
+    CGFloat bodyHeight = textsize.height + gridImageHeight + TextImageSpace;
     
+    x = _bodyView.frame.origin.x;
+    y = _bodyView.frame.origin.y;
+    width = _bodyView.frame.size.width;
+    height = bodyHeight;
     
+    _bodyView.frame = CGRectMake(x, y, width, height);
     
     
     //location
+    if(ModelItem.strLocation != nil )
     
     
     
