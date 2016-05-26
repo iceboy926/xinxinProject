@@ -64,8 +64,17 @@ typedef enum {
     //	HUD.delegate = self;
 	HUD.labelText = @"登录中...";
     
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:SCREEN_FRAME];
+    bgView.backgroundColor = [UIColor clearColor];
+    bgView.image = [UIImage imageNamed:@"login_bj"];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_bj"]];
+    //[self.view addSubview:bgView];
+    [self.view insertSubview:bgView atIndex:0];
+
+    
+    
+    
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_bj"]];
 	
    
     [self.uiLogInBT setBackgroundImage:[[UIImage imageNamed:@"LoginGreenBigBtn_HI"] stretchableImageWithLeftCapWidth:10 topCapHeight:15] forState:UIControlStateDisabled];
