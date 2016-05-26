@@ -426,6 +426,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10698ACE1CF6F48500AE3295 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B5562208285631FD46A35A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -1394,6 +1395,7 @@
 				829D157B1B905C1E00988E90 /* WBHttpRequest+WeiboShare.h */,
 				829D157C1B905C1E00988E90 /* WBHttpRequest+WeiboToken.h */,
 				829D157D1B905C1E00988E90 /* WBHttpRequest+WeiboUser.h */,
+				10698ACE1CF6F48500AE3295 /* WeiboSDK+Statistics.h */,
 				829D157E1B905C1E00988E90 /* WBHttpRequest.h */,
 				829D157F1B905C1E00988E90 /* WBSDKBasicButton.h */,
 				829D15801B905C1E00988E90 /* WBSDKCommentButton.h */,
