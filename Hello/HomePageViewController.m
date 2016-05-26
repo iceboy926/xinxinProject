@@ -63,9 +63,13 @@
 
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     _dicRequestPara = [NSMutableDictionary dictionary];
-    [_dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
-    
-    [self addRefreshView];
+    if(appDelegate.wbtoken != nil)
+    {
+        [_dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
+        
+        [self addRefreshView];
+    }
+
     
  
     
@@ -175,6 +179,13 @@
 
 - (void)RequestHanlderRefresh:(WBHttpRequest *)httpRequest :(id)result : (NSError *)error
 {
+    if(error)
+    {
+        NSLog(@" requestWithAccessToken error code is %@",error);
+        return ;
+    }
+    
+    
     NSData *jsonData = [result JSONData];
     
     
