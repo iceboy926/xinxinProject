@@ -184,7 +184,8 @@ void propListener(void *                  inClientData,
   
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window makeKeyAndVisible];
+    //self.window.rootViewController = []
+    
     
     //if(![user boolForKey:@"FirstLaunch"])
     {
@@ -280,7 +281,10 @@ void propListener(void *                  inClientData,
     
     self.GuidView = [[GuidInViewController alloc] initWithBackGroundImage:arrayImage];
     
+    //[self.window addSubview:self.GuidView.view];
+    self.window.rootViewController = self.GuidView;
     [self.window addSubview:self.GuidView.view];
+    [self.window makeKeyAndVisible];
 }
 
 -(void)UIMainPageShow
@@ -388,7 +392,6 @@ void propListener(void *                  inClientData,
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     
-    
     writeFileLog("dd", "dd");
     if([response isKindOfClass:WBAuthorizeResponse.class]) //
     {
@@ -399,12 +402,17 @@ void propListener(void *                  inClientData,
         
         //NSLog(@"access_token is %@", self.wbtoken);
         
+        NSString *accessStr = [(WBAuthorizeResponse *)response accessToken];
+        NSString *userIDStr = [(WBAuthorizeResponse *)response userID];
+        if(accessStr != nil || userIDStr != nil)
+        {
+            [dicuser setObject:accessStr forKey:@"access_token"];
+            [dicuser setObject:userIDStr forKey:@"userID"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:dicuser forKey:@"sinaweibo"];
+        }
         
-        [dicuser setObject:[(WBAuthorizeResponse *)response accessToken] forKey:@"access_token"];
-        [dicuser setObject:[(WBAuthorizeResponse *)response userID] forKey:@"userID"];
-        
-        [[NSUserDefaults standardUserDefaults] setObject:dicuser forKey:@"sinaweibo"];
-        
+
         MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
         
         [self.window.rootViewController presentViewController:tabBar animated:YES completion:nil];

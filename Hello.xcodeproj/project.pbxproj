@@ -2816,7 +2816,7 @@
 				ORGANIZATIONNAME = mit;
 				TargetAttributes = {
 					82B612C71B2FBC61007E6D42 = {
-						DevelopmentTeam = 8VMQ39YAN8;
+						DevelopmentTeam = S4D7MKJMYK;
 					};
 					82B612E81B2FBC61007E6D42 = {
 						TestTargetID = 82B612C71B2FBC61007E6D42;
@@ -3419,7 +3419,7 @@
 					"$(ARCHS_STANDARD)",
 					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ruizhe Jian (5A863PFFW2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3448,7 +3448,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load ";
 				PRODUCT_NAME = Hello;
-				PROVISIONING_PROFILE = "654b1e3e-4bbc-4e2b-966f-df4f443e507e";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
@@ -3465,7 +3465,7 @@
 					"$(ARCHS_STANDARD)",
 					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ruizhe Jian (5A863PFFW2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3494,7 +3494,7 @@
 				);
 				OTHER_LDFLAGS = "-all_load ";
 				PRODUCT_NAME = Hello;
-				PROVISIONING_PROFILE = "654b1e3e-4bbc-4e2b-966f-df4f443e507e";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
