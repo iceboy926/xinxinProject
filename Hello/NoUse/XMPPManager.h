@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XMPPFramework.h"
+//#import "XMPPFramework.h"
 #import "GloabDef.h"
 
 @interface XMPPManager : NSObject

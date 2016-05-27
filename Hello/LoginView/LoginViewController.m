@@ -57,7 +57,7 @@ typedef enum {
     
     self.title = @"登录";
     // Custom initialization
-    [[XMPPManager ShareManager].xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    //[[XMPPManager ShareManager].xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
 	[self.view addSubview:HUD];
@@ -82,7 +82,7 @@ typedef enum {
     [self.uiLogInBT setBackgroundImage:[[UIImage imageNamed:@"LoginGreenBigBtn"] stretchableImageWithLeftCapWidth:10 topCapHeight:15] forState:UIControlStateNormal];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(DidLogStatus:) name:XMPP_LOGIN_STATUS object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(DidLogStatus:) name:XMPP_LOGIN_STATUS object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardDidChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -486,8 +486,8 @@ typedef enum {
     
     if([self CheckInputVaild])
     {
-        [self SetField:self.uiUserNameTF forkey: XMPP_USER_ID];
-        [self SetField:self.uiPassWordTF forkey: XMPP_PASSWORD];
+        //[self SetField:self.uiUserNameTF forkey: XMPP_USER_ID];
+        //[self SetField:self.uiPassWordTF forkey: XMPP_PASSWORD];
         
         //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         
@@ -502,7 +502,7 @@ typedef enum {
         {
             //[[XMPPManager ShareManager] ConnectThenLogin];
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:XMPP_LOGIN_STATUS object:self userInfo:@{XMPP_LOGIN_KEY:[NSNumber numberWithBool:YES]}];
+            //[[NSNotificationCenter defaultCenter] postNotificationName:XMPP_LOGIN_STATUS object:self userInfo:@{XMPP_LOGIN_KEY:[NSNumber numberWithBool:YES]}];
             
         }
         
@@ -522,27 +522,27 @@ typedef enum {
 }
 
 
--(void)DidLogStatus:(NSNotification *) notification
-{
-    NSDictionary *dic = [notification userInfo];
-    
-    NSNumber *number = [dic objectForKey:XMPP_LOGIN_KEY];
-    
-    BOOL blLoginStatus = [number boolValue];
-    
-    if(blLoginStatus == YES)
-    {
-        //[self performSegueWithIdentifier:@"GoToMainViewSegue" sender:self];
-        
-        [self LoginWithSinabo];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败，请重新输入" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
-        
-        [alert show];
-    }
-}
+//-(void)DidLogStatus:(NSNotification *) notification
+//{
+//    NSDictionary *dic = [notification userInfo];
+//    
+//    NSNumber *number = [dic objectForKey:XMPP_LOGIN_KEY];
+//    
+//    BOOL blLoginStatus = [number boolValue];
+//    
+//    if(blLoginStatus == YES)
+//    {
+//        //[self performSegueWithIdentifier:@"GoToMainViewSegue" sender:self];
+//        
+//        [self LoginWithSinabo];
+//    }
+//    else
+//    {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败，请重新输入" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+//        
+//        [alert show];
+//    }
+//}
 
 // 子线程中
 -(void) waitlogin {
