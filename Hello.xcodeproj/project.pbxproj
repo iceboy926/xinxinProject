@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10698AD01CF6F7E100AE3295 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */; };
+		10698AD21CF6F83300AE3295 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10698AD11CF6F83300AE3295 /* libidn.a */; };
 		8209A7691B9BCCE40023FEE2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209A75F1B9BCCE40023FEE2 /* FMDatabase.m */; };
 		8209A76A1B9BCCE40023FEE2 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209A7611B9BCCE40023FEE2 /* FMDatabaseAdditions.m */; };
 		8209A76B1B9BCCE40023FEE2 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209A7631B9BCCE40023FEE2 /* FMDatabasePool.m */; };
@@ -133,7 +135,6 @@
 		8234557B1B84819E002A36D6 /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8234557A1B84819E002A36D6 /* weixin2.png */; };
 		8234557D1B848933002A36D6 /* qq2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8234557C1B848933002A36D6 /* qq2@2x.png */; };
 		82801BD11B32954300AB8B9B /* HelloDataDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82801BD01B32954300AB8B9B /* HelloDataDelegate.m */; };
-		829D15771B905BBA00988E90 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824A829B1B85BC83005FC2CB /* libWeiboSDK.a */; };
 		829D15861B905C1E00988E90 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 829D15821B905C1E00988E90 /* WeiboSDK.bundle */; };
 		829D15881B905D3900988E90 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829D15871B905D3900988E90 /* ImageIO.framework */; };
 		82A115751BA127AF00527FFA /* ZoomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A115741BA127AF00527FFA /* ZoomImage.m */; };
@@ -246,7 +247,6 @@
 		82DE25561B40EBFE000A5963 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DE25551B40EBFE000A5963 /* Security.framework */; };
 		82DE25581B40EC0B000A5963 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DE25571B40EC0B000A5963 /* SystemConfiguration.framework */; };
 		82DE255A1B40EC15000A5963 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DE25591B40EC15000A5963 /* CFNetwork.framework */; };
-		82DE255B1B4124FF000A5963 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DE25211B40E770000A5963 /* libidn.a */; };
 		82DE255D1B412812000A5963 /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DE255C1B412812000A5963 /* libiconv.2.4.0.dylib */; };
 		82DE26611B412926000A5963 /* XMPPBandwidthMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DE25631B412926000A5963 /* XMPPBandwidthMonitor.m */; };
 		82DE26621B412926000A5963 /* XMPPCoreDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 82DE25661B412926000A5963 /* XMPPCoreDataStorage.m */; };
@@ -427,6 +427,8 @@
 
 /* Begin PBXFileReference section */
 		10698ACE1CF6F48500AE3295 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
+		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
+		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B5562208285631FD46A35A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -608,7 +610,6 @@
 		823455781B8473BC002A36D6 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 		8234557A1B84819E002A36D6 /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixin2.png; sourceTree = "<group>"; };
 		8234557C1B848933002A36D6 /* qq2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq2@2x.png"; sourceTree = "<group>"; };
-		824A829B1B85BC83005FC2CB /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/ShareSDK/Extend/SinaWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		8279A2031BB299F600301BAD /* libkeymgr.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libkeymgr.dylib; path = usr/lib/system/libkeymgr.dylib; sourceTree = SDKROOT; };
 		82801BCF1B32954300AB8B9B /* HelloDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloDataDelegate.h; sourceTree = "<group>"; };
 		82801BD01B32954300AB8B9B /* HelloDataDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloDataDelegate.m; sourceTree = "<group>"; };
@@ -808,7 +809,6 @@
 		82DE251D1B40E770000A5963 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		82DE251F1B40E770000A5963 /* build-libidn.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "build-libidn.sh"; sourceTree = "<group>"; };
 		82DE25201B40E770000A5963 /* idn-int.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "idn-int.h"; sourceTree = "<group>"; };
-		82DE25211B40E770000A5963 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		82DE25221B40E770000A5963 /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
 		82DE254E1B40E9C3000A5963 /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		82DE254F1B40EB79000A5963 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -1122,7 +1122,7 @@
 				B31B04071C98FA3F00C6E080 /* AVFoundation.framework in Frameworks */,
 				CCAB98F81BDA35F5004C321D /* AudioToolbox.framework in Frameworks */,
 				829D15881B905D3900988E90 /* ImageIO.framework in Frameworks */,
-				829D15771B905BBA00988E90 /* libWeiboSDK.a in Frameworks */,
+				10698AD01CF6F7E100AE3295 /* libWeiboSDK.a in Frameworks */,
 				823455631B832E21002A36D6 /* MediaPlayer.framework in Frameworks */,
 				823455611B832E17002A36D6 /* CoreText.framework in Frameworks */,
 				8234555F1B832E10002A36D6 /* AssetsLibrary.framework in Frameworks */,
@@ -1138,9 +1138,9 @@
 				82B2CA1F1B65DF3A00CDDA3D /* libsqlite3.dylib in Frameworks */,
 				82CE98841B5E250D00F39662 /* MapKit.framework in Frameworks */,
 				82DE255D1B412812000A5963 /* libiconv.2.4.0.dylib in Frameworks */,
-				82DE255B1B4124FF000A5963 /* libidn.a in Frameworks */,
 				82DE255A1B40EC15000A5963 /* CFNetwork.framework in Frameworks */,
 				82DE25581B40EC0B000A5963 /* SystemConfiguration.framework in Frameworks */,
+				10698AD21CF6F83300AE3295 /* libidn.a in Frameworks */,
 				82DE25541B40EBF4000A5963 /* libresolv.dylib in Frameworks */,
 				82DE25521B40EBD0000A5963 /* libxml2.dylib in Frameworks */,
 				82DE25501B40EB79000A5963 /* CoreData.framework in Frameworks */,
@@ -1453,11 +1453,11 @@
 		82B612CA1B2FBC61007E6D42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */,
 				B31B04061C98FA3F00C6E080 /* AVFoundation.framework */,
 				CCAB98F71BDA35F5004C321D /* AudioToolbox.framework */,
 				8279A2031BB299F600301BAD /* libkeymgr.dylib */,
 				829D15871B905D3900988E90 /* ImageIO.framework */,
-				824A829B1B85BC83005FC2CB /* libWeiboSDK.a */,
 				823455621B832E21002A36D6 /* MediaPlayer.framework */,
 				823455601B832E17002A36D6 /* CoreText.framework */,
 				8234555E1B832E10002A36D6 /* AssetsLibrary.framework */,
@@ -1470,6 +1470,7 @@
 				823454F81B832B44002A36D6 /* libz.1.2.5.dylib */,
 				823454F61B832B2F002A36D6 /* CoreTelephony.framework */,
 				823454F41B832B17002A36D6 /* libicucore.dylib */,
+				10698AD11CF6F83300AE3295 /* libidn.a */,
 				823454F21B832B07002A36D6 /* QuartzCore.framework */,
 				82B2CA1E1B65DF3A00CDDA3D /* libsqlite3.dylib */,
 				8234556A1B83322F002A36D6 /* libWeChatSDK.a */,
@@ -1477,7 +1478,6 @@
 				82CE98831B5E250D00F39662 /* MapKit.framework */,
 				82DE255E1B41281D000A5963 /* libsqlite3.0.dylib */,
 				82DE255C1B412812000A5963 /* libiconv.2.4.0.dylib */,
-				82DE25211B40E770000A5963 /* libidn.a */,
 				82DE25591B40EC15000A5963 /* CFNetwork.framework */,
 				82DE25571B40EC0B000A5963 /* SystemConfiguration.framework */,
 				82DE25551B40EBFE000A5963 /* Security.framework */,
