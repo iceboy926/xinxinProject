@@ -226,6 +226,7 @@
 		109B6B471CF7EE1F0077FAFA /* vip.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE31CF7EE1F0077FAFA /* vip.png */; };
 		109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */; };
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
+		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
 		823454F51B832B17002A36D6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F41B832B17002A36D6 /* libicucore.dylib */; };
 		823454F71B832B2F002A36D6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F61B832B2F002A36D6 /* CoreTelephony.framework */; };
@@ -598,19 +599,11 @@
 		109B6AE31CF7EE1F0077FAFA /* vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vip.png; path = Hello/image/vip.png; sourceTree = "<group>"; };
 		109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weixin@2x.png"; path = "Hello/image/weixin@2x.png"; sourceTree = "<group>"; };
 		109B6AE51CF7EE1F0077FAFA /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weixin2.png; path = Hello/image/weixin2.png; sourceTree = "<group>"; };
+		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
+		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B5562208285631FD46A35A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		822E56C51B5361E60062DF7E /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
-		822E56C61B5361E60062DF7E /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
-		822E56C81B5389900062DF7E /* MessageCellFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellFrameModel.h; sourceTree = "<group>"; };
-		822E56C91B5389900062DF7E /* MessageCellFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellFrameModel.m; sourceTree = "<group>"; };
-		822E56CF1B539CF80062DF7E /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
-		822E56D01B539CF80062DF7E /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
-		822E56ED1B5757330062DF7E /* AddMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMoreView.h; sourceTree = "<group>"; };
-		822E56EE1B5757330062DF7E /* AddMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMoreView.m; sourceTree = "<group>"; };
-		822E56FA1B5897530062DF7E /* AddMoreManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMoreManagerView.h; sourceTree = "<group>"; };
-		822E56FB1B5897530062DF7E /* AddMoreManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMoreManagerView.m; sourceTree = "<group>"; };
 		823454F21B832B07002A36D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		823454F41B832B17002A36D6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		823454F61B832B2F002A36D6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -646,11 +639,6 @@
 		82B612F21B2FBC61007E6D42 /* HelloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloTests-Info.plist"; sourceTree = "<group>"; };
 		82B612F41B2FBC61007E6D42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82B612F61B2FBC61007E6D42 /* HelloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloTests.m; sourceTree = "<group>"; };
-		82CE98731B5DE07800F39662 /* ChatMorePage_1_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMorePage_1_View.h; sourceTree = "<group>"; };
-		82CE98741B5DE07800F39662 /* ChatMorePage_1_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMorePage_1_View.m; sourceTree = "<group>"; };
-		82CE98761B5DE09F00F39662 /* ChatMorePage_2_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMorePage_2_View.h; sourceTree = "<group>"; };
-		82CE98771B5DE09F00F39662 /* ChatMorePage_2_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMorePage_2_View.m; sourceTree = "<group>"; };
-		82CE98791B5DE0BE00F39662 /* ChatMorePageViewDelegete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMorePageViewDelegete.h; sourceTree = "<group>"; };
 		82CE98831B5E250D00F39662 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		82D2B4231B43DB5F00C2174A /* GloabDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GloabDef.h; sourceTree = "<group>"; };
 		82DE254F1B40EB79000A5963 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -662,13 +650,7 @@
 		82DE255C1B412812000A5963 /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = usr/lib/libiconv.2.4.0.dylib; sourceTree = SDKROOT; };
 		82DE255E1B41281D000A5963 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		82E470231B4BCC4000EC1A59 /* friendsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendsInfo.plist; sourceTree = "<group>"; };
-		82E470691B4F5E8D00EC1A59 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
-		82E4706A1B4F5E8D00EC1A59 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
-		82E4706C1B4F5EC300EC1A59 /* ChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetailViewController.h; sourceTree = "<group>"; };
-		82E4706D1B4F5EC300EC1A59 /* ChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetailViewController.m; sourceTree = "<group>"; };
 		82E470811B4F624B00EC1A59 /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
-		82F5F34B1B466AC60098C7FA /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
-		82F5F34C1B466AC60098C7FA /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		B31B04061C98FA3F00C6E080 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CCAB98F71BDA35F5004C321D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -722,6 +704,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10D1067D1CFBED54006E14E3 /* ZoomScrollImage */ = {
+			isa = PBXGroup;
+			children = (
+				10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */,
+				10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */,
+			);
+			name = ZoomScrollImage;
+			sourceTree = "<group>";
+		};
 		25B632EBEA3A7E0FED768BA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,41 +891,6 @@
 				B32C90451CABB4FE00869A53 /* View */,
 			);
 			name = "朋友圈";
-			sourceTree = "<group>";
-		};
-		822E56C41B5361920062DF7E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				822E56C51B5361E60062DF7E /* MessageModel.h */,
-				822E56C61B5361E60062DF7E /* MessageModel.m */,
-				822E56C81B5389900062DF7E /* MessageCellFrameModel.h */,
-				822E56C91B5389900062DF7E /* MessageCellFrameModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		822E56CE1B5398530062DF7E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				82CE98791B5DE0BE00F39662 /* ChatMorePageViewDelegete.h */,
-				82E470691B4F5E8D00EC1A59 /* ChatTableViewCell.h */,
-				82E4706A1B4F5E8D00EC1A59 /* ChatTableViewCell.m */,
-				82E4706C1B4F5EC300EC1A59 /* ChatDetailViewController.h */,
-				82E4706D1B4F5EC300EC1A59 /* ChatDetailViewController.m */,
-				82CE98731B5DE07800F39662 /* ChatMorePage_1_View.h */,
-				82CE98741B5DE07800F39662 /* ChatMorePage_1_View.m */,
-				82CE98761B5DE09F00F39662 /* ChatMorePage_2_View.h */,
-				82CE98771B5DE09F00F39662 /* ChatMorePage_2_View.m */,
-				822E56ED1B5757330062DF7E /* AddMoreView.h */,
-				822E56EE1B5757330062DF7E /* AddMoreView.m */,
-				822E56FA1B5897530062DF7E /* AddMoreManagerView.h */,
-				822E56FB1B5897530062DF7E /* AddMoreManagerView.m */,
-				822E56CF1B539CF80062DF7E /* MessageTableViewCell.h */,
-				822E56D01B539CF80062DF7E /* MessageTableViewCell.m */,
-				82F5F34B1B466AC60098C7FA /* ChatViewController.h */,
-				82F5F34C1B466AC60098C7FA /* ChatViewController.m */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		823454E71B817578002A36D6 /* GuidePage */ = {
@@ -1281,8 +1237,6 @@
 			children = (
 				82C1F9B81B8F13B600F2356B /* HomeModel */,
 				82C1F9B71B8F13AD00F2356B /* HomeView */,
-				822E56CE1B5398530062DF7E /* View */,
-				822E56C41B5361920062DF7E /* Model */,
 			);
 			name = "HomeModel+View";
 			sourceTree = "<group>";
@@ -1362,6 +1316,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				10D1067D1CFBED54006E14E3 /* ZoomScrollImage */,
 				B38556751CA8D5A700B276C1 /* MLLable */,
 				822272E81BABE94E0095D617 /* TFHPPLE */,
 				8209A75D1B9BCCE40023FEE2 /* fmdb */,
@@ -1725,6 +1680,7 @@
 				109B69591CF7E3220077FAFA /* FMResultSet.m in Sources */,
 				109B69D11CF7E67A0077FAFA /* LineView.m in Sources */,
 				109B69351CF7E2840077FAFA /* MLLabel+Size.m in Sources */,
+				10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */,
 				109B6A7E1CF7EC7A0077FAFA /* MainNavigateViewController.m in Sources */,
 				109B69D81CF7E6D60077FAFA /* MineViewController.m in Sources */,
 				109B69C71CF7E5AB0077FAFA /* AFURLSessionManager.m in Sources */,
