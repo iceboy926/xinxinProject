@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 105542FA1CFEE28D0017D42B /* ScaleImageView.m */; };
 		109B69331CF7E2840077FAFA /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691D1CF7E2840077FAFA /* MLExpressionManager.m */; };
 		109B69341CF7E2840077FAFA /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691F1CF7E2840077FAFA /* MLLabel.m */; };
 		109B69351CF7E2840077FAFA /* MLLabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B69221CF7E2840077FAFA /* MLLabel+Size.m */; };
@@ -278,6 +279,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		105542F91CFEE28D0017D42B /* ScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScaleImageView.h; path = Library/ZoomScrollImage/ScaleImageView.h; sourceTree = "<group>"; };
+		105542FA1CFEE28D0017D42B /* ScaleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScaleImageView.m; path = Library/ZoomScrollImage/ScaleImageView.m; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		109B691C1CF7E2840077FAFA /* MLExpressionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLExpressionManager.h; path = Library/MLLabel/MLExpressionManager.h; sourceTree = "<group>"; };
@@ -707,6 +710,8 @@
 		10D1067D1CFBED54006E14E3 /* ZoomScrollImage */ = {
 			isa = PBXGroup;
 			children = (
+				105542F91CFEE28D0017D42B /* ScaleImageView.h */,
+				105542FA1CFEE28D0017D42B /* ScaleImageView.m */,
 				10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */,
 				10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */,
 			);
@@ -1738,6 +1743,7 @@
 				109B69DA1CF7E6D60077FAFA /* UserViewController.m in Sources */,
 				109B69A91CF7E5800077FAFA /* UIProgressView+AFNetworking.m in Sources */,
 				109B6A411CF7EA670077FAFA /* AsynImageView.m in Sources */,
+				105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */,
 				109B6A021CF7E8760077FAFA /* QRViewController.m in Sources */,
 				109B69391CF7E2840077FAFA /* NSAttributedString+MLExpression.m in Sources */,
 				109B69561CF7E3220077FAFA /* FMDatabaseAdditions.m in Sources */,
