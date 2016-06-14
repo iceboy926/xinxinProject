@@ -106,7 +106,7 @@ static SystemSoundID shake_sound_male_id = 0;
     
     
     FindedUserLabel = [[UILabel alloc] initWithFrame: CGRectMake(5, 58, 200, 20)];
-    FindedUserLabel.font = SourceFont;
+    FindedUserLabel.font = kWBCellTextFont;
     FindedUserLabel.textColor = [UIColor blackColor];
     [FindedUserView addSubview:FindedUserLabel];
     

@@ -8,9 +8,6 @@
 
 #define Padding 10
 
-//#define SourceFont [UIFont systemFontOfSize:12]
-//#define NameFont [UIFont fontWithName:@"TimesNewRomanPS-BoldMT" size:16]
-//#define DetailFont [UIFont fontWithName:@"TimesNewRomanPSMT" size:18]
 #define ICON_WIDTH  50
 #define ICON_HEIGH  50
 

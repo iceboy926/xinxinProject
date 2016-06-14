@@ -29,7 +29,7 @@
 //告诉代理进程启动但还没进入状态保存
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    DEBUG_LOG(@"willFinishLaunchingWithOptions");
+    //DEBUG_LOG(@"willFinishLaunchingWithOptions");
     
     return YES;
 }
@@ -37,87 +37,24 @@
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return [WeiboSDK handleOpenURL:url delegate:self];
-    //return [WXApi handleOpenURL:url delegate:self] | [WeiboSDK handleOpenURL:url delegate: self];
 }
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     return [WeiboSDK handleOpenURL:url delegate:self];
-    //return [WXApi handleOpenURL:url delegate:self]| [WeiboSDK handleOpenURL:url delegate: self];
 }
 
-
-
-
-void propListener(void *                  inClientData,
-                  AudioSessionPropertyID  inID,
-                  UInt32                  inDataSize,
-                  const void *            inData)
-{
-    UInt32 propertySize = sizeof(CFStringRef);
-    AudioSessionInitialize(NULL, NULL, NULL, NULL);
-    CFStringRef state = nil;
-    
-    CFDictionaryRef routeChangeDictionary = inData;
-    
-    CFNumberRef routeChangeReasonRef = CFDictionaryGetValue(routeChangeDictionary, CFSTR(kAudioSession_AudioRouteChangeKey_Reason));
-    
-    SInt32 routeChangeReason;
-    CFNumberGetValue (routeChangeReasonRef, kCFNumberSInt32Type, &routeChangeReason);
-    
-    if(routeChangeReason == kAudioSessionRouteChangeReason_OldDeviceUnavailable) //unplug headphone
-    {
-        //do something you will do
-        
-    }
-    else if(routeChangeReason == kAudioSessionRouteChangeReason_NewDeviceAvailable) //plugin headphone
-    {
-        
-        //do something you will do
-        
-    }
-    else
-    {
-        //do something you will do
-    }
-    
-    
-
-    //获取音频路线
-    AudioSessionGetProperty(kAudioSessionProperty_AudioRoute
-                            ,&propertySize,&state);//kAudioSessionProperty_AudioRoute：音频路线
-    NSLog(@"%@",(NSString *)CFBridgingRelease(state));//Headphone 耳机  Speaker 喇叭.
-}
-
--(void)Runbackground
-{
-    OSStatus status = AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, propListener,CFBridgingRetain(self));
-    
-    /*
-     AudioSessionAddPropertyListener(
-     AudioSessionPropertyID              inID,
-     AudioSessionPropertyListener        inProc,
-     void                                *inClientData
-     )
-     注册一个监听：audioRouteChangeListenerCallback，当音频会话传递的方式（耳机/喇叭）发生改变的时候，会触发这个监听
-     kAudioSessionProperty_AudioRouteChange ：就是检测音频路线是否改变
-     */
-    
-    
-    
-}
 
 #pragma mark 应用程序加载完毕
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    NSLog(@"didFinishLaunchingWithOptions");
     
-    writeFileLog("application", "didFinishLaunchingWithOptions");
+    //writeFileLog("application", "didFinishLaunchingWithOptions");
     
     dispatch_async(dispatch_get_main_queue(), ^{
     
-        NSLog(@"App start time is %f seconds", CFAbsoluteTimeGetCurrent() - startTime);
+        //NSLog(@"App start time is %f seconds", CFAbsoluteTimeGetCurrent() - startTime);
     
     });
     
@@ -175,19 +112,13 @@ void propListener(void *                  inClientData,
     //2、初始化社交平台
     [self InitAllPlatform];
     
-    AudioSessionInitialize(NULL, NULL, NULL, NULL);
-    
-    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(Runbackground) object:nil];
-    [thread start];
-    
     
   
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //self.window.rootViewController = []
     
     
-    //if(![user boolForKey:@"FirstLaunch"])
+    if(![user boolForKey:@"FirstLaunch"])
     {
         
         [user setBool:YES forKey: @"FirstLaunch"];
@@ -212,19 +143,19 @@ void propListener(void *                  inClientData,
         
         //[self.window makeKeyAndVisible];
     }
-//    else
-//    {
-//        NSLog(@"不是第一次加载");
-//        [user setBool:NO forKey:@"FirstLaunch"];
-//        [self UIMainPageShow];
-//    }
+    else
+    {
+        //NSLog(@"不是第一次加载");
+        [user setBool:NO forKey:@"FirstLaunch"];
+        [self UIMainPageShow];
+    }
     return YES;
 }
 
 #pragma mark    失去焦点
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    NSLog(@"applicationWillResignActive");
+    //NSLog(@"applicationWillResignActive");
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
@@ -234,7 +165,7 @@ void propListener(void *                  inClientData,
     
     
     
-    NSLog(@"applicationDidEnterBackground");
+    //NSLog(@"applicationDidEnterBackground");
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
@@ -242,20 +173,20 @@ void propListener(void *                  inClientData,
 #pragma mark    进入前台
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    NSLog(@"applicationWillEnterForeground");
+    //NSLog(@"applicationWillEnterForeground");
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 #pragma mark    获得焦点
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    NSLog(@"applicationDidBecomeActive");
+    //NSLog(@"applicationDidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    NSLog(@"applicationWillTerminate");
+    //NSLog(@"applicationWillTerminate");
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
@@ -294,12 +225,6 @@ void propListener(void *                  inClientData,
     
     if(username != nil)
     {
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-//        
-//        id mainstoryboard = [storyboard instantiateViewControllerWithIdentifier:@"MainPageView"];
-//        
-//        self.window.rootViewController = mainstoryboard;
-        
         LoginViewController *loginView = [[LoginViewController alloc] init];
         self.window.rootViewController = loginView;
         [loginView LoginWithSinabo];
@@ -391,8 +316,6 @@ void propListener(void *                  inClientData,
  */
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
-    
-    writeFileLog("dd", "dd");
     if([response isKindOfClass:WBAuthorizeResponse.class]) //
     {
         self.wbtoken = [(WBAuthorizeResponse *)response accessToken];

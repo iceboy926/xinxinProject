@@ -46,19 +46,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:20/255.0 green:155/255.0 blue:213/255.0 alpha:1.0]];
+    
     self.CellList = [[NSMutableArray alloc] init];
     
     self.StatuseList = [[NSMutableArray alloc] init];
     
     self.navigationItem.title = @"南宫勇少";
+    
+    if([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+        [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    
+    if ([self respondsToSelector:@selector( setAutomaticallyAdjustsScrollViewInsets:)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
 
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -69,10 +72,8 @@
         
         [self addRefreshView];
     }
-
     
- 
-    
+    self.view.backgroundColor = kWBCellBackgroundColor;
     
     //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -285,39 +286,57 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    //NSLog(<#...#>)
-    //NSLog(@"-------------level-------------%d", (int)OSMemoryNotificationCurrentLevel());
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 5.0;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5.0;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section   // custom view for header. will be adjusted to default or specified header height
+{
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 5)];
+    view.backgroundColor = [UIColor clearColor];
+    
+    return view;
+}
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section   // custom view for footer. will be adjusted to default or specified footer height
+{
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 5)];
+    view.backgroundColor = [UIColor clearColor];
+    
+    return view;
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if([self.CellList count] >0)
     {
-        HomeCellFrame *cellFrame = [self.CellList objectAtIndex:[indexPath row]];
+        HomeCellFrame *cellFrame = [self.CellList objectAtIndex:[indexPath section]];
     
         CGFloat height = cellFrame.cellHeight;
-    
-        //DEBUG_LOG(@"height is %f", height);
     
         return height;
     }
     return 80;
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.CellList count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.CellList count];
+    return 1;
 }
 
 
@@ -350,14 +369,13 @@
     }
     
     
-    NSInteger i = [indexPath row];
+    NSInteger i = [indexPath section];
     
     homecellView.Index = i;
     
     homecellView.delegate = self;
-    //homecellView.selectedBackgroundView = [[UIView alloc] initWithFrame:homecellView.frame];
-    homecellView.selectionStyle = UITableViewCellSelectionStyleNone;
-    homecellView.selectedBackgroundView.backgroundColor = [UIColor clearColor];
+    //homecellView.selectionStyle = UITableViewCellSelectionStyleNone;
+    //homecellView.selectedBackgroundView.backgroundColor = [UIColor clearColor];
     
   
     HomeCellFrame *CellFrame = [self.CellList objectAtIndex:i];
@@ -367,6 +385,11 @@
     
     
     return homecellView;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
 }
 
 
@@ -405,33 +428,12 @@
 }
 
 
-
-#pragma mark - Table view delegate
-
-//// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-////    
-////    HomeDetailViewController *HomeDetail = [[HomeDetailViewController alloc] initWithNibName:@"HomeDetailViewController" bundle:nil];
-////    
-////    HomeDetail.DicStatusData = [self.StatuseList objectAtIndex:[indexPath row]];
-////    
-////    [HomeDetail setHidesBottomBarWhenPushed:YES];
-////    
-////    [self.navigationController pushViewController:HomeDetail animated:YES];
-//    
-//}
-
-
 #pragma mark - table View cell delegate
 
 -(void)DidPushWebView:(NSURL *)Url Index:(NSInteger)UserIndex
 {
     
     HomeDetailViewController *HomeDetail = [[HomeDetailViewController alloc] initWithNibName:@"HomeDetailViewController" bundle:nil];
-
-    
-    //[HomeDetail setHidesBottomBarWhenPushed:YES];
     
     [HomeDetail setHttpUrl:Url];
     
@@ -442,7 +444,7 @@
 {
     HomeUserInfoViewController *homeUserView = [[HomeUserInfoViewController alloc] initWithNibName:@"HomeUserInfoViewController" bundle:nil];
     
-    NSString *strUser = [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
+    [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
     
     homeUserView.strUserName = [UserName copy];
     
@@ -451,15 +453,6 @@
 -(void)DidTouchNamelabel:(NSString *)Screenname
 {
     NSLog(@"did tounamelabel");
-//    NSString *strUserPwdBase64 = [NSString stringWithFormat:@"+=/abcdefg+/="];
-//    
-//    NSCharacterSet *allowedCharacters = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"];
-//    
-//    NSString *strUserPwdBase64Percent = [strUserPwdBase64 stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
-//    
-//    NSString *strOut = [strUserPwdBase64 stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
-//    NSString *sttout2 = [strOut stringByReplacingOccurrencesOfString:@"=" withString:@"%3D"];
-//    NSString *strout3 = [sttout2 stringByReplacingOccurrencesOfString:@"/" withString:@"%2F"];
     
     HomeUserInfoViewController *homeUserView = [[HomeUserInfoViewController alloc] initWithNibName:@"HomeUserInfoViewController" bundle:nil];
     
@@ -470,24 +463,12 @@
 
 -(void)DidTouchUserIcon:(UIImageView *)UserIcon Index:(NSInteger)UseIndex
 {
-//    NSDictionary *statues = [self.StatuseList objectAtIndex:UseIndex];
-//    
-//    NSDictionary *UserDic = [statues objectForKey:@"user"];
-//    
-//    NSString *iconHD = [UserDic objectForKey:@"avatar_hd"];
-    
-  
-    
     [ZoomImage ShowImage:UserIcon];
 }
 
 -(void)DidTouchPicView:(UIImageView *)PicView
 {
     [ZoomImage ShowImage:PicView];
-    
-    //ZoomImage *zoom = [[ZoomImage alloc] init];
-    
-    //[zoom ShowavatarImage:PicView];
 }
 
 

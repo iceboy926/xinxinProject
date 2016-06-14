@@ -30,7 +30,7 @@
     CGFloat namelableX = CGRectGetMaxX(_iconFrame) + Padding;
     CGFloat namelableY = iconViewY + Padding/2;
     
-    CGSize  namelabelSize = [self sizeWithString:_HomeCell.Name fontSize:NameFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
+    CGSize  namelabelSize = [self sizeWithString:_HomeCell.Name fontSize:kWBCellNameFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
     
     CGFloat namelableW = namelabelSize.width;
     CGFloat namelableH = namelabelSize.height;
@@ -52,7 +52,7 @@
     //来源 frame
     CGFloat sourcelabelX = namelableX;
     CGFloat sourcelabelY = CGRectGetMaxY(_iconFrame) - 2*Padding;
-    CGSize sourcelabelSize = [self sizeWithString:_HomeCell.timesource fontSize:SourceFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
+    CGSize sourcelabelSize = [self sizeWithString:_HomeCell.timesource fontSize:kWBCellSourceFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
     
     _timesourceFrame = CGRectMake(sourcelabelX, sourcelabelY, sourcelabelSize.width, sourcelabelSize.height);
     
@@ -61,7 +61,7 @@
     //正文 frame
     CGFloat DetaillabelX = iconViewX;
     CGFloat DetaillabelY = CGRectGetMaxY(_iconFrame) + Padding;
-    CGSize detaillabelSize = [self sizeWithString:_HomeCell.detail fontSize:DetailFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
+    CGSize detaillabelSize = [self sizeWithString:_HomeCell.detail fontSize:kWBCellTextFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
     
     CGFloat DetaillabelW = detaillabelSize.width;
     CGFloat DetaillabelH = detaillabelSize.height;
@@ -147,7 +147,7 @@
         
         CGFloat retweetLabelX = Padding;
         CGFloat retweetLabely = Padding;
-        CGSize retweetLabelSize = [self sizeWithString:_HomeCell.retweetDetail fontSize:DetailFont MaxSize:CGSizeMake(MAX_WIDTH - 2*Padding, 0)];
+        CGSize retweetLabelSize = [self sizeWithString:_HomeCell.retweetDetail fontSize:kWBCellTextFontRetweet MaxSize:CGSizeMake(MAX_WIDTH - 2*Padding, 0)];
         
         CGFloat retweetLabelW = retweetLabelSize.width;
         CGFloat retweetlabelH = retweetLabelSize.height;
@@ -155,7 +155,7 @@
         _retweetDetailFrame = CGRectMake(retweetLabelX, retweetLabely, retweetLabelW, retweetlabelH);
         
         
-        _retweetViewFrame = CGRectMake(retweetViewX, retweetViewY, MAX_WIDTH - Padding - Padding/5, retweetlabelH+Padding);
+        _retweetViewFrame = CGRectMake(0, retweetViewY, MAX_WIDTH, retweetlabelH+Padding);
         
         
         
@@ -211,7 +211,7 @@
             _retweetPictureFrame = CGRectMake(retweetPicViewX, retweetPicViewY,MAX_WIDTH - Padding - Padding/5, retweetpicViewH); // 总界面
             
             
-            _retweetViewFrame = CGRectMake(retweetViewX, retweetViewY, MAX_WIDTH - Padding- Padding/5, retweetlabelH +2*Padding + retweetpicViewH);
+            _retweetViewFrame = CGRectMake(0, retweetViewY, MAX_WIDTH, retweetlabelH +2*Padding + retweetpicViewH);
             
             _cellHeight = CGRectGetMaxY(_retweetViewFrame) + Padding;
 

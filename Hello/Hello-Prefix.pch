@@ -17,6 +17,7 @@
 
 #import "LoggerClient.h"
 #import "FileLogC.h"
+#import "UIColor+FlatUI.h"
 
 #ifdef __DC_LOG_FILE__
 #define DC_LOG_FILE DCWriteLog
@@ -27,14 +28,43 @@
 #define NSLogF(...) LogMessageF(__FILE__, __LINE__, __FUNCTION__, NULL, 0,  __VA_ARGS__)
 #define NSLogImage(width, height, Data) LogImageData(NULL, 0, width, height, Data)
 
+#define UIColorHex(_hex_)   [UIColor colorFromHexCode:_hex_]
+
 
 #define  MAX_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
 #define  MAX_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
-#define SourceFont [UIFont systemFontOfSize:12]
-#define NameFont [UIFont fontWithName:@"TimesNewRomanPS-BoldMT" size:16]
-#define DescriptFont [UIFont systemFontOfSize:15]
-#define DetailFont [UIFont fontWithName:@"TimesNewRomanPSMT" size:18]
+
+//字体
+#define kWBCellNameFont         [UIFont systemFontOfSize:16]    // 名字字体大小
+#define kWBCellSourceFont       [UIFont systemFontOfSize:12]    // 来源字体大小
+#define kWBCellTextFont         [UIFont systemFontOfSize:17]  // 文本字体大小
+#define kWBCellTextFontRetweet  [UIFont systemFontOfSize:16] // 转发字体大小
+#define kWBCellCardTitleFont    [UIFont systemFontOfSize:16]    // 卡片标题文本字体大小
+#define kWBCellCardDescFont     [UIFont systemFontOfSize:12]   // 卡片描述文本字体大小
+#define kWBCellTitlebarFont     [UIFont systemFontOfSize:14]   // 标题栏字体大小
+#define kWBCellToolbarFont      [UIFont systemFontOfSize:14]   // 工具栏字体大小
+
+//颜色
+
+#define kWBCellNameNormalColor UIColorHex(@"333333") // 名字颜色
+#define kWBCellNameOrangeColor UIColorHex(@"f26220") // 橙名颜色 (VIP)
+#define kWBCellTimeNormalColor UIColorHex(@"828282") // 时间颜色
+#define kWBCellTimeOrangeColor UIColorHex(@"f28824") // 橙色时间 (最新刷出)
+
+#define kWBCellTextNormalColor UIColorHex(@"333333") // 一般文本色
+#define kWBCellTextSubTitleColor UIColorHex(@"5d5d5d") // 次要文本色
+#define kWBCellTextHighlightColor UIColorHex(@"527ead") // Link 文本色
+#define kWBCellTextHighlightBackgroundColor UIColorHex(@"bfdffe") // Link 点击背景色
+#define kWBCellToolbarTitleColor UIColorHex(@"929292") // 工具栏文本色
+#define kWBCellToolbarTitleHighlightColor UIColorHex(@"df422d") // 工具栏文本高亮色
+
+
+#define kWBCellBackgroundColor UIColorHex(@"f2f2f2")    // Cell背景灰色
+#define kWBCellHighlightColor UIColorHex(@"f0f0f0")     // Cell高亮时灰色
+#define kWBCellInnerViewColor UIColorHex(@"f7f7f7")   // Cell内部卡片灰色
+#define kWBCellInnerViewHighlightColor  UIColorHex(@"f0f0f0") // Cell内部卡片高亮时灰色
+#define kWBCellLineColor [UIColor colorWithWhite:0.000 alpha:0.09] //线条颜色
 
 
 #define HighLightTextColor [UIColor colorWithRed:92/255.0 green:140/255.0 blue:193/255.0 alpha:1.0]

@@ -29,6 +29,10 @@
         _iconView = [[AsynImageView alloc] init];
         _iconView.placeholderImage = [UIImage imageNamed:@"cute_boy_1.png"];
         _iconView.userInteractionEnabled = YES;
+        _iconView.contentMode = UIViewContentModeScaleAspectFill;
+        _iconView.layer.cornerRadius = ICON_HEIGH/2;
+        _iconView.layer.borderWidth = 1.0/[UIScreen mainScreen].scale;
+        _iconView.layer.masksToBounds = YES;
         [self.contentView addSubview:_iconView];
         UITapGestureRecognizer *tapRecIcon = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(TouchUserIcon:)];
         [_iconView addGestureRecognizer:tapRecIcon];
@@ -37,7 +41,8 @@
         
         //name
         _nameLabel = [[UILabel alloc] init];
-        _nameLabel.font = NameFont;
+        _nameLabel.font = kWBCellNameFont;
+        _nameLabel.textColor = kWBCellNameNormalColor;
         _nameLabel.userInteractionEnabled = YES;
         [self.contentView addSubview:_nameLabel];
         
@@ -54,15 +59,16 @@
         
         //timesource
         _timeSourceLabel = [[UILabel alloc] init];
-        _timeSourceLabel.font = SourceFont;
-        _timeSourceLabel.textColor = [UIColor orangeColor];
+        _timeSourceLabel.font = kWBCellSourceFont;
+        _timeSourceLabel.textColor = kWBCellTimeNormalColor;
         [self.contentView addSubview:_timeSourceLabel];
         
         
         //detail
         _detailLabel = [[PPLabel alloc] init];
         _detailLabel.delegate = self;
-        _detailLabel.font = DetailFont;
+        _detailLabel.font = kWBCellTextFont;
+        _detailLabel.textColor = kWBCellTextNormalColor;
         _detailLabel.numberOfLines = 0;
         [self.contentView addSubview:_detailLabel];
         
@@ -82,15 +88,14 @@
         //
         _retweetView = [[UIView alloc] init];
         _retweetView.userInteractionEnabled = YES;
-        _retweetView.backgroundColor = [UIColor colorWithWhite:0.94 alpha:1];
-        _retweetView.layer.borderWidth = 0.5;
-        _retweetView.layer.borderColor = [[UIColor grayColor] CGColor];
+        _retweetView.backgroundColor = kWBCellInnerViewColor;
         [self.contentView addSubview:_retweetView];
         
         
         _retweetLabel = [[PPLabel alloc] init];
         _retweetLabel.delegate = self;
-        _retweetLabel.font = DetailFont;
+        _retweetLabel.font = kWBCellTextFontRetweet;
+        _retweetLabel.textColor = kWBCellTextSubTitleColor;
         _retweetLabel.numberOfLines = 0;
         [_retweetView addSubview:_retweetLabel];
         
@@ -363,7 +368,7 @@
             NSRange matchRange = [match range];
             
             if ([self isIndex:index inRange:matchRange]) {
-                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:matchRange];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:kWBCellTextHighlightBackgroundColor range:matchRange];
             }
             else {
                 [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:matchRange];
@@ -376,10 +381,10 @@
             NSRange matchRange = [match range];
             
             if ([self isIndex:index inRange:matchRange]) {
-                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:matchRange];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:kWBCellTextHighlightBackgroundColor range:matchRange];
             }
             else {
-                [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:matchRange];
+                [attributedString addAttribute:NSForegroundColorAttributeName value:kWBCellTextHighlightColor range:matchRange];
             }
         }
     }
