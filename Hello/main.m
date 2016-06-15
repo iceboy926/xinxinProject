@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
-#import "LoggerClient.h"
+//#import "LoggerClient.h"
 
 
 
@@ -18,8 +18,8 @@ int main(int argc, char * argv[])
     startTime = CFAbsoluteTimeGetCurrent();
     
     @autoreleasepool {
-        LoggerSetViewerHost(NULL, NULL, 0);
-        LoggerSetOptions(NULL, kLoggerOption_BufferLogsUntilConnection|kLoggerOption_UseSSL|kLoggerOption_CaptureSystemConsole|kLoggerOption_BrowseBonjour);
+        //LoggerSetViewerHost(NULL, NULL, 0);
+        //LoggerSetOptions(NULL, kLoggerOption_BufferLogsUntilConnection|kLoggerOption_UseSSL|kLoggerOption_CaptureSystemConsole|kLoggerOption_BrowseBonjour);
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

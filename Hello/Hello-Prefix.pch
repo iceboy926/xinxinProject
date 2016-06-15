@@ -35,6 +35,13 @@
 #define  MAX_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
 
+//AsyImage TAG
+
+#define  ICON_IMAGE_TAG        1000
+#define  DETAIL_IMAGE_TAG      2000
+#define  RETWEET_IMAGE_TAG     3000
+
+
 //字体
 #define kWBCellNameFont         [UIFont systemFontOfSize:16]    // 名字字体大小
 #define kWBCellSourceFont       [UIFont systemFontOfSize:12]    // 来源字体大小

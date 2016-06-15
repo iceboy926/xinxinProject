@@ -130,6 +130,13 @@
 
 - (void)RequestHanlderRefresh:(WBHttpRequest *)httpRequest :(id)result : (NSError *)error
 {
+    
+    if(error)
+    {
+        NSLog(@"WBHttpRequest error msg: %@", error);
+        return ;
+    }
+    
     NSDictionary *UserDic = [[result JSONData] objectFromJSONData];
     
     

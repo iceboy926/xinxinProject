@@ -10,6 +10,18 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UIImage+ResizeImage.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "UIImage+ImageSize.h"
+
+
+@interface AsynImageView()
+{
+    progressDownLoadBlock _progressBlock;
+    
+    NSInteger     totalImageSize;
+
+}
+
+@end
 
 @implementation AsynImageView
 
@@ -19,6 +31,8 @@
 @synthesize fileName = _fileName;
 
 @synthesize imageFilePath = _imageFilePath;
+
+@synthesize completion = _completion;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,6 +47,10 @@
         memCacheDic = [[NSMutableDictionary alloc] init];
         
        // diskCachePathStr = [[NSMutableString alloc] init];
+        
+        _progressBlock = NULL;
+        
+        totalImageSize = 0;
         
     }
     return self;
@@ -125,9 +143,14 @@
         
         _imageURL = imageURL;
     
-        self.image = imageTemp;//[UIImage resizeImageView:imageTemp];
+        self.image = imageTemp;
         
-        //NSLogImage(self.image.size.width, self.image.size.height, loadData);
+        if(self.tag == DETAIL_IMAGE_TAG || self.tag == RETWEET_IMAGE_TAG)
+        {
+            if(_completion)
+                _completion(self.image);
+        }
+        
         
         return;
     }
@@ -182,6 +205,12 @@
                 
                 self.image = tempImage;
                 
+                if(self.tag == DETAIL_IMAGE_TAG || self.tag == RETWEET_IMAGE_TAG)
+                {
+                    if(_completion)
+                        _completion(self.image);
+                }
+                
             }
             else //文件不存在,则执行从网络下载图片
             {
@@ -207,6 +236,18 @@
         }
         
     }
+}
+
+-(void)showImage:(NSString *)imageURL progress:(progressDownLoadBlock) progress completion:(showAsynImageCompletionBlock)completion
+{
+    
+    _progressBlock = [progress copy];
+    
+    _completion = [completion copy];
+    
+    _imageURL = imageURL;
+    
+    [self loadImage];
     
 }
 
@@ -276,9 +317,26 @@
 {
     if(loadData==nil)
     {
-        loadData=[[NSMutableData alloc]initWithCapacity:2048];
+        loadData=[[NSMutableData alloc]initWithCapacity:2048*10];
     }
     [loadData appendData:data];
+    
+    if(_progressBlock)
+    {
+        NSInteger dataLen = [data length];
+        NSInteger loaddataLen = [loadData length];
+        
+        
+        
+        
+        CGFloat percent = 1 - (CGFloat)dataLen/loaddataLen;
+        
+        
+        NSLog(@"datalen = %d loaddatalen =%d percent = %lf", dataLen, loaddataLen, percent);
+        
+        _progressBlock(percent);
+    }
+    
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -304,6 +362,19 @@
     app.networkActivityIndicatorVisible = NO;
     
     self.image = [UIImage imageWithData:loadData];
+    
+    if(self.tag == DETAIL_IMAGE_TAG || self.tag == RETWEET_IMAGE_TAG)
+    {
+        if(_progressBlock)
+        {
+            _progressBlock(1.0);
+        }
+        
+        if(_completion)
+            _completion(self.image);
+        
+
+    }
     
     NSData *imageZipData = UIImageJPEGRepresentation(self.image, 0.5);
     

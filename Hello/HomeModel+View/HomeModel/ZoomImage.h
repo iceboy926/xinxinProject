@@ -17,7 +17,7 @@
 
 +(void)ShowImage:(UIImageView *)avatarImage;
 
--(void)ShowavatarImage:(UIImageView *)avatarImage;
++(void)ShowImageWithUrl:(NSString *)avatarImageUrl;
 
 
 +(void)HideImage:(UITapGestureRecognizer *)tap;

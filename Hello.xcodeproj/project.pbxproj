@@ -231,6 +231,8 @@
 		109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */; };
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
 		10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */; };
+		10B9571D1D1132A00024D640 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9571C1D1132A00024D640 /* SDWaitingView.m */; };
+		10B957231D1146120024D640 /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957221D1146120024D640 /* UIImage+ImageSize.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
 		823454F51B832B17002A36D6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F41B832B17002A36D6 /* libicucore.dylib */; };
@@ -616,6 +618,11 @@
 		109B6AE51CF7EE1F0077FAFA /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weixin2.png; path = Hello/image/weixin2.png; sourceTree = "<group>"; };
 		10B957171D0FAEA90024D640 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatUI.h"; path = "Library/ThirdLib/UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatUI.m"; path = "Library/ThirdLib/UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		10B9571A1D1132A00024D640 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDPhotoBrowserConfig.h; path = Library/ZoomScrollImage/SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		10B9571B1D1132A00024D640 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDWaitingView.h; path = Library/ZoomScrollImage/SDWaitingView.h; sourceTree = "<group>"; };
+		10B9571C1D1132A00024D640 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDWaitingView.m; path = Library/ZoomScrollImage/SDWaitingView.m; sourceTree = "<group>"; };
+		10B957211D1146120024D640 /* UIImage+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageSize.h"; sourceTree = "<group>"; };
+		10B957221D1146120024D640 /* UIImage+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageSize.m"; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -765,6 +772,9 @@
 		10D1067D1CFBED54006E14E3 /* ZoomScrollImage */ = {
 			isa = PBXGroup;
 			children = (
+				10B9571A1D1132A00024D640 /* SDPhotoBrowserConfig.h */,
+				10B9571B1D1132A00024D640 /* SDWaitingView.h */,
+				10B9571C1D1132A00024D640 /* SDWaitingView.m */,
 				105542F91CFEE28D0017D42B /* ScaleImageView.h */,
 				105542FA1CFEE28D0017D42B /* ScaleImageView.m */,
 				10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */,
@@ -1268,6 +1278,8 @@
 				109B6A3E1CF7EA670077FAFA /* UIImage+ResizeImage.m */,
 				109B6A3F1CF7EA670077FAFA /* ZoomImage.h */,
 				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
+				10B957211D1146120024D640 /* UIImage+ImageSize.h */,
+				10B957221D1146120024D640 /* UIImage+ImageSize.m */,
 			);
 			name = HomeModel;
 			sourceTree = "<group>";
@@ -1711,6 +1723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
+				10B9571D1D1132A00024D640 /* SDWaitingView.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
 				109B6A5D1CF7EB180077FAFA /* HomeUserInfoViewController.m in Sources */,
@@ -1757,6 +1770,7 @@
 				109B69691CF7E3A50077FAFA /* FCXRefreshBaseView.m in Sources */,
 				109B6A7D1CF7EC7A0077FAFA /* FileLogC.m in Sources */,
 				109B6A431CF7EA670077FAFA /* HomeCellModel.m in Sources */,
+				10B957231D1146120024D640 /* UIImage+ImageSize.m in Sources */,
 				106205C01D05477700E10485 /* MASViewConstraint.m in Sources */,
 				109B6A5F1CF7EB180077FAFA /* KCAnnotation.m in Sources */,
 				109B6A721CF7EC0A0077FAFA /* MainPageTabBarController.m in Sources */,

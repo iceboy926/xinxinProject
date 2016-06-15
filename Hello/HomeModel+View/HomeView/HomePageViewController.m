@@ -225,10 +225,10 @@
             for (NSDictionary *picDic in arrayPic)
             {
                 NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
-//                NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"large"];
-//                [array addObject:strout];
+                NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                [array addObject:strout];
                 
-                [array addObject:stringPic];
+                //[array addObject:stringPic];
             }
                     
             cellUser.pictureArray = [array mutableCopy];
@@ -262,10 +262,6 @@
             cellUser.blretweet = NO;
         }
         
-                
-    
-            
-            
             
         HomeCellFrame *cellFrame = [[HomeCellFrame alloc] init];
         [cellFrame setHomeCell:cellUser];
@@ -444,9 +440,10 @@
 {
     HomeUserInfoViewController *homeUserView = [[HomeUserInfoViewController alloc] initWithNibName:@"HomeUserInfoViewController" bundle:nil];
     
-    [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
+    NSString *strout = [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
+    NSString *strout2 = [strout stringByReplacingOccurrencesOfString:@"#" withString:@""];
     
-    homeUserView.strUserName = [UserName copy];
+    homeUserView.strUserName = [strout2 copy];
     
     [self.navigationController pushViewController:homeUserView animated:YES];}
 
@@ -466,41 +463,16 @@
     [ZoomImage ShowImage:UserIcon];
 }
 
--(void)DidTouchPicView:(UIImageView *)PicView
-{
-    [ZoomImage ShowImage:PicView];
-}
-
-
 -(void)DidTouchPicAsyView:(AsynImageView *)asyImageView
 {
     NSString *strimageUrl = asyImageView.imageURL;
     
-    NSRange range = [strimageUrl rangeOfString:@"thumbnail"];
+    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+    
     
     if(range.length > 0)
     {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-            NSString *strLargeImageUrl = [strimageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"large"];
-            
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:strLargeImageUrl]];
-            //AsynImageView *largeImage = [[AsynImageView alloc] init];
-            
-            //[largeImage showImage:strLargeImageUrl];
-            
-            UIImageView *largeimage = [[UIImageView alloc] initWithImage:[UIImage imageWithData:data]];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-            
-                 [ZoomImage ShowImage:largeimage];
-            
-            });
-        
-        });
-
-        
-        
+        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
     }
     
 }

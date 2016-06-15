@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^showAsynImageCompletionBlock)(UIImage *image);
+
+typedef void(^progressDownLoadBlock)(CGFloat percent);
+
 @interface AsynImageView : UIImageView
 {
     NSURLConnection *connection;
@@ -25,7 +29,11 @@
 
 @property (nonatomic) NSString *imageFilePath;
 
+@property (nonatomic, strong) showAsynImageCompletionBlock completion;
+
 
 -(void)showImage:(NSString *)imageURL;
+
+-(void)showImage:(NSString *)imageURL progress:(progressDownLoadBlock) progress completion:(showAsynImageCompletionBlock)completion;
 
 @end

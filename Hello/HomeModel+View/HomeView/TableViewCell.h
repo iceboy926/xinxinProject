@@ -22,18 +22,15 @@
 
 -(void)DidTouchUserIcon:(UIImageView *)UserIcon Index:(NSInteger)UseIndex;
 
--(void)DidTouchPicView:(UIImageView *)PicView;
-
 -(void)DidTouchPicAsyView:(AsynImageView *)asyImageView;
 
 @end
 
 @interface TableViewCell : UITableViewCell <PPLabelDelegate>
 {
-    NSArray *matchsArray;
-    NSArray *matchUserArray;
     
-    NSArray *ArrayList;
+    NSArray *detailArrayList;
+    NSArray *retweetArrayList;
 }
 
 /*

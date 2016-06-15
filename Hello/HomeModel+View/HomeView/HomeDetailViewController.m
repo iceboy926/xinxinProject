@@ -51,12 +51,7 @@
     [self.view addSubview:webView];
     
     webView.delegate = self;
-    
-//    DicUser = [self.DicStatusData objectForKey:@"user"];
-//    
-//    NSMutableString *strUrl = [NSMutableString stringWithString:@"http://weibo.com/"];
-//    
-//    [strUrl appendString:[DicUser objectForKey:@"profile_url"]];
+
     
 
     

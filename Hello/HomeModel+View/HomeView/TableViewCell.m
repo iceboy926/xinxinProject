@@ -11,7 +11,9 @@
 #import "HomeCellModel.h"
 #import "AsynImageView.h"
 #import "UIImage+ResizeImage.h"
-//#import <SDWebImage/UIImageView+WebCache.h>
+
+#define  DETAILLABLE_TAG  1000
+#define  RETWEETLABLE_TAG 2000
 
 
 @implementation TableViewCell
@@ -70,6 +72,7 @@
         _detailLabel.font = kWBCellTextFont;
         _detailLabel.textColor = kWBCellTextNormalColor;
         _detailLabel.numberOfLines = 0;
+        _detailLabel.tag = DETAILLABLE_TAG;
         [self.contentView addSubview:_detailLabel];
         
         
@@ -97,11 +100,14 @@
         _retweetLabel.font = kWBCellTextFontRetweet;
         _retweetLabel.textColor = kWBCellTextSubTitleColor;
         _retweetLabel.numberOfLines = 0;
+        _retweetLabel.tag = RETWEETLABLE_TAG;
         [_retweetView addSubview:_retweetLabel];
+        
         
         _retweetPicView = [[UIView alloc] init];
         _retweetPicView.userInteractionEnabled = YES;
         [_retweetView addSubview:_retweetPicView];
+
         
         _retweetPicArray = [[NSMutableArray alloc] init];
         
@@ -135,21 +141,20 @@
 {
     HomeCellModel *CellModel = _CellFrame.HomeCell;
     
-    //_iconView.imageURL = CellModel.icon;
-    
     [_iconView showImage:CellModel.icon];
+    [_iconView setTag:ICON_IMAGE_TAG];
     
     _nameLabel.text = CellModel.Name;
     
     if(CellModel.blVip)
     {
         _vipView.hidden = NO;
-        _nameLabel.textColor = [UIColor redColor];
+        _nameLabel.textColor = kWBCellNameOrangeColor;
     }
     else
     {
         _vipView.hidden = YES;
-        _nameLabel.textColor = [UIColor blackColor];
+        _nameLabel.textColor = kWBCellNameNormalColor;
     }
     
     _timeSourceLabel.text = CellModel.timesource;
@@ -159,19 +164,23 @@
     
     
     
+    
     NSError *error = NULL;
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
     
-    matchsArray = [detector matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
+    NSArray *matchsArray = [detector matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
     
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(@[a-zA-Z0-9._\u4E00-\u9FA5]+)|#([a-zA-Z0-9._\u4E00-\u9FA5]*)#" options:0 error:nil];
     
-    matchUserArray = [regex matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
+    NSArray *matchUserArray = [regex matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
     
-    ArrayList = [matchsArray arrayByAddingObjectsFromArray:matchUserArray];
+    detailArrayList = [matchsArray arrayByAddingObjectsFromArray:matchUserArray];
     
-    [self highlightLinksWithIndex:NSNotFound];
+    
+    
+    
+    [self highlightLinksWithIndex:NSNotFound :_detailLabel];
 
     
     [_picArray removeAllObjects];
@@ -188,11 +197,39 @@
             AsynImageView *asyImage = [[AsynImageView alloc] init];
             
             asyImage.placeholderImage = [UIImage imageNamed:@"pickView"];
-            
-            //asyImage.imageURL = picrul;
             [asyImage showImage:picrul];
+            [asyImage setTag:DETAIL_IMAGE_TAG];
             
             asyImage.userInteractionEnabled = YES;
+            
+            __weak AsynImageView *blockasyImage = asyImage;
+            
+            asyImage.completion = ^(UIImage *image){
+            
+                CGFloat  height = image.size.height;
+                CGFloat  width = image.size.width;
+                
+                NSLog(@"height is %lf width is %lf", height, width);
+                
+                CGFloat scale = (height/width) / (IMAGE_HEIGHT/IMAGE_WIDTH);
+                
+                NSLog(@"scale is %lf", scale);
+                
+                if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
+                    blockasyImage.contentMode = UIViewContentModeScaleAspectFill;
+                    blockasyImage.layer.contentsRect = CGRectMake(0, 0, 1, 1);
+                } else { // 高图只保留顶部
+                    blockasyImage.contentMode = UIViewContentModeScaleToFill;
+                    blockasyImage.layer.contentsRect = CGRectMake(0, 0, 1, (float)width / height);
+                }
+                
+                blockasyImage.image = image;
+                blockasyImage.clipsToBounds = YES;
+            };
+            
+           
+
+            
             
             [_pickView addSubview:asyImage];
             
@@ -221,6 +258,19 @@
         
         _retweetLabel.text = CellModel.retweetDetail;
         
+        NSArray *matchsArray = [detector matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
+        
+        
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(@[a-zA-Z0-9._\u4E00-\u9FA5]+)|#([a-zA-Z0-9._\u4E00-\u9FA5]*)#" options:0 error:nil];
+        
+        NSArray *matchUserArray = [regex matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
+        
+        retweetArrayList = [matchsArray arrayByAddingObjectsFromArray:matchUserArray];
+        
+
+        [self highlightLinksWithIndex:NSNotFound :_retweetLabel];
+        
+        
         if([CellModel.retweetPictureArray count] > 0)
         {
             
@@ -230,12 +280,40 @@
                 AsynImageView *asyImage = [[AsynImageView alloc] init];
                 
                 asyImage.placeholderImage = [UIImage imageNamed:@"pickView"];
-                
-                //asyImage.imageURL = picrul;
+            
+                [asyImage setTag:RETWEET_IMAGE_TAG];
                 
                 [asyImage showImage:picrul];
                 
                 asyImage.userInteractionEnabled = YES;
+                
+                __weak AsynImageView *weekimage = asyImage;
+                
+                asyImage.completion = ^(UIImage *image){
+                
+                    CGFloat  height = image.size.height;
+                    CGFloat  width = image.size.width;
+                    
+                    NSLog(@"height is %lf width is %lf", height, width);
+                    
+                    CGFloat scale = (height/width) / (IMAGE_HEIGHT/IMAGE_WIDTH);
+                    
+                    NSLog(@"scale is %lf", scale);
+                    
+                    if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
+                        weekimage.contentMode = UIViewContentModeScaleAspectFill;
+                        weekimage.layer.contentsRect = CGRectMake(0, 0, 1, 1);
+                    } else { // 高图只保留顶部
+                        weekimage.contentMode = UIViewContentModeScaleToFill;
+                        weekimage.layer.contentsRect = CGRectMake(0, 0, 1, (float)width / height);
+                    }
+                    
+                    weekimage.image = image;
+                    weekimage.clipsToBounds = YES;
+
+                
+                };
+                
                 
                 [_retweetPicView addSubview:asyImage];
                 
@@ -313,17 +391,30 @@
 
 - (void)label:(PPLabel*)label didBeginTouch:(UITouch*)touch onCharacterAtIndex:(CFIndex)charIndex
 {
-    [self highlightLinksWithIndex:charIndex];
+    [self highlightLinksWithIndex:charIndex :label];
 }
 - (void)label:(PPLabel*)label didMoveTouch:(UITouch*)touch onCharacterAtIndex:(CFIndex)charIndex
 {
-    [self highlightLinksWithIndex:charIndex];
+    [self highlightLinksWithIndex:charIndex :label];
 }
 - (void)label:(PPLabel*)label didEndTouch:(UITouch*)touch onCharacterAtIndex:(CFIndex)charIndex
 {
-    [self highlightLinksWithIndex:NSNotFound];
+    [self highlightLinksWithIndex:NSNotFound :label];
     
-    for (NSTextCheckingResult *match in ArrayList) {
+    NSArray *arrylist = nil;
+    
+    if(label.tag == DETAILLABLE_TAG)
+    {
+        arrylist = detailArrayList;
+    }
+    else if(label.tag == RETWEETLABLE_TAG)
+    {
+        arrylist = retweetArrayList;
+    }
+    
+    
+    
+    for (NSTextCheckingResult *match in arrylist) {
         
         if ([match resultType] == NSTextCheckingTypeLink) {
             
@@ -341,7 +432,7 @@
             
             if ([self isIndex:charIndex inRange:matchRange]) {
                 
-                [self.delegate DidPushWebView:[_detailLabel.text substringWithRange:matchRange]];
+                [self.delegate DidPushWebView:[label.text substringWithRange:matchRange]];
                 break;
             }
 
@@ -350,18 +441,29 @@
 }
 - (void)label:(PPLabel*)label didCancelTouch:(UITouch*)touch
 {
-    [self highlightLinksWithIndex:NSNotFound];
+    [self highlightLinksWithIndex:NSNotFound :label];
 }
 
 - (BOOL)isIndex:(CFIndex)index inRange:(NSRange)range {
     return index > range.location && index < range.location+range.length;
 }
 
-- (void)highlightLinksWithIndex:(CFIndex)index {
+- (void)highlightLinksWithIndex:(CFIndex)index :(PPLabel*)label{
     
-    NSMutableAttributedString* attributedString = [_detailLabel.attributedText mutableCopy];
+    NSMutableAttributedString* attributedString = [label.attributedText mutableCopy];
+    NSArray *arraylist = nil;
     
-    for (NSTextCheckingResult *match in ArrayList) {
+    if(label.tag == DETAILLABLE_TAG)
+    {
+        arraylist = detailArrayList;
+    }
+    else
+    {
+        arraylist = retweetArrayList;
+    }
+    
+    for (NSTextCheckingResult *match in arraylist)
+    {
         
         if ([match resultType] == NSTextCheckingTypeLink) {
             
@@ -389,7 +491,7 @@
         }
     }
     
-    _detailLabel.attributedText = attributedString;
+    label.attributedText = attributedString;
 
     
 }
@@ -416,10 +518,6 @@
 - (void)TouchPicView:(UITapGestureRecognizer *)tap
 {
     AsynImageView *picView = (AsynImageView *)[tap view];
-//    if([_delegate respondsToSelector:@selector(DidTouchPicView:)])
-//    {
-//        [_delegate DidTouchPicView:picView];
-//    }
     
     if([_delegate respondsToSelector:@selector(DidTouchPicAsyView:)])
     {
