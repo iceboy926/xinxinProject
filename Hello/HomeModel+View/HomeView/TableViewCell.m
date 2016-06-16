@@ -112,6 +112,13 @@
         _retweetPicArray = [[NSMutableArray alloc] init];
         
         
+        _toolBarView = [[UIView alloc] init];
+        _toolBarView.userInteractionEnabled = YES;
+        
+        [self.contentView addSubview:_toolBarView];
+        
+        
+        
     }
     return self;
 }
@@ -338,9 +345,9 @@
     }
     
     
-    
-    
-    
+    //_toolBarView.layer.borderWidth = 0.1;
+
+    //_toolBarView.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
 -(void)setHomeCellFrame
@@ -385,6 +392,9 @@
             _retweetPicView.frame = _CellFrame.retweetPictureFrame;
         }
     }
+    
+    
+    _toolBarView.frame = _CellFrame.toolBarViewFrame;
     
 }
 

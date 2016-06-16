@@ -74,18 +74,26 @@
 
 
 /*
- 转发weibo
+ 转发
  */
 
 @property (nonatomic, strong)UIView *retweetView;
 @property (nonatomic, strong)PPLabel *retweetLabel;
 @property (nonatomic, strong)UIView *retweetPicView;
-
 @property (nonatomic, strong)NSMutableArray *retweetPicArray;
 
 
-@property (nonatomic, strong)HomeCellFrame *CellFrame;
+/*
+ 评论框
+ */
 
+@property (nonatomic, strong)UIView *toolBarView;
+
+
+
+
+
+@property (nonatomic, strong)HomeCellFrame *CellFrame;
 
 @property (nonatomic) NSInteger  Index;
 
