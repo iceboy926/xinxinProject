@@ -15,4 +15,8 @@
 +(NSString*)replaceUnicode:(NSString *)unicodeStr;
 
 +(NSDate *)dateFromString:(NSString *)string;
+
+-(NSString *)URLEncodeString;
+
+-(NSString *)URLDecodeString;
 @end

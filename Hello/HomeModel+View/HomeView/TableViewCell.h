@@ -14,9 +14,9 @@
 
 @protocol TableViewDelegate <NSObject>
 
--(void)DidPushWebView:(NSURL *)Url Index:(NSInteger)UserIndex;
+-(void)DidPushWebView:(NSURL *)Url Index:(NSInteger)UserIndex viewTitle:(NSString *)title;
 
--(void)DidPushWebView:(NSString *)UserName;
+-(void)DidPushLinkUserNameView:(NSString *)UserName;
 
 -(void)DidTouchNamelabel:(NSString *)Screenname;
 
@@ -29,8 +29,8 @@
 @interface TableViewCell : UITableViewCell <PPLabelDelegate>
 {
     
-    NSArray *detailArrayList;
-    NSArray *retweetArrayList;
+    NSArray *detailLinkArrayList;
+    NSArray *retweetLinkArrayList;
 }
 
 /*

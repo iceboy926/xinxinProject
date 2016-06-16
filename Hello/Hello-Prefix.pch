@@ -96,6 +96,12 @@
 #define SinaWeiBo_URL_NearBy_UserList  @"https://api.weibo.com/2/place/nearby_users/list.json"
 #define SinaWeiBo_URL_NearBy_User       @"https://api.weibo.com/2/place/nearby/users.json"
 
+#define SinaWeiBo_URL                   @"http://weibo.com/"
+
+#define SinaWeiBo_URL_Topic             @"http://m.weibo.cn/k/"
+
+#define SinaWeiBo_URL_Name              @"http://m.weibo.cn/n/"
+
 
 #ifdef _DEBUG
     #ifdef DEBUG_PRINT_FILENAME

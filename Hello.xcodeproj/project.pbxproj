@@ -117,8 +117,6 @@
 		109B6A5A1CF7EB180077FAFA /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A4A1CF7EB180077FAFA /* HomeDetailViewController.xib */; };
 		109B6A5B1CF7EB180077FAFA /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */; };
 		109B6A5C1CF7EB180077FAFA /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */; };
-		109B6A5D1CF7EB180077FAFA /* HomeUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A4F1CF7EB180077FAFA /* HomeUserInfoViewController.m */; };
-		109B6A5E1CF7EB180077FAFA /* HomeUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A501CF7EB180077FAFA /* HomeUserInfoViewController.xib */; };
 		109B6A5F1CF7EB180077FAFA /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A521CF7EB180077FAFA /* KCAnnotation.m */; };
 		109B6A601CF7EB180077FAFA /* MapLocatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A541CF7EB180077FAFA /* MapLocatView.m */; };
 		109B6A611CF7EB180077FAFA /* MapLocatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A551CF7EB180077FAFA /* MapLocatView.xib */; };
@@ -495,9 +493,6 @@
 		109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = "HomeModel+View/HomeView/HomePageViewController.h"; sourceTree = "<group>"; };
 		109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = "HomeModel+View/HomeView/HomePageViewController.m"; sourceTree = "<group>"; };
 		109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = "HomeModel+View/HomeView/HomePageViewController.xib"; sourceTree = "<group>"; };
-		109B6A4E1CF7EB180077FAFA /* HomeUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeUserInfoViewController.h; path = "HomeModel+View/HomeView/HomeUserInfoViewController.h"; sourceTree = "<group>"; };
-		109B6A4F1CF7EB180077FAFA /* HomeUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeUserInfoViewController.m; path = "HomeModel+View/HomeView/HomeUserInfoViewController.m"; sourceTree = "<group>"; };
-		109B6A501CF7EB180077FAFA /* HomeUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeUserInfoViewController.xib; path = "HomeModel+View/HomeView/HomeUserInfoViewController.xib"; sourceTree = "<group>"; };
 		109B6A511CF7EB180077FAFA /* KCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAnnotation.h; path = "HomeModel+View/HomeView/KCAnnotation.h"; sourceTree = "<group>"; };
 		109B6A521CF7EB180077FAFA /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAnnotation.m; path = "HomeModel+View/HomeView/KCAnnotation.m"; sourceTree = "<group>"; };
 		109B6A531CF7EB180077FAFA /* MapLocatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLocatView.h; path = "HomeModel+View/HomeView/MapLocatView.h"; sourceTree = "<group>"; };
@@ -646,7 +641,7 @@
 		829D15871B905D3900988E90 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		82B2CA1C1B65DE9500CDDA3D /* libPods-FMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FMDB.a"; path = "Pods/../build/Debug-iphoneos/libPods-FMDB.a"; sourceTree = "<group>"; };
 		82B2CA1E1B65DF3A00CDDA3D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		82B612C81B2FBC61007E6D42 /* 潮信.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "潮信.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82B612C81B2FBC61007E6D42 /* chaoxin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaoxin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B612CB1B2FBC61007E6D42 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82B612CD1B2FBC61007E6D42 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		82B612CF1B2FBC61007E6D42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1010,7 +1005,7 @@
 		82B612C91B2FBC61007E6D42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82B612C81B2FBC61007E6D42 /* 潮信.app */,
+				82B612C81B2FBC61007E6D42 /* chaoxin.app */,
 				82B612E91B2FBC61007E6D42 /* HelloTests.xctest */,
 			);
 			name = Products;
@@ -1246,9 +1241,6 @@
 				109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */,
 				109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */,
 				109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */,
-				109B6A4E1CF7EB180077FAFA /* HomeUserInfoViewController.h */,
-				109B6A4F1CF7EB180077FAFA /* HomeUserInfoViewController.m */,
-				109B6A501CF7EB180077FAFA /* HomeUserInfoViewController.xib */,
 				109B6A511CF7EB180077FAFA /* KCAnnotation.h */,
 				109B6A521CF7EB180077FAFA /* KCAnnotation.m */,
 				109B6A531CF7EB180077FAFA /* MapLocatView.h */,
@@ -1466,7 +1458,7 @@
 			);
 			name = Hello;
 			productName = Hello;
-			productReference = 82B612C81B2FBC61007E6D42 /* 潮信.app */;
+			productReference = 82B612C81B2FBC61007E6D42 /* chaoxin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		82B612E81B2FBC61007E6D42 /* HelloTests */ = {
@@ -1660,7 +1652,6 @@
 				109B6AFE1CF7EE1F0077FAFA /* addmore_16.png in Resources */,
 				109B6B0A1CF7EE1F0077FAFA /* card_icon_addattention@2x.png in Resources */,
 				109B6B471CF7EE1F0077FAFA /* vip.png in Resources */,
-				109B6A5E1CF7EB180077FAFA /* HomeUserInfoViewController.xib in Resources */,
 				109B6B271CF7EE1F0077FAFA /* cute_boy_14.png in Resources */,
 				109B6B231CF7EE1F0077FAFA /* cute_boy_10.png in Resources */,
 				109B6A221CF7E8E30077FAFA /* FindViewController.xib in Resources */,
@@ -1726,7 +1717,6 @@
 				10B9571D1D1132A00024D640 /* SDWaitingView.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
-				109B6A5D1CF7EB180077FAFA /* HomeUserInfoViewController.m in Sources */,
 				109B6A001CF7E8760077FAFA /* QRResultViewController.m in Sources */,
 				109B69D11CF7E67A0077FAFA /* LineView.m in Sources */,
 				109B69351CF7E2840077FAFA /* MLLabel+Size.m in Sources */,
@@ -1989,7 +1979,7 @@
 					"$(PROJECT_DIR)/Hello/Library/XMPPFramework/Vendor/libidn",
 				);
 				OTHER_LDFLAGS = "-all_load ";
-				PRODUCT_NAME = "潮信";
+				PRODUCT_NAME = chaoxin;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2037,7 +2027,7 @@
 					"$(PROJECT_DIR)/Hello/Library/XMPPFramework/Vendor/libidn",
 				);
 				OTHER_LDFLAGS = "-all_load ";
-				PRODUCT_NAME = "潮信";
+				PRODUCT_NAME = chaoxin;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";

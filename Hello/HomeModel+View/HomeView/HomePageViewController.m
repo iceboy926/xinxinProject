@@ -24,17 +24,12 @@
 #import "ZoomImage.h"
 #import "JSHpple.h"
 #import "AsynImageView.h"
-#import "HomeUserInfoViewController.h"
-#import "MBProgressHUD.h"
-//#import <libkern>
 
 @interface HomePageViewController () <UITableViewDelegate, UITableViewDataSource, WBHttpRequestDelegate, TableViewDelegate>
 {
     FCXRefreshHeaderView *headerView;
     FCXRefreshFooterView *footerView;
     NSInteger totalRow;
-    
-    MBProgressHUD *waitView;
 }
 
 @end
@@ -75,30 +70,7 @@
     
     self.view.backgroundColor = kWBCellBackgroundColor;
     
-    //self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
 }
-
--(void)beginWaiting:(NSString *)message
-{
-    waitView = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:waitView];
-    waitView.delegate = self;
-    waitView.labelText = message;
-    waitView.square = NO;
-    [waitView show:YES];
-}
-
--(void)endWaiting
-{
-    [waitView hide:YES afterDelay:.5];
-}
-
-//-(void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//
-//}
 
 -(void)addRefreshView
 {
@@ -165,8 +137,6 @@
 
 -(void)SendRequst
 {
-    
-    
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
 
     
@@ -227,8 +197,6 @@
                 NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
                 NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
                 [array addObject:strout];
-                
-                //[array addObject:stringPic];
             }
                     
             cellUser.pictureArray = [array mutableCopy];
@@ -249,7 +217,6 @@
                     NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
                     NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
                     [array addObject:strout];
-                    //[array addObject:stringPic];
                 }
                 
                 cellUser.retweetPictureArray = [array mutableCopy];
@@ -274,7 +241,7 @@
     
     [self.tableView reloadData];
     [footerView endRefresh];
-    //[headerView endRefresh];
+    [headerView endRefresh];
 
 }
 
@@ -426,36 +393,59 @@
 
 #pragma mark - table View cell delegate
 
--(void)DidPushWebView:(NSURL *)Url Index:(NSInteger)UserIndex
+-(void)DidPushWebView:(NSURL *)Url Index:(NSInteger)UserIndex viewTitle:(NSString *)title
 {
     
     HomeDetailViewController *HomeDetail = [[HomeDetailViewController alloc] initWithNibName:@"HomeDetailViewController" bundle:nil];
     
     [HomeDetail setHttpUrl:Url];
     
+    [HomeDetail setTitleName:title];
+    
     [self.navigationController pushViewController:HomeDetail animated:YES];
 }
 
--(void)DidPushWebView:(NSString *)UserName
+-(void)DidPushLinkUserNameView:(NSString *)UserName
 {
-    HomeUserInfoViewController *homeUserView = [[HomeUserInfoViewController alloc] initWithNibName:@"HomeUserInfoViewController" bundle:nil];
+    HomeDetailViewController *HomeDetail = [[HomeDetailViewController alloc] initWithNibName:@"HomeDetailViewController" bundle:nil];
     
-    NSString *strout = [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
-    NSString *strout2 = [strout stringByReplacingOccurrencesOfString:@"#" withString:@""];
+    if([UserName hasPrefix:@"@"])
+    {
+        HomeDetail.titleName = [UserName stringByReplacingOccurrencesOfString:@"@" withString:@""];
+        
+        NSString *url = [SinaWeiBo_URL_Name stringByAppendingString:[HomeDetail.titleName URLEncodeString]];
+        
+        HomeDetail.httpUrl = [NSURL URLWithString:url];
+        
+        [self.navigationController pushViewController:HomeDetail animated:YES];
+    }
+    else if([UserName hasPrefix:@"#"] && [UserName hasSuffix:@"#"])
+    {
+        HomeDetail.titleName = [UserName stringByReplacingOccurrencesOfString:@"#" withString:@""];
+        
+        NSString *url = [SinaWeiBo_URL_Topic stringByAppendingString:[HomeDetail.titleName URLEncodeString]];
+        
+        HomeDetail.httpUrl = [NSURL URLWithString:url];
+        
+        [self.navigationController pushViewController:HomeDetail animated:YES];
+    }
+
+}
     
-    homeUserView.strUserName = [strout2 copy];
-    
-    [self.navigationController pushViewController:homeUserView animated:YES];}
 
 -(void)DidTouchNamelabel:(NSString *)Screenname
 {
     NSLog(@"did tounamelabel");
     
-    HomeUserInfoViewController *homeUserView = [[HomeUserInfoViewController alloc] initWithNibName:@"HomeUserInfoViewController" bundle:nil];
+    HomeDetailViewController *HomeDetail = [[HomeDetailViewController alloc] initWithNibName:@"HomeDetailViewController" bundle:nil];
     
-    homeUserView.strUserName = [Screenname copy];
+    HomeDetail.titleName = [Screenname copy];
     
-    [self.navigationController pushViewController:homeUserView animated:YES];
+    NSString *url = [SinaWeiBo_URL_Name stringByAppendingString:[HomeDetail.titleName URLEncodeString]];
+    
+    HomeDetail.httpUrl = [NSURL URLWithString:url];
+    
+    [self.navigationController pushViewController:HomeDetail animated:YES];
 }
 
 -(void)DidTouchUserIcon:(UIImageView *)UserIcon Index:(NSInteger)UseIndex

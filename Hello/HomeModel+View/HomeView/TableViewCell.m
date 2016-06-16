@@ -166,20 +166,19 @@
     
     
     NSError *error = NULL;
+    
     NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:&error];
     
-    NSArray *matchsArray = [detector matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
+    NSArray *matchsLinkArray = [detector matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
     
     
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(@[a-zA-Z0-9._\u4E00-\u9FA5]+)|#([a-zA-Z0-9._\u4E00-\u9FA5]*)#" options:0 error:nil];
     
-    NSArray *matchUserArray = [regex matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
+    NSArray *matchNameTopicArray = [regex matchesInString:_detailLabel.text options:0 range:NSMakeRange(0, _detailLabel.text.length)];
     
-    detailArrayList = [matchsArray arrayByAddingObjectsFromArray:matchUserArray];
+    detailLinkArrayList = [matchsLinkArray arrayByAddingObjectsFromArray:matchNameTopicArray];
     
-    
-    
-    
+
     [self highlightLinksWithIndex:NSNotFound :_detailLabel];
 
     
@@ -258,14 +257,14 @@
         
         _retweetLabel.text = CellModel.retweetDetail;
         
-        NSArray *matchsArray = [detector matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
+        NSArray *matchLinkArray = [detector matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
         
         
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(@[a-zA-Z0-9._\u4E00-\u9FA5]+)|#([a-zA-Z0-9._\u4E00-\u9FA5]*)#" options:0 error:nil];
         
-        NSArray *matchUserArray = [regex matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
+        NSArray *matchNameTopicArray = [regex matchesInString:_retweetLabel.text options:0 range:NSMakeRange(0, _retweetLabel.text.length)];
         
-        retweetArrayList = [matchsArray arrayByAddingObjectsFromArray:matchUserArray];
+        retweetLinkArrayList = [matchLinkArray arrayByAddingObjectsFromArray:matchNameTopicArray];
         
 
         [self highlightLinksWithIndex:NSNotFound :_retweetLabel];
@@ -405,11 +404,11 @@
     
     if(label.tag == DETAILLABLE_TAG)
     {
-        arrylist = detailArrayList;
+        arrylist = detailLinkArrayList;
     }
     else if(label.tag == RETWEETLABLE_TAG)
     {
-        arrylist = retweetArrayList;
+        arrylist = retweetLinkArrayList;
     }
     
     
@@ -422,7 +421,7 @@
             
             if ([self isIndex:charIndex inRange:matchRange]) {
                 
-                [self.delegate DidPushWebView:match.URL Index:self.Index];
+                [self.delegate DidPushWebView:match.URL Index:self.Index viewTitle:_nameLabel.text];
                 break;
             }
         }
@@ -432,7 +431,7 @@
             
             if ([self isIndex:charIndex inRange:matchRange]) {
                 
-                [self.delegate DidPushWebView:[label.text substringWithRange:matchRange]];
+                [self.delegate DidPushLinkUserNameView:[label.text substringWithRange:matchRange]];
                 break;
             }
 
@@ -455,11 +454,11 @@
     
     if(label.tag == DETAILLABLE_TAG)
     {
-        arraylist = detailArrayList;
+        arraylist = detailLinkArrayList;
     }
     else
     {
-        arraylist = retweetArrayList;
+        arraylist = retweetLinkArrayList;
     }
     
     for (NSTextCheckingResult *match in arraylist)

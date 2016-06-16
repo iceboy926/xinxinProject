@@ -34,7 +34,10 @@
     
     //self.navigationController.navigationBarHidden = YES;
     
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonSystemItemDone target:self action:@selector(back:)];
+    self.title = _titleName;
+
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(back:)];
     
     self.navigationItem.leftBarButtonItem = backItem;
     
@@ -42,7 +45,7 @@
     
     webView.scalesPageToFit = YES;
     
-    webView.frame = [[UIScreen mainScreen] applicationFrame];
+    webView.frame = [[UIScreen mainScreen] bounds];
     
     webView.backgroundColor = [UIColor clearColor];
     

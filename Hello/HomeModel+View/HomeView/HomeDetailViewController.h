@@ -15,4 +15,6 @@
 
 @property(strong, nonatomic) NSURL *httpUrl;
 
+@property(strong, nonatomic) NSString *titleName;
+
 @end
