@@ -326,9 +326,7 @@
         NSInteger dataLen = [data length];
         NSInteger loaddataLen = [loadData length];
         
-        
-        
-        
+    
         CGFloat percent = 1 - (CGFloat)dataLen/loaddataLen;
         
         

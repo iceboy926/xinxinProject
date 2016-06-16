@@ -247,9 +247,9 @@
                 for (NSDictionary *picDic in arryRetweetPic) {
                     
                     NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
-//                    NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"large"];
-//                    [array addObject:strout];
-                    [array addObject:stringPic];
+                    NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                    [array addObject:strout];
+                    //[array addObject:stringPic];
                 }
                 
                 cellUser.retweetPictureArray = [array mutableCopy];

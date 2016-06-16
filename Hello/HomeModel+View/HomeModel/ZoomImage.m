@@ -90,7 +90,7 @@ static CGRect oldRect;
     UIWindow *windows = [UIApplication sharedApplication].keyWindow;
     UIView *background = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, MAX_HEIGHT)];
     
-    background.backgroundColor = [UIColor grayColor];
+    background.backgroundColor = [UIColor blackColor];
     background.alpha = 0.8;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(HideImage:)];
@@ -132,8 +132,8 @@ static CGRect oldRect;
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:oldRect];
             
         imageView.image = image;
-            
         imageView.tag = 1;
+        
             
         [background addSubview:imageView];
             
