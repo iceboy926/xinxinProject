@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 mit. All rights reserved.
 //
 
-#import "MapLocatView.h"
+#import "MineLocationView.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "KCAnnotation.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 
 #define SYSTEM_NAVIBAR_COLOR [UIColor colorWithRed:0 green:0 blue:0 alpha:1]
 #define ISIOS8 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=8)
@@ -25,7 +25,7 @@
 
 
 
-@interface MapLocatView () <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface MineLocationView () <MKMapViewDelegate, CLLocationManagerDelegate>
 {
     MKMapView *_mapView;
     CLLocationManager *_locationManager;
@@ -33,11 +33,11 @@
 
 @end
 
-@implementation MapLocatView
+@implementation MineLocationView
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
         // Custom initialization
     }
@@ -98,9 +98,9 @@
 
 -(void)InitGUI
 {
-    //CGRect frame = [[UIScreen mainScreen] bounds];
+    CGRect frame = [[UIScreen mainScreen] applicationFrame];
     
-    _mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+    _mapView = [[MKMapView alloc] initWithFrame:frame];
     
     _mapView.delegate = self;
     
@@ -116,6 +116,13 @@
     
     
     _locationManager = [[CLLocationManager alloc] init];
+    
+    
+    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+    
     
     if(![CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized)
     {
@@ -157,8 +164,6 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:strAnnotation];
             
         }
-        
-        
         
         return annotationView;
         

@@ -109,15 +109,11 @@
 		109B6A411CF7EA670077FAFA /* AsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A341CF7EA670077FAFA /* AsynImageView.m */; };
 		109B6A421CF7EA670077FAFA /* HomeCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A361CF7EA670077FAFA /* HomeCellFrame.m */; };
 		109B6A431CF7EA670077FAFA /* HomeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A381CF7EA670077FAFA /* HomeCellModel.m */; };
-		109B6A451CF7EA670077FAFA /* PPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A3C1CF7EA670077FAFA /* PPLabel.m */; };
 		109B6A471CF7EA670077FAFA /* ZoomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A401CF7EA670077FAFA /* ZoomImage.m */; };
 		109B6A591CF7EB180077FAFA /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A491CF7EB180077FAFA /* HomeDetailViewController.m */; };
 		109B6A5A1CF7EB180077FAFA /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A4A1CF7EB180077FAFA /* HomeDetailViewController.xib */; };
 		109B6A5B1CF7EB180077FAFA /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */; };
 		109B6A5C1CF7EB180077FAFA /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */; };
-		109B6A5F1CF7EB180077FAFA /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A521CF7EB180077FAFA /* KCAnnotation.m */; };
-		109B6A601CF7EB180077FAFA /* MapLocatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A541CF7EB180077FAFA /* MapLocatView.m */; };
-		109B6A611CF7EB180077FAFA /* MapLocatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A551CF7EB180077FAFA /* MapLocatView.xib */; };
 		109B6A621CF7EB180077FAFA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A571CF7EB180077FAFA /* TableViewCell.m */; };
 		109B6A631CF7EB180077FAFA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A581CF7EB180077FAFA /* TableViewCell.xib */; };
 		109B6A721CF7EC0A0077FAFA /* MainPageTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A691CF7EC0A0077FAFA /* MainPageTabBarController.m */; };
@@ -237,6 +233,9 @@
 		10B957361D12A6650024D640 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957311D12A6650024D640 /* NSString+Extension.m */; };
 		10B957371D12A6650024D640 /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957331D12A6650024D640 /* UIImage+ImageSize.m */; };
 		10B957381D12A6650024D640 /* UIImage+ResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957351D12A6650024D640 /* UIImage+ResizeImage.m */; };
+		10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573A1D138DBA0024D640 /* PPLabel.m */; };
+		10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573F1D138EEC0024D640 /* KCAnnotation.m */; };
+		10B957441D138EEC0024D640 /* MineLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957411D138EEC0024D640 /* MineLocationView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
 		823454F51B832B17002A36D6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F41B832B17002A36D6 /* libicucore.dylib */; };
@@ -485,8 +484,6 @@
 		109B6A361CF7EA670077FAFA /* HomeCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCellFrame.m; path = "HomeModel+View/HomeModel/HomeCellFrame.m"; sourceTree = "<group>"; };
 		109B6A371CF7EA670077FAFA /* HomeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCellModel.h; path = "HomeModel+View/HomeModel/HomeCellModel.h"; sourceTree = "<group>"; };
 		109B6A381CF7EA670077FAFA /* HomeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCellModel.m; path = "HomeModel+View/HomeModel/HomeCellModel.m"; sourceTree = "<group>"; };
-		109B6A3B1CF7EA670077FAFA /* PPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPLabel.h; path = "HomeModel+View/HomeModel/PPLabel.h"; sourceTree = "<group>"; };
-		109B6A3C1CF7EA670077FAFA /* PPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPLabel.m; path = "HomeModel+View/HomeModel/PPLabel.m"; sourceTree = "<group>"; };
 		109B6A3F1CF7EA670077FAFA /* ZoomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZoomImage.h; path = "HomeModel+View/HomeModel/ZoomImage.h"; sourceTree = "<group>"; };
 		109B6A401CF7EA670077FAFA /* ZoomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZoomImage.m; path = "HomeModel+View/HomeModel/ZoomImage.m"; sourceTree = "<group>"; };
 		109B6A481CF7EB180077FAFA /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = "HomeModel+View/HomeView/HomeDetailViewController.h"; sourceTree = "<group>"; };
@@ -495,11 +492,6 @@
 		109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = "HomeModel+View/HomeView/HomePageViewController.h"; sourceTree = "<group>"; };
 		109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = "HomeModel+View/HomeView/HomePageViewController.m"; sourceTree = "<group>"; };
 		109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomePageViewController.xib; path = "HomeModel+View/HomeView/HomePageViewController.xib"; sourceTree = "<group>"; };
-		109B6A511CF7EB180077FAFA /* KCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAnnotation.h; path = "HomeModel+View/HomeView/KCAnnotation.h"; sourceTree = "<group>"; };
-		109B6A521CF7EB180077FAFA /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAnnotation.m; path = "HomeModel+View/HomeView/KCAnnotation.m"; sourceTree = "<group>"; };
-		109B6A531CF7EB180077FAFA /* MapLocatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLocatView.h; path = "HomeModel+View/HomeView/MapLocatView.h"; sourceTree = "<group>"; };
-		109B6A541CF7EB180077FAFA /* MapLocatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapLocatView.m; path = "HomeModel+View/HomeView/MapLocatView.m"; sourceTree = "<group>"; };
-		109B6A551CF7EB180077FAFA /* MapLocatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapLocatView.xib; path = "HomeModel+View/HomeView/MapLocatView.xib"; sourceTree = "<group>"; };
 		109B6A561CF7EB180077FAFA /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = "HomeModel+View/HomeView/TableViewCell.h"; sourceTree = "<group>"; };
 		109B6A571CF7EB180077FAFA /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = "HomeModel+View/HomeView/TableViewCell.m"; sourceTree = "<group>"; };
 		109B6A581CF7EB180077FAFA /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = "HomeModel+View/HomeView/TableViewCell.xib"; sourceTree = "<group>"; };
@@ -630,6 +622,12 @@
 		10B957331D12A6650024D640 /* UIImage+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageSize.m"; path = "Library/ThirdLib/UIImage+ImageSize.m"; sourceTree = "<group>"; };
 		10B957341D12A6650024D640 /* UIImage+ResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ResizeImage.h"; path = "Library/ThirdLib/UIImage+ResizeImage.h"; sourceTree = "<group>"; };
 		10B957351D12A6650024D640 /* UIImage+ResizeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ResizeImage.m"; path = "Library/ThirdLib/UIImage+ResizeImage.m"; sourceTree = "<group>"; };
+		10B957391D138DBA0024D640 /* PPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPLabel.h; path = Library/ThirdLib/PPLabel.h; sourceTree = "<group>"; };
+		10B9573A1D138DBA0024D640 /* PPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPLabel.m; path = Library/ThirdLib/PPLabel.m; sourceTree = "<group>"; };
+		10B9573E1D138EEC0024D640 /* KCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KCAnnotation.h; path = "FindModel+View/我的位置/KCAnnotation.h"; sourceTree = "<group>"; };
+		10B9573F1D138EEC0024D640 /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAnnotation.m; path = "FindModel+View/我的位置/KCAnnotation.m"; sourceTree = "<group>"; };
+		10B957401D138EEC0024D640 /* MineLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineLocationView.h; path = "FindModel+View/我的位置/MineLocationView.h"; sourceTree = "<group>"; };
+		10B957411D138EEC0024D640 /* MineLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineLocationView.m; path = "FindModel+View/我的位置/MineLocationView.m"; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -774,6 +772,24 @@
 				106205BA1D05477700E10485 /* ViewController+MASAdditions.m */,
 			);
 			name = Masonry;
+			sourceTree = "<group>";
+		};
+		10B9573C1D138E430024D640 /* 附近的人 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "附近的人";
+			sourceTree = "<group>";
+		};
+		10B9573D1D138E5F0024D640 /* 我的位置 */ = {
+			isa = PBXGroup;
+			children = (
+				10B9573E1D138EEC0024D640 /* KCAnnotation.h */,
+				10B9573F1D138EEC0024D640 /* KCAnnotation.m */,
+				10B957401D138EEC0024D640 /* MineLocationView.h */,
+				10B957411D138EEC0024D640 /* MineLocationView.m */,
+			);
+			name = "我的位置";
 			sourceTree = "<group>";
 		};
 		10D1067D1CFBED54006E14E3 /* ZoomScrollImage */ = {
@@ -1259,11 +1275,6 @@
 				109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */,
 				109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */,
 				109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */,
-				109B6A511CF7EB180077FAFA /* KCAnnotation.h */,
-				109B6A521CF7EB180077FAFA /* KCAnnotation.m */,
-				109B6A531CF7EB180077FAFA /* MapLocatView.h */,
-				109B6A541CF7EB180077FAFA /* MapLocatView.m */,
-				109B6A551CF7EB180077FAFA /* MapLocatView.xib */,
 				109B6A561CF7EB180077FAFA /* TableViewCell.h */,
 				109B6A571CF7EB180077FAFA /* TableViewCell.m */,
 				109B6A581CF7EB180077FAFA /* TableViewCell.xib */,
@@ -1280,8 +1291,6 @@
 				109B6A361CF7EA670077FAFA /* HomeCellFrame.m */,
 				109B6A371CF7EA670077FAFA /* HomeCellModel.h */,
 				109B6A381CF7EA670077FAFA /* HomeCellModel.m */,
-				109B6A3B1CF7EA670077FAFA /* PPLabel.h */,
-				109B6A3C1CF7EA670077FAFA /* PPLabel.m */,
 				109B6A3F1CF7EA670077FAFA /* ZoomImage.h */,
 				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
 			);
@@ -1312,6 +1321,8 @@
 				109B6A1E1CF7E8E30077FAFA /* FindViewController.h */,
 				109B6A1F1CF7E8E30077FAFA /* FindViewController.m */,
 				109B6A201CF7E8E30077FAFA /* FindViewController.xib */,
+				10B9573D1D138E5F0024D640 /* 我的位置 */,
+				10B9573C1D138E430024D640 /* 附近的人 */,
 				CCAB98F11BDA0637004C321D /* 摇一摇 */,
 				8223EE111BD61C4A00AD39B0 /* 朋友圈 */,
 				8223EE101BD61C1900AD39B0 /* 扫一扫 */,
@@ -1346,6 +1357,8 @@
 		82F5F3491B45267B0098C7FA /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				10B957391D138DBA0024D640 /* PPLabel.h */,
+				10B9573A1D138DBA0024D640 /* PPLabel.m */,
 				10B957301D12A6650024D640 /* NSString+Extension.h */,
 				10B957311D12A6650024D640 /* NSString+Extension.m */,
 				10B957321D12A6650024D640 /* UIImage+ImageSize.h */,
@@ -1570,7 +1583,6 @@
 				109B6AE81CF7EE1F0077FAFA /* 003.png in Resources */,
 				109B69681CF7E3A50077FAFA /* blueArrow@2x.png in Resources */,
 				109B6B281CF7EE1F0077FAFA /* cute_boy_15.png in Resources */,
-				109B6A611CF7EB180077FAFA /* MapLocatView.xib in Resources */,
 				109B69ED1CF7E7910077FAFA /* ShakeViewController.xib in Resources */,
 				109B6B031CF7EE1F0077FAFA /* addmore_pic@2x.png in Resources */,
 				109B69EA1CF7E7910077FAFA /* shake_nomatch.wav in Resources */,
@@ -1738,6 +1750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
+				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
 				10B9571D1D1132A00024D640 /* SDWaitingView.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
@@ -1770,6 +1783,7 @@
 				109B6A421CF7EA670077FAFA /* HomeCellFrame.m in Sources */,
 				106205C11D05477700E10485 /* NSArray+MASAdditions.m in Sources */,
 				109B693D1CF7E2840077FAFA /* NSString+MLLabel.m in Sources */,
+				10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */,
 				109B6A311CF7E9700077FAFA /* FansTableViewController.m in Sources */,
 				109B69D21CF7E67A0077FAFA /* LoginViewController.m in Sources */,
 				109B69331CF7E2840077FAFA /* MLExpressionManager.m in Sources */,
@@ -1787,7 +1801,6 @@
 				109B6A7D1CF7EC7A0077FAFA /* FileLogC.m in Sources */,
 				109B6A431CF7EA670077FAFA /* HomeCellModel.m in Sources */,
 				106205C01D05477700E10485 /* MASViewConstraint.m in Sources */,
-				109B6A5F1CF7EB180077FAFA /* KCAnnotation.m in Sources */,
 				109B6A721CF7EC0A0077FAFA /* MainPageTabBarController.m in Sources */,
 				106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */,
 				109B69A81CF7E5800077FAFA /* UIImageView+AFNetworking.m in Sources */,
@@ -1799,6 +1812,7 @@
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
 				82B612D81B2FBC61007E6D42 /* main.m in Sources */,
 				109B69F01CF7E8150077FAFA /* FriendBaseModel.m in Sources */,
+				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
 				109B69381CF7E2840077FAFA /* MLTextAttachment.m in Sources */,
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
 				109B693C1CF7E2840077FAFA /* NSString+MLExpression.m in Sources */,
@@ -1812,10 +1826,8 @@
 				105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */,
 				109B6A021CF7E8760077FAFA /* QRViewController.m in Sources */,
 				109B69391CF7E2840077FAFA /* NSAttributedString+MLExpression.m in Sources */,
-				109B6A601CF7EB180077FAFA /* MapLocatView.m in Sources */,
 				109B69371CF7E2840077FAFA /* MLLinkLabel.m in Sources */,
 				109B6A2F1CF7E9700077FAFA /* FansTableViewCell.m in Sources */,
-				109B6A451CF7EA670077FAFA /* PPLabel.m in Sources */,
 				109B6A591CF7EB180077FAFA /* HomeDetailViewController.m in Sources */,
 				109B6A471CF7EA670077FAFA /* ZoomImage.m in Sources */,
 				10B957371D12A6650024D640 /* UIImage+ImageSize.m in Sources */,

@@ -20,7 +20,6 @@
 #import "UIScrollView+FCXRefresh.h"
 #import "NSString+Extension.h"
 #import "HomeDetailViewController.h"
-#import "MapLocatView.h"
 #import "ZoomImage.h"
 #import "JSHpple.h"
 #import "AsynImageView.h"

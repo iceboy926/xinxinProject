@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapLocatView : UIViewController
+@interface MineLocationView : UIViewController
 
 @end

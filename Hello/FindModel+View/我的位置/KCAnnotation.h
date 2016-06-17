@@ -10,13 +10,6 @@
 #import <MapKit/MapKit.h>
 
 @interface KCAnnotation : NSObject<MKAnnotation>
-//{
-//    CLLocationCoordinate2D coordinate;
-//    
-//    NSString *title;
-//    
-//    NSString *subtitle;
-//}
 
 @property(nonatomic) CLLocationCoordinate2D coordinate;
 

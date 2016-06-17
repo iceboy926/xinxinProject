@@ -11,6 +11,7 @@
 #import "QRResultViewController.h"
 #import "ShakeViewController.h"
 #import "FriendsViewController.h"
+#import "MineLocationView.h"
 
 @interface FindViewController ()
 
@@ -206,6 +207,23 @@
         }
         
     }
+    else if([indexPath section] == 2)
+    {
+        if([indexPath row] == 0)  //nearby person
+        {
+            
+            
+            
+        }
+        else if([indexPath row] == 1) //current loc
+        {
+            MineLocationView *locationView = [[MineLocationView alloc] init];
+            
+            [self.navigationController pushViewController:locationView animated:YES];
+        }
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
 
