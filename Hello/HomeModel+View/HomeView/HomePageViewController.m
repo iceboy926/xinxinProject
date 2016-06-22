@@ -23,6 +23,8 @@
 #import "ZoomImage.h"
 #import "JSHpple.h"
 #import "AsynImageView.h"
+#import "CellToolBarView.h"
+#import "CellToolBarModel.h"
 
 @interface HomePageViewController () <UITableViewDelegate, UITableViewDataSource, WBHttpRequestDelegate, TableViewDelegate>
 {
@@ -47,6 +49,8 @@
     self.CellList = [[NSMutableArray alloc] init];
     
     self.StatuseList = [[NSMutableArray alloc] init];
+    
+    self.ToolBarList = [[NSMutableArray alloc] init];
     
     self.navigationItem.title = @"南宫勇少";
     
@@ -228,6 +232,11 @@
             cellUser.blretweet = NO;
         }
         
+        CellToolBarModel *cellToolBar = [[CellToolBarModel alloc] init];
+        
+        
+        
+        
             
         HomeCellFrame *cellFrame = [[HomeCellFrame alloc] init];
         [cellFrame setHomeCell:cellUser];
@@ -254,26 +263,30 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 5.0;
+    return 10.0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 5.0;
+    return 30.0;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section   // custom view for header. will be adjusted to default or specified header height
 {
-    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 5)];
-    view.backgroundColor = [UIColor clearColor];
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 10)];
+    view.backgroundColor = kWBCellInnerViewColor;
     
     return view;
 }
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section   // custom view for footer. will be adjusted to default or specified footer height
 {
-    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 5)];
-    view.backgroundColor = [UIColor clearColor];
+    CellToolBarView *toolBar=[[CellToolBarView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 30)];
+    //view.backgroundColor = [UIColor whiteColor];
     
-    return view;
+    CellToolBarModel *toolBarModel = [self.ToolBarList objectAtIndex:section];
+    
+    [toolBar setData:toolBarModel];
+    
+    return toolBar;
 }
 
 

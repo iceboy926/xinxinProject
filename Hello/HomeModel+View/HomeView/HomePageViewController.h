@@ -16,6 +16,7 @@
 @property(strong, nonatomic) NSMutableArray *dataList;
 @property(strong, nonatomic) NSMutableArray *CellList;
 @property(strong, nonatomic) NSMutableArray *StatuseList;
+@property(strong, nonatomic) NSMutableArray *ToolBarList;
 
 //@property (strong, nonatomic)UITableView *tableView;
 @property (strong, nonatomic)NSMutableDictionary *dicRequestPara;

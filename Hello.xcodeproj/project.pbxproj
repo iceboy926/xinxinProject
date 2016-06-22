@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132C1D1A3A4100BA1273 /* CellToolBarView.m */; };
+		100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */; };
 		104AB7531D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 104AB7521D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 105542FA1CFEE28D0017D42B /* ScaleImageView.m */; };
 		106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A31D05477700E10485 /* MASCompositeConstraint.m */; };
@@ -288,6 +290,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100F132B1D1A3A4100BA1273 /* CellToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellToolBarView.h; path = "HomeModel+View/HomeView/CellToolBarView.h"; sourceTree = "<group>"; };
+		100F132C1D1A3A4100BA1273 /* CellToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarView.m; path = "HomeModel+View/HomeView/CellToolBarView.m"; sourceTree = "<group>"; };
+		100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellToolBarModel.h; path = "HomeModel+View/HomeModel/CellToolBarModel.h"; sourceTree = "<group>"; };
+		100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarModel.m; path = "HomeModel+View/HomeModel/CellToolBarModel.m"; sourceTree = "<group>"; };
 		104AB7511D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "Library/FullScreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		104AB7521D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "Library/FullScreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		105542F91CFEE28D0017D42B /* ScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScaleImageView.h; path = Library/ZoomScrollImage/ScaleImageView.h; sourceTree = "<group>"; };
@@ -1278,6 +1284,8 @@
 				109B6A561CF7EB180077FAFA /* TableViewCell.h */,
 				109B6A571CF7EB180077FAFA /* TableViewCell.m */,
 				109B6A581CF7EB180077FAFA /* TableViewCell.xib */,
+				100F132B1D1A3A4100BA1273 /* CellToolBarView.h */,
+				100F132C1D1A3A4100BA1273 /* CellToolBarView.m */,
 			);
 			name = HomeView;
 			sourceTree = "<group>";
@@ -1293,6 +1301,8 @@
 				109B6A381CF7EA670077FAFA /* HomeCellModel.m */,
 				109B6A3F1CF7EA670077FAFA /* ZoomImage.h */,
 				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
+				100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */,
+				100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */,
 			);
 			name = HomeModel;
 			sourceTree = "<group>";
@@ -1815,10 +1825,12 @@
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
 				109B69381CF7E2840077FAFA /* MLTextAttachment.m in Sources */,
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
+				100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */,
 				109B693C1CF7E2840077FAFA /* NSString+MLExpression.m in Sources */,
 				109B6A621CF7EB180077FAFA /* TableViewCell.m in Sources */,
 				109B696B1CF7E3A50077FAFA /* FCXRefreshHeaderView.m in Sources */,
 				109B69BF1CF7E5AB0077FAFA /* AFHTTPRequestOperation.m in Sources */,
+				100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */,
 				109B69AB1CF7E5800077FAFA /* UIWebView+AFNetworking.m in Sources */,
 				109B69DA1CF7E6D60077FAFA /* UserViewController.m in Sources */,
 				109B69A91CF7E5800077FAFA /* UIProgressView+AFNetworking.m in Sources */,

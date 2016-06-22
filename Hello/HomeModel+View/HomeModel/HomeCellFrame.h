@@ -38,7 +38,7 @@
 @property (nonatomic, assign, readonly) CGRect retweetPictureFrame;
 @property (nonatomic, strong) NSMutableArray *retweetPictureFrameArray;
 
-@property (nonatomic, readonly) CGRect  toolBarViewFrame;
+//@property (nonatomic, readonly) CGRect  toolBarViewFrame;
 
 
 @property (nonatomic, strong) HomeCellModel *HomeCell;

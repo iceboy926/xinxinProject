@@ -112,10 +112,10 @@
         _retweetPicArray = [[NSMutableArray alloc] init];
         
         
-        _toolBarView = [[UIView alloc] init];
-        _toolBarView.userInteractionEnabled = YES;
+        //_toolBarView = [[UIView alloc] init];
+        //_toolBarView.userInteractionEnabled = YES;
         
-        [self.contentView addSubview:_toolBarView];
+        //[self.contentView addSubview:_toolBarView];
         
         
         
@@ -394,7 +394,7 @@
     }
     
     
-    _toolBarView.frame = _CellFrame.toolBarViewFrame;
+    //_toolBarView.frame = _CellFrame.toolBarViewFrame;
     
 }
 

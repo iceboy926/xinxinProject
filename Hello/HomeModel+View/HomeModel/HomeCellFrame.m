@@ -220,17 +220,17 @@
     }
     
     //
-    CGFloat toolBarViewX = iconViewX;
-    CGFloat toolBarViewY = _cellHeight + Padding/2;
-    
-    
-    CGFloat toolBarViewW = MAX_WIDTH - 2*iconViewX;
-    CGFloat toolBarViewH = 40;
-    
-    _toolBarViewFrame = CGRectMake(toolBarViewX, toolBarViewY, toolBarViewW, toolBarViewH);
-    
-    
-    _cellHeight = _cellHeight + Padding + toolBarViewH;
+//    CGFloat toolBarViewX = iconViewX;
+//    CGFloat toolBarViewY = _cellHeight + Padding/2;
+//    
+//    
+//    CGFloat toolBarViewW = MAX_WIDTH - 2*iconViewX;
+//    CGFloat toolBarViewH = 40;
+//    
+//    _toolBarViewFrame = CGRectMake(toolBarViewX, toolBarViewY, toolBarViewW, toolBarViewH);
+//    
+//    
+//    _cellHeight = _cellHeight + Padding + toolBarViewH;
     
     
 

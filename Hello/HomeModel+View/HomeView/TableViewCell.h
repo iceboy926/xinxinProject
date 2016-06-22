@@ -87,7 +87,7 @@
  评论框
  */
 
-@property (nonatomic, strong)UIView *toolBarView;
+//@property (nonatomic, strong)UIView *toolBarView;
 
 
 
