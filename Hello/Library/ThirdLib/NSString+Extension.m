@@ -58,6 +58,24 @@
     return [NSDate dateWithTimeIntervalSince1970:t];
 }
 
+-(NSMutableString*)GetTime
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSDate *datastr = [NSString dateFromString:self];
+    
+    NSString *str = [dateFormatter stringFromDate:datastr];
+    
+    
+    NSMutableString *strDate = [[NSMutableString alloc] initWithString:str];
+    
+    
+    return strDate;
+}
+
+
 
 -(NSString *)URLEncodeString
 {

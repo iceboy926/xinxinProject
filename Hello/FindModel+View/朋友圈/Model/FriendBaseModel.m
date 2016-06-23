@@ -10,19 +10,4 @@
 
 @implementation FriendBaseModel
 
--(id)init
-{
-    self = [super init];
-    if(self)
-    {
-        
-        _strContentText = @"";
-        
-        _imageArray = [NSMutableArray array];
-        
-    }
-    
-    return self;
-}
-
 @end

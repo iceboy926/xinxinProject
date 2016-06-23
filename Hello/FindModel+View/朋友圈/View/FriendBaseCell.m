@@ -34,8 +34,6 @@
 
 @property (nonatomic, strong) MLLinkLabel *userNickLabel;
 
-@property (nonatomic, strong) UILabel  *titleLabel;
-
 @property (nonatomic, strong) MLLinkLabel *contentTextLabel;
 
 @property (nonatomic, strong) FriendGridImageView *gridImageView;
@@ -104,15 +102,6 @@
         [self.contentView addSubview:_userNickLabel];
     }
     
-    if(nil == _titleLabel)
-    {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _titleLabel.textColor = [UIColor lightGrayColor];
-        _titleLabel.font = TitleLabelFont;
-        
-        [self.contentView addSubview:_titleLabel];
-        
-    }
     
     if(nil == _bodyView)
     {
@@ -235,10 +224,7 @@
     _userNickLabel.frame = CGRectMake(x, y, width, height);
     _userNickLabel.attributedText = nickName;
     
-    x = CGRectGetMaxX(_userNickLabel.frame) + padding;
-    width = MAX_WIDTH - x - margin;
-    _titleLabel.frame = CGRectMake(x, y, width, height);
-    _titleLabel.text = ModelItem.strTitle;
+
     
     
     

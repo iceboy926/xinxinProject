@@ -19,4 +19,7 @@
 -(NSString *)URLEncodeString;
 
 -(NSString *)URLDecodeString;
+
+-(NSMutableString*)GetTime;
+
 @end
