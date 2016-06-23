@@ -9,19 +9,19 @@
 #import <UIKit/UIKit.h>
 
 
-@class AsynImageView, CellToolBarModel;
+@class CellToolBarModel;
 @interface CellToolBarView : UIView
 
 @property (nonatomic, strong)UIView *repostView;
-@property (nonatomic, strong)AsynImageView *repostImage;
+@property (nonatomic, strong)UIImageView *repostImage;
 @property (nonatomic, strong)UILabel *repostLabel;
 
 @property (nonatomic, strong)UIView *commentView;
-@property (nonatomic, strong)AsynImageView *commentImage;
+@property (nonatomic, strong)UIImageView *commentImage;
 @property (nonatomic, strong)UILabel *commentLabel;
 
 @property (nonatomic, strong)UIView *likeView;
-@property (nonatomic, strong)AsynImageView *likeImage;
+@property (nonatomic, strong)UIImageView *likeImage;
 @property (nonatomic, strong)UILabel *likeLabel;
 
 

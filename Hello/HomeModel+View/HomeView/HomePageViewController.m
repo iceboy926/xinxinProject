@@ -232,19 +232,50 @@
             cellUser.blretweet = NO;
         }
         
-        CellToolBarModel *cellToolBar = [[CellToolBarModel alloc] init];
         
-        
-        
-        
-            
         HomeCellFrame *cellFrame = [[HomeCellFrame alloc] init];
         [cellFrame setHomeCell:cellUser];
-            
+        
         [self.CellList addObject:cellFrame];
-            
+        
         [self.StatuseList addObject:Statuses];
         
+        
+        CellToolBarModel *cellToolBar = [[CellToolBarModel alloc] init];
+        
+        int repostCount = [[Statuses valueForKey:@"reposts_count"] intValue];
+        int commentCount = [[Statuses valueForKey:@"comments_count"] intValue];
+        int likeCount = [[Statuses valueForKey:@"attitudes_count"] intValue];
+        
+        if(repostCount == 0)
+        {
+            [cellToolBar setRepostStr:[NSString stringWithFormat:@"转发"]];
+        }
+        else
+        {
+            [cellToolBar setRepostStr:[NSString stringWithFormat:@"%d", repostCount]];
+        }
+        
+        if(commentCount == 0)
+        {
+            [cellToolBar setCommentStr:[NSString stringWithFormat:@"评论"]];
+        }
+        else
+        {
+            [cellToolBar setCommentStr:[NSString stringWithFormat:@"%d", commentCount]];
+        }
+        
+        if(likeCount == 0)
+        {
+            [cellToolBar setLikeStr:[NSString stringWithFormat:@"赞"]];
+        }
+        else
+        {
+            [cellToolBar setLikeStr:[NSString stringWithFormat:@"%d", likeCount]];
+        }
+
+        [self.ToolBarList addObject:cellToolBar];
+
     }
     
     [self.tableView reloadData];
@@ -267,7 +298,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 30.0;
+    return 25.0;
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section   // custom view for header. will be adjusted to default or specified header height
@@ -279,12 +310,15 @@
 }
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section   // custom view for footer. will be adjusted to default or specified footer height
 {
-    CellToolBarView *toolBar=[[CellToolBarView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 30)];
-    //view.backgroundColor = [UIColor whiteColor];
+    CellToolBarView *toolBar=[[CellToolBarView alloc] initWithFrame:CGRectMake(0, 0, MAX_WIDTH, 25)];
+    toolBar.backgroundColor = [UIColor whiteColor];
     
-    CellToolBarModel *toolBarModel = [self.ToolBarList objectAtIndex:section];
+    if([self.ToolBarList count] > 0)
+    {
+        CellToolBarModel *toolBarModel = [self.ToolBarList objectAtIndex:section];
     
-    [toolBar setData:toolBarModel];
+        [toolBar setData:toolBarModel];
+    }
     
     return toolBar;
 }

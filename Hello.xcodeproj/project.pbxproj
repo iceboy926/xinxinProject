@@ -21,6 +21,8 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
+		10936B201D1B917E0025B594 /* icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10936B1E1D1B917E0025B594 /* icon_like@2x.png */; };
+		10936B211D1B917E0025B594 /* icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10936B1F1D1B917E0025B594 /* icon_like@3x.png */; };
 		109B69331CF7E2840077FAFA /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691D1CF7E2840077FAFA /* MLExpressionManager.m */; };
 		109B69341CF7E2840077FAFA /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691F1CF7E2840077FAFA /* MLLabel.m */; };
 		109B69351CF7E2840077FAFA /* MLLabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B69221CF7E2840077FAFA /* MLLabel+Size.m */; };
@@ -230,8 +232,8 @@
 		10B9572B1D12A4890024D640 /* icon_comment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957251D12A4890024D640 /* icon_comment@3x.png */; };
 		10B9572C1D12A4890024D640 /* icon_retweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957261D12A4890024D640 /* icon_retweet@2x.png */; };
 		10B9572D1D12A4890024D640 /* icon_retweet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957271D12A4890024D640 /* icon_retweet@3x.png */; };
-		10B9572E1D12A4890024D640 /* icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957281D12A4890024D640 /* icon_like@2x.png */; };
-		10B9572F1D12A4890024D640 /* icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957291D12A4890024D640 /* icon_like@3x.png */; };
+		10B9572E1D12A4890024D640 /* icon_unlike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957281D12A4890024D640 /* icon_unlike@2x.png */; };
+		10B9572F1D12A4890024D640 /* icon_unlike@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957291D12A4890024D640 /* icon_unlike@3x.png */; };
 		10B957361D12A6650024D640 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957311D12A6650024D640 /* NSString+Extension.m */; };
 		10B957371D12A6650024D640 /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957331D12A6650024D640 /* UIImage+ImageSize.m */; };
 		10B957381D12A6650024D640 /* UIImage+ResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957351D12A6650024D640 /* UIImage+ResizeImage.m */; };
@@ -325,6 +327,8 @@
 		106205BA1D05477700E10485 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Library/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
+		10936B1E1D1B917E0025B594 /* icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@2x.png"; path = "Hello/image/icon_like@2x.png"; sourceTree = "<group>"; };
+		10936B1F1D1B917E0025B594 /* icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@3x.png"; path = "Hello/image/icon_like@3x.png"; sourceTree = "<group>"; };
 		109B691C1CF7E2840077FAFA /* MLExpressionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLExpressionManager.h; path = Library/MLLabel/MLExpressionManager.h; sourceTree = "<group>"; };
 		109B691D1CF7E2840077FAFA /* MLExpressionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLExpressionManager.m; path = Library/MLLabel/MLExpressionManager.m; sourceTree = "<group>"; };
 		109B691E1CF7E2840077FAFA /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLLabel.h; path = Library/MLLabel/MLLabel.h; sourceTree = "<group>"; };
@@ -620,8 +624,8 @@
 		10B957251D12A4890024D640 /* icon_comment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment@3x.png"; path = "Hello/image/icon_comment@3x.png"; sourceTree = "<group>"; };
 		10B957261D12A4890024D640 /* icon_retweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_retweet@2x.png"; path = "Hello/image/icon_retweet@2x.png"; sourceTree = "<group>"; };
 		10B957271D12A4890024D640 /* icon_retweet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_retweet@3x.png"; path = "Hello/image/icon_retweet@3x.png"; sourceTree = "<group>"; };
-		10B957281D12A4890024D640 /* icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@2x.png"; path = "Hello/image/icon_like@2x.png"; sourceTree = "<group>"; };
-		10B957291D12A4890024D640 /* icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@3x.png"; path = "Hello/image/icon_like@3x.png"; sourceTree = "<group>"; };
+		10B957281D12A4890024D640 /* icon_unlike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_unlike@2x.png"; path = "Hello/image/icon_unlike@2x.png"; sourceTree = "<group>"; };
+		10B957291D12A4890024D640 /* icon_unlike@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_unlike@3x.png"; path = "Hello/image/icon_unlike@3x.png"; sourceTree = "<group>"; };
 		10B957301D12A6650024D640 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extension.h"; path = "Library/ThirdLib/NSString+Extension.h"; sourceTree = "<group>"; };
 		10B957311D12A6650024D640 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extension.m"; path = "Library/ThirdLib/NSString+Extension.m"; sourceTree = "<group>"; };
 		10B957321D12A6650024D640 /* UIImage+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageSize.h"; path = "Library/ThirdLib/UIImage+ImageSize.h"; sourceTree = "<group>"; };
@@ -1146,12 +1150,14 @@
 		82B613001B302196007E6D42 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				10936B1E1D1B917E0025B594 /* icon_like@2x.png */,
+				10936B1F1D1B917E0025B594 /* icon_like@3x.png */,
 				10B957241D12A4890024D640 /* icon_comment@2x.png */,
 				10B957251D12A4890024D640 /* icon_comment@3x.png */,
 				10B957261D12A4890024D640 /* icon_retweet@2x.png */,
 				10B957271D12A4890024D640 /* icon_retweet@3x.png */,
-				10B957281D12A4890024D640 /* icon_like@2x.png */,
-				10B957291D12A4890024D640 /* icon_like@3x.png */,
+				10B957281D12A4890024D640 /* icon_unlike@2x.png */,
+				10B957291D12A4890024D640 /* icon_unlike@3x.png */,
 				109B6A821CF7EE1F0077FAFA /* 001.png */,
 				109B6A831CF7EE1F0077FAFA /* 002.png */,
 				109B6A841CF7EE1F0077FAFA /* 003.png */,
@@ -1615,6 +1621,7 @@
 				109B6B2A1CF7EE1F0077FAFA /* Default.png in Resources */,
 				109B6B011CF7EE1F0077FAFA /* addmore_camera@2x.png in Resources */,
 				109B6B261CF7EE1F0077FAFA /* cute_boy_13.png in Resources */,
+				10936B201D1B917E0025B594 /* icon_like@2x.png in Resources */,
 				109B6B0E1CF7EE1F0077FAFA /* chat_bottom_keyboard_press.png in Resources */,
 				109B6AF31CF7EE1F0077FAFA /* addmore_5.png in Resources */,
 				109B6B2C1CF7EE1F0077FAFA /* guide_background_00@2x.jpg in Resources */,
@@ -1648,7 +1655,7 @@
 				109B6AEC1CF7EE1F0077FAFA /* 007.png in Resources */,
 				109B6AF11CF7EE1F0077FAFA /* addmore_3.png in Resources */,
 				109B6B121CF7EE1F0077FAFA /* chat_bottom_smile_normal.png in Resources */,
-				10B9572F1D12A4890024D640 /* icon_like@3x.png in Resources */,
+				10B9572F1D12A4890024D640 /* icon_unlike@3x.png in Resources */,
 				109B6B3A1CF7EE1F0077FAFA /* LoginGreenBigBtn_Hl@2x.png in Resources */,
 				109B6A011CF7E8760077FAFA /* QRResultViewController.xib in Resources */,
 				109B6B1E1CF7EE1F0077FAFA /* cute_boy_5.png in Resources */,
@@ -1671,6 +1678,7 @@
 				109B6B381CF7EE1F0077FAFA /* local_picture@2x.png in Resources */,
 				109B6B321CF7EE1F0077FAFA /* Icon@2x.png in Resources */,
 				109B6A191CF7E8C60077FAFA /* ff_IconShake@2x.png in Resources */,
+				10936B211D1B917E0025B594 /* icon_like@3x.png in Resources */,
 				82B612DF1B2FBC61007E6D42 /* Main.storyboard in Resources */,
 				109B6B1A1CF7EE1F0077FAFA /* cute_boy_1.png in Resources */,
 				109B6B441CF7EE1F0077FAFA /* retina_1.jpeg in Resources */,
@@ -1698,7 +1706,7 @@
 				109B6B0A1CF7EE1F0077FAFA /* card_icon_addattention@2x.png in Resources */,
 				109B6B471CF7EE1F0077FAFA /* vip.png in Resources */,
 				109B6B271CF7EE1F0077FAFA /* cute_boy_14.png in Resources */,
-				10B9572E1D12A4890024D640 /* icon_like@2x.png in Resources */,
+				10B9572E1D12A4890024D640 /* icon_unlike@2x.png in Resources */,
 				109B6B231CF7EE1F0077FAFA /* cute_boy_10.png in Resources */,
 				109B6A221CF7E8E30077FAFA /* FindViewController.xib in Resources */,
 				109B69671CF7E3A50077FAFA /* blueArrow.png in Resources */,
