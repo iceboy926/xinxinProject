@@ -12,16 +12,9 @@
 #import "MLLabel+Size.h"
 #import "FriendGridImageView.h"
 #import "FriendBaseModel.h"
+#import "FriendBaseFrame.h"
 
-#define margin 15
-#define padding 10
-#define avartsize 40
 
-#define BodyMaxWidth (MAX_WIDTH - avartsize - 3*margin)
-
-#define GridMaxWidth (BodyMaxWidth*0.85)
-
-#define UserNickMaxWidth 150
 
 
 @interface FriendBaseCell()
@@ -66,20 +59,14 @@
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    CGFloat x = 0.0, y = 0.0, width = 0.0, height = 0.0;
-    
-    x = margin;
-    y = margin;
-    width = avartsize;
-    height = avartsize;
-    
+       
     if(nil == _userAvartImage)
     {
-        _userAvartImage = [[AsynImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _userAvartImage = [[AsynImageView alloc] initWithFrame:CGRectZero];
         _userAvartImage.backgroundColor = [UIColor lightGrayColor];
         [self.contentView addSubview:_userAvartImage];
         
-        _userAvartbtn = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _userAvartbtn = [[UIButton alloc] initWithFrame:CGRectZero];
         [_userAvartbtn addTarget:self action:@selector(onClickUserAvart:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:_userAvartbtn];
         
@@ -105,12 +92,7 @@
     
     if(nil == _bodyView)
     {
-        x = CGRectGetMaxX(_userAvartImage.frame) + margin;
-        y = 40;
-        width = BodyMaxWidth;
-        height = 1;
-        
-        _bodyView = [[UIView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _bodyView = [[UIView alloc] initWithFrame:CGRectZero];
         
         [self.contentView addSubview:_bodyView];
     }
@@ -135,7 +117,7 @@
     
     if(nil == _gridImageView)
     {
-        _gridImageView = [[FriendGridImageView alloc] initWithFrame:CGRectMake(0, 0, GridMaxWidth, GridMaxWidth)];
+        _gridImageView = [[FriendGridImageView alloc] initWithFrame:CGRectZero];
         
         [_bodyView addSubview:_gridImageView];
     }
@@ -204,25 +186,18 @@
     
 }
 
--(void)updateWithBaseModel:(FriendBaseModel *)ModelItem
+-(void)setBaseCellFrame:(FriendBaseFrame *)BaseCellFrame
 {
-    self.BaseModel = ModelItem;
+    _BaseModel = BaseCellFrame.baseModel;
+   
+    [self updateWithBaseModel:_BaseModel];
     
-    [_userAvartImage showImage:ModelItem.strAvartUrl];
-    
-    NSAttributedString *nickName = [[NSAttributedString alloc] initWithString:ModelItem.strNick];
-    
-    CGSize textsize = [MLLinkLabel getViewSize:nickName maxWidth:UserNickMaxWidth font:UserNickFont lineHeight:1.0 lines:1];
-    
-    CGFloat x, y, width, height;
-    
-    x = CGRectGetMaxX(_userAvartImage.frame) + margin;
-    y = CGRectGetMinY(_userAvartImage.frame) + 2;
-    width = textsize.width;
-    height = textsize.height;
-    
-    _userNickLabel.frame = CGRectMake(x, y, width, height);
-    _userNickLabel.attributedText = nickName;
+    [self updateWithBaseFrame:BaseCellFrame];
+}
+
+-(void)updateWithBaseFrame:(FriendBaseFrame *)FrameItem
+{
+
     
 
     
@@ -231,14 +206,12 @@
     
 }
 
--(CGFloat)getCellHeight:(FriendBaseModel *)ModelItem
+
+-(void)updateWithBaseModel:(FriendBaseModel *)baseModel
 {
-    CGFloat modelHeight = 0.0;
     
-    
-    
-    return modelHeight;
 }
+
 
 
 

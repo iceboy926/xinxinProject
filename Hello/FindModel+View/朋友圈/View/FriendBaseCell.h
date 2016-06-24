@@ -10,16 +10,12 @@
 
 
 
-#define UserNickFont [UIFont systemFontOfSize:16]
-#define TitleLabelFont [UIFont systemFontOfSize:13]
-#define TextFont        [UIFont systemFontOfSize:14]
-#define LocationLabelFont [UIFont systemFontOfSize:10]
-#define TimeLabelFont [UIFont systemFontOfSize:12]
 
 
 
 
-@class FriendBaseModel;
+
+@class FriendBaseFrame;
 
 @protocol FriendBaseCellDelegate <NSObject>
 
@@ -33,11 +29,7 @@
 
 @property (nonatomic, weak) id<FriendBaseCellDelegate> delegate;
 
-
-
--(void)updateWithBaseModel:(FriendBaseModel *)ModelItem;
-
--(CGFloat)getCellHeight:(FriendBaseModel *)ModelItem;
+@property (nonatomic, strong) FriendBaseFrame *BaseCellFrame;
 
 
 @end

@@ -13,6 +13,7 @@
 #import "AsynImageView.h"
 #import "FriendBaseCell.h"
 #import "FriendBaseModel.h"
+#import "FriendBaseFrame.h"
 #import "WeiboSDK.h"
 #import "WeiboUser.h"
 #import "AppDelegate.h"
@@ -32,7 +33,7 @@
 
 @interface FriendsViewController()
 {
-    NSMutableArray *friendDataArray;
+    NSMutableArray *friendFrameArray;
 }
 
 @property (nonatomic, strong) AsynImageView *coverImage;
@@ -60,7 +61,7 @@
     self = [super init];
     if(self)
     {
-        friendDataArray = nil;
+        friendFrameArray = nil;
         [self SendRequst];
     }
     
@@ -103,8 +104,11 @@
     NSDictionary *dicResult = [jsonData objectFromJSONData];
     
     NSArray *userArray = [dicResult objectForKey:@"users"];
+
     
-    friendDataArray = [self composeBaseModel:userArray];
+    friendFrameArray = [self composeBaseModel:userArray];
+    
+    
     
     [_tableView reloadData];
 }
@@ -211,9 +215,7 @@
 
 -(NSMutableArray *)composeBaseModel:(NSArray *)dataArray
 {
-    NSMutableArray *arrayList = [NSMutableArray arrayWithCapacity:[dataArray count]];
-    
-
+    NSMutableArray *arraylist = [[NSMutableArray alloc] initWithCapacity:[dataArray count]];
     unsigned long index = 0;
     
     for (NSDictionary *usersDic in dataArray) {
@@ -260,11 +262,17 @@
         [baseModel setStrTime:strTime];
         
         
-        [arrayList addObject:baseModel];
+        FriendBaseFrame *baseFrame = [[FriendBaseFrame alloc] init];
+        
+        [baseFrame setBaseModel:baseModel];
+        
+        [arraylist addObject:baseFrame];
+        
     }
     
     
-    return [arrayList mutableCopy];
+    return [arraylist mutableCopy];
+    
 }
 
 
@@ -522,12 +530,21 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [friendDataArray count];
+    return [friendFrameArray count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    if([friendFrameArray count] > 0)
+    {
+        FriendBaseFrame *baseFrame = [friendFrameArray objectAtIndex:[indexPath row]];
+        
+        return baseFrame.totalHeight;
+    }
+    else
+    {
+        return 80;
+    }
 }
 
 
@@ -548,13 +565,10 @@
         cell.layoutMargins = UIEdgeInsetsZero;
     }
     
+    [cell setBaseCellFrame:[friendFrameArray objectAtIndex:[indexPath row]]];
+    
     return cell;
 }
 
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
 
 @end
