@@ -77,32 +77,33 @@
 
 -(void)addRefreshView
 {
-    __weak __typeof(self)weakSelf = self;
+    
+    __block HomePageViewController *blockself = self;
     
     headerView = [self.tableView addHeaderWithRefreshHandler:^(FCXRefreshBaseView *refreshView)
                   {
-                      [weakSelf refreshAction];
+                      [blockself refreshAction];
                   }];
     
     footerView = [self.tableView addFooterWithRefreshHandler:^(FCXRefreshBaseView *refreshView)
     {
         AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        [weakSelf.dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
+        [blockself.dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
         //[weakSelf.dicRequestPara setObject:@"100" forKey:@"count"];
-        if([weakSelf.StatuseList count] >1)
+        if([blockself.StatuseList count] >1)
         {
             NSNumber *longid = [[NSUserDefaults standardUserDefaults] objectForKey:@"Next"];//[[weakSelf.StatuseList lastObject] objectForKey:@"idstr"];
             if([longid longValue] == 0)
             {
-                [footerView showNoMoreData];
-                [footerView endRefresh];
+                [blockself->footerView showNoMoreData];
+                [blockself->footerView endRefresh];
                 
                 return ;
             }
-            [weakSelf.dicRequestPara setObject:[longid stringValue] forKey:@"max_id"];
+            [blockself.dicRequestPara setObject:[longid stringValue] forKey:@"max_id"];
         }
         
-        [weakSelf SendRequst];
+        [blockself SendRequst];
                       
     }];
     
