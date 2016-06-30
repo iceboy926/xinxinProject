@@ -65,4 +65,9 @@
     
 }
 
+-(void)onClickImage:(UITapGestureRecognizer *)GestureRecognizer
+{
+    
+}
+
 @end

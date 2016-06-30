@@ -20,6 +20,8 @@
 #define UserNickMaxWidth 150
 
 #define IMAGE_PADDING 2
+#define likeCommentwidth  50
+#define likeCommentheight 40
 
 
 
@@ -123,7 +125,16 @@
     
     
 
-
+    //like comment tool
+    x = MAX_WIDTH - likeCommentwidth - padding;
+    y = CGRectGetMaxY(_locationFrame) + padding;
+    width = likeCommentwidth;
+    height = likeCommentheight;
+    
+    _likeCommentFrame = CGRectMake(x, y, width, height);
+    
+    _totalHeight = _totalHeight + likeCommentheight + padding;
+    
     
     
 }

@@ -26,6 +26,8 @@
 
 @property (nonatomic, assign) CGRect  timeFrame;
 
+@property (nonatomic, assign) CGRect  likeCommentFrame;
+
 @property (nonatomic, strong) FriendBaseModel *baseModel;
 
 @property (nonatomic, assign) CGFloat  totalHeight;

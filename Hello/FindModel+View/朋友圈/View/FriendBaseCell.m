@@ -128,7 +128,7 @@
         _locationLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _locationLabel.textColor = LocationTextColor;
         _locationLabel.font = LocationLabelFont;
-        _locationLabel.hidden = YES;
+        //_locationLabel.hidden = YES;
         
         [self.contentView addSubview:_locationLabel];
         
@@ -139,7 +139,7 @@
         _timeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _timeLabel.textColor = [UIColor lightGrayColor];
         _timeLabel.font = TimeLabelFont;
-        _timeLabel.hidden = YES;
+        //_timeLabel.hidden = YES;
         
         [self.contentView addSubview:_timeLabel];
     }
