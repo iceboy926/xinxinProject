@@ -13,7 +13,7 @@
 #import "FriendGridImageView.h"
 #import "FriendBaseModel.h"
 #import "FriendBaseFrame.h"
-
+#import "OperationMenu.h"
 
 
 
@@ -37,6 +37,7 @@
 
 @property (nonatomic ,strong) UIButton *likeCommentBtn;
 
+@property (nonatomic, strong) OperationMenu *operationMenu;
 
 @end
 
@@ -147,12 +148,18 @@
     if(nil == _likeCommentBtn)
     {
         _likeCommentBtn = [[UIButton alloc] initWithFrame:CGRectZero];
-        _likeCommentBtn.hidden = YES;
         [_likeCommentBtn setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
         [_likeCommentBtn setImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] forState:UIControlStateHighlighted];
         [_likeCommentBtn addTarget:self action:@selector(onClickLikeCommentBtn:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.contentView addSubview:_likeCommentBtn];
+    }
+    
+    if(nil == _operationMenu)
+    {
+        _operationMenu = [[OperationMenu alloc] initWithFrame:CGRectZero];
+        _operationMenu.show = NO;
+        [self.contentView addSubview:_operationMenu];
     }
 
     
@@ -177,7 +184,7 @@
 
 
 /**
- *  <#Description#>
+ *
  */
 
 -(void)onClickLikeCommentBtn:(id)sender
@@ -197,9 +204,14 @@
 
 -(void)updateWithBaseFrame:(FriendBaseFrame *)FrameItem
 {
-
+    [_userAvartImage setFrame:FrameItem.avartFrame];
+    [_userAvartbtn setFrame:FrameItem.avartFrame];
     
+    [_userNickLabel setFrame:FrameItem.nickFrame];
+    
+    [_bodyView setFrame:FrameItem.bodyFrame];
 
+    //[_contentTextLabel setFrame:FrameItem.contentFrame];
     
     
     
@@ -209,6 +221,10 @@
 
 -(void)updateWithBaseModel:(FriendBaseModel *)baseModel
 {
+    [_userAvartImage setImageURL:baseModel.strAvartUrl];
+    [_userNickLabel setText:baseModel.strNick];
+    
+    //[_contentTextLabel setText:baseModel.strContentText];
     
 }
 

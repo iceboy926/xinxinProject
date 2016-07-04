@@ -28,6 +28,8 @@
 
 @property (nonatomic, assign) CGRect  likeCommentFrame;
 
+@property (nonatomic, assign) CGRect  operationMenuFrame;
+
 @property (nonatomic, strong) FriendBaseModel *baseModel;
 
 @property (nonatomic, assign) CGFloat  totalHeight;

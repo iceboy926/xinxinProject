@@ -22,7 +22,7 @@
 #define IMAGE_PADDING 2
 #define likeCommentwidth  50
 #define likeCommentheight 40
-
+#define operationMenuwidth 180
 
 
 @implementation FriendBaseFrame
@@ -132,6 +132,14 @@
     height = likeCommentheight;
     
     _likeCommentFrame = CGRectMake(x, y, width, height);
+    
+    
+    //operateMenu
+    x = CGRectGetMinX(_likeCommentFrame) - operationMenuwidth;
+    y = CGRectGetMaxY(_locationFrame) + padding;
+    width = operationMenuwidth;
+    height = likeCommentheight;
+    _operationMenuFrame = CGRectMake(x, y, width, height);
     
     _totalHeight = _totalHeight + likeCommentheight + padding;
     

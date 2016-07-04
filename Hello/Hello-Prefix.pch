@@ -18,6 +18,7 @@
 #import "LoggerClient.h"
 #import "FileLogC.h"
 #import "UIColor+FlatUI.h"
+#import "Masonry.h"
 
 #ifdef __DC_LOG_FILE__
 #define DC_LOG_FILE DCWriteLog
