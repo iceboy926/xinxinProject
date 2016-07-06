@@ -10,8 +10,11 @@
 
 @interface OperationMenu : UIView
 
-@property (nonatomic, assign) BOOL show;
 @property (nonatomic, copy) void (^likeButtonClickedOperation)();
 @property (nonatomic, copy) void (^commentButtonClickedOpration)();
+
+-(void)showPopMenu;
+
+-(void)hidePopMenu;
 
 @end

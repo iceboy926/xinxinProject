@@ -158,7 +158,7 @@
     if(nil == _operationMenu)
     {
         _operationMenu = [[OperationMenu alloc] initWithFrame:CGRectZero];
-        _operationMenu.show = NO;
+        _operationMenu.hidden = YES;
         [self.contentView addSubview:_operationMenu];
     }
 
@@ -211,7 +211,8 @@
     
     [_bodyView setFrame:FrameItem.bodyFrame];
 
-    //[_contentTextLabel setFrame:FrameItem.contentFrame];
+    [_contentTextLabel setFrame:FrameItem.contentFrame];
+    
     
     
     
@@ -224,7 +225,7 @@
     [_userAvartImage setImageURL:baseModel.strAvartUrl];
     [_userNickLabel setText:baseModel.strNick];
     
-    //[_contentTextLabel setText:baseModel.strContentText];
+    [_contentTextLabel setText:baseModel.strContentText];
     
 }
 

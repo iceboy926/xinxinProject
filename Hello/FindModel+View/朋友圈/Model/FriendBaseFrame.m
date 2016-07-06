@@ -64,7 +64,7 @@
     
     //content & pic  body
     x = CGRectGetMaxX(_avartFrame) + padding;
-    y = CGRectGetMaxY(_avartFrame) + padding;
+    y = CGRectGetMaxY(_nickFrame) + padding/2;
     
     width = MAX_WIDTH - x - padding;
     height = 0;
@@ -76,7 +76,7 @@
     //content
     NSAttributedString *content = [[NSAttributedString alloc] initWithString:baseModel.strContentText];
     
-    CGSize contentsize = [MLLinkLabel getViewSize:content maxWidth:_bodyFrame.size.width font:TextFont lineHeight:1.0 lines:0];
+    CGSize contentsize = [MLLinkLabel getViewSize:content maxWidth:_bodyFrame.size.width font:TextFont lineHeight:1.2 lines:0];
     
     x = 0.0;
     y = 0.0;

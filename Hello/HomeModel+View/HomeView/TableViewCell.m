@@ -215,11 +215,11 @@
                 CGFloat  height = image.size.height;
                 CGFloat  width = image.size.width;
                 
-                NSLog(@"height is %lf width is %lf", height, width);
+                //NSLog(@"height is %lf width is %lf", height, width);
                 
                 CGFloat scale = (height/width) / (IMAGE_HEIGHT/IMAGE_WIDTH);
                 
-                NSLog(@"scale is %lf", scale);
+                //NSLog(@"scale is %lf", scale);
                 
                 if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
                     blockasyImage.contentMode = UIViewContentModeScaleAspectFill;

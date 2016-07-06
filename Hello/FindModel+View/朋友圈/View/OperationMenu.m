@@ -106,26 +106,25 @@
 }
 
 
--(void)setShow:(BOOL)show
+-(void)showPopMenu
 {
-    _show = show;
+    UIWindow * window = [[[UIApplication sharedApplication] windows] firstObject];
+    [window addSubview:self];
     
     [UIView animateWithDuration:0.2 animations:^{
     
-        if(_show)
-        {
-            //CGRect frame = self.frame;
-        
-        }
-        else
-        {
-            CGRect frame = self.frame;
-            frame.size.width = 0;
-            [self setFrame:frame];
-        }
-    
+        self.transform = CGAffineTransformMakeScale(1.0, 1.0);
     }];
-    
+}
+
+-(void)hidePopMenu
+{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.transform = CGAffineTransformMakeScale(0.0001, 0.0001);
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+
 }
 
 
