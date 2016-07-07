@@ -559,6 +559,7 @@
         
     }
     
+    cell.userInteractionEnabled = YES;
     cell.separatorInset = UIEdgeInsetsZero;
     if([cell respondsToSelector:@selector(setLayoutMargins:)])
     {

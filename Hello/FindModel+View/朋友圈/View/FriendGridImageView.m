@@ -8,6 +8,7 @@
 
 #import "FriendGridImageView.h"
 #import "AsynImageView.h"
+#import "ZoomImage.h"
 
 #define padding 2
 
@@ -49,11 +50,6 @@
         for (int column = 0; column < 3; column++) {
             
             AsynImageView *imageView = [[AsynImageView alloc] initWithFrame:CGRectZero];
-            
-            imageView.userInteractionEnabled = YES;
-            
-            UITapGestureRecognizer *TapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickImage:)];
-            [imageView addGestureRecognizer:TapGesture];
             
             [_imageViewArray addObject:imageView];
             
@@ -106,7 +102,16 @@
             if(index < imageCount)
             {
                 [_imageViewArray[index] setFrame:CGRectMake(x, y, width, height)];
-                [self addSubview:_imageViewArray[index]];
+                
+                AsynImageView *imageview = _imageViewArray[index];
+                
+                imageview.userInteractionEnabled = YES;
+                
+                [self addSubview:imageview];
+                
+                UITapGestureRecognizer *TapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickImage:)];
+                
+                [imageview addGestureRecognizer:TapGesture];
             }
             
         }
@@ -115,9 +120,20 @@
 }
 
 
--(void)onClickImage:(UITapGestureRecognizer *)GestureRecognizer
+-(void)onClickImage:(UIGestureRecognizer *)GestureRecognizer
 {
+    AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
     
+    NSString *strimageUrl = asyImageView.imageURL;
+    
+    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+    
+    
+    if(range.length > 0)
+    {
+        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
+    }
+
 }
 
 @end

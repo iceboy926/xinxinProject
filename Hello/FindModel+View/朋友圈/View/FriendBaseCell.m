@@ -95,6 +95,8 @@
     {
         _bodyView = [[UIView alloc] initWithFrame:CGRectZero];
         
+        _bodyView.userInteractionEnabled = YES;
+        
         [self.contentView addSubview:_bodyView];
     }
     
@@ -119,6 +121,8 @@
     if(nil == _gridImageView)
     {
         _gridImageView = [[FriendGridImageView alloc] initWithFrame:CGRectZero];
+        
+        [_gridImageView setUserInteractionEnabled:YES];
         
         [_bodyView addSubview:_gridImageView];
     }
