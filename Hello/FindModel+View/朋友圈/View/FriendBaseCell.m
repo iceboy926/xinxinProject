@@ -197,9 +197,28 @@
 {
     _BaseModel = BaseCellFrame.baseModel;
    
-    [self updateWithBaseModel:_BaseModel];
+    [self updateWithBaseModel:BaseCellFrame.baseModel];
     
     [self updateWithBaseFrame:BaseCellFrame];
+}
+
+-(void)updateWithBaseModel:(FriendBaseModel *)baseModel
+{
+    [_userAvartImage setImageURL:baseModel.strAvartUrl];
+    [_userNickLabel setText:baseModel.strNick];
+    
+    [_contentTextLabel setText:baseModel.strContentText];
+    
+    if([baseModel.imageArray count] > 0)
+    {
+        [_gridImageView setSrcImageArray:baseModel.imageArray];
+        [_gridImageView setHidden:NO];
+    }
+    else
+    {
+        [_gridImageView setHidden:YES];
+    }
+    
 }
 
 -(void)updateWithBaseFrame:(FriendBaseFrame *)FrameItem
@@ -213,21 +232,18 @@
 
     [_contentTextLabel setFrame:FrameItem.contentFrame];
     
-    
+    if([FrameItem.baseModel.imageArray count] > 0)
+    {
+        [_gridImageView setFrame:FrameItem.gridImageFrame];
+        [_gridImageView setGridImageFrame:FrameItem.gridImageFrame];
+    }
     
     
     
 }
 
 
--(void)updateWithBaseModel:(FriendBaseModel *)baseModel
-{
-    [_userAvartImage setImageURL:baseModel.strAvartUrl];
-    [_userNickLabel setText:baseModel.strNick];
-    
-    [_contentTextLabel setText:baseModel.strContentText];
-    
-}
+
 
 
 

@@ -95,7 +95,8 @@
         x = 0.0;
         y = CGRectGetMaxY(_contentFrame) + padding;
         width = CGRectGetWidth(_bodyFrame);
-        height =  (picCount/3 + 1)*IMAGE_HEIGHT + (picCount/3 + 1)*IMAGE_PADDING;
+        
+        height =  (picCount/3 + 1)*(width - 2*2)/3.0 + (picCount/3 + 1)*2;
         
         _gridImageFrame = CGRectMake(x, y, width, height);
         
