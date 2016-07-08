@@ -34,6 +34,8 @@
 @interface FriendsViewController()
 {
     NSMutableArray *friendFrameArray;
+    NSInteger  next_cursor;
+    NSInteger  total_Count;
 }
 
 @property (nonatomic, strong) AsynImageView *coverImage;
@@ -61,7 +63,16 @@
     self = [super init];
     if(self)
     {
-        friendFrameArray = nil;
+        friendFrameArray = [NSMutableArray array];
+        
+        next_cursor = 0;
+        
+        [self InitTableView];
+        
+        [self InitHeader];
+        
+        [self InitFooter];
+        
         [self SendRequst];
     }
     
@@ -81,6 +92,7 @@
     [dicRequest setObject:appDelegate.wbtoken forKey:@"access_token"];
     [dicRequest setObject:@"200" forKey:@"count"];
     [dicRequest setObject:@"0" forKey:@"trim_status"];
+    [dicRequest setObject:[NSString stringWithFormat:@"%ld", (long)next_cursor] forKey:@"cursor"];
     
     
     [WBHttpRequest requestWithAccessToken:appDelegate.wbtoken url:SinaWeiBo_URL_FriendsList/*SinaWeiBo_URL_Statuses_friends*/ httpMethod:@"Get" params:dicRequest queue:nil withCompletionHandler:^(WBHttpRequest *httpRequest, id result, NSError *error)
@@ -104,11 +116,31 @@
     NSDictionary *dicResult = [jsonData objectFromJSONData];
     
     NSArray *userArray = [dicResult objectForKey:@"users"];
+    
+    next_cursor = [[dicResult objectForKey:@"next_cursor"] integerValue];
+    
+    total_Count = [[dicResult objectForKey:@"total_number"] integerValue];
+    
+    if(next_cursor == 0)
+    {
+        next_cursor = total_Count;
+    }
 
     
-    friendFrameArray = [self composeBaseModel:userArray];
+    NSMutableArray *newfriendFrameArray = nil;
     
+    newfriendFrameArray = [self composeBaseModel:userArray];
     
+    //倒序遍历
+    NSEnumerator *enumerator;
+    enumerator = [newfriendFrameArray reverseObjectEnumerator];
+    
+    id object;
+    while (object = [enumerator nextObject]) {
+        [friendFrameArray insertObject:object atIndex:0];
+    }
+    
+    [self.refreshControl endRefreshing];
     
     [_tableView reloadData];
 }
@@ -216,7 +248,7 @@
 -(NSMutableArray *)composeBaseModel:(NSArray *)dataArray
 {
     NSMutableArray *arraylist = [[NSMutableArray alloc] initWithCapacity:[dataArray count]];
-    unsigned long index = 0;
+    static unsigned long index = 0;
     
     for (NSDictionary *usersDic in dataArray) {
         
@@ -271,6 +303,8 @@
     }
     
     
+    
+    
     return [arraylist mutableCopy];
     
 }
@@ -286,11 +320,6 @@
     
     self.navigationItem.title = @"朋友圈";
     
-    [self InitTableView];
-    
-    [self InitHeader];
-    
-    [self InitFooter];
 }
 
 -(void)InitTableView
@@ -376,6 +405,7 @@
     if(_refreshControl == nil)
     {
         _refreshControl = [[UIRefreshControl alloc] init];
+        _refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"努力加载中……"];
         [_refreshControl addTarget:self action:@selector(onPullDown:) forControlEvents:UIControlEventValueChanged];
         
         [_tableView addSubview:_refreshControl];
@@ -467,12 +497,22 @@
 
 -(void)onClickUserAvatar:(id)sender
 {
-    
+    NSLog(@"onClickUserAvatar");
 }
 
 -(void)onPullDown:(id)sender
 {
+    NSLog(@"onPullDown");
     
+    
+    if(next_cursor < total_Count)
+    {
+        [self SendRequst];
+    }
+    else
+    {
+        [_refreshControl endRefreshing];
+    }
 }
 
 

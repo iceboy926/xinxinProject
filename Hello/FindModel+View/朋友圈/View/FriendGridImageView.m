@@ -64,7 +64,11 @@
     [_imageViewArray removeAllObjects];
     
     for (UIView* subView in self.subviews) {
-        [subView removeFromSuperview];
+        
+        if([subView isKindOfClass:[AsynImageView class]])
+        {
+            [subView removeFromSuperview];
+        }
     }
 }
 
@@ -120,19 +124,20 @@
 }
 
 
--(void)onClickImage:(UIGestureRecognizer *)GestureRecognizer
+-(void)onClickImage:(UITapGestureRecognizer *)GestureRecognizer
 {
-    AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
-    
-    NSString *strimageUrl = asyImageView.imageURL;
-    
-    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
-    
-    
-    if(range.length > 0)
-    {
-        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
-    }
+    NSLog(@"onClickImage");
+//    AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
+//    
+//    NSString *strimageUrl = asyImageView.imageURL;
+//    
+//    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+//    
+//    
+//    if(range.length > 0)
+//    {
+//        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
+//    }
 
 }
 

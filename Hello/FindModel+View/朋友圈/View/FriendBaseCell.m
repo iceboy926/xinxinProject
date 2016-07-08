@@ -95,8 +95,6 @@
     {
         _bodyView = [[UIView alloc] initWithFrame:CGRectZero];
         
-        _bodyView.userInteractionEnabled = YES;
-        
         [self.contentView addSubview:_bodyView];
     }
     
@@ -121,8 +119,6 @@
     if(nil == _gridImageView)
     {
         _gridImageView = [[FriendGridImageView alloc] initWithFrame:CGRectZero];
-        
-        [_gridImageView setUserInteractionEnabled:YES];
         
         [_bodyView addSubview:_gridImageView];
     }
@@ -179,6 +175,8 @@
 
 -(void)onClickUserAvart:(id)sender
 {
+    NSLog(@"onClickUserAvart");
+    
     if(_delegate && [_delegate respondsToSelector:@selector(onClickUserAvart:)])
     {
         [_delegate onClickUserAvart:self.BaseModel.itemID];
@@ -193,8 +191,7 @@
 
 -(void)onClickLikeCommentBtn:(id)sender
 {
-    
-    
+    NSLog(@"onClickLikeCommentBtn");
 }
 
 -(void)setBaseCellFrame:(FriendBaseFrame *)BaseCellFrame
@@ -215,8 +212,9 @@
     
     if([baseModel.imageArray count] > 0)
     {
-        [_gridImageView setSrcImageArray:baseModel.imageArray];
         [_gridImageView setHidden:NO];
+        [_gridImageView setSrcImageArray:baseModel.imageArray];
+        
     }
     else
     {
