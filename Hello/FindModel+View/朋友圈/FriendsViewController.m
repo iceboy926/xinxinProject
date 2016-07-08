@@ -36,6 +36,7 @@
     NSMutableArray *friendFrameArray;
     NSInteger  next_cursor;
     NSInteger  total_Count;
+    BOOL       blFinished;
 }
 
 @property (nonatomic, strong) AsynImageView *coverImage;
@@ -66,6 +67,8 @@
         friendFrameArray = [NSMutableArray array];
         
         next_cursor = 0;
+        
+        blFinished = NO;
         
         [self InitTableView];
         
@@ -123,7 +126,7 @@
     
     if(next_cursor == 0)
     {
-        next_cursor = total_Count;
+        blFinished = YES;
     }
 
     
@@ -505,7 +508,7 @@
     NSLog(@"onPullDown");
     
     
-    if(next_cursor < total_Count)
+    if(blFinished == NO)
     {
         [self SendRequst];
     }
