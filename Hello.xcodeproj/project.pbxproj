@@ -22,6 +22,7 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
+		1068E4681D33959000B69010 /* FriendsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068E4671D33959000B69010 /* FriendsInfoViewController.m */; };
 		10861A3D1D29FFA30092B1DF /* OperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10861A3C1D29FFA30092B1DF /* OperationMenu.m */; };
 		10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */; };
 		10861A431D2A03DD0092B1DF /* AlbumComment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3F1D2A03DD0092B1DF /* AlbumComment@3x.png */; };
@@ -333,6 +334,8 @@
 		106205B81D05477700E10485 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Library/Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		106205B91D05477700E10485 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Library/Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		106205BA1D05477700E10485 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Library/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		1068E4661D33959000B69010 /* FriendsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsInfoViewController.h; sourceTree = "<group>"; };
+		1068E4671D33959000B69010 /* FriendsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsInfoViewController.m; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		10861A3B1D29FFA30092B1DF /* OperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OperationMenu.h; path = "FindModel+View/朋友圈/View/OperationMenu.h"; sourceTree = "<group>"; };
@@ -990,6 +993,8 @@
 			children = (
 				109B69F71CF7E84A0077FAFA /* FriendsViewController.h */,
 				109B69F81CF7E84A0077FAFA /* FriendsViewController.m */,
+				1068E4661D33959000B69010 /* FriendsInfoViewController.h */,
+				1068E4671D33959000B69010 /* FriendsInfoViewController.m */,
 				B32C90461CABB50C00869A53 /* Model */,
 				B32C90451CABB4FE00869A53 /* View */,
 			);
@@ -1829,6 +1834,7 @@
 				106205C11D05477700E10485 /* NSArray+MASAdditions.m in Sources */,
 				109B693D1CF7E2840077FAFA /* NSString+MLLabel.m in Sources */,
 				10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */,
+				1068E4681D33959000B69010 /* FriendsInfoViewController.m in Sources */,
 				109B6A311CF7E9700077FAFA /* FansTableViewController.m in Sources */,
 				109B69D21CF7E67A0077FAFA /* LoginViewController.m in Sources */,
 				109B69331CF7E2840077FAFA /* MLExpressionManager.m in Sources */,

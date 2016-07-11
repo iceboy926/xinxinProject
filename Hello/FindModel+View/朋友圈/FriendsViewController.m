@@ -18,6 +18,7 @@
 #import "WeiboUser.h"
 #import "AppDelegate.h"
 #import "JSONKit.h"
+#import "FriendsInfoViewController.h"
 
 
 #define TableHeaderHeight 290*([UIScreen mainScreen].bounds.size.width / 375.0)
@@ -31,7 +32,7 @@
 #define SignFont   [UIFont systemFontOfSize:11]
 
 
-@interface FriendsViewController()
+@interface FriendsViewController() <FriendBaseCellDelegate>
 {
     NSMutableArray *friendFrameArray;
     NSInteger  next_cursor;
@@ -150,7 +151,8 @@
 
 /**
  *  userdic
- *
+ *  homepage = "http://m.weibo.cn/u/1714904297"
+ * avatar_hd = "http://tva3.sinaimg.cn/crop.0.0.180.180.50/66375ce9jw1e8qgp5bmzyj2050050aa8.jpg"
  {
  "allow_all_act_msg" = 0;
  "allow_all_comment" = 1;
@@ -251,17 +253,16 @@
 -(NSMutableArray *)composeBaseModel:(NSArray *)dataArray
 {
     NSMutableArray *arraylist = [[NSMutableArray alloc] initWithCapacity:[dataArray count]];
-    static unsigned long index = 0;
     
     for (NSDictionary *usersDic in dataArray) {
         
         FriendBaseModel *baseModel = [FriendBaseModel new];
         
-        baseModel.itemID = index++;
+        //baseModel.itemID = index++;
         
         //解析dic
         
-        
+        [baseModel setItemID:[usersDic objectForKey:@"idstr"]];
         [baseModel setStrAvartUrl:[usersDic objectForKey:@"avatar_hd"]];
         [baseModel setStrNick:[NSString replaceUnicode:[usersDic objectForKey:@"screen_name"]]];
         [baseModel setStrLocation:[NSString replaceUnicode:[usersDic objectForKey:@"location"]]];
@@ -611,8 +612,25 @@
     
     [cell setBaseCellFrame:[friendFrameArray objectAtIndex:[indexPath row]]];
     
+    cell.delegate = self;
+    
     return cell;
 }
 
+/**
+ *  friendbasecell delegate
+ */
+
+-(void)onClickUserItem:(NSString *)userIDStr
+{
+    NSLog(@"onclickUser id str is %@", userIDStr);
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", SinaWeiBo_URL_UID, userIDStr]];
+    
+    FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] init];
+    friendInfoVC.httpUrl = url;
+    [self.navigationController pushViewController:friendInfoVC animated:YES];
+    
+}
 
 @end

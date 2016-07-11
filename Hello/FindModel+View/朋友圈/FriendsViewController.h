@@ -15,4 +15,8 @@
 @property (nonatomic, assign) NSInteger coverHeight;
 @property (nonatomic, assign) NSInteger userAvartSize;
 
+-(void)setUserAvart:(NSString *)strUrlAvart;
+
+-(void)setCover:(NSString *)strUrlCover;
+
 @end

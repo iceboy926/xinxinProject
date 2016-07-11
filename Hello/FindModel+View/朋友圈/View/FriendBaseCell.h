@@ -19,7 +19,7 @@
 
 @protocol FriendBaseCellDelegate <NSObject>
 
--(void)onClickUserAvart:(NSInteger)userID;
+-(void)onClickUserItem:(NSString *)userIDStr;
 
 @end
 

@@ -174,6 +174,10 @@
         
         FriendsViewController *friendsView = [[FriendsViewController alloc] init];
         
+        [friendsView setUserAvart:HomePage_AvatarImage_URL];
+        
+        [friendsView setCover:HomePage_BackgroundImage_URL];
+        
         [self.navigationController pushViewController:friendsView animated:YES];
         
     }

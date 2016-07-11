@@ -175,11 +175,9 @@
 
 -(void)onClickUserAvart:(id)sender
 {
-    NSLog(@"onClickUserAvart");
-    
-    if(_delegate && [_delegate respondsToSelector:@selector(onClickUserAvart:)])
+    if(_delegate && [_delegate respondsToSelector:@selector(onClickUserItem:)])
     {
-        [_delegate onClickUserAvart:self.BaseModel.itemID];
+        [_delegate onClickUserItem:self.BaseModel.itemID];
     }
     
 }

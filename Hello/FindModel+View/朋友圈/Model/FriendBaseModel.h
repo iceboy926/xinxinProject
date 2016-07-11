@@ -10,7 +10,7 @@
 
 @interface FriendBaseModel : NSObject
 
-@property (nonatomic, assign) long itemID;
+@property (nonatomic, strong) NSString *itemID;
 
 @property (nonatomic, strong) NSString *strAvartUrl;
 
