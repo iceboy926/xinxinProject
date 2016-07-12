@@ -103,6 +103,12 @@
         _totalHeight =  _totalHeight + height + padding;
     }
     
+    CGRect newBodyFrame = _bodyFrame;
+    
+    newBodyFrame.size.height = CGRectGetHeight(_contentFrame) + CGRectGetHeight(_gridImageFrame) + padding;
+    
+    _bodyFrame = newBodyFrame;
+    
     
     //location  time
     
@@ -114,7 +120,7 @@
     _locationFrame = CGRectMake(x, y, width, height);
     
     
-    x = _bodyFrame.size.width/2;
+    x = CGRectGetMaxX(_bodyFrame) - _bodyFrame.size.width/2;
     y = _locationFrame.origin.y;
     width = _bodyFrame.size.width/2;
     height = locationheight;

@@ -14,6 +14,7 @@
 #import "FriendBaseModel.h"
 #import "FriendBaseFrame.h"
 #import "OperationMenu.h"
+#import "NSString+Extension.h"
 
 
 
@@ -88,6 +89,9 @@
         _userNickLabel.lineHeightMultiple = 1.0;
         
         [self.contentView addSubview:_userNickLabel];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickUserNickLabel:)];
+        [_userNickLabel addGestureRecognizer:tap];
     }
     
     
@@ -129,10 +133,9 @@
         _locationLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _locationLabel.textColor = LocationTextColor;
         _locationLabel.font = LocationLabelFont;
-        //_locationLabel.hidden = YES;
+        _locationLabel.textAlignment = NSTextAlignmentLeft;
         
         [self.contentView addSubview:_locationLabel];
-        
     }
     
     if(nil == _timeLabel)
@@ -140,7 +143,7 @@
         _timeLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _timeLabel.textColor = [UIColor lightGrayColor];
         _timeLabel.font = TimeLabelFont;
-        //_timeLabel.hidden = YES;
+        _timeLabel.textAlignment = NSTextAlignmentRight;
         
         [self.contentView addSubview:_timeLabel];
     }
@@ -177,9 +180,22 @@
 {
     if(_delegate && [_delegate respondsToSelector:@selector(onClickUserItem:)])
     {
-        [_delegate onClickUserItem:self.BaseModel.itemID];
+        NSString *strUserURL = [NSString stringWithFormat:@"%@%@", SinaWeiBo_URL_UID, self.BaseModel.itemID];
+        [_delegate onClickUserItem:strUserURL];
     }
     
+}
+
+-(void)onClickUserNickLabel:(UITapGestureRecognizer *)GestureRecognize
+{
+    if(_delegate &&[_delegate respondsToSelector:@selector(onClickUserItem:)])
+    {
+        UILabel *nickLabel = (UILabel *)GestureRecognize.view;
+    
+        NSString *url = [SinaWeiBo_URL_Name stringByAppendingString:[nickLabel.text URLEncodeString]];
+        
+        [_delegate onClickUserItem:url];
+    }
 }
 
 
@@ -219,6 +235,10 @@
         [_gridImageView setHidden:YES];
     }
     
+    [_locationLabel setText:baseModel.strLocation];
+    
+    [_timeLabel setText:baseModel.strTime];
+    
 }
 
 -(void)updateWithBaseFrame:(FriendBaseFrame *)FrameItem
@@ -238,7 +258,11 @@
         [_gridImageView setGridImageFrame:FrameItem.gridImageFrame];
     }
     
+    [_locationLabel setFrame:FrameItem.locationFrame];
     
+    [_timeLabel setFrame:FrameItem.timeFrame];
+    
+    [_likeCommentBtn setFrame:FrameItem.likeCommentFrame];
     
 }
 

@@ -22,7 +22,7 @@
 
 @property (nonatomic, strong) NSString *strLocation;
 
-@property (nonatomic, assign) NSString *strTime;
+@property (nonatomic, strong) NSString *strTime;
 
 @property (nonatomic, assign) CGFloat cellHeight;
 

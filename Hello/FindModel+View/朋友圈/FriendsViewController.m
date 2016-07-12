@@ -623,9 +623,9 @@
 
 -(void)onClickUserItem:(NSString *)userIDStr
 {
-    NSLog(@"onclickUser id str is %@", userIDStr);
+    NSLog(@"onclickUser url is %@", userIDStr);
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", SinaWeiBo_URL_UID, userIDStr]];
+    NSURL *url = [NSURL URLWithString:userIDStr];
     
     FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] init];
     friendInfoVC.httpUrl = url;

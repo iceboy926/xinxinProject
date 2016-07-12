@@ -105,9 +105,9 @@
             int index = row*3+column;
             if(index < imageCount)
             {
-                [_imageViewArray[index] setFrame:CGRectMake(x, y, width, height)];
-                
                 AsynImageView *imageview = _imageViewArray[index];
+                
+                [imageview setFrame:CGRectMake(x, y, width, height)];
                 
                 imageview.userInteractionEnabled = YES;
                 
@@ -117,7 +117,6 @@
                 
                 [imageview addGestureRecognizer:TapGesture];
             }
-            
         }
     }
 
@@ -127,17 +126,18 @@
 -(void)onClickImage:(UITapGestureRecognizer *)GestureRecognizer
 {
     NSLog(@"onClickImage");
-//    AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
-//    
-//    NSString *strimageUrl = asyImageView.imageURL;
-//    
-//    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
-//    
-//    
-//    if(range.length > 0)
-//    {
-//        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
-//    }
+    
+    AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
+    
+    NSString *strimageUrl = asyImageView.imageURL;
+    
+    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+    
+    
+    if(range.length > 0)
+    {
+        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
+    }
 
 }
 
