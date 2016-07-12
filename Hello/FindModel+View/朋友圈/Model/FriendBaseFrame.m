@@ -14,15 +14,15 @@
 #define margin 15
 #define padding 10
 #define avartsize 40
-#define locationheight 40
+#define locationheight 20
 
 #define GridMaxWidth (BodyMaxWidth*0.85)
 #define UserNickMaxWidth 150
 
 #define IMAGE_PADDING 2
 #define likeCommentwidth  50
-#define likeCommentheight 40
-#define operationMenuwidth 180
+#define likeCommentheight 30
+#define operationMenuwidth 120
 
 
 @implementation FriendBaseFrame
@@ -100,12 +100,12 @@
         
         _gridImageFrame = CGRectMake(x, y, width, height);
         
-        _totalHeight =  _totalHeight + height + padding;
+        _totalHeight =  _totalHeight + height + padding/2;
     }
     
     CGRect newBodyFrame = _bodyFrame;
     
-    newBodyFrame.size.height = CGRectGetHeight(_contentFrame) + CGRectGetHeight(_gridImageFrame) + padding;
+    newBodyFrame.size.height = CGRectGetHeight(_contentFrame) + CGRectGetHeight(_gridImageFrame) + padding/2;
     
     _bodyFrame = newBodyFrame;
     
@@ -113,7 +113,7 @@
     //location  time
     
     x = _bodyFrame.origin.x;
-    y = CGRectGetMaxY(_bodyFrame) + padding;
+    y = CGRectGetMaxY(_bodyFrame) + padding/2;
     width = _bodyFrame.size.width/2;
     height = locationheight;
     
@@ -128,13 +128,13 @@
     _timeFrame = CGRectMake(x, y, width, height);
     
     
-    _totalHeight = _totalHeight + locationheight + padding;
+    _totalHeight = _totalHeight + locationheight + padding/2;
     
     
 
     //like comment tool
-    x = MAX_WIDTH - likeCommentwidth - padding;
-    y = CGRectGetMaxY(_locationFrame) + padding;
+    x = MAX_WIDTH - likeCommentwidth;
+    y = CGRectGetMaxY(_locationFrame) + padding/2;
     width = likeCommentwidth;
     height = likeCommentheight;
     
@@ -143,12 +143,12 @@
     
     //operateMenu
     x = CGRectGetMinX(_likeCommentFrame) - operationMenuwidth;
-    y = CGRectGetMaxY(_locationFrame) + padding;
+    y = CGRectGetMaxY(_locationFrame) + padding/2;
     width = operationMenuwidth;
     height = likeCommentheight;
     _operationMenuFrame = CGRectMake(x, y, width, height);
     
-    _totalHeight = _totalHeight + likeCommentheight + padding;
+    _totalHeight = _totalHeight + likeCommentheight + padding/2;
     
     
     

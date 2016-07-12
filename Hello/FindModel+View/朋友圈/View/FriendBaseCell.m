@@ -164,8 +164,6 @@
         _operationMenu.hidden = YES;
         [self.contentView addSubview:_operationMenu];
     }
-
-    
 }
 
 
@@ -205,7 +203,21 @@
 
 -(void)onClickLikeCommentBtn:(id)sender
 {
-    NSLog(@"onClickLikeCommentBtn");
+    static BOOL blOperateMenu = NO;
+    
+    blOperateMenu = !blOperateMenu;
+    
+    if(blOperateMenu)
+    {
+        [_operationMenu showPopMenu];
+        [_operationMenu setHidden:NO];
+    }
+    else
+    {
+        [_operationMenu hidePopMenu];
+        [_operationMenu setHidden:YES];
+    }
+    
 }
 
 -(void)setBaseCellFrame:(FriendBaseFrame *)BaseCellFrame
@@ -263,6 +275,8 @@
     [_timeLabel setFrame:FrameItem.timeFrame];
     
     [_likeCommentBtn setFrame:FrameItem.likeCommentFrame];
+    
+    [_operationMenu setFrame:FrameItem.operationMenuFrame];
     
 }
 

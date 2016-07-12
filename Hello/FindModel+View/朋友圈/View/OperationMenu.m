@@ -56,7 +56,7 @@
        
         make.centerY.mas_equalTo(self.mas_centerY);
         make.height.mas_equalTo(self.mas_height);
-        make.width.mas_equalTo(_commentButton.mas_width);
+        make.width.mas_equalTo(40);
         make.left.mas_equalTo(self.mas_left).with.offset(margin);
         
     }];
@@ -74,11 +74,10 @@
         make.left.mas_equalTo(lineView.mas_right).with.offset(margin);
         make.centerY.mas_equalTo(self.mas_centerY);
         make.height.mas_equalTo(self.mas_height);
-        make.width.mas_equalTo(_likeButton.mas_width);
+        make.width.mas_equalTo(_likeButton.mas_width).multipliedBy(1.5);
         
     }];
-    
-    
+
 }
 
 
@@ -89,7 +88,7 @@
     [btn setImage:image forState:UIControlStateNormal];
     [btn setImage:selImage forState:UIControlStateSelected];
     [btn addTarget:target action:sel forControlEvents:UIControlEventTouchUpInside];
-    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    btn.titleLabel.font = [UIFont systemFontOfSize:12];
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 3, 0, 0);
     return btn;
 }
@@ -108,11 +107,7 @@
 
 -(void)showPopMenu
 {
-    UIWindow * window = [[[UIApplication sharedApplication] windows] firstObject];
-    [window addSubview:self];
-    
     [UIView animateWithDuration:0.2 animations:^{
-    
         self.transform = CGAffineTransformMakeScale(1.0, 1.0);
     }];
 }
@@ -121,8 +116,6 @@
 {
     [UIView animateWithDuration:0.15 animations:^{
         self.transform = CGAffineTransformMakeScale(0.0001, 0.0001);
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
     }];
 
 }
