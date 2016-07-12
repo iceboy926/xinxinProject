@@ -91,12 +91,20 @@
     NSInteger picCount = [baseModel.imageArray count];
     if(picCount > 0)
     {
+        picCount = (picCount > 9) ? 9 : picCount;
         
         x = 0.0;
         y = CGRectGetMaxY(_contentFrame) + padding;
         width = CGRectGetWidth(_bodyFrame);
         
-        height =  (picCount/3 + 1)*(width - 2*2)/3.0 + (picCount/3 + 1)*2;
+        if(picCount%3 == 0)
+        {
+            height =  (picCount/3)*(width - 2*2)/3.0 + (picCount/3)*2;
+        }
+        else
+        {
+            height =  (picCount/3 + 1)*(width - 2*2)/3.0 + + (picCount/3 + 1)*2;
+        }
         
         _gridImageFrame = CGRectMake(x, y, width, height);
         

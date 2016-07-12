@@ -18,7 +18,7 @@
 
 
 
-@interface FriendBaseCell()
+@interface FriendBaseCell()<MLLinkLabelDelegate>
 
 @property (nonatomic, strong) FriendBaseModel *BaseModel;
 
@@ -116,6 +116,7 @@
         _contentTextLabel.activeLinkTextAttributes = nil;
         _contentTextLabel.lineHeightMultiple = 1.2f;
         _contentTextLabel.linkTextAttributes = @{NSForegroundColorAttributeName: HighLightTextColor};
+        _contentTextLabel.delegate = self;
         
         [_bodyView addSubview:_contentTextLabel];
     }
@@ -194,6 +195,45 @@
         
         [_delegate onClickUserItem:url];
     }
+}
+
+- (void)didClickLink:(MLLink*)link linkText:(NSString*)linkText linkLabel:(MLLinkLabel*)linkLabel
+{
+    NSLog(@"linkText is %@", linkText);
+    
+    if(link.linkType == MLLinkTypeURL) //url
+    {
+        if(_delegate && [_delegate respondsToSelector:@selector(onClickUserItem:)])
+        {
+            [_delegate onClickUserItem:linkText];
+        }
+
+    }
+    else if (link.linkType == MLLinkTypeUserHandle) //@XXXX
+    {
+        NSString *strUserName = [linkText stringByReplacingOccurrencesOfString:@"@" withString:@""];
+        
+        NSString *url = [SinaWeiBo_URL_Name stringByAppendingString:[strUserName URLEncodeString]];
+        
+        if(_delegate && [_delegate respondsToSelector:@selector(onClickUserItem:)])
+        {
+            [_delegate onClickUserItem:url];
+        }
+    }
+    else if (link.linkType == MLLinkTypeHashtag)  //#...#
+    {
+        NSString *strUserName = [linkText stringByReplacingOccurrencesOfString:@"#" withString:@""];
+        
+        NSString *url = [SinaWeiBo_URL_Topic stringByAppendingString:[strUserName URLEncodeString]];
+        
+        if(_delegate && [_delegate respondsToSelector:@selector(onClickUserItem:)])
+        {
+            [_delegate onClickUserItem:url];
+        }
+
+    }
+
+    
 }
 
 
