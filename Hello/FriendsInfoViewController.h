@@ -10,6 +10,6 @@
 
 @interface FriendsInfoViewController : UIViewController
 
-@property (nonatomic, strong) NSURL *httpUrl;
+-(instancetype)initWithURL:(NSURL *)URL;
 
 @end

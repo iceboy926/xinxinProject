@@ -12,18 +12,24 @@
 @interface FriendsInfoViewController () <UIWebViewDelegate>
 {
     UIWebView  *webView;
+    NSURL *httpUrl;
 }
 
 @end
 
 @implementation FriendsInfoViewController
 
-- (id)init
+-(instancetype)initWithURL:(NSURL *)URL
 {
     self = [super init];
-    if (self) {
-        // Custom initialization
+    if(self)
+    {
+        webView = [[UIWebView alloc] init];
+        webView.delegate = self;
+        
+        httpUrl = URL;
     }
+    
     return self;
 }
 
@@ -32,20 +38,13 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(back:)];
     
     self.navigationItem.leftBarButtonItem = backItem;
+
     
-    webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-    
-    webView.scalesPageToFit = YES;
-    
-    webView.frame = [[UIScreen mainScreen] bounds];
-    
-    webView.backgroundColor = [UIColor clearColor];
-    
-    webView.opaque = NO;
+    webView.frame = self.view.bounds;
     
     [self.view addSubview:webView];
     
-    webView.delegate = self;
+    [webView loadRequest:[NSURLRequest requestWithURL:httpUrl]];
     
 
 
@@ -56,10 +55,6 @@
     [super viewDidLoad];
     
     [self InitUI];
-    
-    NSURLRequest *quest = [NSURLRequest requestWithURL:self.httpUrl];
-    
-    [webView loadRequest:quest];
     
 }
 
@@ -100,7 +95,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)ShowTabBar:(BOOL)blret
+-(void)HideTabBar:(BOOL)blret
 {
     
     NSArray *views = [self.tabBarController.view subviews];
@@ -113,14 +108,14 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self ShowTabBar:YES];
     [super viewWillAppear:animated];
+    [self HideTabBar:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-    [self ShowTabBar:NO];
     [super viewWillDisappear:animated];
+    [self HideTabBar:NO];
 }
 
 

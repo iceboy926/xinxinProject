@@ -247,6 +247,7 @@
 		10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573A1D138DBA0024D640 /* PPLabel.m */; };
 		10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573F1D138EEC0024D640 /* KCAnnotation.m */; };
 		10B957441D138EEC0024D640 /* MineLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957411D138EEC0024D640 /* MineLocationView.m */; };
+		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
 		823454F51B832B17002A36D6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F41B832B17002A36D6 /* libicucore.dylib */; };
@@ -655,6 +656,8 @@
 		10B9573F1D138EEC0024D640 /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAnnotation.m; path = "FindModel+View/我的位置/KCAnnotation.m"; sourceTree = "<group>"; };
 		10B957401D138EEC0024D640 /* MineLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineLocationView.h; path = "FindModel+View/我的位置/MineLocationView.h"; sourceTree = "<group>"; };
 		10B957411D138EEC0024D640 /* MineLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineLocationView.m; path = "FindModel+View/我的位置/MineLocationView.m"; sourceTree = "<group>"; };
+		10CB8B941D34EE3A006B4D88 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZLCWebView.h; path = Library/WebView/ZLCWebView.h; sourceTree = "<group>"; };
+		10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZLCWebView.m; path = Library/WebView/ZLCWebView.m; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -817,6 +820,15 @@
 				10B957411D138EEC0024D640 /* MineLocationView.m */,
 			);
 			name = "我的位置";
+			sourceTree = "<group>";
+		};
+		10CB8B931D34EE21006B4D88 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				10CB8B941D34EE3A006B4D88 /* ZLCWebView.h */,
+				10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		10D1067D1CFBED54006E14E3 /* ZoomScrollImage */ = {
@@ -1426,6 +1438,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				10CB8B931D34EE21006B4D88 /* WebView */,
 				104AB7501D07B82A00B81408 /* FullScreenPopGesture */,
 				106205A11D05474F00E10485 /* Masonry */,
 				10D1067D1CFBED54006E14E3 /* ZoomScrollImage */,
@@ -1826,6 +1839,7 @@
 				109B69851CF7E4870077FAFA /* Reachability.m in Sources */,
 				10861A3D1D29FFA30092B1DF /* OperationMenu.m in Sources */,
 				106205BF1D05477700E10485 /* MASViewAttribute.m in Sources */,
+				10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */,
 				109B69361CF7E2840077FAFA /* MLLabelLayoutManager.m in Sources */,
 				109B69341CF7E2840077FAFA /* MLLabel.m in Sources */,
 				109B69701CF7E3DC0077FAFA /* LoggerClient.m in Sources */,

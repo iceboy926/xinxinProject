@@ -627,8 +627,7 @@
     
     NSURL *url = [NSURL URLWithString:userIDStr];
     
-    FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] init];
-    friendInfoVC.httpUrl = url;
+    FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] initWithURL:url];
     [self.navigationController pushViewController:friendInfoVC animated:YES];
     
 }
