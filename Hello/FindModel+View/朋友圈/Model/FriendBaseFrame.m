@@ -23,6 +23,7 @@
 #define likeCommentwidth  50
 #define likeCommentheight 30
 #define operationMenuwidth 120
+#define commentviewheight  80
 
 
 @implementation FriendBaseFrame
@@ -159,6 +160,14 @@
     _totalHeight = _totalHeight + likeCommentheight + padding/2;
     
     
+    x = _bodyFrame.origin.x;
+    y = CGRectGetMaxY(_operationMenuFrame) + padding/2;
+    width = CGRectGetWidth(_bodyFrame);
+    height = commentviewheight;
+    
+    _commentViewFrame = CGRectMake(x, y, width, height);
+    
+    _trueTotalHeight = _totalHeight + commentviewheight;
     
 }
 

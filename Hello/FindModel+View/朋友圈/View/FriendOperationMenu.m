@@ -6,9 +6,9 @@
 //  Copyright © 2016年 mit. All rights reserved.
 //
 
-#import "OperationMenu.h"
+#import "FriendOperationMenu.h"
 
-@interface OperationMenu ()
+@interface FriendOperationMenu ()
 {
     UIButton *_likeButton;
     UIButton *_commentButton;
@@ -16,7 +16,7 @@
 }
 @end
 
-@implementation OperationMenu
+@implementation FriendOperationMenu
 
 -(instancetype) initWithFrame:(CGRect)frame
 {
@@ -35,6 +35,8 @@
     self.clipsToBounds = YES;
     self.layer.cornerRadius = 5;
     self.backgroundColor = UIColorHex(@"454A4C");
+    
+    _blShow = NO;
     
     _likeButton = [self creatButtonWithTitle:@"赞" image:[UIImage imageNamed:@"AlbumLike"] selImage:[UIImage imageNamed:@""] target:self selector:@selector(likeButtonClicked)];
     
@@ -116,6 +118,8 @@
     [UIView animateWithDuration:0.2 animations:^{
         self.transform = CGAffineTransformMakeScale(1.0, 1.0);
     }];
+    
+    _blShow = YES;
 }
 
 -(void)hidePopMenu
@@ -123,7 +127,8 @@
     [UIView animateWithDuration:0.15 animations:^{
         self.transform = CGAffineTransformMakeScale(0.0001, 0.0001);
     }];
-
+    
+    _blShow = NO;
 }
 
 

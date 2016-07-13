@@ -13,8 +13,10 @@
 #import "FriendGridImageView.h"
 #import "FriendBaseModel.h"
 #import "FriendBaseFrame.h"
-#import "OperationMenu.h"
+#import "FriendOperationMenu.h"
+#import "FriendCommentView.h"
 #import "NSString+Extension.h"
+
 
 
 
@@ -38,7 +40,9 @@
 
 @property (nonatomic ,strong) UIButton *likeCommentBtn;
 
-@property (nonatomic, strong) OperationMenu *operationMenu;
+@property (nonatomic, strong) FriendOperationMenu *operationMenu;
+
+@property (nonatomic, strong) FriendCommentView *commentView;
 
 @end
 
@@ -162,7 +166,7 @@
     
     if(nil == _operationMenu)
     {
-        _operationMenu = [[OperationMenu alloc] initWithFrame:CGRectZero];
+        _operationMenu = [[FriendOperationMenu alloc] initWithFrame:CGRectZero];
         _operationMenu.hidden = YES;
         [self.contentView addSubview:_operationMenu];
         
@@ -184,6 +188,15 @@
         
         }];
     }
+    
+    
+    if(nil == _commentView)
+    {
+        _commentView = [[FriendCommentView alloc] initWithFrame:CGRectZero];
+        [self.contentView addSubview:_commentView];
+        [_commentView setHidden:YES];
+    }
+    
 }
 
 
@@ -251,10 +264,7 @@
         }
 
     }
-
-    
 }
-
 
 /**
  *
@@ -262,11 +272,8 @@
 
 -(void)onClickLikeCommentBtn:(id)sender
 {
-    static BOOL blOperateMenu = NO;
-    
-    blOperateMenu = !blOperateMenu;
-    
-    if(blOperateMenu)
+
+    if(_operationMenu.blShow == NO)
     {
         [_operationMenu showPopMenu];
         [_operationMenu setHidden:NO];
@@ -310,6 +317,8 @@
     
     [_timeLabel setText:baseModel.strTime];
     
+    [_operationMenu setHidden:YES];
+    
 }
 
 -(void)updateWithBaseFrame:(FriendBaseFrame *)FrameItem
@@ -336,6 +345,8 @@
     [_likeCommentBtn setFrame:FrameItem.likeCommentFrame];
     
     [_operationMenu setFrame:FrameItem.operationMenuFrame];
+    
+    [_commentView setFrame:FrameItem.commentViewFrame];
     
 }
 

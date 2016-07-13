@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OperationMenu : UIView
+@interface FriendOperationMenu : UIView
 
 @property (nonatomic, copy) void (^likeButtonClickedOperation)();
 @property (nonatomic, copy) void (^commentButtonClickedOpration)();
+
+@property (nonatomic, assign) BOOL blShow;
 
 -(void)showPopMenu;
 

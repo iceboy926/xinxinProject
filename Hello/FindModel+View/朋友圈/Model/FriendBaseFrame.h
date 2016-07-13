@@ -30,8 +30,12 @@
 
 @property (nonatomic, assign) CGRect  operationMenuFrame;
 
+@property (nonatomic, assign) CGRect  commentViewFrame;
+
 @property (nonatomic, strong) FriendBaseModel *baseModel;
 
 @property (nonatomic, assign) CGFloat  totalHeight;
+
+@property (nonatomic, assign) CGFloat  trueTotalHeight;
 
 @end

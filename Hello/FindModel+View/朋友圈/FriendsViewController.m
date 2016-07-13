@@ -649,6 +649,15 @@
 -(void)onClickLikeButtonInCell:(UITableViewCell *)cell
 {
     NSLog(@"%s", __FUNCTION__);
+    
+    NSIndexPath *indexpath = [self.tableView indexPathForCell:cell];
+
+    FriendBaseFrame *baseCellFrame = [friendFrameArray objectAtIndex:[indexpath row]];
+
+    baseCellFrame.totalHeight = baseCellFrame.trueTotalHeight;
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexpath] withRowAnimation:UITableViewRowAnimationNone];
+
 }
 
 
