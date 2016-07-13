@@ -21,6 +21,10 @@
 
 -(void)onClickUserItem:(NSString *)userIDStr;
 
+-(void)onClickLikeButtonInCell:(UITableViewCell *)cell;
+
+-(void)onClickCommentButtonInCell:(UITableViewCell *)cell;
+
 @end
 
 @interface FriendBaseCell : UITableViewCell

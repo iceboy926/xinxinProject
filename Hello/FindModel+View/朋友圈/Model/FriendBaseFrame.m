@@ -122,15 +122,15 @@
     
     x = _bodyFrame.origin.x;
     y = CGRectGetMaxY(_bodyFrame) + padding/2;
-    width = _bodyFrame.size.width/2;
+    width = _bodyFrame.size.width/3;
     height = locationheight;
     
     _locationFrame = CGRectMake(x, y, width, height);
     
     
-    x = CGRectGetMaxX(_bodyFrame) - _bodyFrame.size.width/2;
+    x = CGRectGetMaxX(_bodyFrame) - _bodyFrame.size.width/3.0*2;
     y = _locationFrame.origin.y;
-    width = _bodyFrame.size.width/2;
+    width = _bodyFrame.size.width/3.0*2;
     height = locationheight;
     
     _timeFrame = CGRectMake(x, y, width, height);

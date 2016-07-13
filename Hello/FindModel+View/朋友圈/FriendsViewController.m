@@ -19,6 +19,7 @@
 #import "AppDelegate.h"
 #import "JSONKit.h"
 #import "FriendsInfoViewController.h"
+#import "JSHpple.h"
 
 
 #define TableHeaderHeight 290*([UIScreen mainScreen].bounds.size.width / 375.0)
@@ -287,16 +288,28 @@
             {
                 baseModel.imageArray = nil;
             }
+            
+            NSData *sourceData = [[statusDic objectForKey:@"source"] dataUsingEncoding:NSUTF8StringEncoding];
+            JSHpple *jsHpple = [JSHpple ShareHpple];
+            
+            NSArray *arrayData = [jsHpple HtmlWithData:sourceData XPath:@"//a"];
+            
+            if([arrayData count] > 0)
+            {
+                NSString *strSource = @"来自";
+                [baseModel setStrTime:[strSource stringByAppendingString:[arrayData objectAtIndex:0]]];
+            }
+            else
+            {
+                [baseModel setStrTime:@""];
+            }
+            
         }
         else
         {
             [baseModel setStrContentText:[NSString replaceUnicode:[usersDic objectForKey:@"description"]]];
             baseModel.imageArray = nil;
         }
-        
-        NSMutableString *strTime = [[usersDic objectForKey:@"created_at"] GetTime];
-        [baseModel setStrTime:strTime];
-        
         
         FriendBaseFrame *baseFrame = [[FriendBaseFrame alloc] init];
         
@@ -630,6 +643,18 @@
     FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] initWithURL:url];
     [self.navigationController pushViewController:friendInfoVC animated:YES];
     
+}
+
+
+-(void)onClickLikeButtonInCell:(UITableViewCell *)cell
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
+
+-(void)onClickCommentButtonInCell:(UITableViewCell *)cell
+{
+    NSLog(@"%s", __FUNCTION__);
 }
 
 @end

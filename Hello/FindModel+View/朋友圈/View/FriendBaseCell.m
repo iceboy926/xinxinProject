@@ -61,6 +61,7 @@
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    __weak typeof(self) weakself = self;
        
     if(nil == _userAvartImage)
     {
@@ -164,6 +165,24 @@
         _operationMenu = [[OperationMenu alloc] initWithFrame:CGRectZero];
         _operationMenu.hidden = YES;
         [self.contentView addSubview:_operationMenu];
+        
+        [_operationMenu setLikeButtonClickedOperation:^{
+            
+            if(weakself.delegate && [weakself.delegate respondsToSelector:@selector(onClickLikeButtonInCell:)])
+            {
+                [weakself.delegate onClickLikeButtonInCell:weakself];
+            }
+        
+        }];
+        
+        [_operationMenu setCommentButtonClickedOpration:^{
+            
+            if(weakself.delegate && [weakself.delegate respondsToSelector:@selector(onClickCommentButtonInCell:)])
+            {
+                [weakself.delegate onClickCommentButtonInCell:weakself];
+            }
+        
+        }];
     }
 }
 

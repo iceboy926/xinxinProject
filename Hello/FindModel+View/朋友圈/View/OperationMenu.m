@@ -96,12 +96,18 @@
 
 -(void)likeButtonClicked
 {
-    
+    if(self.likeButtonClickedOperation)
+    {
+        self.likeButtonClickedOperation();
+    }
 }
 
 -(void)commentButtonClicked
 {
-    
+    if(self.commentButtonClickedOpration)
+    {
+        self.commentButtonClickedOpration();
+    }
 }
 
 
