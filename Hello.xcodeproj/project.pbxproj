@@ -23,6 +23,7 @@
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
 		1068E4681D33959000B69010 /* FriendsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1068E4671D33959000B69010 /* FriendsInfoViewController.m */; };
+		107C21B51D35DF2000792E3E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10861A3D1D29FFA30092B1DF /* OperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10861A3C1D29FFA30092B1DF /* OperationMenu.m */; };
 		10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */; };
 		10861A431D2A03DD0092B1DF /* AlbumComment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3F1D2A03DD0092B1DF /* AlbumComment@3x.png */; };
@@ -339,6 +340,7 @@
 		1068E4671D33959000B69010 /* FriendsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsInfoViewController.m; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
+		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		10861A3B1D29FFA30092B1DF /* OperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OperationMenu.h; path = "FindModel+View/朋友圈/View/OperationMenu.h"; sourceTree = "<group>"; };
 		10861A3C1D29FFA30092B1DF /* OperationMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OperationMenu.m; path = "FindModel+View/朋友圈/View/OperationMenu.m"; sourceTree = "<group>"; };
 		10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AlbumComment@2x.png"; path = "image/AlbumComment@2x.png"; sourceTree = "<group>"; };
@@ -661,8 +663,6 @@
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		56B5562208285631FD46A35A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		823454F21B832B07002A36D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		823454F41B832B17002A36D6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		823454F61B832B2F002A36D6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -719,6 +719,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107C21B51D35DF2000792E3E /* WebKit.framework in Frameworks */,
 				109B69C91CF7E5EB0077FAFA /* libidn.a in Frameworks */,
 				109B697E1CF7E40C0077FAFA /* libWeiboSDK.a in Frameworks */,
 				B31B04071C98FA3F00C6E080 /* AVFoundation.framework in Frameworks */,
@@ -843,15 +844,6 @@
 				10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */,
 			);
 			name = ZoomScrollImage;
-			sourceTree = "<group>";
-		};
-		25B632EBEA3A7E0FED768BA5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				56B5562208285631FD46A35A /* Pods.debug.xcconfig */,
-				5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		8216718D1B3949380099A38D /* AFNetworking */ = {
@@ -1071,7 +1063,6 @@
 				82B612F01B2FBC61007E6D42 /* HelloTests */,
 				82B612CA1B2FBC61007E6D42 /* Frameworks */,
 				82B612C91B2FBC61007E6D42 /* Products */,
-				25B632EBEA3A7E0FED768BA5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1087,6 +1078,7 @@
 		82B612CA1B2FBC61007E6D42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				107C21B41D35DF2000792E3E /* WebKit.framework */,
 				109B69C81CF7E5EB0077FAFA /* libidn.a */,
 				10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */,
 				B31B04061C98FA3F00C6E080 /* AVFoundation.framework */,
@@ -1533,11 +1525,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82B612FA1B2FBC61007E6D42 /* Build configuration list for PBXNativeTarget "Hello" */;
 			buildPhases = (
-				04BE3874441CC3AA5903CAA5 /* Check Pods Manifest.lock */,
 				82B612C41B2FBC61007E6D42 /* Sources */,
 				82B612C51B2FBC61007E6D42 /* Frameworks */,
 				82B612C61B2FBC61007E6D42 /* Resources */,
-				614209616135561C683F974F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1772,39 +1762,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		04BE3874441CC3AA5903CAA5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		614209616135561C683F974F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82B612C41B2FBC61007E6D42 /* Sources */ = {
@@ -2046,7 +2003,6 @@
 		};
 		82B612FB1B2FBC61007E6D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56B5562208285631FD46A35A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
@@ -2094,7 +2050,6 @@
 		};
 		82B612FC1B2FBC61007E6D42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CC642EF0F61751F1A96B310 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
