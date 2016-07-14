@@ -278,8 +278,8 @@
                 for (NSDictionary *picDic in arrayPic)
                 {
                     NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
-                    NSString *strpic = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-                    [array addObject:strpic];
+                    //NSString *strpic = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                    [array addObject:stringPic];
                 }
                 
                 baseModel.imageArray = [array mutableCopy];
@@ -636,8 +636,6 @@
 
 -(void)onClickUserItem:(NSString *)userIDStr
 {
-    NSLog(@"onclickUser url is %@", userIDStr);
-    
     NSURL *url = [NSURL URLWithString:userIDStr];
     
     FriendsInfoViewController *friendInfoVC = [[FriendsInfoViewController alloc] initWithURL:url];
@@ -648,8 +646,6 @@
 
 -(void)onClickLikeButtonInCell:(UITableViewCell *)cell
 {
-    NSLog(@"%s", __FUNCTION__);
-    
     NSIndexPath *indexpath = [self.tableView indexPathForCell:cell];
 
     FriendBaseFrame *baseCellFrame = [friendFrameArray objectAtIndex:[indexpath row]];

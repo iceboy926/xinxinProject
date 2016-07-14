@@ -199,8 +199,8 @@
             for (NSDictionary *picDic in arrayPic)
             {
                 NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
-                NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-                [array addObject:strout];
+                //NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                [array addObject:stringPic];
             }
                     
             cellUser.pictureArray = [array mutableCopy];
@@ -219,8 +219,8 @@
                 for (NSDictionary *picDic in arryRetweetPic) {
                     
                     NSMutableString *stringPic = [picDic objectForKey:@"thumbnail_pic"];
-                    NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-                    [array addObject:strout];
+                    //NSString *strout = [stringPic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                    [array addObject:stringPic];
                 }
                 
                 cellUser.retweetPictureArray = [array mutableCopy];
@@ -504,12 +504,12 @@
 {
     NSString *strimageUrl = asyImageView.imageURL;
     
-    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+    NSRange range = [strimageUrl rangeOfString:@"thumbnail"];
     
     
     if(range.length > 0)
     {
-        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
+        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"]];
     }
     
 }

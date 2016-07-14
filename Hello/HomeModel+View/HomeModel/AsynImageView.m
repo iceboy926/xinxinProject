@@ -61,53 +61,19 @@
 {
     if(placeholderImage != _placeholderImage)
     {
-        //[_placeholderImage release];
         
         _placeholderImage = placeholderImage;
         self.image = _placeholderImage;    //指定默认图片
     }
 }
 
-//重写imageURL的Setter方法
-//-(void)setImageURL:(NSString *)imageURL
-//{
-//    if(imageURL != _imageURL)
-//    {
-//        self.image = _placeholderImage;    //指定默认图片
-//       //[_imageURL release];
-//        //_imageURL = [imageURL retain];
-//        _imageURL = imageURL;
-//    }
-//    
-//    if(_imageURL)
-//    {
-//        
-//        //确定图片的缓存地址
-//        NSArray *path=NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-//        NSString *docDir=[path objectAtIndex:0];
-//        NSString *tmpPath=[docDir stringByAppendingPathComponent:@"AsynImage"];
-//        
-//        NSFileManager *fm = [NSFileManager defaultManager];
-//        if(![fm fileExistsAtPath:tmpPath])
-//        {
-//            [fm createDirectoryAtPath:tmpPath withIntermediateDirectories:YES attributes:nil error:nil];
-//        }
-//        NSArray *lineArray = [_imageURL componentsSeparatedByString:@"/"];
-//        self.fileName = [NSString stringWithFormat:@"%@/%@", tmpPath, [lineArray objectAtIndex:[lineArray count] - 1]];
-//        
-//        //判断图片是否已经下载过，如果已经下载到本地缓存，则不用重新下载。如果没有，请求网络进行下载。
-//        if(![[NSFileManager defaultManager] fileExistsAtPath:_fileName])
-//        {
-//            //下载图片，保存到本地缓存中
-//            [self loadImage];
-//        }
-//        else
-//        {
-//            //本地缓存中已经存在，直接指定请求的网络图片
-//            self.image = [UIImage imageWithContentsOfFile:_fileName];
-//        }
-//    }
-//}
+-(UIImage *)getImage
+{
+    [self loadImage];
+    
+    return self.image;
+}
+
 
 //带缓存的image加载
 

@@ -8,11 +8,12 @@
 
 #import "FriendGridImageView.h"
 #import "AsynImageView.h"
-#import "ZoomImage.h"
+//#import "ZoomImage.h"
+#import "SDPhotoBrowser.h"
 
 #define padding 2
 
-@interface FriendGridImageView()
+@interface FriendGridImageView() <SDPhotoBrowserDelegate>
 {
     int  imageCount;
 }
@@ -111,6 +112,8 @@
                 
                 imageview.userInteractionEnabled = YES;
                 
+                imageview.tag = index;
+                
                 [self addSubview:imageview];
                 
                 UITapGestureRecognizer *TapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickImage:)];
@@ -122,23 +125,58 @@
 
 }
 
-
 -(void)onClickImage:(UITapGestureRecognizer *)GestureRecognizer
 {
     NSLog(@"onClickImage");
     
     AsynImageView *asyImageView = (AsynImageView *)[GestureRecognizer view];
     
-    NSString *strimageUrl = asyImageView.imageURL;
+    SDPhotoBrowser *photoBrowser = [[SDPhotoBrowser alloc] init];
     
-    NSRange range = [strimageUrl rangeOfString:@"bmiddle"];
+    photoBrowser.sourceImagesContainerView = self;
+    photoBrowser.currentImageIndex = asyImageView.tag;
+    photoBrowser.imageCount = imageCount;
+    photoBrowser.delegate = self;
+    [photoBrowser show];
     
-    
-    if(range.length > 0)
-    {
-        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"bmiddle" withString:@"large"]];
-    }
-
 }
+
+
+/**
+ *  delegate
+ *
+ *  @param browser
+ *  @param index
+ *
+ *  @return
+ */
+//
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index;
+{
+    AsynImageView *imageView = _imageViewArray[index];
+    
+    return [imageView image];
+}
+
+
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSURL *url = nil;
+    
+    AsynImageView *imageView = _imageViewArray[index];
+    
+    if(imageView)
+    {
+        NSString *strUrl = imageView.imageURL;
+        strUrl = [strUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        url = [NSURL URLWithString:strUrl];
+    }
+    
+    return url;
+}
+
+
+
+
 
 @end
