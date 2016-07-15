@@ -101,7 +101,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)ShowTabBar:(BOOL)blret
+-(void)HideTabBar:(BOOL)blret
 {
     
     NSArray *views = [self.tabBarController.view subviews];
@@ -112,16 +112,30 @@
     }
 }
 
+-(void)HideNavigateBar:(BOOL)blHide
+{
+    NSArray *views = [self.navigationController.view subviews];
+    for(UIView* view in views)
+    {
+        if([view isKindOfClass:[UINavigationBar class]])
+        {
+            [view setHidden:blHide];
+        }
+    }
+}
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self ShowTabBar:YES];
+    [self HideTabBar:YES];
+    [self HideNavigateBar:YES];
     [super viewWillAppear:animated];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-    [self ShowTabBar:NO];
+    [self HideTabBar:NO];
+    [self HideNavigateBar:NO];
     [super viewWillDisappear:animated];
 }
 

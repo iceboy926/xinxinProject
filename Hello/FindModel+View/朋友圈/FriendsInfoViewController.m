@@ -6,12 +6,12 @@
 //  Copyright © 2016年 mit. All rights reserved.
 //
 
-
 #import "FriendsInfoViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface FriendsInfoViewController () <UIWebViewDelegate>
+@interface FriendsInfoViewController () <WKNavigationDelegate, WKUIDelegate>
 {
-    UIWebView  *webView;
+    WKWebView  *webView;
     NSURL *httpUrl;
 }
 
@@ -24,8 +24,9 @@
     self = [super init];
     if(self)
     {
-        webView = [[UIWebView alloc] init];
-        webView.delegate = self;
+        webView = [[WKWebView alloc] init];
+        webView.navigationDelegate = self;
+        webView.UIDelegate = self;
         
         httpUrl = URL;
     }
@@ -45,9 +46,6 @@
     [self.view addSubview:webView];
     
     [webView loadRequest:[NSURLRequest requestWithURL:httpUrl]];
-    
-
-
 }
 
 - (void)viewDidLoad
@@ -106,38 +104,72 @@
     }
 }
 
+-(void)HideNavigateBar:(BOOL)blHide
+{
+    NSArray *arrayView = [self.navigationController.view subviews];
+    for (UIView *view in arrayView) {
+        if([view isKindOfClass:[UINavigationBar class]])
+        {
+            [view setHidden:blHide];
+        }
+    }
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self HideTabBar:YES];
+    [self HideNavigateBar:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self HideTabBar:NO];
+    [self HideNavigateBar:NO];
 }
 
 
-#pragma webViewDelegete
-- (void)webViewDidStartLoad:(UIWebView *)webView
+#pragma mark- WKNavigationDelegate
+// 在发送请求之前，决定是否跳转
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    
+    NSLog(@"%s", __FUNCTION__);
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+//在收到响应后，决定是否跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler
 {
-    
+    NSLog(@"%s", __FUNCTION__);
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+// 页面开始加载时调用
+-(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
-    if(error)
-    {
-        NSLog(@"didFailLoadWithError error is %@", error);
-    }
-    
+    NSLog(@"%s", __FUNCTION__);
 }
+
+//当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+    
+    NSLog(@"%s", __FUNCTION__);
+}
+
+
+// 页面加载完成之后调用
+-(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
+// 页面加载失败时调用
+- (void)webView:(WKWebView *) webView didFailProvisionalNavigation: (WKNavigation *) navigation withError: (NSError *) error
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 
 @end
 

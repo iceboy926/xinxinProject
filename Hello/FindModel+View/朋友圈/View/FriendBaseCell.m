@@ -19,7 +19,6 @@
 
 
 
-
 @interface FriendBaseCell()<MLLinkLabelDelegate>
 
 @property (nonatomic, strong) FriendBaseModel *BaseModel;
@@ -214,7 +213,6 @@
         NSString *strUserURL = [NSString stringWithFormat:@"%@%@", SinaWeiBo_URL_UID, self.BaseModel.itemID];
         [_delegate onClickUserItem:strUserURL];
     }
-    
 }
 
 -(void)onClickUserNickLabel:(UITapGestureRecognizer *)GestureRecognize

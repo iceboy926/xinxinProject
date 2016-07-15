@@ -22,7 +22,6 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
-		107C21B51D35DF2000792E3E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10861A3C1D29FFA30092B1DF /* FriendOperationMenu.m */; };
 		10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */; };
 		10861A431D2A03DD0092B1DF /* AlbumComment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3F1D2A03DD0092B1DF /* AlbumComment@3x.png */; };
@@ -267,6 +266,7 @@
 		10C009D11D37661C003B6CF3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009BF1D37661C003B6CF3 /* UIImageView+HighlightedWebCache.m */; };
 		10C009D21D37661C003B6CF3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009C11D37661C003B6CF3 /* UIImageView+WebCache.m */; };
 		10C009D31D37661C003B6CF3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009C31D37661C003B6CF3 /* UIView+WebCacheOperation.m */; };
+		10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
@@ -777,7 +777,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				107C21B51D35DF2000792E3E /* WebKit.framework in Frameworks */,
+				10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */,
 				109B69C91CF7E5EB0077FAFA /* libidn.a in Frameworks */,
 				109B697E1CF7E40C0077FAFA /* libWeiboSDK.a in Frameworks */,
 				B31B04071C98FA3F00C6E080 /* AVFoundation.framework in Frameworks */,
@@ -2152,6 +2152,7 @@
 					"$(PROJECT_DIR)/Hello/ShareSDK",
 					"$(PROJECT_DIR)/Hello/ShareSDK/UI",
 					/Users/a111/Downloads,
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hello/Hello-Prefix.pch";
@@ -2199,6 +2200,7 @@
 					"$(PROJECT_DIR)/Hello/ShareSDK",
 					"$(PROJECT_DIR)/Hello/ShareSDK/UI",
 					/Users/a111/Downloads,
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hello/Hello-Prefix.pch";
