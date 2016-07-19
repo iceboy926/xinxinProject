@@ -38,6 +38,16 @@
 				<string>wxb15b4ab26fce2028</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>taobao</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tbopen23412306</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

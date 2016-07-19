@@ -92,6 +92,10 @@
 
 #define _DEBUG
 
+
+#define ALBBaiChuan_AppKey    @"23412306"
+#define ALBBaiChuan_AppSecret @"60d094448b7362b7f714a916a4f85e4d"
+
 #define SinaWeiBo_AppKey @"2187371547"
 #define SinaWeiBo_AppSecret @"d3963e403edbc49048f5217eb81a2d26"
 #define SinaWeiBo_redirectUri @"http://www.myapp.com/login/callback"

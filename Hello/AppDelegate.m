@@ -16,6 +16,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioSession.h>
 #import <AVFoundation/AVAudioSession.h>
+#import <ALBBSDK/ALBBSDK.h>
 
 @interface AppDelegate() <WeiboSDKDelegate>
 
@@ -41,7 +42,13 @@
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [WeiboSDK handleOpenURL:url delegate:self];
+    
+    if (![[ALBBSDK sharedInstance] handleOpenURL:url]) {
+        // 处理其他app跳转到自己的app
+        return [WeiboSDK handleOpenURL:url delegate:self];
+    }
+
+    return YES;
 }
 
 
@@ -49,14 +56,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    //writeFileLog("application", "didFinishLaunchingWithOptions");
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-    
-        //NSLog(@"App start time is %f seconds", CFAbsoluteTimeGetCurrent() - startTime);
-    
-    });
     
     //LaunchOptions 为app的启动方式
     //如果为用户直接启动：launchOptions 为nil 或者无数据
@@ -102,10 +101,6 @@
     
 
     
-    
-    [WeiboSDK enableDebugMode:YES];
-    //1、注册AppKey
-    [WeiboSDK registerApp:SinaWeiBo_AppKey];
     
     
     
@@ -245,56 +240,24 @@
 
 -(void)InitAllPlatform
 {
-    //sina weibo
+    //
     
-    //appkey 2187371547
-    //appsecret d3963e403edbc49048f5217eb81a2d26
-    //[ShareSDK connectSinaWeiboWithAppKey:@"2187371547" appSecret:@"d3963e403edbc49048f5217eb81a2d26" redirectUri:@"http://www.myapp.com/login/callback"];
-    
-    //[WeiboSDK registerApp:@"2187371547"];
-    
-    
-    //QQ weibo
-    //[ShareSDK connectTencentWeiboWithAppKey:@"9b859fbef42e" appSecret:@"82daf2c539030bdd428e5b2896b2503d"
-    //redirectUri:@"http://www.sharesdk.cn"];
+    [WeiboSDK enableDebugMode:YES];
+    //1、注册AppKey
+    [WeiboSDK registerApp:SinaWeiBo_AppKey];
+
     
     
-    //SMS 短信通知
-    //[ShareSDK connectSMS];
-    
-    
-    //QQ
-    //[ShareSDK connectQQWithQZoneAppKey:@"1104820204" qqApiInterfaceCls:[QQApiInterface class] tencentOAuthCls:[TencentOAuth class]];
-    
-    
-    //weixin
-    //AppID：wxb15b4ab26fce2028
-    //AppSecret：6557ddc82829bbe31682e71e4835d5af
-//    [ShareSDK connectWeChatWithAppId:@"wxb15b4ab26fce2028" appSecret:@"6557ddc82829bbe31682e71e4835d5af" wechatCls:[WXApi class]];
-//    
-//    BOOL blret = [WXApi registerApp:@"wxb15b4ab26fce2028"];
-//    
-//    if(blret)
-//    {
-//        NSLog(@"weixin registerApp sucess");
-//    }
-//    
-//    blret = [WXApi isWXAppSupportApi];
-//    if(blret)
-//    {
-//        NSLog(@"weixin is supportapi");
-//    }
-    
-    //QQ Zone
-    //[ShareSDK connectQZoneWithAppKey:@"1104746727" appSecret:@"BMjtbX0vQeOupS4Z" qqApiInterfaceCls:[QQApiInterface class] tencentOAuthCls:[TencentOAuth class]];
-    
-    
-    //QQ 开放平台
-    //APPID 1104746727
-    //APP KEY: BMjtbX0vQeOupS4Z
-    
-    
-    
+    //
+    [[ALBBSDK sharedInstance] setDebugLogOpen:YES];
+    [[ALBBSDK sharedInstance] setUseTaobaoNativeDetail:NO];
+    [[ALBBSDK sharedInstance] setViewType:ALBB_ITEM_VIEWTYPE_TAOBAO];
+    [[ALBBSDK sharedInstance] asyncInit:^{
+        NSLog(@"ALBBSDK success");
+    } failure:^(NSError *error) {
+        NSLog(@"ALBBSDK failure, %@", error);
+    }];
+
 }
 
 /**
