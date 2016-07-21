@@ -249,7 +249,7 @@
     
     
     //
-    [[ALBBSDK sharedInstance] setDebugLogOpen:YES];
+    [[ALBBSDK sharedInstance] setDebugLogOpen:NO];
     [[ALBBSDK sharedInstance] setUseTaobaoNativeDetail:NO];
     [[ALBBSDK sharedInstance] setViewType:ALBB_ITEM_VIEWTYPE_TAOBAO];
     [[ALBBSDK sharedInstance] asyncInit:^{

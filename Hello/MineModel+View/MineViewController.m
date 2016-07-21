@@ -7,8 +7,10 @@
 //
 
 #import "MineViewController.h"
+#import "UIImage+CircleImage.h"
+#import "MineSettingViewController.h"
 
-@interface MineViewController ()
+@interface MineViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -39,80 +41,219 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 0;
+    return 4;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([indexPath section] == 0)
+    {
+        return 60;
+    }
+    else
+    {
+        return 44;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return 0;
+    NSInteger rows = 0;
+ 
+    switch (section) {
+        case 0:
+        {
+            rows = 1;
+        }
+            break;
+        case 1:
+        {
+            rows = 3;
+        }
+            
+            break;
+        case 2:
+        {
+            rows = 1;
+        }
+            break;
+        case 3:
+        {
+            rows = 1;
+        }
+            break;
+            
+        default:
+            rows = 0;
+            break;
+    }
+    
+    
+    return rows;
 }
 
-/*
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *strCell = @"mineCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:strCell];
+    
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strCell];
+    }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    switch ([indexPath section]) {
+        case 0:
+        {
+            cell.textLabel.text = @"南宫勇少";
+            cell.imageView.image = [UIImage imageNamed:@"xhr"];
+            cell.imageView.layer.cornerRadius = 5.0;
+            cell.imageView.clipsToBounds = YES;
+        }
+            break;
+        case 1:
+        {
+            switch ([indexPath row]) {
+                case 0:
+                {
+                    cell.textLabel.text = @"相册";
+                    cell.imageView.image = [UIImage imageNamed:@"MoreMyAlbum"];
+                }
+                    break;
+                case 1:
+                {
+                    cell.textLabel.text = @"钱包";
+                    cell.imageView.image = [UIImage imageNamed:@"MoreMyBankCard"];
+                }
+                    break;
+                case 2:
+                {
+                    cell.textLabel.text = @"卡包";
+                    cell.imageView.image = [UIImage imageNamed:@"MyCardPackageIcon"];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 2:
+        {
+            cell.textLabel.text = @"表情";
+            cell.imageView.image = [UIImage imageNamed:@"MoreExpressionShops"];
+        }
+            break;
+        case 3:
+        {
+            cell.textLabel.text = @"设置";
+            cell.imageView.image = [UIImage imageNamed:@"MoreSetting"];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    switch ([indexPath section]) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            switch ([indexPath row]) {
+                case 0:
+                {
+                    [self OpenPhotoAblum];
+                }
+                    break;
+                case 1:
+                {
+                    
+                }
+                    break;
+                case 2:
+                {
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            MineSettingViewController *settingVC = [[MineSettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            
+            [self.navigationController pushViewController:settingVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+
 }
-*/
+
+-(void)OpenPhotoAblum
+{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        
+        [self presentViewController:imagePicker animated:YES completion:nil];//:imagePicker animated:YES];
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo
+{
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    
+}
+
 
 @end
