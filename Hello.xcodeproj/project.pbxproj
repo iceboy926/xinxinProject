@@ -22,6 +22,15 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
+		107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D76981D4071550065F2A5 /* MineSettingViewController.m */; };
+		107D769C1D4071940065F2A5 /* UnlockPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */; };
+		107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */; };
+		107D76A21D40A5480065F2A5 /* GestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D76A11D40A5480065F2A5 /* GestureLockView.m */; };
+		107D76A81D40A7DB0065F2A5 /* gesture_node_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 107D76A31D40A7DB0065F2A5 /* gesture_node_highlighted.png */; };
+		107D76A91D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107D76A41D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png */; };
+		107D76AA1D40A7DB0065F2A5 /* gesture_node_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 107D76A51D40A7DB0065F2A5 /* gesture_node_normal.png */; };
+		107D76AB1D40A7DB0065F2A5 /* gesture_node_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 107D76A61D40A7DB0065F2A5 /* gesture_node_normal@2x.png */; };
+		107D76AC1D40A7DB0065F2A5 /* Home_refresh_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 107D76A71D40A7DB0065F2A5 /* Home_refresh_bg.png */; };
 		10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10861A3C1D29FFA30092B1DF /* FriendOperationMenu.m */; };
 		10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */; };
 		10861A431D2A03DD0092B1DF /* AlbumComment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10861A3F1D2A03DD0092B1DF /* AlbumComment@3x.png */; };
@@ -310,7 +319,6 @@
 		10FEB09D1D3F229B00F342CF /* ProfileLockOn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB08C1D3F229B00F342CF /* ProfileLockOn@3x.png */; };
 		10FEB0A11D3F494E00F342CF /* UIImage+CircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FEB0A01D3F494E00F342CF /* UIImage+CircleImage.m */; };
 		10FEB0A31D3F4B4500F342CF /* xhr.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB0A21D3F4B4500F342CF /* xhr.png */; };
-		10FEB0A61D3F4F8600F342CF /* MineSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FEB0A51D3F4F8600F342CF /* MineSettingViewController.m */; };
 		823454F31B832B07002A36D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F21B832B07002A36D6 /* QuartzCore.framework */; };
 		823454F51B832B17002A36D6 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F41B832B17002A36D6 /* libicucore.dylib */; };
 		823454F71B832B2F002A36D6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823454F61B832B2F002A36D6 /* CoreTelephony.framework */; };
@@ -400,6 +408,19 @@
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		107D76971D4071550065F2A5 /* MineSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineSettingViewController.h; path = "MineModel+View/设置/MineSettingViewController.h"; sourceTree = "<group>"; };
+		107D76981D4071550065F2A5 /* MineSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineSettingViewController.m; path = "MineModel+View/设置/MineSettingViewController.m"; sourceTree = "<group>"; };
+		107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnlockPassWordVC.h; path = "MineModel+View/我的钱包/UnlockPassWordVC.h"; sourceTree = "<group>"; };
+		107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnlockPassWordVC.m; path = "MineModel+View/我的钱包/UnlockPassWordVC.m"; sourceTree = "<group>"; };
+		107D769D1D4074550065F2A5 /* MineDetailInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineDetailInfoVC.h; path = "MineModel+View/我的信息/MineDetailInfoVC.h"; sourceTree = "<group>"; };
+		107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineDetailInfoVC.m; path = "MineModel+View/我的信息/MineDetailInfoVC.m"; sourceTree = "<group>"; };
+		107D76A01D40A5480065F2A5 /* GestureLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureLockView.h; path = "MineModel+View/我的钱包/GestureLockView.h"; sourceTree = "<group>"; };
+		107D76A11D40A5480065F2A5 /* GestureLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureLockView.m; path = "MineModel+View/我的钱包/GestureLockView.m"; sourceTree = "<group>"; };
+		107D76A31D40A7DB0065F2A5 /* gesture_node_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gesture_node_highlighted.png; path = Hello/image/gesture_node_highlighted.png; sourceTree = "<group>"; };
+		107D76A41D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gesture_node_highlighted@2x.png"; path = "Hello/image/gesture_node_highlighted@2x.png"; sourceTree = "<group>"; };
+		107D76A51D40A7DB0065F2A5 /* gesture_node_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gesture_node_normal.png; path = Hello/image/gesture_node_normal.png; sourceTree = "<group>"; };
+		107D76A61D40A7DB0065F2A5 /* gesture_node_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gesture_node_normal@2x.png"; path = "Hello/image/gesture_node_normal@2x.png"; sourceTree = "<group>"; };
+		107D76A71D40A7DB0065F2A5 /* Home_refresh_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home_refresh_bg.png; path = Hello/image/Home_refresh_bg.png; sourceTree = "<group>"; };
 		10861A3B1D29FFA30092B1DF /* FriendOperationMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendOperationMenu.h; path = "FindModel+View/朋友圈/View/FriendOperationMenu.h"; sourceTree = "<group>"; };
 		10861A3C1D29FFA30092B1DF /* FriendOperationMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendOperationMenu.m; path = "FindModel+View/朋友圈/View/FriendOperationMenu.m"; sourceTree = "<group>"; };
 		10861A3E1D2A03DD0092B1DF /* AlbumComment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AlbumComment@2x.png"; path = "image/AlbumComment@2x.png"; sourceTree = "<group>"; };
@@ -808,8 +829,6 @@
 		10FEB09F1D3F494E00F342CF /* UIImage+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CircleImage.h"; path = "Library/ThirdLib/UIImage+CircleImage.h"; sourceTree = "<group>"; };
 		10FEB0A01D3F494E00F342CF /* UIImage+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CircleImage.m"; path = "Library/ThirdLib/UIImage+CircleImage.m"; sourceTree = "<group>"; };
 		10FEB0A21D3F4B4500F342CF /* xhr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xhr.png; path = Hello/image/xhr.png; sourceTree = "<group>"; };
-		10FEB0A41D3F4F8600F342CF /* MineSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineSettingViewController.h; path = "MineModel+View/MineSettingViewController.h"; sourceTree = "<group>"; };
-		10FEB0A51D3F4F8600F342CF /* MineSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineSettingViewController.m; path = "MineModel+View/MineSettingViewController.m"; sourceTree = "<group>"; };
 		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		823454F21B832B07002A36D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		823454F41B832B17002A36D6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
@@ -986,6 +1005,8 @@
 		107D76911D4061C90065F2A5 /* MineInfo */ = {
 			isa = PBXGroup;
 			children = (
+				107D769D1D4074550065F2A5 /* MineDetailInfoVC.h */,
+				107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */,
 			);
 			name = MineInfo;
 			sourceTree = "<group>";
@@ -1000,6 +1021,10 @@
 		107D76931D4062030065F2A5 /* MineBankCard */ = {
 			isa = PBXGroup;
 			children = (
+				107D76A01D40A5480065F2A5 /* GestureLockView.h */,
+				107D76A11D40A5480065F2A5 /* GestureLockView.m */,
+				107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */,
+				107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */,
 			);
 			name = MineBankCard;
 			sourceTree = "<group>";
@@ -1007,8 +1032,8 @@
 		107D76941D4062160065F2A5 /* MineSetting */ = {
 			isa = PBXGroup;
 			children = (
-				10FEB0A41D3F4F8600F342CF /* MineSettingViewController.h */,
-				10FEB0A51D3F4F8600F342CF /* MineSettingViewController.m */,
+				107D76971D4071550065F2A5 /* MineSettingViewController.h */,
+				107D76981D4071550065F2A5 /* MineSettingViewController.m */,
 			);
 			name = MineSetting;
 			sourceTree = "<group>";
@@ -1509,6 +1534,11 @@
 		82B613001B302196007E6D42 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				107D76A31D40A7DB0065F2A5 /* gesture_node_highlighted.png */,
+				107D76A41D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png */,
+				107D76A51D40A7DB0065F2A5 /* gesture_node_normal.png */,
+				107D76A61D40A7DB0065F2A5 /* gesture_node_normal@2x.png */,
+				107D76A71D40A7DB0065F2A5 /* Home_refresh_bg.png */,
 				10FEB0A21D3F4B4500F342CF /* xhr.png */,
 				10FEB07C1D3F229B00F342CF /* MoreExpressionShops.png */,
 				10FEB07D1D3F229B00F342CF /* MoreExpressionShops@2x.png */,
@@ -1961,6 +1991,7 @@
 				109B6AFD1CF7EE1F0077FAFA /* addmore_15.png in Resources */,
 				109B6B421CF7EE1F0077FAFA /* qqweibo.png in Resources */,
 				10FEB0921D3F229B00F342CF /* MoreMyAlbum@3x.png in Resources */,
+				107D76A91D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png in Resources */,
 				10FEB08D1D3F229B00F342CF /* MoreExpressionShops.png in Resources */,
 				109B69E71CF7E7910077FAFA /* Shake_Logo_Female_Up@2x.png in Resources */,
 				10FEB0961D3F229B00F342CF /* MoreMyFavorites.png in Resources */,
@@ -2011,6 +2042,7 @@
 				10FEB0991D3F229B00F342CF /* MoreSetting@2x.png in Resources */,
 				109B6B011CF7EE1F0077FAFA /* addmore_camera@2x.png in Resources */,
 				109B6B261CF7EE1F0077FAFA /* cute_boy_13.png in Resources */,
+				107D76AC1D40A7DB0065F2A5 /* Home_refresh_bg.png in Resources */,
 				10936B201D1B917E0025B594 /* icon_like@2x.png in Resources */,
 				109B6B0E1CF7EE1F0077FAFA /* chat_bottom_keyboard_press.png in Resources */,
 				109B6AF31CF7EE1F0077FAFA /* addmore_5.png in Resources */,
@@ -2098,6 +2130,7 @@
 				109B6A5A1CF7EB180077FAFA /* HomeDetailViewController.xib in Resources */,
 				109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */,
 				109B6B3E1CF7EE1F0077FAFA /* operationbox_text@2x.png in Resources */,
+				107D76AA1D40A7DB0065F2A5 /* gesture_node_normal.png in Resources */,
 				109B6A7F1CF7EC7A0077FAFA /* MainNavigateViewController.xib in Resources */,
 				109B6A1A1CF7E8C60077FAFA /* ff_IconShake@3x.png in Resources */,
 				109B6B3C1CF7EE1F0077FAFA /* map_located@2x.png in Resources */,
@@ -2106,6 +2139,7 @@
 				109B6B041CF7EE1F0077FAFA /* addmore_video@2x.png in Resources */,
 				109B6AFE1CF7EE1F0077FAFA /* addmore_16.png in Resources */,
 				10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */,
+				107D76A81D40A7DB0065F2A5 /* gesture_node_highlighted.png in Resources */,
 				109B6B0A1CF7EE1F0077FAFA /* card_icon_addattention@2x.png in Resources */,
 				109B6B471CF7EE1F0077FAFA /* vip.png in Resources */,
 				109B6B271CF7EE1F0077FAFA /* cute_boy_14.png in Resources */,
@@ -2116,6 +2150,7 @@
 				109B6A221CF7E8E30077FAFA /* FindViewController.xib in Resources */,
 				109B69671CF7E3A50077FAFA /* blueArrow.png in Resources */,
 				109B6A811CF7EC7A0077FAFA /* MainTabBarViewController.xib in Resources */,
+				107D76AB1D40A7DB0065F2A5 /* gesture_node_normal@2x.png in Resources */,
 				109B6B221CF7EE1F0077FAFA /* cute_boy_9.png in Resources */,
 				109B6B2E1CF7EE1F0077FAFA /* guide_background_02@2x.jpg in Resources */,
 				109B6B251CF7EE1F0077FAFA /* cute_boy_12.png in Resources */,
@@ -2144,6 +2179,7 @@
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
+				107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */,
 				109B6A001CF7E8760077FAFA /* QRResultViewController.m in Sources */,
 				109B69D11CF7E67A0077FAFA /* LineView.m in Sources */,
 				10C009D31D37661C003B6CF3 /* UIView+WebCacheOperation.m in Sources */,
@@ -2159,7 +2195,7 @@
 				109B69C71CF7E5AB0077FAFA /* AFURLSessionManager.m in Sources */,
 				109B69841CF7E4870077FAFA /* MBProgressHUD.m in Sources */,
 				109B6A271CF7E9600077FAFA /* FansModel.m in Sources */,
-				10FEB0A61D3F4F8600F342CF /* MineSettingViewController.m in Sources */,
+				107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */,
 				10C009C71D37661C003B6CF3 /* SDWebImageCompat.m in Sources */,
 				10C009C91D37661C003B6CF3 /* SDWebImageDownloader.m in Sources */,
 				109B69F61CF7E8260077FAFA /* FriendGridImageView.m in Sources */,
@@ -2172,6 +2208,7 @@
 				109B69AA1CF7E5800077FAFA /* UIRefreshControl+AFNetworking.m in Sources */,
 				109B696A1CF7E3A50077FAFA /* FCXRefreshFooterView.m in Sources */,
 				109B69851CF7E4870077FAFA /* Reachability.m in Sources */,
+				107D76A21D40A5480065F2A5 /* GestureLockView.m in Sources */,
 				10FEB0A11D3F494E00F342CF /* UIImage+CircleImage.m in Sources */,
 				10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */,
 				10C009911D363686003B6CF3 /* FriendsInfoViewController.m in Sources */,
@@ -2241,6 +2278,7 @@
 				105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */,
 				109B6A021CF7E8760077FAFA /* QRViewController.m in Sources */,
 				109B69391CF7E2840077FAFA /* NSAttributedString+MLExpression.m in Sources */,
+				107D769C1D4071940065F2A5 /* UnlockPassWordVC.m in Sources */,
 				109B69371CF7E2840077FAFA /* MLLinkLabel.m in Sources */,
 				109B6A2F1CF7E9700077FAFA /* FansTableViewCell.m in Sources */,
 				109B6A591CF7EB180077FAFA /* HomeDetailViewController.m in Sources */,

@@ -9,6 +9,8 @@
 #import "MineViewController.h"
 #import "UIImage+CircleImage.h"
 #import "MineSettingViewController.h"
+#import "MineDetailInfoVC.h"
+#import "UnlockPassWordVC.h"
 
 @interface MineViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -184,7 +186,8 @@
     switch ([indexPath section]) {
         case 0:
         {
-            
+            MineDetailInfoVC *detailInfo = [[MineDetailInfoVC alloc] initWithStyle:UITableViewStyleGrouped];
+            [self.navigationController pushViewController:detailInfo animated:YES];
         }
             break;
         case 1:
@@ -197,7 +200,9 @@
                     break;
                 case 1:
                 {
-                    
+                    UnlockPassWordVC *unlockVC = [[UnlockPassWordVC alloc] init];
+                    unlockVC.title = @"手势密码";
+                    [self.navigationController pushViewController:unlockVC animated:YES];
                 }
                     break;
                 case 2:
