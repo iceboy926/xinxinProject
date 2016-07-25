@@ -16,7 +16,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioSession.h>
 #import <AVFoundation/AVAudioSession.h>
-#import <ALBBSDK/ALBBSDK.h>
+//#import <ALBBSDK/ALBBSDK.h>
+#import "JPushHelper.h"
 
 @interface AppDelegate() <WeiboSDKDelegate>
 
@@ -43,12 +44,12 @@
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     
-    if (![[ALBBSDK sharedInstance] handleOpenURL:url]) {
+    //if (![[ALBBSDK sharedInstance] handleOpenURL:url]) {
         // 处理其他app跳转到自己的app
         return [WeiboSDK handleOpenURL:url delegate:self];
-    }
+    //}
 
-    return YES;
+    //return YES;
 }
 
 
@@ -100,6 +101,7 @@
     
     
 
+    [JPushHelper setupWithOptions:launchOptions];
     
     
     
@@ -186,10 +188,41 @@
 }
 
 
-//收到推送消息时触发的消息 PS: 必须是app打开的情况下,如果在关闭的情况下，需要在didFinishLaunchingWithOptions 处理推送消息
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
 
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    
+    [JPushHelper registerDeviceToken:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    NSLog(@"application %s", __FUNCTION__);
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    [JPushHelper showLocalNotificationAtFront:notification];
+}
+
+//收到推送消息时触发的消息 PS: 必须是app打开的情况下,如果在关闭的情况下，需要在didFinishLaunchingWithOptions 处理推送消息
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [JPushHelper handleRemoteNotification:userInfo completion:nil];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [JPushHelper handleRemoteNotification:userInfo completion:completionHandler];
+    //    if (application.applicationState == UIApplicationStateActive) {
+    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"收到推送消息"
+    //                                                        message:userInfo[@"aps"][@"alert"]
+    //                                                       delegate:nil
+    //                                              cancelButtonTitle:@"取消"
+    //                                              otherButtonTitles:@"确定", nil];
+    //        [alert show];
+    //    }
 }
 
 
@@ -249,14 +282,14 @@
     
     
     //
-    [[ALBBSDK sharedInstance] setDebugLogOpen:NO];
-    [[ALBBSDK sharedInstance] setUseTaobaoNativeDetail:NO];
-    [[ALBBSDK sharedInstance] setViewType:ALBB_ITEM_VIEWTYPE_TAOBAO];
-    [[ALBBSDK sharedInstance] asyncInit:^{
-        NSLog(@"ALBBSDK success");
-    } failure:^(NSError *error) {
-        NSLog(@"ALBBSDK failure, %@", error);
-    }];
+//    [[ALBBSDK sharedInstance] setDebugLogOpen:NO];
+//    [[ALBBSDK sharedInstance] setUseTaobaoNativeDetail:NO];
+//    [[ALBBSDK sharedInstance] setViewType:ALBB_ITEM_VIEWTYPE_TAOBAO];
+//    [[ALBBSDK sharedInstance] asyncInit:^{
+//        NSLog(@"ALBBSDK success");
+//    } failure:^(NSError *error) {
+//        NSLog(@"ALBBSDK failure, %@", error);
+//    }];
 
 }
 

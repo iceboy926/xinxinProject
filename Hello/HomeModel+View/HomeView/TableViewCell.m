@@ -135,6 +135,13 @@
     // Configure the view for the selected state
 }
 
+//-(void)setFrame:(CGRect)frame
+//{
+//    frame.origin.x = 10;//这里间距为10，可以根据自己的情况调整
+//    frame.size.height -= 2 * frame.origin.x;
+//    [super setFrame:frame];
+//}
+
 -(void)setCellFrame:(HomeCellFrame *)CellFrame
 {
     _CellFrame = CellFrame;
@@ -300,11 +307,11 @@
                     CGFloat  height = image.size.height;
                     CGFloat  width = image.size.width;
                     
-                    NSLog(@"height is %lf width is %lf", height, width);
+                    //NSLog(@"height is %lf width is %lf", height, width);
                     
                     CGFloat scale = (height/width) / (IMAGE_HEIGHT/IMAGE_WIDTH);
                     
-                    NSLog(@"scale is %lf", scale);
+                    //NSLog(@"scale is %lf", scale);
                     
                     if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
                         weekimage.contentMode = UIViewContentModeScaleAspectFill;
