@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>潮信</string>
+	<string>有料</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
@@ -34,7 +34,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tencent1104746727</string>
-				<string>wb2187371547</string>
+				<string>wb1522613711</string>
 				<string>wxb15b4ab26fce2028</string>
 			</array>
 		</dict>
