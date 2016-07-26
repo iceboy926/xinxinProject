@@ -8,6 +8,7 @@
 
 #import "UnlockPassWordVC.h"
 #import "GestureLockView.h"
+#import "MineWalletViewController.h"
 
 #define  LOCKPATH  @"lockpath"
 
@@ -158,7 +159,15 @@
 
 - (void)gestureViewUnlockSuccess:(UIView *)gestureView
 {
+    [self dismissViewControllerAnimated:YES completion:^{
     
+        if(self.didUnlockPassWord)
+        {
+            self.didUnlockPassWord();
+        }
+    
+    }];
+ 
 }
 
 -(void)gestureViewUnlockFailed:(UIView *)gestureView
@@ -196,6 +205,13 @@
             msgView_.text = @"手势密码设置成功";
             [self SaveLockPath:path];
             [NSThread sleepForTimeInterval:1.2f];
+            
+            [self dismissViewControllerAnimated:YES completion:^{
+                if(self.didSetPassWord)
+                {
+                    self.didSetPassWord();
+                }
+            }];
         }
         else
         {

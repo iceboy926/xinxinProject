@@ -280,6 +280,46 @@
 		10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
+		10E1F3EA1D47315900107345 /* MineWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E1F3E91D47315900107345 /* MineWalletViewController.m */; };
+		10E1F3EF1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3EB1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png */; };
+		10E1F3F01D473F7800107345 /* ap_home_top_icon_pay_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3EC1D473F7800107345 /* ap_home_top_icon_pay_new@2x.png */; };
+		10E1F3F11D473F7800107345 /* ap_home_top_icon_scan_new_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3ED1D473F7800107345 /* ap_home_top_icon_scan_new_highlight@2x.png */; };
+		10E1F3F21D473F7800107345 /* ap_home_top_icon_scan_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3EE1D473F7800107345 /* ap_home_top_icon_scan_new@2x.png */; };
+		10E1F4171D47426900107345 /* 09999976.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F41D47426900107345 /* 09999976.png */; };
+		10E1F4181D47426900107345 /* 09999988.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F51D47426900107345 /* 09999988.png */; };
+		10E1F4191D47426900107345 /* 09999999.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F61D47426900107345 /* 09999999.png */; };
+		10E1F41A1D47426900107345 /* 10000003.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F71D47426900107345 /* 10000003.png */; };
+		10E1F41B1D47426900107345 /* 10000004.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F81D47426900107345 /* 10000004.png */; };
+		10E1F41C1D47426900107345 /* 10000006.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3F91D47426900107345 /* 10000006.png */; };
+		10E1F41D1D47426900107345 /* 10000008.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FA1D47426900107345 /* 10000008.png */; };
+		10E1F41E1D47426900107345 /* 10000009.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FB1D47426900107345 /* 10000009.png */; };
+		10E1F41F1D47426900107345 /* 10000011.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FC1D47426900107345 /* 10000011.png */; };
+		10E1F4201D47426900107345 /* 10000014.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FD1D47426900107345 /* 10000014.png */; };
+		10E1F4211D47426900107345 /* 10000033.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FE1D47426900107345 /* 10000033.png */; };
+		10E1F4221D47426900107345 /* 11000002.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3FF1D47426900107345 /* 11000002.png */; };
+		10E1F4231D47426900107345 /* 20000032.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4001D47426900107345 /* 20000032.png */; };
+		10E1F4241D47426900107345 /* 20000046.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4011D47426900107345 /* 20000046.png */; };
+		10E1F4251D47426900107345 /* 20000066.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4021D47426900107345 /* 20000066.png */; };
+		10E1F4261D47426900107345 /* 20000078.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4031D47426900107345 /* 20000078.png */; };
+		10E1F4271D47426900107345 /* 20000094.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4041D47426900107345 /* 20000094.png */; };
+		10E1F4281D47426900107345 /* 20000119.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4051D47426900107345 /* 20000119.png */; };
+		10E1F4291D47426900107345 /* 20000120.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4061D47426900107345 /* 20000120.png */; };
+		10E1F42A1D47426900107345 /* 20000123.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4071D47426900107345 /* 20000123.png */; };
+		10E1F42B1D47426900107345 /* 20000130.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4081D47426900107345 /* 20000130.png */; };
+		10E1F42C1D47426900107345 /* 20000131.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4091D47426900107345 /* 20000131.png */; };
+		10E1F42D1D47426900107345 /* 20000132.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40A1D47426900107345 /* 20000132.png */; };
+		10E1F42E1D47426900107345 /* 20000134.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40B1D47426900107345 /* 20000134.png */; };
+		10E1F42F1D47426900107345 /* 20000150.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40C1D47426900107345 /* 20000150.png */; };
+		10E1F4301D47426900107345 /* 20000155.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40D1D47426900107345 /* 20000155.png */; };
+		10E1F4311D47426900107345 /* 20000168.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40E1D47426900107345 /* 20000168.png */; };
+		10E1F4321D47426900107345 /* 30000001.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F40F1D47426900107345 /* 30000001.png */; };
+		10E1F4331D47426900107345 /* 2013080300000698.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4101D47426900107345 /* 2013080300000698.png */; };
+		10E1F4341D47426900107345 /* 2013082800000932.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4111D47426900107345 /* 2013082800000932.png */; };
+		10E1F4351D47426900107345 /* AlipayHomeIcons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4121D47426900107345 /* AlipayHomeIcons.plist */; };
+		10E1F4361D47426900107345 /* app_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4131D47426900107345 /* app_add.png */; };
+		10E1F4371D47426900107345 /* app_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4141D47426900107345 /* app_item_bg.png */; };
+		10E1F4381D47426900107345 /* app_item_pressed_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4151D47426900107345 /* app_item_pressed_bg.png */; };
+		10E1F4391D47426900107345 /* bill_history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4161D47426900107345 /* bill_history@2x.png */; };
 		10FEB08D1D3F229B00F342CF /* MoreExpressionShops.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07C1D3F229B00F342CF /* MoreExpressionShops.png */; };
 		10FEB08E1D3F229B00F342CF /* MoreExpressionShops@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07D1D3F229B00F342CF /* MoreExpressionShops@2x.png */; };
 		10FEB08F1D3F229B00F342CF /* MoreExpressionShops@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07E1D3F229B00F342CF /* MoreExpressionShops@3x.png */; };
@@ -765,6 +805,47 @@
 		10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZLCWebView.m; path = Library/WebView/ZLCWebView.m; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
+		10E1F3E81D47315900107345 /* MineWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineWalletViewController.h; path = "MineModel+View/我的钱包/MineWalletViewController.h"; sourceTree = "<group>"; };
+		10E1F3E91D47315900107345 /* MineWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineWalletViewController.m; path = "MineModel+View/我的钱包/MineWalletViewController.m"; sourceTree = "<group>"; };
+		10E1F3EB1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ap_home_top_icon_pay_new_highlight@2x.png"; path = "Hello/image/ap_home_top_icon_pay_new_highlight@2x.png"; sourceTree = "<group>"; };
+		10E1F3EC1D473F7800107345 /* ap_home_top_icon_pay_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ap_home_top_icon_pay_new@2x.png"; path = "Hello/image/ap_home_top_icon_pay_new@2x.png"; sourceTree = "<group>"; };
+		10E1F3ED1D473F7800107345 /* ap_home_top_icon_scan_new_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ap_home_top_icon_scan_new_highlight@2x.png"; path = "Hello/image/ap_home_top_icon_scan_new_highlight@2x.png"; sourceTree = "<group>"; };
+		10E1F3EE1D473F7800107345 /* ap_home_top_icon_scan_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ap_home_top_icon_scan_new@2x.png"; path = "Hello/image/ap_home_top_icon_scan_new@2x.png"; sourceTree = "<group>"; };
+		10E1F3F41D47426900107345 /* 09999976.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 09999976.png; path = Hello/image/MyWalletIcon/09999976.png; sourceTree = "<group>"; };
+		10E1F3F51D47426900107345 /* 09999988.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 09999988.png; path = Hello/image/MyWalletIcon/09999988.png; sourceTree = "<group>"; };
+		10E1F3F61D47426900107345 /* 09999999.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 09999999.png; path = Hello/image/MyWalletIcon/09999999.png; sourceTree = "<group>"; };
+		10E1F3F71D47426900107345 /* 10000003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000003.png; path = Hello/image/MyWalletIcon/10000003.png; sourceTree = "<group>"; };
+		10E1F3F81D47426900107345 /* 10000004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000004.png; path = Hello/image/MyWalletIcon/10000004.png; sourceTree = "<group>"; };
+		10E1F3F91D47426900107345 /* 10000006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000006.png; path = Hello/image/MyWalletIcon/10000006.png; sourceTree = "<group>"; };
+		10E1F3FA1D47426900107345 /* 10000008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000008.png; path = Hello/image/MyWalletIcon/10000008.png; sourceTree = "<group>"; };
+		10E1F3FB1D47426900107345 /* 10000009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000009.png; path = Hello/image/MyWalletIcon/10000009.png; sourceTree = "<group>"; };
+		10E1F3FC1D47426900107345 /* 10000011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000011.png; path = Hello/image/MyWalletIcon/10000011.png; sourceTree = "<group>"; };
+		10E1F3FD1D47426900107345 /* 10000014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000014.png; path = Hello/image/MyWalletIcon/10000014.png; sourceTree = "<group>"; };
+		10E1F3FE1D47426900107345 /* 10000033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10000033.png; path = Hello/image/MyWalletIcon/10000033.png; sourceTree = "<group>"; };
+		10E1F3FF1D47426900107345 /* 11000002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11000002.png; path = Hello/image/MyWalletIcon/11000002.png; sourceTree = "<group>"; };
+		10E1F4001D47426900107345 /* 20000032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000032.png; path = Hello/image/MyWalletIcon/20000032.png; sourceTree = "<group>"; };
+		10E1F4011D47426900107345 /* 20000046.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000046.png; path = Hello/image/MyWalletIcon/20000046.png; sourceTree = "<group>"; };
+		10E1F4021D47426900107345 /* 20000066.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000066.png; path = Hello/image/MyWalletIcon/20000066.png; sourceTree = "<group>"; };
+		10E1F4031D47426900107345 /* 20000078.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000078.png; path = Hello/image/MyWalletIcon/20000078.png; sourceTree = "<group>"; };
+		10E1F4041D47426900107345 /* 20000094.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000094.png; path = Hello/image/MyWalletIcon/20000094.png; sourceTree = "<group>"; };
+		10E1F4051D47426900107345 /* 20000119.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000119.png; path = Hello/image/MyWalletIcon/20000119.png; sourceTree = "<group>"; };
+		10E1F4061D47426900107345 /* 20000120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000120.png; path = Hello/image/MyWalletIcon/20000120.png; sourceTree = "<group>"; };
+		10E1F4071D47426900107345 /* 20000123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000123.png; path = Hello/image/MyWalletIcon/20000123.png; sourceTree = "<group>"; };
+		10E1F4081D47426900107345 /* 20000130.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000130.png; path = Hello/image/MyWalletIcon/20000130.png; sourceTree = "<group>"; };
+		10E1F4091D47426900107345 /* 20000131.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000131.png; path = Hello/image/MyWalletIcon/20000131.png; sourceTree = "<group>"; };
+		10E1F40A1D47426900107345 /* 20000132.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000132.png; path = Hello/image/MyWalletIcon/20000132.png; sourceTree = "<group>"; };
+		10E1F40B1D47426900107345 /* 20000134.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000134.png; path = Hello/image/MyWalletIcon/20000134.png; sourceTree = "<group>"; };
+		10E1F40C1D47426900107345 /* 20000150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000150.png; path = Hello/image/MyWalletIcon/20000150.png; sourceTree = "<group>"; };
+		10E1F40D1D47426900107345 /* 20000155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000155.png; path = Hello/image/MyWalletIcon/20000155.png; sourceTree = "<group>"; };
+		10E1F40E1D47426900107345 /* 20000168.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20000168.png; path = Hello/image/MyWalletIcon/20000168.png; sourceTree = "<group>"; };
+		10E1F40F1D47426900107345 /* 30000001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 30000001.png; path = Hello/image/MyWalletIcon/30000001.png; sourceTree = "<group>"; };
+		10E1F4101D47426900107345 /* 2013080300000698.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2013080300000698.png; path = Hello/image/MyWalletIcon/2013080300000698.png; sourceTree = "<group>"; };
+		10E1F4111D47426900107345 /* 2013082800000932.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2013082800000932.png; path = Hello/image/MyWalletIcon/2013082800000932.png; sourceTree = "<group>"; };
+		10E1F4121D47426900107345 /* AlipayHomeIcons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AlipayHomeIcons.plist; path = Hello/image/MyWalletIcon/AlipayHomeIcons.plist; sourceTree = "<group>"; };
+		10E1F4131D47426900107345 /* app_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_add.png; path = Hello/image/MyWalletIcon/app_add.png; sourceTree = "<group>"; };
+		10E1F4141D47426900107345 /* app_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_item_bg.png; path = Hello/image/MyWalletIcon/app_item_bg.png; sourceTree = "<group>"; };
+		10E1F4151D47426900107345 /* app_item_pressed_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_item_pressed_bg.png; path = Hello/image/MyWalletIcon/app_item_pressed_bg.png; sourceTree = "<group>"; };
+		10E1F4161D47426900107345 /* bill_history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bill_history@2x.png"; path = "Hello/image/MyWalletIcon/bill_history@2x.png"; sourceTree = "<group>"; };
 		10FEB07C1D3F229B00F342CF /* MoreExpressionShops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MoreExpressionShops.png; path = Hello/image/MoreExpressionShops.png; sourceTree = "<group>"; };
 		10FEB07D1D3F229B00F342CF /* MoreExpressionShops@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MoreExpressionShops@2x.png"; path = "Hello/image/MoreExpressionShops@2x.png"; sourceTree = "<group>"; };
 		10FEB07E1D3F229B00F342CF /* MoreExpressionShops@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MoreExpressionShops@3x.png"; path = "Hello/image/MoreExpressionShops@3x.png"; sourceTree = "<group>"; };
@@ -978,6 +1059,8 @@
 				107D76A11D40A5480065F2A5 /* GestureLockView.m */,
 				107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */,
 				107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */,
+				10E1F3E81D47315900107345 /* MineWalletViewController.h */,
+				10E1F3E91D47315900107345 /* MineWalletViewController.m */,
 			);
 			name = MineBankCard;
 			sourceTree = "<group>";
@@ -1095,6 +1178,48 @@
 				10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */,
 			);
 			name = ZoomScrollImage;
+			sourceTree = "<group>";
+		};
+		10E1F3F31D47424500107345 /* MyWalletIcon */ = {
+			isa = PBXGroup;
+			children = (
+				10E1F3F41D47426900107345 /* 09999976.png */,
+				10E1F3F51D47426900107345 /* 09999988.png */,
+				10E1F3F61D47426900107345 /* 09999999.png */,
+				10E1F3F71D47426900107345 /* 10000003.png */,
+				10E1F3F81D47426900107345 /* 10000004.png */,
+				10E1F3F91D47426900107345 /* 10000006.png */,
+				10E1F3FA1D47426900107345 /* 10000008.png */,
+				10E1F3FB1D47426900107345 /* 10000009.png */,
+				10E1F3FC1D47426900107345 /* 10000011.png */,
+				10E1F3FD1D47426900107345 /* 10000014.png */,
+				10E1F3FE1D47426900107345 /* 10000033.png */,
+				10E1F3FF1D47426900107345 /* 11000002.png */,
+				10E1F4001D47426900107345 /* 20000032.png */,
+				10E1F4011D47426900107345 /* 20000046.png */,
+				10E1F4021D47426900107345 /* 20000066.png */,
+				10E1F4031D47426900107345 /* 20000078.png */,
+				10E1F4041D47426900107345 /* 20000094.png */,
+				10E1F4051D47426900107345 /* 20000119.png */,
+				10E1F4061D47426900107345 /* 20000120.png */,
+				10E1F4071D47426900107345 /* 20000123.png */,
+				10E1F4081D47426900107345 /* 20000130.png */,
+				10E1F4091D47426900107345 /* 20000131.png */,
+				10E1F40A1D47426900107345 /* 20000132.png */,
+				10E1F40B1D47426900107345 /* 20000134.png */,
+				10E1F40C1D47426900107345 /* 20000150.png */,
+				10E1F40D1D47426900107345 /* 20000155.png */,
+				10E1F40E1D47426900107345 /* 20000168.png */,
+				10E1F40F1D47426900107345 /* 30000001.png */,
+				10E1F4101D47426900107345 /* 2013080300000698.png */,
+				10E1F4111D47426900107345 /* 2013082800000932.png */,
+				10E1F4121D47426900107345 /* AlipayHomeIcons.plist */,
+				10E1F4131D47426900107345 /* app_add.png */,
+				10E1F4141D47426900107345 /* app_item_bg.png */,
+				10E1F4151D47426900107345 /* app_item_pressed_bg.png */,
+				10E1F4161D47426900107345 /* bill_history@2x.png */,
+			);
+			name = MyWalletIcon;
 			sourceTree = "<group>";
 		};
 		8216718D1B3949380099A38D /* AFNetworking */ = {
@@ -1428,6 +1553,11 @@
 		82B613001B302196007E6D42 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				10E1F3F31D47424500107345 /* MyWalletIcon */,
+				10E1F3EB1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png */,
+				10E1F3EC1D473F7800107345 /* ap_home_top_icon_pay_new@2x.png */,
+				10E1F3ED1D473F7800107345 /* ap_home_top_icon_scan_new_highlight@2x.png */,
+				10E1F3EE1D473F7800107345 /* ap_home_top_icon_scan_new@2x.png */,
 				107D76A31D40A7DB0065F2A5 /* gesture_node_highlighted.png */,
 				107D76A41D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png */,
 				107D76A51D40A7DB0065F2A5 /* gesture_node_normal.png */,
@@ -1879,6 +2009,7 @@
 			files = (
 				109B6B2B1CF7EE1F0077FAFA /* Default@2x.png in Resources */,
 				109B6B1F1CF7EE1F0077FAFA /* cute_boy_6.png in Resources */,
+				10E1F4201D47426900107345 /* 10000014.png in Resources */,
 				109B6AEF1CF7EE1F0077FAFA /* addmore_1.png in Resources */,
 				109B69E81CF7E7910077FAFA /* Shake_Logo_Up@2x.png in Resources */,
 				10861A451D2A03DD0092B1DF /* AlbumLike@3x.png in Resources */,
@@ -1893,17 +2024,21 @@
 				82E470241B4BCC4000EC1A59 /* friendsInfo.plist in Resources */,
 				109B6B331CF7EE1F0077FAFA /* img_index_01bg@2x.png in Resources */,
 				109B6AFD1CF7EE1F0077FAFA /* addmore_15.png in Resources */,
+				10E1F4371D47426900107345 /* app_item_bg.png in Resources */,
 				109B6B421CF7EE1F0077FAFA /* qqweibo.png in Resources */,
 				10FEB0921D3F229B00F342CF /* MoreMyAlbum@3x.png in Resources */,
 				107D76A91D40A7DB0065F2A5 /* gesture_node_highlighted@2x.png in Resources */,
 				10FEB08D1D3F229B00F342CF /* MoreExpressionShops.png in Resources */,
 				109B69E71CF7E7910077FAFA /* Shake_Logo_Female_Up@2x.png in Resources */,
+				10E1F4381D47426900107345 /* app_item_pressed_bg.png in Resources */,
+				10E1F4311D47426900107345 /* 20000168.png in Resources */,
 				10FEB0961D3F229B00F342CF /* MoreMyFavorites.png in Resources */,
 				109B6A1D1CF7E8C60077FAFA /* ff_IconShowAlbum@3x.png in Resources */,
 				109B6A151CF7E8C60077FAFA /* ff_IconQRCode.png in Resources */,
 				10FEB09C1D3F229B00F342CF /* ProfileLockOn@2x.png in Resources */,
 				10FEB0901D3F229B00F342CF /* MoreMyAlbum.png in Resources */,
 				109B6AED1CF7EE1F0077FAFA /* 008.png in Resources */,
+				10E1F3F21D473F7800107345 /* ap_home_top_icon_scan_new@2x.png in Resources */,
 				109B6AE91CF7EE1F0077FAFA /* 004.png in Resources */,
 				109B6B081CF7EE1F0077FAFA /* AlbumOperateMoreHL@3x.png in Resources */,
 				109B6AF01CF7EE1F0077FAFA /* addmore_2.png in Resources */,
@@ -1914,19 +2049,28 @@
 				109B6B201CF7EE1F0077FAFA /* cute_boy_7.png in Resources */,
 				109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */,
 				109B6B1D1CF7EE1F0077FAFA /* cute_boy_4.png in Resources */,
+				10E1F4391D47426900107345 /* bill_history@2x.png in Resources */,
 				10FEB08E1D3F229B00F342CF /* MoreExpressionShops@2x.png in Resources */,
 				109B6AE81CF7EE1F0077FAFA /* 003.png in Resources */,
 				109B69681CF7E3A50077FAFA /* blueArrow@2x.png in Resources */,
+				10E1F4181D47426900107345 /* 09999988.png in Resources */,
 				109B6B281CF7EE1F0077FAFA /* cute_boy_15.png in Resources */,
 				109B69ED1CF7E7910077FAFA /* ShakeViewController.xib in Resources */,
+				10E1F42E1D47426900107345 /* 20000134.png in Resources */,
 				109B6B031CF7EE1F0077FAFA /* addmore_pic@2x.png in Resources */,
+				10E1F4341D47426900107345 /* 2013082800000932.png in Resources */,
 				109B69EA1CF7E7910077FAFA /* shake_nomatch.wav in Resources */,
 				82E470821B4F624B00EC1A59 /* messages.plist in Resources */,
 				10FEB09A1D3F229B00F342CF /* MoreSetting@3x.png in Resources */,
 				109B6A1C1CF7E8C60077FAFA /* ff_IconShowAlbum@2x.png in Resources */,
 				10B9572D1D12A4890024D640 /* icon_retweet@3x.png in Resources */,
+				10E1F4191D47426900107345 /* 09999999.png in Resources */,
 				109B6AF71CF7EE1F0077FAFA /* addmore_9.png in Resources */,
 				109B6B301CF7EE1F0077FAFA /* guide_background_04@2x.jpg in Resources */,
+				10E1F4241D47426900107345 /* 20000046.png in Resources */,
+				10E1F4361D47426900107345 /* app_add.png in Resources */,
+				10E1F41A1D47426900107345 /* 10000003.png in Resources */,
+				10E1F3EF1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png in Resources */,
 				10FEB0971D3F229B00F342CF /* MoreMyFavorites@2x.png in Resources */,
 				82B612E41B2FBC61007E6D42 /* Images.xcassets in Resources */,
 				109B6B161CF7EE1F0077FAFA /* chat_bottom_up_nor@2x.png in Resources */,
@@ -1934,6 +2078,7 @@
 				109B6B0D1CF7EE1F0077FAFA /* chat_bottom_keyboard_nor.png in Resources */,
 				10FEB0A31D3F4B4500F342CF /* xhr.png in Resources */,
 				109B6B371CF7EE1F0077FAFA /* LikeCmtBg@3x.png in Resources */,
+				10E1F42A1D47426900107345 /* 20000123.png in Resources */,
 				109B6A1B1CF7E8C60077FAFA /* ff_IconShowAlbum.png in Resources */,
 				109B6A321CF7E9700077FAFA /* FansTableViewController.xib in Resources */,
 				109B6AF81CF7EE1F0077FAFA /* addmore_10.png in Resources */,
@@ -1941,7 +2086,10 @@
 				109B6AEB1CF7EE1F0077FAFA /* 006.png in Resources */,
 				109B6B351CF7EE1F0077FAFA /* img_index_03bg@2x.png in Resources */,
 				10FEB0951D3F229B00F342CF /* MoreMyBankCard@3x.png in Resources */,
+				10E1F4231D47426900107345 /* 20000032.png in Resources */,
 				109B6B2A1CF7EE1F0077FAFA /* Default.png in Resources */,
+				10E1F4261D47426900107345 /* 20000078.png in Resources */,
+				10E1F4271D47426900107345 /* 20000094.png in Resources */,
 				10FEB0991D3F229B00F342CF /* MoreSetting@2x.png in Resources */,
 				109B6B011CF7EE1F0077FAFA /* addmore_camera@2x.png in Resources */,
 				109B6B261CF7EE1F0077FAFA /* cute_boy_13.png in Resources */,
@@ -1959,15 +2107,20 @@
 				109B6A181CF7E8C60077FAFA /* ff_IconShake.png in Resources */,
 				109B6B0B1CF7EE1F0077FAFA /* card_icon_attention@2x.png in Resources */,
 				109B6B1B1CF7EE1F0077FAFA /* cute_boy_2.png in Resources */,
+				10E1F4221D47426900107345 /* 11000002.png in Resources */,
 				109B6B141CF7EE1F0077FAFA /* chat_bottom_sound_nor.png in Resources */,
+				10E1F41E1D47426900107345 /* 10000009.png in Resources */,
 				109B6A111CF7E8C60077FAFA /* CardPack@2x.png in Resources */,
 				109B6B411CF7EE1F0077FAFA /* qq2@2x.png in Resources */,
 				109B69E91CF7E7910077FAFA /* shake_match.wav in Resources */,
 				109B6B2D1CF7EE1F0077FAFA /* guide_background_01@2x.jpg in Resources */,
 				109B6B451CF7EE1F0077FAFA /* SignUpPasswordIcon@2x.png in Resources */,
 				109B69E61CF7E7910077FAFA /* Shake_Logo_Female_Down@2x.png in Resources */,
+				10E1F41C1D47426900107345 /* 10000006.png in Resources */,
 				109B6B151CF7EE1F0077FAFA /* chat_bottom_textfield@2x.png in Resources */,
 				109B6B181CF7EE1F0077FAFA /* chat_recive_nor@2x.png in Resources */,
+				10E1F4281D47426900107345 /* 20000119.png in Resources */,
+				10E1F3F11D473F7800107345 /* ap_home_top_icon_scan_new_highlight@2x.png in Resources */,
 				109B6B341CF7EE1F0077FAFA /* img_index_02bg@2x.png in Resources */,
 				10B9572A1D12A4890024D640 /* icon_comment@2x.png in Resources */,
 				10FEB0981D3F229B00F342CF /* MoreMyFavorites@3x.png in Resources */,
@@ -1979,6 +2132,7 @@
 				109B6B111CF7EE1F0077FAFA /* chat_bottom_smile_nor@2x.png in Resources */,
 				109B6B171CF7EE1F0077FAFA /* chat_bottom_voice_nor@2x.png in Resources */,
 				109B6B311CF7EE1F0077FAFA /* Icon.png in Resources */,
+				10E1F4171D47426900107345 /* 09999976.png in Resources */,
 				109B6AEC1CF7EE1F0077FAFA /* 007.png in Resources */,
 				109B6AF11CF7EE1F0077FAFA /* addmore_3.png in Resources */,
 				109B6B121CF7EE1F0077FAFA /* chat_bottom_smile_normal.png in Resources */,
@@ -1988,6 +2142,7 @@
 				109B6B1E1CF7EE1F0077FAFA /* cute_boy_5.png in Resources */,
 				82B612D61B2FBC61007E6D42 /* InfoPlist.strings in Resources */,
 				109B6AFB1CF7EE1F0077FAFA /* addmore_13.png in Resources */,
+				10E1F3F01D473F7800107345 /* ap_home_top_icon_pay_new@2x.png in Resources */,
 				10B9572B1D12A4890024D640 /* icon_comment@3x.png in Resources */,
 				109B6AE61CF7EE1F0077FAFA /* 001.png in Resources */,
 				109B6B061CF7EE1F0077FAFA /* AlbumOperateMore@3x.png in Resources */,
@@ -2000,6 +2155,7 @@
 				109B6AF91CF7EE1F0077FAFA /* addmore_11.png in Resources */,
 				109B6B361CF7EE1F0077FAFA /* LikeCmtBg@2x.png in Resources */,
 				109B6B401CF7EE1F0077FAFA /* qq.png in Resources */,
+				10E1F4211D47426900107345 /* 10000033.png in Resources */,
 				109B6B0F1CF7EE1F0077FAFA /* chat_bottom_nor.png in Resources */,
 				109B6B3B1CF7EE1F0077FAFA /* LoginGreenBigBtn@2x.png in Resources */,
 				109B6B1C1CF7EE1F0077FAFA /* cute_boy_3.png in Resources */,
@@ -2008,14 +2164,19 @@
 				109B6B321CF7EE1F0077FAFA /* Icon@2x.png in Resources */,
 				10FEB0931D3F229B00F342CF /* MoreMyBankCard.png in Resources */,
 				109B6A191CF7E8C60077FAFA /* ff_IconShake@2x.png in Resources */,
+				10E1F42F1D47426900107345 /* 20000150.png in Resources */,
+				10E1F41D1D47426900107345 /* 10000008.png in Resources */,
 				10936B211D1B917E0025B594 /* icon_like@3x.png in Resources */,
 				10FEB0941D3F229B00F342CF /* MoreMyBankCard@2x.png in Resources */,
+				10E1F42D1D47426900107345 /* 20000132.png in Resources */,
 				82B612DF1B2FBC61007E6D42 /* Main.storyboard in Resources */,
 				109B6B1A1CF7EE1F0077FAFA /* cute_boy_1.png in Resources */,
 				109B6B441CF7EE1F0077FAFA /* retina_1.jpeg in Resources */,
 				109B6B391CF7EE1F0077FAFA /* login_bj@2x.png in Resources */,
+				10E1F42C1D47426900107345 /* 20000131.png in Resources */,
 				109B6AF51CF7EE1F0077FAFA /* addmore_7.png in Resources */,
 				109B6B191CF7EE1F0077FAFA /* chat_send_nor@2x.png in Resources */,
+				10E1F4301D47426900107345 /* 20000155.png in Resources */,
 				109B6B291CF7EE1F0077FAFA /* Default-568h@2x.png in Resources */,
 				109B6A5C1CF7EB180077FAFA /* HomePageViewController.xib in Resources */,
 				109B6B021CF7EE1F0077FAFA /* addmore_location@2x.png in Resources */,
@@ -2026,31 +2187,39 @@
 				10FEB09D1D3F229B00F342CF /* ProfileLockOn@3x.png in Resources */,
 				109B6AFA1CF7EE1F0077FAFA /* addmore_12.png in Resources */,
 				109B6A5A1CF7EB180077FAFA /* HomeDetailViewController.xib in Resources */,
+				10E1F4331D47426900107345 /* 2013080300000698.png in Resources */,
 				109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */,
 				109B6B3E1CF7EE1F0077FAFA /* operationbox_text@2x.png in Resources */,
 				107D76AA1D40A7DB0065F2A5 /* gesture_node_normal.png in Resources */,
 				109B6A7F1CF7EC7A0077FAFA /* MainNavigateViewController.xib in Resources */,
+				10E1F42B1D47426900107345 /* 20000130.png in Resources */,
 				109B6A1A1CF7E8C60077FAFA /* ff_IconShake@3x.png in Resources */,
 				109B6B3C1CF7EE1F0077FAFA /* map_located@2x.png in Resources */,
 				109B6B461CF7EE1F0077FAFA /* sinaweibo.png in Resources */,
+				10E1F41B1D47426900107345 /* 10000004.png in Resources */,
 				109B6A131CF7E8C60077FAFA /* ff_IconLocationService@2x.png in Resources */,
 				109B6B041CF7EE1F0077FAFA /* addmore_video@2x.png in Resources */,
 				109B6AFE1CF7EE1F0077FAFA /* addmore_16.png in Resources */,
 				10861A421D2A03DD0092B1DF /* AlbumComment@2x.png in Resources */,
 				107D76A81D40A7DB0065F2A5 /* gesture_node_highlighted.png in Resources */,
 				109B6B0A1CF7EE1F0077FAFA /* card_icon_addattention@2x.png in Resources */,
+				10E1F4351D47426900107345 /* AlipayHomeIcons.plist in Resources */,
 				109B6B471CF7EE1F0077FAFA /* vip.png in Resources */,
 				109B6B271CF7EE1F0077FAFA /* cute_boy_14.png in Resources */,
+				10E1F4251D47426900107345 /* 20000066.png in Resources */,
 				10B9572E1D12A4890024D640 /* icon_unlike@2x.png in Resources */,
 				109B6B231CF7EE1F0077FAFA /* cute_boy_10.png in Resources */,
 				109B6A221CF7E8E30077FAFA /* FindViewController.xib in Resources */,
 				109B69671CF7E3A50077FAFA /* blueArrow.png in Resources */,
 				109B6A811CF7EC7A0077FAFA /* MainTabBarViewController.xib in Resources */,
 				107D76AB1D40A7DB0065F2A5 /* gesture_node_normal@2x.png in Resources */,
+				10E1F41F1D47426900107345 /* 10000011.png in Resources */,
 				109B6B221CF7EE1F0077FAFA /* cute_boy_9.png in Resources */,
 				109B6B2E1CF7EE1F0077FAFA /* guide_background_02@2x.jpg in Resources */,
 				109B6B251CF7EE1F0077FAFA /* cute_boy_12.png in Resources */,
+				10E1F4321D47426900107345 /* 30000001.png in Resources */,
 				109B6B3F1CF7EE1F0077FAFA /* other.png in Resources */,
+				10E1F4291D47426900107345 /* 20000120.png in Resources */,
 				109B69EB1CF7E7910077FAFA /* shake_sound_male.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2108,6 +2277,7 @@
 				10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */,
 				10C009911D363686003B6CF3 /* FriendsInfoViewController.m in Sources */,
 				106205BF1D05477700E10485 /* MASViewAttribute.m in Sources */,
+				10E1F3EA1D47315900107345 /* MineWalletViewController.m in Sources */,
 				10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */,
 				109B69361CF7E2840077FAFA /* MLLabelLayoutManager.m in Sources */,
 				109B69341CF7E2840077FAFA /* MLLabel.m in Sources */,

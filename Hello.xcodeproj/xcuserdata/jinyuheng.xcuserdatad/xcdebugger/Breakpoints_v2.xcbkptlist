@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hello/MineModel+View/&#x6211;&#x7684;&#x94b1;&#x5305;/UnlockPassWordVC.m"
-            timestampString = "490785968.725795"
+            timestampString = "491206398.361279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-lockView:didFinishPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -336,22 +336,6 @@
             startingLineNumber = "649"
             endingLineNumber = "649"
             landmarkName = "-didReceiveWeiboResponse:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hello/LoginView/LoginViewController.m"
-            timestampString = "491190793.69662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "-LoginWithSinabo"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

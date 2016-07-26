@@ -11,6 +11,7 @@
 #import "MineSettingViewController.h"
 #import "MineDetailInfoVC.h"
 #import "UnlockPassWordVC.h"
+#import "MineWalletViewController.h"
 
 @interface MineViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -200,9 +201,34 @@
                     break;
                 case 1:
                 {
+                    __weak typeof(self) weakSelf = self;
+                    
                     UnlockPassWordVC *unlockVC = [[UnlockPassWordVC alloc] init];
                     unlockVC.title = @"手势密码";
-                    [self.navigationController pushViewController:unlockVC animated:YES];
+                    unlockVC.didUnlockPassWord = ^{
+                    
+                        MineWalletViewController *walletVC = [[MineWalletViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                        walletVC.title = @"我的钱包";
+                        
+                        [weakSelf.navigationController pushViewController:walletVC animated:YES];
+                    };
+                    
+                    unlockVC.didSetPassWord = ^{
+                    
+                        UnlockPassWordVC *unlockVC = [[UnlockPassWordVC alloc] init];
+                        unlockVC.title = @"手势密码";
+                        unlockVC.didUnlockPassWord = ^{
+                            
+                            MineWalletViewController *walletVC = [[MineWalletViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                            walletVC.title = @"我的钱包";
+                            [weakSelf.navigationController pushViewController:walletVC animated:YES];
+                        };
+                        
+                        [weakSelf presentViewController:unlockVC animated:YES completion:nil];
+                    
+                    };
+                    
+                    [self presentViewController:unlockVC animated:YES completion:nil];
                 }
                     break;
                 case 2:

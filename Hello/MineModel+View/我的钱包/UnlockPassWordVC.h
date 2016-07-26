@@ -10,5 +10,8 @@
 
 @interface UnlockPassWordVC : UIViewController
 
+@property (nonatomic, copy) void(^didUnlockPassWord)();
+
+@property (nonatomic, copy) void(^didSetPassWord)();
 
 @end
