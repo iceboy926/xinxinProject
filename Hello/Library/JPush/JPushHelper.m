@@ -14,7 +14,7 @@
 // 在应用启动的时候调用
 + (void)setupWithOptions:(NSDictionary *)launchOptions
 {
-    [JPUSHService setDebugMode];
+    //[JPUSHService setDebugMode];
     
     
 

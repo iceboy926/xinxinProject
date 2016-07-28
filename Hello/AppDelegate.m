@@ -105,7 +105,7 @@
     
     
     //清除app上的小红点
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    //[[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     
     //2、初始化社交平台
@@ -181,6 +181,8 @@
 {
     //NSLog(@"applicationDidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

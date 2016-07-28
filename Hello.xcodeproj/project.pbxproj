@@ -14,6 +14,7 @@
 		105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 105542FA1CFEE28D0017D42B /* ScaleImageView.m */; };
 		105AD0021D45FF3600C6AAD0 /* jpush-ios-2.1.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 105AD0001D45FF3600C6AAD0 /* jpush-ios-2.1.8.a */; };
 		105AD0051D45FF6A00C6AAD0 /* JPushHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AD0041D45FF6A00C6AAD0 /* JPushHelper.m */; };
+		105C49561D49E27300EE398B /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C49551D49E27300EE398B /* UIBarButtonItem+Badge.m */; };
 		106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A31D05477700E10485 /* MASCompositeConstraint.m */; };
 		106205BC1D05477700E10485 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A51D05477700E10485 /* MASConstraint.m */; };
 		106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A81D05477700E10485 /* MASConstraintMaker.m */; };
@@ -404,6 +405,8 @@
 		105AD0011D45FF3600C6AAD0 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPUSHService.h; path = Library/JPush/JPUSHService.h; sourceTree = "<group>"; };
 		105AD0031D45FF6A00C6AAD0 /* JPushHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPushHelper.h; path = Library/JPush/JPushHelper.h; sourceTree = "<group>"; };
 		105AD0041D45FF6A00C6AAD0 /* JPushHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPushHelper.m; path = Library/JPush/JPushHelper.m; sourceTree = "<group>"; };
+		105C49541D49E27300EE398B /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Badge.h"; path = "MineModel+View/UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		105C49551D49E27300EE398B /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Badge.m"; path = "MineModel+View/UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
 		106205A21D05477700E10485 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Library/Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		106205A31D05477700E10485 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Library/Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		106205A41D05477700E10485 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Library/Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -991,6 +994,31 @@
 			name = JPush;
 			sourceTree = "<group>";
 		};
+		105C49521D49E1ED00EE398B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				105C49541D49E27300EE398B /* UIBarButtonItem+Badge.h */,
+				105C49551D49E27300EE398B /* UIBarButtonItem+Badge.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		105C49531D49E20A00EE398B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				109B69D31CF7E6D60077FAFA /* MineViewController.h */,
+				109B69D41CF7E6D60077FAFA /* MineViewController.m */,
+				109B69D51CF7E6D60077FAFA /* MineViewController.xib */,
+				107D76961D40626A0065F2A5 /* MineExpressionShop */,
+				107D76951D4062420065F2A5 /* MinePackage */,
+				107D76941D4062160065F2A5 /* MineSetting */,
+				107D76931D4062030065F2A5 /* MineBankCard */,
+				107D76921D4061F30065F2A5 /* MineAblum */,
+				107D76911D4061C90065F2A5 /* MineInfo */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		106205A11D05474F00E10485 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,15 +1076,8 @@
 		107D76901D4061600065F2A5 /* MineModel+View */ = {
 			isa = PBXGroup;
 			children = (
-				109B69D31CF7E6D60077FAFA /* MineViewController.h */,
-				109B69D41CF7E6D60077FAFA /* MineViewController.m */,
-				109B69D51CF7E6D60077FAFA /* MineViewController.xib */,
-				107D76961D40626A0065F2A5 /* MineExpressionShop */,
-				107D76951D4062420065F2A5 /* MinePackage */,
-				107D76941D4062160065F2A5 /* MineSetting */,
-				107D76931D4062030065F2A5 /* MineBankCard */,
-				107D76921D4061F30065F2A5 /* MineAblum */,
-				107D76911D4061C90065F2A5 /* MineInfo */,
+				105C49531D49E20A00EE398B /* View */,
+				105C49521D49E1ED00EE398B /* Model */,
 			);
 			name = "MineModel+View";
 			sourceTree = "<group>";
@@ -2360,6 +2381,7 @@
 				10C009CE1D37661C003B6CF3 /* UIImage+GIF.m in Sources */,
 				109B69AB1CF7E5800077FAFA /* UIWebView+AFNetworking.m in Sources */,
 				109B69A91CF7E5800077FAFA /* UIProgressView+AFNetworking.m in Sources */,
+				105C49561D49E27300EE398B /* UIBarButtonItem+Badge.m in Sources */,
 				109B6A411CF7EA670077FAFA /* AsynImageView.m in Sources */,
 				105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */,
 				105AD0051D45FF6A00C6AAD0 /* JPushHelper.m in Sources */,
