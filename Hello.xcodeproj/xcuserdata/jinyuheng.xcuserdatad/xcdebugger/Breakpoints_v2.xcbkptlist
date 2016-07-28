@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hello/MineModel+View/&#x6211;&#x7684;&#x94b1;&#x5305;/UnlockPassWordVC.m"
-            timestampString = "491206398.361279"
+            timestampString = "491298169.160514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "-lockView:didFinishPath:"
             landmarkType = "5">
          </BreakpointContent>

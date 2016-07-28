@@ -201,34 +201,11 @@
                     break;
                 case 1:
                 {
-                    __weak typeof(self) weakSelf = self;
-                    
                     UnlockPassWordVC *unlockVC = [[UnlockPassWordVC alloc] init];
                     unlockVC.title = @"手势密码";
-                    unlockVC.didUnlockPassWord = ^{
+                    [unlockVC setModalTransitionStyle:UIModalTransitionStylePartialCurl];
                     
-                        MineWalletViewController *walletVC = [[MineWalletViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                        walletVC.title = @"我的钱包";
-                        
-                        [weakSelf.navigationController pushViewController:walletVC animated:YES];
-                    };
-                    
-                    unlockVC.didSetPassWord = ^{
-                    
-                        UnlockPassWordVC *unlockVC = [[UnlockPassWordVC alloc] init];
-                        unlockVC.title = @"手势密码";
-                        unlockVC.didUnlockPassWord = ^{
-                            
-                            MineWalletViewController *walletVC = [[MineWalletViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                            walletVC.title = @"我的钱包";
-                            [weakSelf.navigationController pushViewController:walletVC animated:YES];
-                        };
-                        
-                        [weakSelf presentViewController:unlockVC animated:YES completion:nil];
-                    
-                    };
-                    
-                    [self presentViewController:unlockVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:unlockVC animated:YES];
                 }
                     break;
                 case 2:

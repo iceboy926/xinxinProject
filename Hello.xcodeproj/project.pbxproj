@@ -24,6 +24,7 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
+		107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 107AD8B81D48AC010028EDA6 /* CustomGrid.m */; };
 		107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D76981D4071550065F2A5 /* MineSettingViewController.m */; };
 		107D769C1D4071940065F2A5 /* UnlockPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */; };
 		107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */; };
@@ -430,6 +431,8 @@
 		106205BA1D05477700E10485 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Library/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
+		107AD8B71D48AC010028EDA6 /* CustomGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGrid.h; path = "MineModel+View/我的钱包/CustomGrid.h"; sourceTree = "<group>"; };
+		107AD8B81D48AC010028EDA6 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGrid.m; path = "MineModel+View/我的钱包/CustomGrid.m"; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		107D76971D4071550065F2A5 /* MineSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineSettingViewController.h; path = "MineModel+View/设置/MineSettingViewController.h"; sourceTree = "<group>"; };
 		107D76981D4071550065F2A5 /* MineSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineSettingViewController.m; path = "MineModel+View/设置/MineSettingViewController.m"; sourceTree = "<group>"; };
@@ -1020,6 +1023,28 @@
 			name = Masonry;
 			sourceTree = "<group>";
 		};
+		107AD8B51D48ABB40028EDA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				107AD8B71D48AC010028EDA6 /* CustomGrid.h */,
+				107AD8B81D48AC010028EDA6 /* CustomGrid.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		107AD8B61D48ABC40028EDA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				107D76A01D40A5480065F2A5 /* GestureLockView.h */,
+				107D76A11D40A5480065F2A5 /* GestureLockView.m */,
+				107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */,
+				107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */,
+				10E1F3E81D47315900107345 /* MineWalletViewController.h */,
+				10E1F3E91D47315900107345 /* MineWalletViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		107D76901D4061600065F2A5 /* MineModel+View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1055,12 +1080,8 @@
 		107D76931D4062030065F2A5 /* MineBankCard */ = {
 			isa = PBXGroup;
 			children = (
-				107D76A01D40A5480065F2A5 /* GestureLockView.h */,
-				107D76A11D40A5480065F2A5 /* GestureLockView.m */,
-				107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */,
-				107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */,
-				10E1F3E81D47315900107345 /* MineWalletViewController.h */,
-				10E1F3E91D47315900107345 /* MineWalletViewController.m */,
+				107AD8B61D48ABC40028EDA6 /* View */,
+				107AD8B51D48ABB40028EDA6 /* Model */,
 			);
 			name = MineBankCard;
 			sourceTree = "<group>";
@@ -2355,6 +2376,7 @@
 				106205BE1D05477700E10485 /* MASLayoutConstraint.m in Sources */,
 				106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */,
 				10C009C61D37661C003B6CF3 /* SDImageCache.m in Sources */,
+				107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */,
 				109B69C61CF7E5AB0077FAFA /* AFURLResponseSerialization.m in Sources */,
 				109B69F51CF7E8260077FAFA /* FriendBaseCell.m in Sources */,
 				102D90AF1D1CC989005F0DEB /* FriendBaseFrame.m in Sources */,

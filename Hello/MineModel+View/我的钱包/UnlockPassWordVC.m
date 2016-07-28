@@ -159,14 +159,10 @@
 
 - (void)gestureViewUnlockSuccess:(UIView *)gestureView
 {
-    [self dismissViewControllerAnimated:YES completion:^{
+    MineWalletViewController *walletVC = [[MineWalletViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    walletVC.title = @"我的钱包";
     
-        if(self.didUnlockPassWord)
-        {
-            self.didUnlockPassWord();
-        }
-    
-    }];
+    [self.navigationController pushViewController:walletVC animated:YES];
  
 }
 

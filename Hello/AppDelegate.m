@@ -104,6 +104,8 @@
     [JPushHelper setupWithOptions:launchOptions];
     
     
+    //清除app上的小红点
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     
     //2、初始化社交平台

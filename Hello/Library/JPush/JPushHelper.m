@@ -15,6 +15,8 @@
 + (void)setupWithOptions:(NSDictionary *)launchOptions
 {
     [JPUSHService setDebugMode];
+    
+    
 
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         //可以添加自定义categories
@@ -33,6 +35,7 @@
     
     // Required
     [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:isProduction];
+
     
     return;
 }
