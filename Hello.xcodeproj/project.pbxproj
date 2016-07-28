@@ -15,6 +15,9 @@
 		105AD0021D45FF3600C6AAD0 /* jpush-ios-2.1.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 105AD0001D45FF3600C6AAD0 /* jpush-ios-2.1.8.a */; };
 		105AD0051D45FF6A00C6AAD0 /* JPushHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 105AD0041D45FF6A00C6AAD0 /* JPushHelper.m */; };
 		105C49561D49E27300EE398B /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C49551D49E27300EE398B /* UIBarButtonItem+Badge.m */; };
+		105C49591D49EF3F00EE398B /* ticketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C49581D49EF3F00EE398B /* ticketModel.m */; };
+		105C495C1D49F7F700EE398B /* ticketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C495B1D49F7F700EE398B /* ticketCell.m */; };
+		105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C495E1D49FDFA00EE398B /* MinePackageViewController.m */; };
 		106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A31D05477700E10485 /* MASCompositeConstraint.m */; };
 		106205BC1D05477700E10485 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A51D05477700E10485 /* MASConstraint.m */; };
 		106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A81D05477700E10485 /* MASConstraintMaker.m */; };
@@ -407,6 +410,12 @@
 		105AD0041D45FF6A00C6AAD0 /* JPushHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPushHelper.m; path = Library/JPush/JPushHelper.m; sourceTree = "<group>"; };
 		105C49541D49E27300EE398B /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Badge.h"; path = "MineModel+View/UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
 		105C49551D49E27300EE398B /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Badge.m"; path = "MineModel+View/UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
+		105C49571D49EF3F00EE398B /* ticketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ticketModel.h; path = "MineModel+View/我的卡包/ticketModel.h"; sourceTree = "<group>"; };
+		105C49581D49EF3F00EE398B /* ticketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ticketModel.m; path = "MineModel+View/我的卡包/ticketModel.m"; sourceTree = "<group>"; };
+		105C495A1D49F7F700EE398B /* ticketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ticketCell.h; path = "MineModel+View/我的卡包/ticketCell.h"; sourceTree = "<group>"; };
+		105C495B1D49F7F700EE398B /* ticketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ticketCell.m; path = "MineModel+View/我的卡包/ticketCell.m"; sourceTree = "<group>"; };
+		105C495D1D49FDFA00EE398B /* MinePackageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinePackageViewController.h; path = "MineModel+View/我的卡包/MinePackageViewController.h"; sourceTree = "<group>"; };
+		105C495E1D49FDFA00EE398B /* MinePackageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinePackageViewController.m; path = "MineModel+View/我的卡包/MinePackageViewController.m"; sourceTree = "<group>"; };
 		106205A21D05477700E10485 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Library/Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		106205A31D05477700E10485 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Library/Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		106205A41D05477700E10485 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Library/Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -1119,6 +1128,12 @@
 		107D76951D4062420065F2A5 /* MinePackage */ = {
 			isa = PBXGroup;
 			children = (
+				105C49571D49EF3F00EE398B /* ticketModel.h */,
+				105C49581D49EF3F00EE398B /* ticketModel.m */,
+				105C495A1D49F7F700EE398B /* ticketCell.h */,
+				105C495B1D49F7F700EE398B /* ticketCell.m */,
+				105C495D1D49FDFA00EE398B /* MinePackageViewController.h */,
+				105C495E1D49FDFA00EE398B /* MinePackageViewController.m */,
 			);
 			name = MinePackage;
 			sourceTree = "<group>";
@@ -2282,6 +2297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
+				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
@@ -2384,6 +2400,7 @@
 				105C49561D49E27300EE398B /* UIBarButtonItem+Badge.m in Sources */,
 				109B6A411CF7EA670077FAFA /* AsynImageView.m in Sources */,
 				105542FB1CFEE28D0017D42B /* ScaleImageView.m in Sources */,
+				105C495C1D49F7F700EE398B /* ticketCell.m in Sources */,
 				105AD0051D45FF6A00C6AAD0 /* JPushHelper.m in Sources */,
 				109B6A021CF7E8760077FAFA /* QRViewController.m in Sources */,
 				109B69391CF7E2840077FAFA /* NSAttributedString+MLExpression.m in Sources */,
@@ -2392,6 +2409,7 @@
 				109B6A2F1CF7E9700077FAFA /* FansTableViewCell.m in Sources */,
 				109B6A591CF7EB180077FAFA /* HomeDetailViewController.m in Sources */,
 				109B6A471CF7EA670077FAFA /* ZoomImage.m in Sources */,
+				105C49591D49EF3F00EE398B /* ticketModel.m in Sources */,
 				10B957371D12A6650024D640 /* UIImage+ImageSize.m in Sources */,
 				109B69C21CF7E5AB0077FAFA /* AFNetworkReachabilityManager.m in Sources */,
 				109B69A61CF7E5800077FAFA /* UIAlertView+AFNetworking.m in Sources */,
