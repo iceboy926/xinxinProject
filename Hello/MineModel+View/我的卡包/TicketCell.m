@@ -25,12 +25,12 @@
         self.backgroundColor = [UIColor clearColor];
         
         _marginTopView = [[UIView alloc] init];
-        _marginTopView.backgroundColor = kWBCellInnerViewColor;
+        _marginTopView.backgroundColor = [self.superview.superview backgroundColor];
         [self.contentView addSubview:_marginTopView];
         
         _backgroundImageView = [[UIImageView alloc] init];
         //_backgroundImageView.clipsToBounds = YES;
-        _backgroundImageView.layer.shadowColor = [[UIColor yellowColor] CGColor];
+        _backgroundImageView.layer.shadowColor = [[UIColor whiteColor] CGColor];
         _backgroundImageView.layer.shadowOffset = CGSizeMake(0, 0);
         _backgroundImageView.layer.shadowRadius = 10.0;
         _backgroundImageView.layer.shadowOpacity = 0.5;
@@ -39,7 +39,7 @@
         _backgroundImageView.layer.masksToBounds = YES;
         
         _backgroundImageView.layer.borderWidth = 3.0;
-        _backgroundImageView.layer.borderColor = [[UIColor yellowColor] CGColor];
+        _backgroundImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
         
         _backgroundImageView.userInteractionEnabled = YES;
         [self.contentView addSubview:_backgroundImageView];

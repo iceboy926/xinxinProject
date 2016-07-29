@@ -28,7 +28,8 @@
     [super viewDidLoad];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.view.backgroundColor = kWBCellInnerViewColor;
+    //self.view.backgroundColor = kWBCellInnerViewColor;
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:[[UIImage imageNamed:@"coupon_overdue"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)]];
     
     _couponTickets = [NSMutableArray array];
     
