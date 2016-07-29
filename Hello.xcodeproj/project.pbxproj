@@ -20,6 +20,7 @@
 		105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105C495E1D49FDFA00EE398B /* MinePackageViewController.m */; };
 		105C49671D4B410700EE398B /* coupon_common.png in Resources */ = {isa = PBXBuildFile; fileRef = 105C49651D4B410700EE398B /* coupon_common.png */; };
 		105C49681D4B410700EE398B /* coupon_overdue.png in Resources */ = {isa = PBXBuildFile; fileRef = 105C49661D4B410700EE398B /* coupon_overdue.png */; };
+		105C496A1D4B563F00EE398B /* MyPackage.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 105C49691D4B4F5D00EE398B /* MyPackage.geojson */; };
 		106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A31D05477700E10485 /* MASCompositeConstraint.m */; };
 		106205BC1D05477700E10485 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A51D05477700E10485 /* MASConstraint.m */; };
 		106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205A81D05477700E10485 /* MASConstraintMaker.m */; };
@@ -420,6 +421,7 @@
 		105C495E1D49FDFA00EE398B /* MinePackageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinePackageViewController.m; path = "MineModel+View/我的卡包/MinePackageViewController.m"; sourceTree = "<group>"; };
 		105C49651D4B410700EE398B /* coupon_common.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coupon_common.png; path = Hello/image/coupon_common.png; sourceTree = "<group>"; };
 		105C49661D4B410700EE398B /* coupon_overdue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coupon_overdue.png; path = Hello/image/coupon_overdue.png; sourceTree = "<group>"; };
+		105C49691D4B4F5D00EE398B /* MyPackage.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; name = MyPackage.geojson; path = "MineModel+View/我的卡包/MyPackage.geojson"; sourceTree = "<group>"; };
 		106205A21D05477700E10485 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Library/Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		106205A31D05477700E10485 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Library/Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		106205A41D05477700E10485 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Library/Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -1048,6 +1050,7 @@
 				105C495B1D49F7F700EE398B /* TicketCell.m */,
 				105C495D1D49FDFA00EE398B /* MinePackageViewController.h */,
 				105C495E1D49FDFA00EE398B /* MinePackageViewController.m */,
+				105C49691D4B4F5D00EE398B /* MyPackage.geojson */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2086,6 +2089,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105C496A1D4B563F00EE398B /* MyPackage.geojson in Resources */,
 				109B6B2B1CF7EE1F0077FAFA /* Default@2x.png in Resources */,
 				109B6B1F1CF7EE1F0077FAFA /* cute_boy_6.png in Resources */,
 				10E1F4201D47426900107345 /* 10000014.png in Resources */,

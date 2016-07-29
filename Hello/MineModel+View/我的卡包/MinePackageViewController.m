@@ -7,7 +7,7 @@
 //
 
 #import "MinePackageViewController.h"
-
+#import "JSONKit.h"
 
 @interface MinePackageViewController()
 {
@@ -131,17 +131,21 @@
 
 - (void)requestTickets
 {
-    NSDictionary *dic1 = @{@"goodName": @"绝味鸭脖", @"minLimitMoney": @50, @"deadline": @"2016-7-30", @"ticketMoney": @"10.0", @"overdue": @NO};
+    NSString *strPath = [[NSBundle mainBundle] pathForResource:@"MyPackage" ofType:@"geojson"];
     
-     NSDictionary *dic2 = @{@"goodName": @"麦当劳", @"minLimitMoney": @100, @"deadline": @"2016-12-30", @"ticketMoney": @"30.0", @"overdue": @YES};
+    NSString *data = [[NSString alloc] initWithContentsOfFile:strPath encoding:NSUTF8StringEncoding error:nil];
     
-    TicketModel *Model1 = [[TicketModel alloc] initWithDict:dic1];
-    TicketModel *Model2 = [[TicketModel alloc] initWithDict:dic2];
+    NSDictionary *dataDic = [data objectFromJSONString];
+    
+    NSArray *array = [dataDic objectForKey:@"package"];
+    
+    for (NSDictionary *dic in array) {
+        TicketModel *model = [[TicketModel alloc] initWithDict:dic];
+        [_couponTickets addObject:model];
+    }
     
     _ticketType = TPCellTypeCoupon;
-    
-    [_couponTickets addObject:Model1];
-    [_couponTickets addObject:Model2];
+
     
     [_currentModelSet addObjectsFromArray:_couponTickets];
 

@@ -38,7 +38,7 @@
         _backgroundImageView.layer.cornerRadius = 10.0;
         _backgroundImageView.layer.masksToBounds = YES;
         
-        _backgroundImageView.layer.borderWidth = 3.0;
+        _backgroundImageView.layer.borderWidth = 2.0;
         _backgroundImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
         
         _backgroundImageView.userInteractionEnabled = YES;

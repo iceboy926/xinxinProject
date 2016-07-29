@@ -1,0 +1,46 @@
+{"type": "MyWallet",
+    "package":[
+               {
+               "goodName": "绝味鸭脖",
+               "minLimitMoney": 50,
+               "deadline": "2016-7-30",
+               "ticketMoney": "10.0",
+               "overdue": "NO"
+               },
+               {
+               "goodName": "酒店代金券",
+               "minLimitMoney": 200,
+               "deadline": "2018-12-30",
+               "ticketMoney": "50.0",
+               "overdue": "YES"
+               },
+               {
+               "goodName": "呷哺呷哺",
+               "minLimitMoney": 50,
+               "deadline": "2017-12-30",
+               "ticketMoney": "10.0",
+               "overdue": "NO"
+                   },
+               {
+               "goodName": "肯德基",
+               "minLimitMoney": 80,
+               "deadline": "2018-6-30",
+               "ticketMoney": "20.0",
+               "overdue": "NO"
+               },
+               {
+               "goodName": "海底捞",
+               "minLimitMoney": 200,
+               "deadline": "2018-6-30",
+               "ticketMoney": "50.0",
+               "overdue": "NO"
+               },
+               {
+               "goodName": "星巴克",
+               "minLimitMoney": 100,
+               "deadline": "2016-9-30",
+               "ticketMoney": "30.0",
+               "overdue": "NO"
+               }
+               ]
+}
