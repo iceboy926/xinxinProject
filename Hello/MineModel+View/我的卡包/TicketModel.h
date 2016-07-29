@@ -15,14 +15,14 @@ typedef NS_ENUM(NSInteger, TPCellType) {
 };
 
 
-@protocol ticketModelProtocol <NSObject>
+@protocol TicketModelProtocol <NSObject>
 
 @required
 
 @property (nonatomic, strong, readonly) NSString *goodName;
 @property (nonatomic, strong, readonly) NSString *effectCondition;
 @property (nonatomic, strong, readonly) NSString *deadLine;
-@property (nonatomic, assign, readonly) TPCellType Type;
+@property (nonatomic, assign) TPCellType Type;
 @property (nonatomic, strong, readonly) NSString *backgroundImageName;
 
 @optional
@@ -34,6 +34,6 @@ typedef NS_ENUM(NSInteger, TPCellType) {
 @end
 
 
-@interface ticketModel : NSObject<ticketModelProtocol>
+@interface TicketModel : NSObject<TicketModelProtocol>
 
 @end

@@ -12,6 +12,7 @@
 #import "MineDetailInfoVC.h"
 #import "UnlockPassWordVC.h"
 #import "MineWalletViewController.h"
+#import "MinePackageViewController.h"
 
 @interface MineViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -210,7 +211,9 @@
                     break;
                 case 2:
                 {
-                    
+                    MinePackageViewController *packageVC = [[MinePackageViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                    packageVC.title = @"我的卡包";
+                    [self.navigationController pushViewController:packageVC animated:YES];
                 }
                     break;
                 default:

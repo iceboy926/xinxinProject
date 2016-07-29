@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ticketModel.h"
-#import "ticketCell.h"
+#import "TicketModel.h"
+#import "TicketCell.h"
 
 @interface MinePackageViewController : UITableViewController
 
-@property (nonatomic, strong)NSMutableArray<id<ticketModelProtocol>>  *currentModelSet;
+@property (nonatomic, strong)NSMutableArray<id<TicketModelProtocol>>  *currentModelSet;
 
 @end

@@ -6,18 +6,18 @@
 //  Copyright © 2016年 mit. All rights reserved.
 //
 #import <objc/runtime.h>
-#import "ticketModel.h"
+#import "TicketModel.h"
 
 NSString const *KMCPerferentialKey = @"perferentialKey";
 
-@interface ticketModel()
+@interface TicketModel()
 {
     NSDictionary * _dict;
 }
 
 @end
 
-@implementation ticketModel
+@implementation TicketModel
 
 
 - (NSString *)backgroundImageName
@@ -35,7 +35,7 @@ NSString const *KMCPerferentialKey = @"perferentialKey";
     
     NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString: @"￥" attributes: @{ NSFontAttributeName: [UIFont systemFontOfSize: 16] }];
     [attributedString appendAttributedString: [[NSAttributedString alloc] initWithString: [NSString stringWithFormat: @"%g", [_dict[@"ticketMoney"] doubleValue]] attributes: @{ NSFontAttributeName: [UIFont boldSystemFontOfSize: 32] }]];
-    [attributedString addAttributes: @{NSForegroundColorAttributeName: [UIColor blackColor] } range: NSMakeRange(0, attributedString.length)];
+    [attributedString addAttributes: @{NSForegroundColorAttributeName: [UIColor redColor] } range: NSMakeRange(0, attributedString.length)];
     result = attributedString.copy;
     
     objc_setAssociatedObject(self, &KMCPerferentialKey, result, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -44,7 +44,7 @@ NSString const *KMCPerferentialKey = @"perferentialKey";
 
 - (NSString *)goodName
 {
-    return [_dict[@"goodName"] stringValue];
+    return _dict[@"goodName"];
 }
 
 - (NSString *)effectCondition
@@ -52,7 +52,7 @@ NSString const *KMCPerferentialKey = @"perferentialKey";
     return [NSString stringWithFormat: @"· 满%d元可用", [_dict[@"minLimitMoney"] intValue]];;
 }
 
-- (NSString *)deadline
+- (NSString *)deadLine
 {
     return [NSString stringWithFormat: @"· 兑换截止日期：%@", _dict[@"deadline"]];
 }

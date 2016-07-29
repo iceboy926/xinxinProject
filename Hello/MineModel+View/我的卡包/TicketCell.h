@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ticketModelProtocol;
+@protocol TicketModelProtocol;
 
-@protocol ticketCellProtocol <NSObject>
+@protocol TicketCellProtocol <NSObject>
 
--(void)configurateWithModel:(id<ticketModelProtocol>)Model;
+-(void)configurateWithModel:(id<TicketModelProtocol>)Model;
 
 @end
 
-@interface ticketCell : UITableViewCell <ticketCellProtocol>
+@interface TicketCell : UITableViewCell <TicketCellProtocol>
 
 @property (nonatomic, strong)UIImageView *backgroundImageView;
 @property (nonatomic, strong)UILabel    *goodNameLabel;
@@ -24,6 +24,7 @@
 @property (nonatomic, strong)UILabel    *deadLineLabel;
 @property (nonatomic, strong)UILabel    *perferentialLabel;
 @property (nonatomic, strong)UIButton   *userBtn;
+@property (nonatomic, strong)UIView     *marginTopView;
 
 
 @end

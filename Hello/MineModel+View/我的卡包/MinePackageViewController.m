@@ -14,9 +14,9 @@
     TPCellType _ticketType;
 }
 
-@property (nonatomic, strong) NSMutableArray<id<ticketModelProtocol>> *couponTickets;
-@property (nonatomic, strong) NSMutableArray<id<ticketModelProtocol>> *discountTickets;
-@property (nonatomic, strong) NSMutableArray<id<ticketModelProtocol>> *convertTickets;
+@property (nonatomic, strong) NSMutableArray<id<TicketModelProtocol>> *couponTickets;
+@property (nonatomic, strong) NSMutableArray<id<TicketModelProtocol>> *discountTickets;
+@property (nonatomic, strong) NSMutableArray<id<TicketModelProtocol>> *convertTickets;
 
 @end
 
@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.view.backgroundColor = kWBCellInnerViewColor;
+    
+    _couponTickets = [NSMutableArray array];
+    
+    _currentModelSet = [NSMutableArray array];
+    
+    [self requestTickets];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,20 +76,26 @@
     return [self.currentModelSet count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150;
+}
 
 - (UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath: (NSIndexPath *)indexPath
 {
     static NSString *KMCTicketCommonCellIdentifier = @"ticketCell";
     
-    ticketCell * cell = [tableView dequeueReusableCellWithIdentifier: KMCTicketCommonCellIdentifier];
+    TicketCell * cell = [tableView dequeueReusableCellWithIdentifier: KMCTicketCommonCellIdentifier];
     if(cell == nil)
     {
-        cell = [[ticketCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KMCTicketCommonCellIdentifier];
+        cell = [[TicketCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KMCTicketCommonCellIdentifier];
     }
     
-    if ([cell conformsToProtocol: @protocol(ticketCellProtocol)])
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if ([cell conformsToProtocol: @protocol(TicketCellProtocol)])
     {
-        [(id<ticketCellProtocol>)cell configurateWithModel:[self modelWithIndexPath:indexPath]];
+        [(id<TicketCellProtocol>)cell configurateWithModel:[self modelWithIndexPath:indexPath]];
     }
     
     return cell;
@@ -94,12 +108,12 @@
  */
 
 #pragma mark - Data Generator
-- (id<ticketModelProtocol>)modelWithIndexPath: (NSIndexPath *)indexPath
+- (id<TicketModelProtocol>)modelWithIndexPath: (NSIndexPath *)indexPath
 {
     return self.currentModelSet[indexPath.row];
 }
 
-- (NSMutableArray< id<ticketModelProtocol> > *)currentModelSet
+- (NSMutableArray< id<TicketModelProtocol> > *)currentModelSet
 {
     switch (_ticketType) {
         case TPCellTypeCoupon:
@@ -111,6 +125,25 @@
         case TPCellTypeConvert:
             return _convertTickets;
     }
+}
+
+
+- (void)requestTickets
+{
+    NSDictionary *dic1 = @{@"goodName": @"绝味鸭脖", @"minLimitMoney": @50, @"deadline": @"2016-7-30", @"ticketMoney": @"10.0", @"overdue": @NO};
+    
+     NSDictionary *dic2 = @{@"goodName": @"麦当劳", @"minLimitMoney": @100, @"deadline": @"2016-12-30", @"ticketMoney": @"30.0", @"overdue": @YES};
+    
+    TicketModel *Model1 = [[TicketModel alloc] initWithDict:dic1];
+    TicketModel *Model2 = [[TicketModel alloc] initWithDict:dic2];
+    
+    _ticketType = TPCellTypeCoupon;
+    
+    [_couponTickets addObject:Model1];
+    [_couponTickets addObject:Model2];
+    
+    [_currentModelSet addObjectsFromArray:_couponTickets];
+
 }
 
 
