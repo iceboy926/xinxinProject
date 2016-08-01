@@ -53,7 +53,7 @@
         titleView.textColor = UIColorHex(@"3C454C");
         [self addSubview:titleView];
         
-        int padding = 10;
+        int padding = 20;
         
         [iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             

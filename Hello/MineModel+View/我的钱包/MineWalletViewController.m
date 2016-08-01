@@ -39,7 +39,7 @@
     
     _tableViewOffset = .0 - navRect.size.height - statusRect.size.height;
     
-    sectionIICount = 12;
+    sectionIICount = 9;
     
 }
 
@@ -103,16 +103,14 @@
         [self.titleList addObject:strkey];
         [self.iconList addObject:[dataDic objectForKey:strkey]];
     }
-    
-    //[self.tableView reloadData];
 }
 
 - (void)InitCellUIWithView:(UIView *)SuperView
 {
-    int row = 4;
+    int row = 3;
     int column = 3;
     CGFloat gridWidth =  (MAX_WIDTH)/row;
-    CGFloat gridHeight = 82;
+    CGFloat gridHeight = (MAX_WIDTH)/row;
     
     for (int i = 0;  i < sectionIICount; i++) {
         CGFloat x = 0.0, y = 0.0, width = 0.0, height = 0.0;
@@ -136,9 +134,9 @@
 
 - (void)InitSectionIIIWithView:(UIView *)SuperView
 {
-    int row = 4;
+    int row = 3;
     CGFloat gridWidth =  (MAX_WIDTH)/row;
-    CGFloat gridHeight = 83;
+    CGFloat gridHeight = (MAX_WIDTH)/row;
   
     
     for (int i = sectionIICount;  i < [self.titleList count]; i++) {
@@ -268,11 +266,11 @@
     }
     else if([indexPath section] == 1)
     {
-        return 3*83.;
+        return 3*106.;
     }
     else
     {
-        return 2*83.;
+        return 3*106.;
     }
 }
 
