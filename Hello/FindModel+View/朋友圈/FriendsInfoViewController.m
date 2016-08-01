@@ -55,7 +55,7 @@
     [webView loadRequest:[NSURLRequest requestWithURL:httpUrl]];
     
     progressView.frame = self.view.bounds;
-    progressView.backgroundColor = [UIColor blueColor];
+    progressView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:progressView];
 
 }

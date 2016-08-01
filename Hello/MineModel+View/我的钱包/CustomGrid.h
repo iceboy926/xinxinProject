@@ -20,7 +20,7 @@
 
 @property (nonatomic, assign) CGPoint   gridCenterPoint;
 
-@property (nonatomic, weak) id<CustomGridDelegate> delegate;
+
 
 
 - (id) initWithFrame:(CGRect)frame
@@ -28,7 +28,8 @@
                 Icon:(NSString *)icon
          NormalImage:(NSString *)normalImage
       HighlightImage:(NSString *)highlightImage
-              GridID:(NSInteger)gridID;
+              GridID:(NSInteger)gridID
+              Delegate:(id<CustomGridDelegate>) delegate;
 
 
 

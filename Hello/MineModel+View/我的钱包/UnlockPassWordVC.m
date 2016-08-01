@@ -9,8 +9,11 @@
 #import "UnlockPassWordVC.h"
 #import "GestureLockView.h"
 #import "MineWalletViewController.h"
+#import "AESCrypt.h"
 
 #define  LOCKPATH  @"lockpath"
+
+#define  AES_KEY   @"12345678"
 
 
 @interface UnlockPassWordVC() <GestureLockViewDelegate, GestureSetLockViewDelegate>
@@ -109,7 +112,7 @@
     else
     {
         [lockView_ setBlsetPassWord:NO];
-        [lockView_ setPassword:lockPassWord];
+        [lockView_ setPassword:[self getDecryptedPassword]];
         lockView_.delegate_Lock = self;
         resetBtn_.hidden = YES;
     }
@@ -199,15 +202,10 @@
         {
             msgView_.textColor = [UIColor blueColor];
             msgView_.text = @"手势密码设置成功";
-            [self SaveLockPath:path];
+            [self saveEncryptedPassword:path];
             [NSThread sleepForTimeInterval:1.2f];
             
-            [self dismissViewControllerAnimated:YES completion:^{
-                if(self.didSetPassWord)
-                {
-                    self.didSetPassWord();
-                }
-            }];
+            [self.navigationController popViewControllerAnimated:YES];
         }
         else
         {
@@ -221,10 +219,18 @@
     }
 }
 
-- (void)SaveLockPath:(NSString *)path{
-    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
-    [userDef setObject:path forKey:LOCKPATH];
-    [userDef synchronize];
+-(NSString *)getDecryptedPassword{
+    NSUserDefaults * defaults=[NSUserDefaults standardUserDefaults];
+    NSString * encrypedPass=[defaults stringForKey:LOCKPATH]; //可能返回nil
+    NSString * decryptedPass=[AESCrypt decrypt:encrypedPass password:AES_KEY];//不可能返回nil
+    return decryptedPass;
 }
+-(void)saveEncryptedPassword:(NSString *)pass{
+    NSUserDefaults * defaults=[NSUserDefaults standardUserDefaults];
+    NSString * encryptedPass=[AESCrypt encrypt:pass password:AES_KEY];
+    [defaults setObject:encryptedPass forKey:LOCKPATH];
+    [defaults synchronize];
+}
+
 
 @end

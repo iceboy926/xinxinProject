@@ -32,6 +32,11 @@
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
 		107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 107AD8B81D48AC010028EDA6 /* CustomGrid.m */; };
+		107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F441D4F3AA7002987D9 /* AESCrypt.m */; };
+		107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F461D4F3AA7002987D9 /* NSData+Base64.m */; };
+		107C2F4D1D4F3AA7002987D9 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F481D4F3AA7002987D9 /* NSData+CommonCrypto.m */; };
+		107C2F4E1D4F3AA7002987D9 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F4A1D4F3AA7002987D9 /* NSString+Base64.m */; };
+		107C2F501D4F423A002987D9 /* add_businesses.png in Resources */ = {isa = PBXBuildFile; fileRef = 107C2F4F1D4F423A002987D9 /* add_businesses.png */; };
 		107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D76981D4071550065F2A5 /* MineSettingViewController.m */; };
 		107D769C1D4071940065F2A5 /* UnlockPassWordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769B1D4071940065F2A5 /* UnlockPassWordVC.m */; };
 		107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */; };
@@ -452,6 +457,15 @@
 		107AD8B71D48AC010028EDA6 /* CustomGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGrid.h; path = "MineModel+View/我的钱包/CustomGrid.h"; sourceTree = "<group>"; };
 		107AD8B81D48AC010028EDA6 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGrid.m; path = "MineModel+View/我的钱包/CustomGrid.m"; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		107C2F431D4F3AA7002987D9 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AESCrypt.h; path = "Library/AESCrypt-ObjC/AESCrypt.h"; sourceTree = "<group>"; };
+		107C2F441D4F3AA7002987D9 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AESCrypt.m; path = "Library/AESCrypt-ObjC/AESCrypt.m"; sourceTree = "<group>"; };
+		107C2F451D4F3AA7002987D9 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Library/AESCrypt-ObjC/NSData+Base64.h"; sourceTree = "<group>"; };
+		107C2F461D4F3AA7002987D9 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Library/AESCrypt-ObjC/NSData+Base64.m"; sourceTree = "<group>"; };
+		107C2F471D4F3AA7002987D9 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CommonCrypto.h"; path = "Library/AESCrypt-ObjC/NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		107C2F481D4F3AA7002987D9 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CommonCrypto.m"; path = "Library/AESCrypt-ObjC/NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		107C2F491D4F3AA7002987D9 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64.h"; path = "Library/AESCrypt-ObjC/NSString+Base64.h"; sourceTree = "<group>"; };
+		107C2F4A1D4F3AA7002987D9 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64.m"; path = "Library/AESCrypt-ObjC/NSString+Base64.m"; sourceTree = "<group>"; };
+		107C2F4F1D4F423A002987D9 /* add_businesses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_businesses.png; path = Hello/image/MyWalletIcon/add_businesses.png; sourceTree = "<group>"; };
 		107D76971D4071550065F2A5 /* MineSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineSettingViewController.h; path = "MineModel+View/设置/MineSettingViewController.h"; sourceTree = "<group>"; };
 		107D76981D4071550065F2A5 /* MineSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineSettingViewController.m; path = "MineModel+View/设置/MineSettingViewController.m"; sourceTree = "<group>"; };
 		107D769A1D4071940065F2A5 /* UnlockPassWordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnlockPassWordVC.h; path = "MineModel+View/我的钱包/UnlockPassWordVC.h"; sourceTree = "<group>"; };
@@ -1109,6 +1123,21 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		107C2F421D4F3A7E002987D9 /* AESCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				107C2F431D4F3AA7002987D9 /* AESCrypt.h */,
+				107C2F441D4F3AA7002987D9 /* AESCrypt.m */,
+				107C2F451D4F3AA7002987D9 /* NSData+Base64.h */,
+				107C2F461D4F3AA7002987D9 /* NSData+Base64.m */,
+				107C2F471D4F3AA7002987D9 /* NSData+CommonCrypto.h */,
+				107C2F481D4F3AA7002987D9 /* NSData+CommonCrypto.m */,
+				107C2F491D4F3AA7002987D9 /* NSString+Base64.h */,
+				107C2F4A1D4F3AA7002987D9 /* NSString+Base64.m */,
+			);
+			name = AESCrypto;
+			sourceTree = "<group>";
+		};
 		107D76901D4061600065F2A5 /* MineModel+View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1263,6 +1292,7 @@
 		10E1F3F31D47424500107345 /* MyWalletIcon */ = {
 			isa = PBXGroup;
 			children = (
+				107C2F4F1D4F423A002987D9 /* add_businesses.png */,
 				10E1F3F41D47426900107345 /* 09999976.png */,
 				10E1F3F51D47426900107345 /* 09999988.png */,
 				10E1F3F61D47426900107345 /* 09999999.png */,
@@ -1906,6 +1936,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				107C2F421D4F3A7E002987D9 /* AESCrypto */,
 				105ACFFF1D45FF0D00C6AAD0 /* JPush */,
 				10C009A21D376605003B6CF3 /* SDWebImage */,
 				10C009971D376595003B6CF3 /* SDPhotoBrowser */,
@@ -2146,6 +2177,7 @@
 				109B69EA1CF7E7910077FAFA /* shake_nomatch.wav in Resources */,
 				82E470821B4F624B00EC1A59 /* messages.plist in Resources */,
 				10FEB09A1D3F229B00F342CF /* MoreSetting@3x.png in Resources */,
+				107C2F501D4F423A002987D9 /* add_businesses.png in Resources */,
 				109B6A1C1CF7E8C60077FAFA /* ff_IconShowAlbum@2x.png in Resources */,
 				10B9572D1D12A4890024D640 /* icon_retweet@3x.png in Resources */,
 				10E1F4191D47426900107345 /* 09999999.png in Resources */,
@@ -2401,12 +2433,14 @@
 				10C009D01D37661C003B6CF3 /* UIImage+WebP.m in Sources */,
 				109B69A81CF7E5800077FAFA /* UIImageView+AFNetworking.m in Sources */,
 				109B693B1CF7E2840077FAFA /* NSMutableAttributedString+MLLabel.m in Sources */,
+				107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */,
 				109B6A211CF7E8E30077FAFA /* FindViewController.m in Sources */,
 				10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */,
 				109B69C11CF7E5AB0077FAFA /* AFHTTPSessionManager.m in Sources */,
 				82B612DC1B2FBC61007E6D42 /* AppDelegate.m in Sources */,
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
 				82B612D81B2FBC61007E6D42 /* main.m in Sources */,
+				107C2F4E1D4F3AA7002987D9 /* NSString+Base64.m in Sources */,
 				109B69F01CF7E8150077FAFA /* FriendBaseModel.m in Sources */,
 				10C009C51D37661C003B6CF3 /* NSData+ImageContentType.m in Sources */,
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
@@ -2419,6 +2453,7 @@
 				10C009D21D37661C003B6CF3 /* UIImageView+WebCache.m in Sources */,
 				109B6A621CF7EB180077FAFA /* TableViewCell.m in Sources */,
 				109B696B1CF7E3A50077FAFA /* FCXRefreshHeaderView.m in Sources */,
+				107C2F4D1D4F3AA7002987D9 /* NSData+CommonCrypto.m in Sources */,
 				10C009CA1D37661C003B6CF3 /* SDWebImageDownloaderOperation.m in Sources */,
 				109B69BF1CF7E5AB0077FAFA /* AFHTTPRequestOperation.m in Sources */,
 				100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */,
@@ -2448,6 +2483,7 @@
 				109B69C61CF7E5AB0077FAFA /* AFURLResponseSerialization.m in Sources */,
 				109B69F51CF7E8260077FAFA /* FriendBaseCell.m in Sources */,
 				102D90AF1D1CC989005F0DEB /* FriendBaseFrame.m in Sources */,
+				107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */,
 				109B696C1CF7E3A50077FAFA /* UIScrollView+FCXRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

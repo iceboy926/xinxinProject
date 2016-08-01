@@ -7,11 +7,13 @@
 //
 
 #import "MineWalletViewController.h"
+#import "CustomGrid.h"
 
-@interface MineWalletViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface MineWalletViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, CustomGridDelegate>
 {
     int _lastPosition;
     CGFloat _tableViewOffset;
+    int sectionIICount;
 }
 
 @property (nonatomic, strong) UIButton *leftIconBtn;
@@ -36,6 +38,8 @@
     CGRect statusRect = [[UIApplication sharedApplication] statusBarFrame];
     
     _tableViewOffset = .0 - navRect.size.height - statusRect.size.height;
+    
+    sectionIICount = 12;
     
 }
 
@@ -84,14 +88,76 @@
 
 - (void)initDataSource
 {
-    NSDictionary *dataListDic = [NSDictionary dictionaryWithContentsOfFile:@"AlipayHomeIcons.plist"];
+    
+    NSString *strPath = [[NSBundle mainBundle] pathForResource:@"AlipayHomeIcons" ofType:@"plist"];
+    
+    NSArray *dataListArray = [NSArray arrayWithContentsOfFile:strPath];
     
     self.titleList = [[NSMutableArray alloc] init];
     self.iconList = [[NSMutableArray alloc] init];
     
-    for (id key in dataListDic) {
-        [self.titleList addObject:key];
-        [self.iconList addObject:[dataListDic objectForKey:key]];
+    for (NSDictionary *dataDic in dataListArray) {
+        
+        NSString *strkey = [[dataDic allKeys] objectAtIndex:0];
+        
+        [self.titleList addObject:strkey];
+        [self.iconList addObject:[dataDic objectForKey:strkey]];
+    }
+    
+    //[self.tableView reloadData];
+}
+
+- (void)InitCellUIWithView:(UIView *)SuperView
+{
+    int row = 4;
+    int column = 3;
+    CGFloat gridWidth =  (MAX_WIDTH)/row;
+    CGFloat gridHeight = 82;
+    
+    for (int i = 0;  i < sectionIICount; i++) {
+        CGFloat x = 0.0, y = 0.0, width = 0.0, height = 0.0;
+        
+        x = gridWidth*(i%row);
+        y = gridHeight*(i/row);
+        width = gridWidth;
+        height = gridHeight;
+        
+        CGRect gridRect = CGRectMake(x, y, width, height);
+        NSString *strTitle = [self.titleList objectAtIndex:i];
+        NSString *strIcon = [self.iconList objectAtIndex:i];
+        NSString *strNormalImage = @"app_item_bg.png";
+        NSString *strHightlightImage = @"app_item_pressed_bg.png";
+        
+        CustomGrid *grid = [[CustomGrid alloc] initWithFrame:gridRect Title:strTitle Icon:strIcon NormalImage:strNormalImage HighlightImage:strHightlightImage GridID:i Delegate:self];
+        
+        [SuperView addSubview:grid];
+    }
+}
+
+- (void)InitSectionIIIWithView:(UIView *)SuperView
+{
+    int row = 4;
+    CGFloat gridWidth =  (MAX_WIDTH)/row;
+    CGFloat gridHeight = 83;
+  
+    
+    for (int i = sectionIICount;  i < [self.titleList count]; i++) {
+        CGFloat x = 0.0, y = 0.0, width = 0.0, height = 0.0;
+        int offsetCount = i - sectionIICount;
+        x = gridWidth*(offsetCount%row);
+        y = gridHeight*(offsetCount/row);
+        width = gridWidth;
+        height = gridHeight;
+        
+        CGRect gridRect = CGRectMake(x, y, width, height);
+        NSString *strTitle = [self.titleList objectAtIndex:i];
+        NSString *strIcon = [self.iconList objectAtIndex:i];
+        NSString *strNormalImage = @"app_item_bg.png";
+        NSString *strHightlightImage = @"app_item_pressed_bg.png";
+        
+        CustomGrid *grid = [[CustomGrid alloc] initWithFrame:gridRect Title:strTitle Icon:strIcon NormalImage:strNormalImage HighlightImage:strHightlightImage GridID:i Delegate:self];
+        
+        [SuperView addSubview:grid];
     }
 }
 
@@ -200,9 +266,13 @@
     {
         return 104.;
     }
-    else
+    else if([indexPath section] == 1)
     {
         return 3*83.;
+    }
+    else
+    {
+        return 2*83.;
     }
 }
 
@@ -221,13 +291,13 @@
             break;
         case 1:
         {
-            
+            [self InitCellUIWithView:cell.contentView];
         }
             
             break;
         case 2:
         {
-            
+            [self InitSectionIIIWithView:cell.contentView];
         }
             break;
         default:
@@ -236,6 +306,19 @@
     
     
     return cell;
+}
+
+
+
+/**
+ *  customGridDelegate
+ *
+ *  @param item <#item description#>
+ */
+
+- (void)gridItemDidClicked:(CustomGrid *)item
+{
+    NSLog(@"gridItem clicked is %d", item.gridID);
 }
 
 /**

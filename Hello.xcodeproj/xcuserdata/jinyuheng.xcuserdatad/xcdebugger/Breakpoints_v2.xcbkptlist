@@ -313,22 +313,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Hello/MineModel+View/&#x6211;&#x7684;&#x94b1;&#x5305;/UnlockPassWordVC.m"
-            timestampString = "491298169.160514"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "-lockView:didFinishPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Hello/LoginView/LoginViewController.m"
             timestampString = "491190748.970036"
             startingColumnNumber = "9223372036854775807"
