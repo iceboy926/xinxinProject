@@ -13,6 +13,7 @@
 {
     WKWebView  *webView;
     NSURL *httpUrl;
+    UIProgressView *progressView;
 }
 
 @end
@@ -24,10 +25,6 @@
     self = [super init];
     if(self)
     {
-        webView = [[WKWebView alloc] init];
-        webView.navigationDelegate = self;
-        webView.UIDelegate = self;
-        
         httpUrl = URL;
     }
     
@@ -41,11 +38,26 @@
     self.navigationItem.leftBarButtonItem = backItem;
 
     
+    webView = [[WKWebView alloc] init];
+    webView.navigationDelegate = self;
+    webView.UIDelegate = self;
+    
+    [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+
+    
+    //
+    progressView = [[UIProgressView alloc] init];
+    
     webView.frame = self.view.bounds;
     
     [self.view addSubview:webView];
     
     [webView loadRequest:[NSURLRequest requestWithURL:httpUrl]];
+    
+    progressView.frame = self.view.bounds;
+    progressView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:progressView];
+
 }
 
 - (void)viewDidLoad
@@ -127,7 +139,20 @@
     [super viewWillDisappear:animated];
     [self HideTabBar:NO];
     [self HideNavigateBar:NO];
+    [webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
+
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+    if([keyPath isEqualToString:@"estimatedProgress"])
+    {
+        NSLog(@"progress is %f", webView.estimatedProgress);
+        progressView.progress = webView.estimatedProgress;
+    }
+}
+
 
 
 #pragma mark- WKNavigationDelegate
