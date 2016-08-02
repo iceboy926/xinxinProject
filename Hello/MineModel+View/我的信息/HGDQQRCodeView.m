@@ -44,6 +44,27 @@
 }
 
 
++ (UIImage *)creatQRCodeWithURLString:(NSString *)urlString ViewSize:(CGSize)ViewSize logoImage:(UIImage *)logoImage logoImageSize:(CGSize)logoImageSize logoImageWithCornerRadius:(CGFloat)cornerRadius
+{
+    HGDQQRCodeView *QRCodeView = [[HGDQQRCodeView alloc] init];
+    QRCodeView.tag = 123;
+    QRCodeView.frame = CGRectMake(0, 0, ViewSize.width, ViewSize.height);
+    CIImage *ciImage = [QRCodeView creatQRcodeWithUrlstring:urlString]; // 生成二维码
+    UIImage *qrImage = [QRCodeView changeImageSizeWithCIImage:ciImage andSize:ViewSize.width]; // 改变二维码的大小
+    if (logoImage != nil) {
+        if (cornerRadius < 0) {
+            cornerRadius = 0;
+            NSLog(@"cornerRadius 不能小于0");
+        }
+        qrImage = [QRCodeView addImageToSuperImage:qrImage withSubImage:[QRCodeView imageWithCornerRadius:cornerRadius image:logoImage] andSubImagePosition:CGRectMake((ViewSize.width - logoImageSize.width)/2, (ViewSize.height - logoImageSize.height)/2, logoImageSize.width, logoImageSize.height)]; // 增加logo
+    }
+    //QRCodeView.layer.contents = (__bridge id)qrImage.CGImage;
+    
+    return qrImage;
+
+}
+
+
 /**
  *  根据字符串生成二维码 CIImage 对象
  *

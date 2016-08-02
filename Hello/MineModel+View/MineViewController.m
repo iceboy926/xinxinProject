@@ -63,7 +63,7 @@
 {
     if([indexPath section] == 0)
     {
-        return 60;
+        return 80;
     }
     else
     {
@@ -125,10 +125,33 @@
     switch ([indexPath section]) {
         case 0:
         {
-            cell.textLabel.text = @"南宫勇少";
-            cell.imageView.image = [UIImage imageNamed:@"xhr"];
-            cell.imageView.layer.cornerRadius = 5.0;
-            cell.imageView.clipsToBounds = YES;
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xhr"]];
+            imageView.layer.cornerRadius = 5.0;
+            imageView.layer.masksToBounds = YES;
+            [cell.contentView addSubview:imageView];
+            
+            UILabel  *titleLabel = [[UILabel alloc] init];
+            titleLabel.text = @"南宫勇少";
+            titleLabel.font = [UIFont systemFontOfSize:17];
+            titleLabel.textAlignment = NSTextAlignmentLeft;
+            [cell.contentView addSubview:titleLabel];
+            
+            [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+               
+                make.centerY.mas_equalTo(cell.contentView.mas_centerY);
+                make.size.mas_equalTo(CGSizeMake(50, 50));
+                make.left.mas_equalTo(cell.contentView.mas_left).with.offset(15);
+                
+            }];
+            
+            [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                
+                make.left.mas_equalTo(imageView.mas_right).with.offset(10);
+                make.right.mas_equalTo(cell.contentView.mas_right);
+                make.centerY.mas_equalTo(cell.contentView.mas_centerY);
+                make.height.mas_equalTo(imageView.mas_height);
+            }];
+        
         }
             break;
         case 1:
@@ -189,6 +212,7 @@
         case 0:
         {
             MineDetailInfoVC *detailInfo = [[MineDetailInfoVC alloc] initWithStyle:UITableViewStyleGrouped];
+            detailInfo.title = @"我的二维码";
             [self.navigationController pushViewController:detailInfo animated:YES];
         }
             break;

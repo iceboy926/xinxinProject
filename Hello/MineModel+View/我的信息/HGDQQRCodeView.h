@@ -25,6 +25,9 @@
  */
 + (HGDQQRCodeView *)creatQRCodeWithURLString:(NSString *)urlString superView:(UIView *)superView logoImage:(UIImage *)logoImage logoImageSize:(CGSize)logoImageSize logoImageWithCornerRadius:(CGFloat)cornerRadius;
 
+
++ (UIImage *)creatQRCodeWithURLString:(NSString *)urlString ViewSize:(CGSize)ViewSize logoImage:(UIImage *)logoImage logoImageSize:(CGSize)logoImageSize logoImageWithCornerRadius:(CGFloat)cornerRadius;
+
 /**
  *  读取图片中的二维码
  *
