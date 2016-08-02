@@ -258,6 +258,8 @@
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
 		10B24D0C1D506B850025D8BF /* HGDQQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */; };
 		10B24D0E1D5079C60025D8BF /* anddy926_avtar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10B24D0D1D5079C60025D8BF /* anddy926_avtar.jpg */; };
+		10B24D141D509EEA0025D8BF /* KMQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D131D509EEA0025D8BF /* KMQRCode.m */; };
+		10B24D171D509F800025D8BF /* UIImage+RoundedRectImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D161D509F800025D8BF /* UIImage+RoundedRectImage.m */; };
 		10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */; };
 		10B9572A1D12A4890024D640 /* icon_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957241D12A4890024D640 /* icon_comment@2x.png */; };
 		10B9572B1D12A4890024D640 /* icon_comment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957251D12A4890024D640 /* icon_comment@3x.png */; };
@@ -777,6 +779,10 @@
 		10B24D0A1D506B850025D8BF /* HGDQQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGDQQRCodeView.h; path = "MineModel+View/我的信息/HGDQQRCodeView.h"; sourceTree = "<group>"; };
 		10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGDQQRCodeView.m; path = "MineModel+View/我的信息/HGDQQRCodeView.m"; sourceTree = "<group>"; };
 		10B24D0D1D5079C60025D8BF /* anddy926_avtar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = anddy926_avtar.jpg; path = Hello/image/anddy926_avtar.jpg; sourceTree = "<group>"; };
+		10B24D121D509EEA0025D8BF /* KMQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMQRCode.h; path = "MineModel+View/我的信息/KMQRCode/KMQRCode.h"; sourceTree = "<group>"; };
+		10B24D131D509EEA0025D8BF /* KMQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMQRCode.m; path = "MineModel+View/我的信息/KMQRCode/KMQRCode.m"; sourceTree = "<group>"; };
+		10B24D151D509F800025D8BF /* UIImage+RoundedRectImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedRectImage.h"; path = "MineModel+View/我的信息/KMQRCode/UIImage+RoundedRectImage.h"; sourceTree = "<group>"; };
+		10B24D161D509F800025D8BF /* UIImage+RoundedRectImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedRectImage.m"; path = "MineModel+View/我的信息/KMQRCode/UIImage+RoundedRectImage.m"; sourceTree = "<group>"; };
 		10B957171D0FAEA90024D640 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatUI.h"; path = "Library/ThirdLib/UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatUI.m"; path = "Library/ThirdLib/UIColor+FlatUI.m"; sourceTree = "<group>"; };
 		10B957241D12A4890024D640 /* icon_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment@2x.png"; path = "Hello/image/icon_comment@2x.png"; sourceTree = "<group>"; };
@@ -1155,6 +1161,7 @@
 		107D76911D4061C90065F2A5 /* MineInfo */ = {
 			isa = PBXGroup;
 			children = (
+				10B24D111D509EC90025D8BF /* KMQRCode */,
 				10B24D061D504AFF0025D8BF /* QRCode */,
 				107D769D1D4074550065F2A5 /* MineDetailInfoVC.h */,
 				107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */,
@@ -1210,6 +1217,17 @@
 				10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */,
 			);
 			name = QRCode;
+			sourceTree = "<group>";
+		};
+		10B24D111D509EC90025D8BF /* KMQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				10B24D121D509EEA0025D8BF /* KMQRCode.h */,
+				10B24D131D509EEA0025D8BF /* KMQRCode.m */,
+				10B24D151D509F800025D8BF /* UIImage+RoundedRectImage.h */,
+				10B24D161D509F800025D8BF /* UIImage+RoundedRectImage.m */,
+			);
+			name = KMQRCode;
 			sourceTree = "<group>";
 		};
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
@@ -2429,6 +2447,7 @@
 				109B6A5B1CF7EB180077FAFA /* HomePageViewController.m in Sources */,
 				109B69A71CF7E5800077FAFA /* UIButton+AFNetworking.m in Sources */,
 				10C0099F1D3765B8003B6CF3 /* SDBrowserImageView.m in Sources */,
+				10B24D141D509EEA0025D8BF /* KMQRCode.m in Sources */,
 				10C009D11D37661C003B6CF3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				10C009A01D3765B8003B6CF3 /* SDPhotoBrowser.m in Sources */,
 				10C009CB1D37661C003B6CF3 /* SDWebImageManager.m in Sources */,
@@ -2459,6 +2478,7 @@
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
 				82B612D81B2FBC61007E6D42 /* main.m in Sources */,
 				107C2F4E1D4F3AA7002987D9 /* NSString+Base64.m in Sources */,
+				10B24D171D509F800025D8BF /* UIImage+RoundedRectImage.m in Sources */,
 				109B69F01CF7E8150077FAFA /* FriendBaseModel.m in Sources */,
 				10C009C51D37661C003B6CF3 /* NSData+ImageContentType.m in Sources */,
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
