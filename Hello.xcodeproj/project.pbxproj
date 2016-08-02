@@ -256,6 +256,7 @@
 		109B6B471CF7EE1F0077FAFA /* vip.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE31CF7EE1F0077FAFA /* vip.png */; };
 		109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */; };
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
+		10B24D0C1D506B850025D8BF /* HGDQQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */; };
 		10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */; };
 		10B9572A1D12A4890024D640 /* icon_comment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957241D12A4890024D640 /* icon_comment@2x.png */; };
 		10B9572B1D12A4890024D640 /* icon_comment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B957251D12A4890024D640 /* icon_comment@3x.png */; };
@@ -772,6 +773,8 @@
 		109B6AE31CF7EE1F0077FAFA /* vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vip.png; path = Hello/image/vip.png; sourceTree = "<group>"; };
 		109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weixin@2x.png"; path = "Hello/image/weixin@2x.png"; sourceTree = "<group>"; };
 		109B6AE51CF7EE1F0077FAFA /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weixin2.png; path = Hello/image/weixin2.png; sourceTree = "<group>"; };
+		10B24D0A1D506B850025D8BF /* HGDQQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGDQQRCodeView.h; path = "MineModel+View/我的信息/HGDQQRCodeView.h"; sourceTree = "<group>"; };
+		10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGDQQRCodeView.m; path = "MineModel+View/我的信息/HGDQQRCodeView.m"; sourceTree = "<group>"; };
 		10B957171D0FAEA90024D640 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatUI.h"; path = "Library/ThirdLib/UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		10B957181D0FAEA90024D640 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatUI.m"; path = "Library/ThirdLib/UIColor+FlatUI.m"; sourceTree = "<group>"; };
 		10B957241D12A4890024D640 /* icon_comment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_comment@2x.png"; path = "Hello/image/icon_comment@2x.png"; sourceTree = "<group>"; };
@@ -1150,6 +1153,7 @@
 		107D76911D4061C90065F2A5 /* MineInfo */ = {
 			isa = PBXGroup;
 			children = (
+				10B24D061D504AFF0025D8BF /* QRCode */,
 				107D769D1D4074550065F2A5 /* MineDetailInfoVC.h */,
 				107D769E1D4074550065F2A5 /* MineDetailInfoVC.m */,
 			);
@@ -1195,6 +1199,15 @@
 			children = (
 			);
 			name = MineExpressionShop;
+			sourceTree = "<group>";
+		};
+		10B24D061D504AFF0025D8BF /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				10B24D0A1D506B850025D8BF /* HGDQQRCodeView.h */,
+				10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */,
+			);
+			name = QRCode;
 			sourceTree = "<group>";
 		};
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
@@ -2404,6 +2417,7 @@
 				109B6A421CF7EA670077FAFA /* HomeCellFrame.m in Sources */,
 				106205C11D05477700E10485 /* NSArray+MASAdditions.m in Sources */,
 				109B693D1CF7E2840077FAFA /* NSString+MLLabel.m in Sources */,
+				10B24D0C1D506B850025D8BF /* HGDQQRCodeView.m in Sources */,
 				10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */,
 				109B6A311CF7E9700077FAFA /* FansTableViewController.m in Sources */,
 				109B69D21CF7E67A0077FAFA /* LoginViewController.m in Sources */,
