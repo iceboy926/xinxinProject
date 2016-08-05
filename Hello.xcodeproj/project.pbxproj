@@ -31,6 +31,8 @@
 		106205C21D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B51D05477700E10485 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		106205C31D05477700E10485 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205B71D05477700E10485 /* View+MASAdditions.m */; };
 		106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 106205BA1D05477700E10485 /* ViewController+MASAdditions.m */; };
+		107282361D542B1B00A20E0D /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282351D542B1B00A20E0D /* RadarView.m */; };
+		107282391D54377800A20E0D /* NeighBourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282381D54377800A20E0D /* NeighBourViewController.m */; };
 		107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 107AD8B81D48AC010028EDA6 /* CustomGrid.m */; };
 		107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F441D4F3AA7002987D9 /* AESCrypt.m */; };
 		107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F461D4F3AA7002987D9 /* NSData+Base64.m */; };
@@ -458,6 +460,10 @@
 		106205BA1D05477700E10485 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Library/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		10698ACF1CF6F7E100AE3295 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = Hello/libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
 		10698AD11CF6F83300AE3295 /* libidn.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libidn.a; path = Hello/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
+		107282341D542B1B00A20E0D /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadarView.h; path = "FindModel+View/附近的人/RadarView.h"; sourceTree = "<group>"; };
+		107282351D542B1B00A20E0D /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadarView.m; path = "FindModel+View/附近的人/RadarView.m"; sourceTree = "<group>"; };
+		107282371D54377800A20E0D /* NeighBourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NeighBourViewController.h; path = "FindModel+View/附近的人/NeighBourViewController.h"; sourceTree = "<group>"; };
+		107282381D54377800A20E0D /* NeighBourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeighBourViewController.m; path = "FindModel+View/附近的人/NeighBourViewController.m"; sourceTree = "<group>"; };
 		107AD8B71D48AC010028EDA6 /* CustomGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGrid.h; path = "MineModel+View/我的钱包/CustomGrid.h"; sourceTree = "<group>"; };
 		107AD8B81D48AC010028EDA6 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGrid.m; path = "MineModel+View/我的钱包/CustomGrid.m"; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -1233,6 +1239,10 @@
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
 			isa = PBXGroup;
 			children = (
+				107282341D542B1B00A20E0D /* RadarView.h */,
+				107282351D542B1B00A20E0D /* RadarView.m */,
+				107282371D54377800A20E0D /* NeighBourViewController.h */,
+				107282381D54377800A20E0D /* NeighBourViewController.m */,
 			);
 			name = "附近的人";
 			sourceTree = "<group>";
@@ -2391,12 +2401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107282391D54377800A20E0D /* NeighBourViewController.m in Sources */,
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
 				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
 				107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */,
+				107282361D542B1B00A20E0D /* RadarView.m in Sources */,
 				109B6A001CF7E8760077FAFA /* QRResultViewController.m in Sources */,
 				109B69D11CF7E67A0077FAFA /* LineView.m in Sources */,
 				10C009D31D37661C003B6CF3 /* UIView+WebCacheOperation.m in Sources */,

@@ -12,6 +12,7 @@
 #import "ShakeViewController.h"
 #import "FriendsViewController.h"
 #import "MineLocationView.h"
+#import "NeighBourViewController.h"
 
 @interface FindViewController ()
 
@@ -215,9 +216,8 @@
     {
         if([indexPath row] == 0)  //nearby person
         {
-            
-            
-            
+            NeighBourViewController *neighBourVC = [[NeighBourViewController alloc] init];
+            [self.navigationController pushViewController:neighBourVC animated:YES];
         }
         else if([indexPath row] == 1) //current loc
         {
