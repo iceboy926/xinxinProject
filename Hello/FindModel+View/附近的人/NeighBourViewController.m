@@ -30,7 +30,7 @@
     
     self.navigationItem.title = @"附件的同伴";
     
-    UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Home_refresh_bg"]];
+    UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"radar_background"]];
     
     self.view.backgroundColor = bgColor;
     // Do any additional setup after loading the view from its nib.
