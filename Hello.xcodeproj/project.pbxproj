@@ -251,6 +251,9 @@
 		10B0C3C51D581F030030FA8A /* radar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B0C3C41D581F030030FA8A /* radar_background@2x.png */; };
 		10B0C3C91D582A320030FA8A /* httpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3C81D582A320030FA8A /* httpRequest.m */; };
 		10B0C3CF1D5833830030FA8A /* CBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3CE1D5833830030FA8A /* CBNetworking.m */; };
+		10B0C3D81D586D2D0030FA8A /* XHRadarIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3D31D586D2D0030FA8A /* XHRadarIndicatorView.m */; };
+		10B0C3D91D586D2D0030FA8A /* XHRadarPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3D51D586D2D0030FA8A /* XHRadarPointView.m */; };
+		10B0C3DA1D586D2D0030FA8A /* XHRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3D71D586D2D0030FA8A /* XHRadarView.m */; };
 		10B24D0C1D506B850025D8BF /* HGDQQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */; };
 		10B24D0E1D5079C60025D8BF /* anddy926_avtar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10B24D0D1D5079C60025D8BF /* anddy926_avtar.jpg */; };
 		10B24D141D509EEA0025D8BF /* KMQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B24D131D509EEA0025D8BF /* KMQRCode.m */; };
@@ -757,6 +760,12 @@
 		10B0C3C81D582A320030FA8A /* httpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = httpRequest.m; path = Library/ConnectServer/httpRequest.m; sourceTree = "<group>"; };
 		10B0C3CD1D5833830030FA8A /* CBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBNetworking.h; path = Library/CBNetworking/CBNetworking.h; sourceTree = "<group>"; };
 		10B0C3CE1D5833830030FA8A /* CBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBNetworking.m; path = Library/CBNetworking/CBNetworking.m; sourceTree = "<group>"; };
+		10B0C3D21D586D2D0030FA8A /* XHRadarIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHRadarIndicatorView.h; path = "FindModel+View/附近的人/XHRadarView/XHRadarIndicatorView.h"; sourceTree = "<group>"; };
+		10B0C3D31D586D2D0030FA8A /* XHRadarIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHRadarIndicatorView.m; path = "FindModel+View/附近的人/XHRadarView/XHRadarIndicatorView.m"; sourceTree = "<group>"; };
+		10B0C3D41D586D2D0030FA8A /* XHRadarPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHRadarPointView.h; path = "FindModel+View/附近的人/XHRadarView/XHRadarPointView.h"; sourceTree = "<group>"; };
+		10B0C3D51D586D2D0030FA8A /* XHRadarPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHRadarPointView.m; path = "FindModel+View/附近的人/XHRadarView/XHRadarPointView.m"; sourceTree = "<group>"; };
+		10B0C3D61D586D2D0030FA8A /* XHRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHRadarView.h; path = "FindModel+View/附近的人/XHRadarView/XHRadarView.h"; sourceTree = "<group>"; };
+		10B0C3D71D586D2D0030FA8A /* XHRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHRadarView.m; path = "FindModel+View/附近的人/XHRadarView/XHRadarView.m"; sourceTree = "<group>"; };
 		10B24D0A1D506B850025D8BF /* HGDQQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HGDQQRCodeView.h; path = "MineModel+View/我的信息/HGDQQRCodeView.h"; sourceTree = "<group>"; };
 		10B24D0B1D506B850025D8BF /* HGDQQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGDQQRCodeView.m; path = "MineModel+View/我的信息/HGDQQRCodeView.m"; sourceTree = "<group>"; };
 		10B24D0D1D5079C60025D8BF /* anddy926_avtar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = anddy926_avtar.jpg; path = Hello/image/anddy926_avtar.jpg; sourceTree = "<group>"; };
@@ -1209,6 +1218,28 @@
 			name = CBNetworking;
 			sourceTree = "<group>";
 		};
+		10B0C3D01D586C760030FA8A /* WaterWaveRadar */ = {
+			isa = PBXGroup;
+			children = (
+				107282341D542B1B00A20E0D /* RadarView.h */,
+				107282351D542B1B00A20E0D /* RadarView.m */,
+			);
+			name = WaterWaveRadar;
+			sourceTree = "<group>";
+		};
+		10B0C3D11D586CA20030FA8A /* SectorRadar */ = {
+			isa = PBXGroup;
+			children = (
+				10B0C3D21D586D2D0030FA8A /* XHRadarIndicatorView.h */,
+				10B0C3D31D586D2D0030FA8A /* XHRadarIndicatorView.m */,
+				10B0C3D41D586D2D0030FA8A /* XHRadarPointView.h */,
+				10B0C3D51D586D2D0030FA8A /* XHRadarPointView.m */,
+				10B0C3D61D586D2D0030FA8A /* XHRadarView.h */,
+				10B0C3D71D586D2D0030FA8A /* XHRadarView.m */,
+			);
+			name = SectorRadar;
+			sourceTree = "<group>";
+		};
 		10B24D061D504AFF0025D8BF /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -1232,8 +1263,8 @@
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
 			isa = PBXGroup;
 			children = (
-				107282341D542B1B00A20E0D /* RadarView.h */,
-				107282351D542B1B00A20E0D /* RadarView.m */,
+				10B0C3D11D586CA20030FA8A /* SectorRadar */,
+				10B0C3D01D586C760030FA8A /* WaterWaveRadar */,
 				107282371D54377800A20E0D /* NeighBourViewController.h */,
 				107282381D54377800A20E0D /* NeighBourViewController.m */,
 			);
@@ -2405,6 +2436,7 @@
 				107D76A21D40A5480065F2A5 /* GestureLockView.m in Sources */,
 				10FEB0A11D3F494E00F342CF /* UIImage+CircleImage.m in Sources */,
 				10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */,
+				10B0C3DA1D586D2D0030FA8A /* XHRadarView.m in Sources */,
 				10C009911D363686003B6CF3 /* FriendsInfoViewController.m in Sources */,
 				106205BF1D05477700E10485 /* MASViewAttribute.m in Sources */,
 				10E1F3EA1D47315900107345 /* MineWalletViewController.m in Sources */,
@@ -2448,6 +2480,7 @@
 				109B6A211CF7E8E30077FAFA /* FindViewController.m in Sources */,
 				10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */,
 				109B69C11CF7E5AB0077FAFA /* AFHTTPSessionManager.m in Sources */,
+				10B0C3D81D586D2D0030FA8A /* XHRadarIndicatorView.m in Sources */,
 				82B612DC1B2FBC61007E6D42 /* AppDelegate.m in Sources */,
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
 				82B612D81B2FBC61007E6D42 /* main.m in Sources */,
@@ -2458,6 +2491,7 @@
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
 				109B69381CF7E2840077FAFA /* MLTextAttachment.m in Sources */,
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
+				10B0C3D91D586D2D0030FA8A /* XHRadarPointView.m in Sources */,
 				100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */,
 				10C009C41D37661C003B6CF3 /* MKAnnotationView+WebCache.m in Sources */,
 				109B693C1CF7E2840077FAFA /* NSString+MLExpression.m in Sources */,

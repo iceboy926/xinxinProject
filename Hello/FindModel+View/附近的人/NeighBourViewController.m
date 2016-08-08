@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     
+    [self setNavigatetransparent];
+    
     //[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backGo)];
@@ -29,6 +31,9 @@
     self.navigationItem.leftBarButtonItem = backItem;
     
     self.navigationItem.title = @"附件的同伴";
+    
+    
+    
     
     UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"radar_background"]];
     
@@ -42,6 +47,31 @@
     [self.view addSubview:radarView];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:radarView selector:@selector(findResultItem) userInfo:nil repeats:YES];
+    
+}
+
+
+- (void)setNavigatetransparent
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                               
+                                               [UIColor blackColor],UITextAttributeTextColor,
+                                               
+                                               [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                               
+                                               [NSValue valueWithUIOffset:UIOffsetMake(-1, 0)], UITextAttributeTextShadowOffset, nil];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    
+    //[self.navigationItem.leftBarButtonItem setTitleTextAttributes:navbarTitleTextAttributes forState:UIControlStateNormal];
     
 }
 

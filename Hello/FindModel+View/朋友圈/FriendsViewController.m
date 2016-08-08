@@ -99,7 +99,7 @@
     [dicRequest setObject:@"0" forKey:@"trim_status"];
     [dicRequest setObject:[NSString stringWithFormat:@"%ld", (long)next_cursor] forKey:@"cursor"];
     
-    __weak typeof(self) weakself;
+    __weak typeof(self) weakself = self;
     
     [WBHttpRequest requestWithAccessToken:appDelegate.wbtoken url:SinaWeiBo_URL_FriendsList/*SinaWeiBo_URL_Statuses_friends*/ httpMethod:@"Get" params:dicRequest queue:nil withCompletionHandler:^(WBHttpRequest *httpRequest, id result, NSError *error)
      {
