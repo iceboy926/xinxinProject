@@ -17,6 +17,8 @@
 
 @interface XHRadarView : UIView <XHRadarPointViewDelegate> {
     
+    CGPoint centerPoint;
+    
 }
 
 @property (nonatomic, assign) CGFloat radius;           //半径

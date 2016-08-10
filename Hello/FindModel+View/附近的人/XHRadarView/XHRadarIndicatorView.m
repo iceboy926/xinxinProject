@@ -30,6 +30,8 @@
     CGContextSetLineWidth(context, 0);//线的宽度
     //以self.radius为半径围绕圆心画指定角度扇形
     CGContextMoveToPoint(context, self.center.x, self.center.y);
+    
+    NSLog(@"sector radar view center is (%f, %f)", self.center.x, self.center.y);
     CGContextAddArc(context, self.center.x, self.center.y, self.radius, (self.clockwise?self.angle:0) * M_PI / 180, (self.clockwise?(self.angle -1):1)  * M_PI / 180, self.clockwise);
     CGContextClosePath(context);
     CGContextDrawPath(context, kCGPathFillStroke); //绘制路径

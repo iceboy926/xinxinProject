@@ -8,10 +8,12 @@
 
 #import "NeighBourViewController.h"
 #import "RadarView.h"
+#import "XHRadarView.h"
 
-@interface NeighBourViewController()
+@interface NeighBourViewController() <XHRadarViewDataSource, XHRadarViewDelegate>
 {
-    RadarView *radarView;
+    RadarView *waterWaveView;
+    XHRadarView *sectorView;
 }
 
 @end
@@ -22,31 +24,76 @@
 {
     [super viewDidLoad];
     
-    [self setNavigatetransparent];
-    
-    //[self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+    //[self setNavigatetransparent];
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backGo)];
-    
     self.navigationItem.leftBarButtonItem = backItem;
-    
     self.navigationItem.title = @"附件的同伴";
-    
-    
-    
-    
+
     UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"radar_background"]];
-    
     self.view.backgroundColor = bgColor;
-    // Do any additional setup after loading the view from its nib.
+    
+    //[self InitWaterRadarView];
+    
+    [self InitSectorRadarView];
+}
+
+
+- (void)InitWaterRadarView
+{
     
     CGRect radarFrame = CGRectMake(0, (MAX_HEIGHT - MAX_WIDTH)/2.0, MAX_WIDTH, MAX_WIDTH);
     
-    radarView = [[RadarView alloc] initWithFrame:radarFrame LogoImage:@"anddy926_avtar.jpg"];
+    waterWaveView = [[RadarView alloc] initWithFrame:radarFrame LogoImage:@"anddy926_avtar.jpg"];
     
-    [self.view addSubview:radarView];
+    [self.view addSubview:waterWaveView];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:radarView selector:@selector(findResultItem) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:waterWaveView selector:@selector(findResultItem) userInfo:nil repeats:YES];
+    
+}
+
+- (void)InitSectorRadarView
+{
+    CGRect  radarFrame = CGRectMake(0, (MAX_HEIGHT - MAX_WIDTH)/2.0, MIN(MAX_WIDTH, MAX_HEIGHT), MIN(MAX_WIDTH, MAX_HEIGHT));
+    
+    sectorView = [[XHRadarView alloc] initWithFrame:radarFrame];
+    
+    sectorView.backgroundColor = [UIColor clearColor];
+    
+    sectorView.radius = MIN(MAX_HEIGHT, MAX_WIDTH)/2.0;
+    
+    sectorView.indicatorAngle = 180;
+    
+    sectorView.dataSource = self;
+    
+    sectorView.delegate = self;
+    
+    
+    [self.view addSubview:sectorView];
+    
+    [sectorView scan];
+}
+
+/**
+ *
+ *
+ *  @param radarView
+ *
+ *  @return
+ */
+
+
+- (NSInteger)numberOfSectionsInRadarView:(XHRadarView *)radarView
+{
+    return 4;
+}
+- (NSInteger)numberOfPointsInRadarView:(XHRadarView *)radarView
+{
+    return 5;
+}
+
+- (void)radarView:(XHRadarView *)radarView didSelectItemAtIndex:(NSUInteger)index //点击事件
+{
     
 }
 
@@ -70,9 +117,6 @@
                                                [NSValue valueWithUIOffset:UIOffsetMake(-1, 0)], UITextAttributeTextShadowOffset, nil];
     
     [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
-    
-    //[self.navigationItem.leftBarButtonItem setTitleTextAttributes:navbarTitleTextAttributes forState:UIControlStateNormal];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
