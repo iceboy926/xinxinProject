@@ -1007,6 +1007,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1024F8171D61B001006F14F5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		104AB7501D07B82A00B81408 /* FullScreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1536,8 +1543,9 @@
 				109B69F81CF7E84A0077FAFA /* FriendsViewController.m */,
 				10C0098F1D363686003B6CF3 /* FriendsInfoViewController.h */,
 				10C009901D363686003B6CF3 /* FriendsInfoViewController.m */,
+				1024F8171D61B001006F14F5 /* ViewModel */,
 				B32C90461CABB50C00869A53 /* Model */,
-				B32C90451CABB4FE00869A53 /* View */,
+				B32C90451CABB4FE00869A53 /* ViewController */,
 			);
 			name = "朋友圈";
 			sourceTree = "<group>";
@@ -2010,7 +2018,7 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		B32C90451CABB4FE00869A53 /* View */ = {
+		B32C90451CABB4FE00869A53 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				10C009921D363692003B6CF3 /* FriendCommentView.h */,
@@ -2022,7 +2030,7 @@
 				10861A3B1D29FFA30092B1DF /* FriendOperationMenu.h */,
 				10861A3C1D29FFA30092B1DF /* FriendOperationMenu.m */,
 			);
-			name = View;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		B32C90461CABB50C00869A53 /* Model */ = {

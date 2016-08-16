@@ -14,9 +14,7 @@
 // 在应用启动的时候调用
 + (void)setupWithOptions:(NSDictionary *)launchOptions
 {
-    //[JPUSHService setDebugMode];
-    
-    
+    [JPUSHService setDebugMode];
 
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         //可以添加自定义categories
@@ -32,9 +30,12 @@
                                               categories:nil];
     }
 
+    NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    NSLog(@"IDFA is %@", uuid);
     
     // Required
-    [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:isProduction];
+    [JPUSHService setupWithOption:launchOptions appKey:appKey channel:channel apsForProduction:isProduction advertisingIdentifier:uuid];
 
     
     return;
@@ -60,6 +61,11 @@
 + (void)showLocalNotificationAtFront:(UILocalNotification *)notification
 {
     [JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
+}
+
++ (NSString *)getRegisterID
+{
+    return [JPUSHService registrationID];
 }
 
 @end

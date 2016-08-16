@@ -26,4 +26,6 @@ static BOOL isProduction = FALSE;
 // 显示本地通知在最前面
 + (void)showLocalNotificationAtFront:(UILocalNotification *)notification;
 
++ (NSString *)getRegisterID;
+
 @end

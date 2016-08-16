@@ -198,6 +198,8 @@
     NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
     
     [JPushHelper registerDeviceToken:deviceToken];
+    
+    NSLog(@"registrationID is %@", [JPushHelper getRegisterID]);
 }
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
