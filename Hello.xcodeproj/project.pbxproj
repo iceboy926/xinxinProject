@@ -58,6 +58,9 @@
 		108C99941D3E2269002BF0D5 /* libUMSocial_Sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108C99931D3E2269002BF0D5 /* libUMSocial_Sdk.a */; };
 		10936B201D1B917E0025B594 /* icon_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10936B1E1D1B917E0025B594 /* icon_like@2x.png */; };
 		10936B211D1B917E0025B594 /* icon_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10936B1F1D1B917E0025B594 /* icon_like@3x.png */; };
+		109995AA1D640A4500C29A70 /* NearbyPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109995A91D640A4500C29A70 /* NearbyPersonModel.m */; };
+		109995AF1D640E0D00C29A70 /* PersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109995AE1D640E0D00C29A70 /* PersonViewModel.m */; };
+		109995B21D640F8100C29A70 /* ViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 109995B11D640F8100C29A70 /* ViewModelClass.m */; };
 		109B69331CF7E2840077FAFA /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691D1CF7E2840077FAFA /* MLExpressionManager.m */; };
 		109B69341CF7E2840077FAFA /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B691F1CF7E2840077FAFA /* MLLabel.m */; };
 		109B69351CF7E2840077FAFA /* MLLabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B69221CF7E2840077FAFA /* MLLabel+Size.m */; };
@@ -499,6 +502,12 @@
 		108C99931D3E2269002BF0D5 /* libUMSocial_Sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUMSocial_Sdk.a; path = Hello/Library/ALBBaiChuanSDK/UMSocial/libUMSocial_Sdk.a; sourceTree = "<group>"; };
 		10936B1E1D1B917E0025B594 /* icon_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@2x.png"; path = "Hello/image/icon_like@2x.png"; sourceTree = "<group>"; };
 		10936B1F1D1B917E0025B594 /* icon_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_like@3x.png"; path = "Hello/image/icon_like@3x.png"; sourceTree = "<group>"; };
+		109995A81D640A4500C29A70 /* NearbyPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearbyPersonModel.h; path = "FindModel+View/附近的人/NearbyPersonModel.h"; sourceTree = "<group>"; };
+		109995A91D640A4500C29A70 /* NearbyPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearbyPersonModel.m; path = "FindModel+View/附近的人/NearbyPersonModel.m"; sourceTree = "<group>"; };
+		109995AD1D640E0D00C29A70 /* PersonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonViewModel.h; path = "FindModel+View/附近的人/PersonViewModel.h"; sourceTree = "<group>"; };
+		109995AE1D640E0D00C29A70 /* PersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonViewModel.m; path = "FindModel+View/附近的人/PersonViewModel.m"; sourceTree = "<group>"; };
+		109995B01D640F8100C29A70 /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewModelClass.h; path = "FindModel+View/附近的人/ViewModelClass.h"; sourceTree = "<group>"; };
+		109995B11D640F8100C29A70 /* ViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewModelClass.m; path = "FindModel+View/附近的人/ViewModelClass.m"; sourceTree = "<group>"; };
 		109B691C1CF7E2840077FAFA /* MLExpressionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLExpressionManager.h; path = Library/MLLabel/MLExpressionManager.h; sourceTree = "<group>"; };
 		109B691D1CF7E2840077FAFA /* MLExpressionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLExpressionManager.m; path = Library/MLLabel/MLExpressionManager.m; sourceTree = "<group>"; };
 		109B691E1CF7E2840077FAFA /* MLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLLabel.h; path = Library/MLLabel/MLLabel.h; sourceTree = "<group>"; };
@@ -1221,6 +1230,35 @@
 			name = MineExpressionShop;
 			sourceTree = "<group>";
 		};
+		109995A71D63FBF600C29A70 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				109995AB1D640B0100C29A70 /* Model */,
+				109995AC1D640B3400C29A70 /* ViewModel */,
+			);
+			name = MVVM;
+			sourceTree = "<group>";
+		};
+		109995AB1D640B0100C29A70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				109995A81D640A4500C29A70 /* NearbyPersonModel.h */,
+				109995A91D640A4500C29A70 /* NearbyPersonModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		109995AC1D640B3400C29A70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				109995AD1D640E0D00C29A70 /* PersonViewModel.h */,
+				109995AE1D640E0D00C29A70 /* PersonViewModel.m */,
+				109995B01D640F8100C29A70 /* ViewModelClass.h */,
+				109995B11D640F8100C29A70 /* ViewModelClass.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		10B0C3C61D5829DC0030FA8A /* ConnectServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1284,6 +1322,7 @@
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
 			isa = PBXGroup;
 			children = (
+				109995A71D63FBF600C29A70 /* MVVM */,
 				10B0C3D11D586CA20030FA8A /* SectorRadar */,
 				10B0C3D01D586C760030FA8A /* WaterWaveRadar */,
 				107282371D54377800A20E0D /* NeighBourViewController.h */,
@@ -2438,6 +2477,7 @@
 				109B6A7E1CF7EC7A0077FAFA /* MainNavigateViewController.m in Sources */,
 				10B957361D12A6650024D640 /* NSString+Extension.m in Sources */,
 				109B69D81CF7E6D60077FAFA /* MineViewController.m in Sources */,
+				109995AF1D640E0D00C29A70 /* PersonViewModel.m in Sources */,
 				106205BC1D05477700E10485 /* MASConstraint.m in Sources */,
 				106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */,
 				109B69C71CF7E5AB0077FAFA /* AFURLSessionManager.m in Sources */,
@@ -2479,8 +2519,10 @@
 				10B24D141D509EEA0025D8BF /* KMQRCode.m in Sources */,
 				10C009D11D37661C003B6CF3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				10C009A01D3765B8003B6CF3 /* SDPhotoBrowser.m in Sources */,
+				109995AA1D640A4500C29A70 /* NearbyPersonModel.m in Sources */,
 				10C009CB1D37661C003B6CF3 /* SDWebImageManager.m in Sources */,
 				109B69C31CF7E5AB0077FAFA /* AFSecurityPolicy.m in Sources */,
+				109995B21D640F8100C29A70 /* ViewModelClass.m in Sources */,
 				1050D03B1D5C75A4002EF5CB /* MBProgressHUD+Easy.m in Sources */,
 				109B69F91CF7E84A0077FAFA /* FriendsViewController.m in Sources */,
 				109B695C1CF7E3490077FAFA /* JSONKit.m in Sources */,

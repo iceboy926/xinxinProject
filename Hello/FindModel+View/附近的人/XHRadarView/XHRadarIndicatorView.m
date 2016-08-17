@@ -48,7 +48,7 @@
         G = startColorComponents[1] - (startColorComponents[1] - endColorComponents[1])*ratio;
         B = startColorComponents[2] - (startColorComponents[2] - endColorComponents[2])*ratio;
         A = startColorComponents[3] - (startColorComponents[3] - endColorComponents[3])*ratio;
-        NSLog(@"RGBA: %f, %f, %f, %f", R, G, B, A);
+        //NSLog(@"RGBA: %f, %f, %f, %f", R, G, B, A);
         //画扇形，也就画圆，只不过是设置角度的大小，形成一个扇形
         UIColor *aColor = [UIColor colorWithRed:R green:G blue:B alpha:A];
         

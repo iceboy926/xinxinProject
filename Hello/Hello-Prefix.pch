@@ -36,6 +36,9 @@
 #define  MAX_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
 
+
+#define ARC4RANDOM_MAX      0x100000000
+
 //AsyImage TAG
 
 #define  ICON_IMAGE_TAG        1000

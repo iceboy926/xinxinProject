@@ -199,7 +199,7 @@
                     
                     pointView.frame = customView.frame;
                     pointView.center = CGPointMake(self.center.x + posDistance*sin(DEGREES_TO_RADIANS(posDirection)), self.center.y + posDistance*cos(DEGREES_TO_RADIANS(posDirection)));
-                    NSLog(@"sin:%f, cos:%f, self center:%@, point center:%@",sin(DEGREES_TO_RADIANS(posDirection)), cos(DEGREES_TO_RADIANS(posDirection)), NSStringFromCGPoint(self.center), NSStringFromCGPoint(pointView.center));
+                    //NSLog(@"sin:%f, cos:%f, self center:%@, point center:%@",sin(DEGREES_TO_RADIANS(posDirection)), cos(DEGREES_TO_RADIANS(posDirection)), NSStringFromCGPoint(self.center), NSStringFromCGPoint(pointView.center));
                     pointView.delegate = self;
                     
                     //动画

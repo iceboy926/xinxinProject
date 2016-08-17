@@ -17,7 +17,7 @@
 
 #define DIRECTORYPATH [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"] stringByAppendingString:@"/CBNetWorking/"];
 
-#define MAX_CACHE_SIZE (10 * 1024 * 1024)
+#define MAX_CACHE_SIZE (10 * 1024 * 1024) //10K
 
 @interface CBNetworking : NSObject
 
