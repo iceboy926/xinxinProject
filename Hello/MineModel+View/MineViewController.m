@@ -15,6 +15,9 @@
 #import "MinePackageViewController.h"
 
 @interface MineViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    UIImagePickerController *imagePicker;
+}
 
 @end
 
@@ -267,7 +270,7 @@
 {
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
     {
-        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker = [[UIImagePickerController alloc] init];
         imagePicker.delegate = self;
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
@@ -287,7 +290,10 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    
+    if(imagePicker)
+    {
+        [imagePicker dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 
