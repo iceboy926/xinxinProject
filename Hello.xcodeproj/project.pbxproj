@@ -252,6 +252,7 @@
 		109B6B471CF7EE1F0077FAFA /* vip.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE31CF7EE1F0077FAFA /* vip.png */; };
 		109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */; };
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
+		10A1B5441D6C326D00A3078D /* HomeCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */; };
 		10B0C3C51D581F030030FA8A /* radar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B0C3C41D581F030030FA8A /* radar_background@2x.png */; };
 		10B0C3C91D582A320030FA8A /* httpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3C81D582A320030FA8A /* httpRequest.m */; };
 		10B0C3CF1D5833830030FA8A /* CBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3CE1D5833830030FA8A /* CBNetworking.m */; };
@@ -769,6 +770,8 @@
 		109B6AE31CF7EE1F0077FAFA /* vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vip.png; path = Hello/image/vip.png; sourceTree = "<group>"; };
 		109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weixin@2x.png"; path = "Hello/image/weixin@2x.png"; sourceTree = "<group>"; };
 		109B6AE51CF7EE1F0077FAFA /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weixin2.png; path = Hello/image/weixin2.png; sourceTree = "<group>"; };
+		10A1B5421D6C326D00A3078D /* HomeCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCoreDataManager.h; path = "HomeModel+View/HomeModel/HomeCoreDataManager.h"; sourceTree = "<group>"; };
+		10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCoreDataManager.m; path = "HomeModel+View/HomeModel/HomeCoreDataManager.m"; sourceTree = "<group>"; };
 		10B0C3C41D581F030030FA8A /* radar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radar_background@2x.png"; path = "Hello/image/radar_background@2x.png"; sourceTree = "<group>"; };
 		10B0C3C71D582A320030FA8A /* httpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httpRequest.h; path = Library/ConnectServer/httpRequest.h; sourceTree = "<group>"; };
 		10B0C3C81D582A320030FA8A /* httpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = httpRequest.m; path = Library/ConnectServer/httpRequest.m; sourceTree = "<group>"; };
@@ -1960,6 +1963,8 @@
 				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
 				100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */,
 				100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */,
+				10A1B5421D6C326D00A3078D /* HomeCoreDataManager.h */,
+				10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */,
 			);
 			name = HomeModel;
 			sourceTree = "<group>";
@@ -2545,6 +2550,7 @@
 				106205C01D05477700E10485 /* MASViewConstraint.m in Sources */,
 				109B6A721CF7EC0A0077FAFA /* MainPageTabBarController.m in Sources */,
 				106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */,
+				10A1B5441D6C326D00A3078D /* HomeCoreDataManager.m in Sources */,
 				10C009D01D37661C003B6CF3 /* UIImage+WebP.m in Sources */,
 				109B693B1CF7E2840077FAFA /* NSMutableAttributedString+MLLabel.m in Sources */,
 				107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */,

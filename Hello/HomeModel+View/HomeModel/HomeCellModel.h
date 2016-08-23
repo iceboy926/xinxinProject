@@ -10,22 +10,35 @@
 
 @interface HomeCellModel : NSObject
 
-@property (nonatomic, copy) NSString *icon;
+@property (nonatomic, strong) NSString *icon;
 
-@property (nonatomic, copy) NSString *Name;
+@property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, copy) NSString *timesource;
+@property (nonatomic, strong) NSString *timesource;
 
-@property (nonatomic, copy) NSString *detail;
+@property (nonatomic, strong) NSString *detail;
 
-@property (nonatomic, copy) NSMutableArray *pictureArray;
+@property (nonatomic, strong) NSMutableArray *pictureArray;
 
-@property (nonatomic, assign) BOOL blVip;
+@property (nonatomic) BOOL blVip;
 
-@property (nonatomic, copy) NSString *retweetDetail;
-@property (nonatomic, copy) NSMutableArray *retweetPictureArray;
+@property (nonatomic, strong) NSString *retweetDetail;
+@property (nonatomic, strong) NSMutableArray *retweetPictureArray;
 
-@property (nonatomic, assign) BOOL blretweet;
+@property (nonatomic) BOOL blretweet;
 
+@property (nonatomic)NSInteger repostCount;
+@property (nonatomic)NSInteger commentCount;
+@property (nonatomic)NSInteger atitudesCount;
 
 @end
+
+@interface PictureArray : NSValueTransformer
+
+@end
+
+@interface RetweetPictureArray : NSValueTransformer
+
+@end
+
+

@@ -158,7 +158,7 @@
     [_iconView showImage:CellModel.icon];
     [_iconView setTag:ICON_IMAGE_TAG];
     
-    _nameLabel.text = CellModel.Name;
+    _nameLabel.text = CellModel.name;
     
     if(CellModel.blVip)
     {

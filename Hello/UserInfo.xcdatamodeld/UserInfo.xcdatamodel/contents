@@ -4,6 +4,20 @@
         <attribute name="avartImageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="avartName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="HomeCellModel" syncable="YES">
+        <attribute name="atitudesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="blretweet" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="blVip" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="commentCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="repostCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="retweetDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="retweetPictureArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="timesource" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="UserFans" syncable="YES">
         <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconurl" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,5 +27,6 @@
     <elements>
         <element name="Friends" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="UserFans" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="HomeCellModel" positionX="-54" positionY="27" width="128" height="225"/>
     </elements>
 </model>

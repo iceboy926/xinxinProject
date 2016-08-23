@@ -30,7 +30,7 @@
     CGFloat namelableX = CGRectGetMaxX(_iconFrame) + Padding;
     CGFloat namelableY = iconViewY + Padding/2;
     
-    CGSize  namelabelSize = [self sizeWithString:_HomeCell.Name fontSize:kWBCellNameFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
+    CGSize  namelabelSize = [self sizeWithString:_HomeCell.name fontSize:kWBCellNameFont MaxSize:CGSizeMake(MAX_WIDTH - Padding, 0)];
     
     CGFloat namelableW = namelabelSize.width;
     CGFloat namelableH = namelabelSize.height;

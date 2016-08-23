@@ -25,12 +25,16 @@
 #import "AsynImageView.h"
 #import "CellToolBarView.h"
 #import "CellToolBarModel.h"
+#import "HomeCoreDataManager.h"
+
+#define HomeRequst_Key   @"home_request"
 
 @interface HomePageViewController () <UITableViewDelegate, UITableViewDataSource, WBHttpRequestDelegate, TableViewDelegate>
 {
     FCXRefreshHeaderView *headerView;
     FCXRefreshFooterView *footerView;
     NSInteger totalRow;
+    HomeCoreDataManager *homeCoreManange;
 }
 
 @end
@@ -61,14 +65,25 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
-
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    _dicRequestPara = [NSMutableDictionary dictionary];
-    if(appDelegate.wbtoken != nil)
+    homeCoreManange = [[HomeCoreDataManager alloc] init];
+    
+    if([self NeedRequst])
     {
-        [_dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
+        [self DeleteDB];
         
-        [self addRefreshView];
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        _dicRequestPara = [NSMutableDictionary dictionary];
+        if(appDelegate.wbtoken != nil)
+        {
+            [_dicRequestPara setObject:appDelegate.wbtoken forKey:@"access_token"];
+            
+            [self addRefreshView];
+        }
+    }
+    else
+    {
+        [self ComposeCellFrame];
+        [self.tableView reloadData];
     }
     
     self.view.backgroundColor = kWBCellBackgroundColor;
@@ -139,6 +154,101 @@
 }
 
 
+- (BOOL)NeedRequst
+{
+    BOOL blRequest = YES;
+    
+    NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+    
+    NSString *updateTimeStr = [defaultUser objectForKey:HomeRequst_Key];
+    
+    if(updateTimeStr)
+    {
+        NSTimeInterval  updateTime = updateTimeStr.doubleValue;
+        NSTimeInterval  nowTime = [NSDate timeIntervalSinceReferenceDate];
+        if((nowTime - updateTime) > 1*60*60)//大于2个小时
+        {
+            blRequest = YES;
+        }
+        else
+        {
+            blRequest = NO;
+        }
+    }
+    else
+    {
+        blRequest = YES;
+    }
+    
+    
+    return blRequest;
+}
+
+- (void)WriteToDB:(NSMutableArray *)arrayData
+{
+    [homeCoreManange writeCoreDataToDB:arrayData];
+    
+    NSString *currentTimeStr = [NSString stringWithFormat:@"%f", [NSDate timeIntervalSinceReferenceDate]];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:currentTimeStr forKey:HomeRequst_Key];
+}
+
+- (NSMutableArray *)ReadFromDB
+{
+    return [homeCoreManange readCoreDataFromDB];
+}
+
+- (void)DeleteDB
+{
+    [homeCoreManange deleteCoreDataFromDB];
+}
+
+- (void)ComposeCellFrame
+{
+    NSMutableArray *cellModelArray = [self ReadFromDB];
+    for (HomeCellModel *cellUser in cellModelArray) {
+        HomeCellFrame *cellFrame = [[HomeCellFrame alloc] init];
+        [cellFrame setHomeCell:cellUser];
+        
+        [self.CellList addObject:cellFrame];
+    
+        
+        
+        CellToolBarModel *cellToolBar = [[CellToolBarModel alloc] init];
+        
+        
+        if(cellUser.repostCount == 0)
+        {
+            [cellToolBar setRepostStr:[NSString stringWithFormat:@"转发"]];
+        }
+        else
+        {
+            [cellToolBar setRepostStr:[NSString stringWithFormat:@"%d", cellUser.repostCount]];
+        }
+        
+        if(cellUser.commentCount == 0)
+        {
+            [cellToolBar setCommentStr:[NSString stringWithFormat:@"评论"]];
+        }
+        else
+        {
+            [cellToolBar setCommentStr:[NSString stringWithFormat:@"%d", cellUser.commentCount]];
+        }
+        
+        if(cellUser.atitudesCount == 0)
+        {
+            [cellToolBar setLikeStr:[NSString stringWithFormat:@"赞"]];
+        }
+        else
+        {
+            [cellToolBar setLikeStr:[NSString stringWithFormat:@"%d", cellUser.atitudesCount]];
+        }
+        
+        [self.ToolBarList addObject:cellToolBar];
+    }
+ }
+
+
 -(void)SendRequst
 {
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -170,6 +280,7 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:[dicResult objectForKey:@"next_cursor"] forKey:@"Next"];
     
+    NSMutableArray *arrayData = [NSMutableArray array];
     
     
     for (NSDictionary *Statuses in tempArray)
@@ -233,6 +344,14 @@
             cellUser.blretweet = NO;
         }
         
+        int repostCount = [[Statuses valueForKey:@"reposts_count"] intValue];
+        int commentCount = [[Statuses valueForKey:@"comments_count"] intValue];
+        int likeCount = [[Statuses valueForKey:@"attitudes_count"] intValue];
+        
+        cellUser.repostCount = repostCount;
+        cellUser.commentCount = commentCount;
+        cellUser.atitudesCount = likeCount;
+        
         
         HomeCellFrame *cellFrame = [[HomeCellFrame alloc] init];
         [cellFrame setHomeCell:cellUser];
@@ -244,9 +363,7 @@
         
         CellToolBarModel *cellToolBar = [[CellToolBarModel alloc] init];
         
-        int repostCount = [[Statuses valueForKey:@"reposts_count"] intValue];
-        int commentCount = [[Statuses valueForKey:@"comments_count"] intValue];
-        int likeCount = [[Statuses valueForKey:@"attitudes_count"] intValue];
+      
         
         if(repostCount == 0)
         {
@@ -276,8 +393,13 @@
         }
 
         [self.ToolBarList addObject:cellToolBar];
+        
+        [arrayData addObject:cellUser];
 
     }
+    
+    [self WriteToDB:arrayData];
+    
     
     [self.tableView reloadData];
     [footerView endRefresh];
