@@ -2749,7 +2749,7 @@
 				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jianlin wang (W88Q2VQC4N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jianlin wang (W88Q2VQC4N)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKDIR)/usr/include/libxml2",
@@ -2787,7 +2787,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "d46a84a1-c0f6-4ef1-92e7-77474dfba66c";
+				PROVISIONING_PROFILE = "df2b4abd-9798-4972-ae63-b5b61029c344";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
@@ -2805,7 +2805,7 @@
 				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: jianlin wang (W88Q2VQC4N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: jianlin wang (W88Q2VQC4N)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKDIR)/usr/include/libxml2",
@@ -2843,7 +2843,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "d46a84a1-c0f6-4ef1-92e7-77474dfba66c";
+				PROVISIONING_PROFILE = "df2b4abd-9798-4972-ae63-b5b61029c344";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
