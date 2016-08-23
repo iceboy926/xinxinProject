@@ -103,12 +103,12 @@
     
 }
 
--(void)setFansData:(FansModel *)fansData
+-(void)setFansData:(UserFans *)fansData
 {
-    [_IconView showImage:fansData.IconUrl];
-    _FansNameLable.text = fansData.Name;
-    _FansDescriptLabel.text = fansData.Descript;
-    _FansSourceLabel.text = fansData.Source;
+    [_IconView showImage:fansData.iconurl];
+    _FansNameLable.text = fansData.name;
+    _FansDescriptLabel.text = fansData.descript;
+    _FansSourceLabel.text = fansData.source;
 }
 
 

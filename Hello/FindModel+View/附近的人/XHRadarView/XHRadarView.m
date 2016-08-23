@@ -13,7 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 #define RADAR_DEFAULT_SECTIONS_NUM 3
 #define RADAR_DEFAULT_RADIUS 100.f
-#define RADAR_ROTATE_SPEED 60.0f
+#define RADAR_ROTATE_SPEED 80.0f
 #define INDICATOR_START_COLOR [UIColor colorWithRed:20.0/255.0 green:120.0/255.0 blue:40.0/255.0 alpha:1]
 #define INDICATOR_END_COLOR [UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:0]
 #define INDICATOR_ANGLE 240.0   //角度
@@ -62,7 +62,26 @@
         _pointsView = pointsView;
     }
     
+    _logoImage = [UIImage imageNamed:@"anddy926_avtar.jpg"];
     
+    _logoImageView = [[UIImageView alloc] initWithImage:_logoImage];
+    
+    _logoImageView.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapLogoViewGesture:)];
+    [_logoImageView addGestureRecognizer:tapGesture];
+
+    [self addSubview:_logoImageView];
+    
+    
+}
+
+- (void)tapLogoViewGesture:(UITapGestureRecognizer *)gesture
+{
+    if(_delegate && [_delegate respondsToSelector:@selector(refetchWeiBoUser)])
+    {
+        [_delegate refetchWeiBoUser];
+    }
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -139,16 +158,33 @@
         self.indicatorView.endColor = indicatorEndColor;
     }
     
-    if (self.textLabel) {
-        self.textLabel.frame = CGRectMake(0, centerPoint.y + ([UIScreen mainScreen].bounds.size.height)/3.3, rect.size.width, 30);
-        self.textLabel.textColor = [UIColor whiteColor];
-        self.textLabel.font = [UIFont systemFontOfSize:13];
-        if (self.labelText) {
-            self.textLabel.text = self.labelText;
-        }
-        self.textLabel.textAlignment = NSTextAlignmentCenter;
-        [self bringSubviewToFront:self.textLabel];
-    }
+//    if (self.textLabel) {
+//        self.textLabel.frame = CGRectMake(0, centerPoint.y + ([UIScreen mainScreen].bounds.size.height)/3.3, rect.size.width, 30);
+//        self.textLabel.textColor = [UIColor whiteColor];
+//        self.textLabel.font = [UIFont systemFontOfSize:13];
+//        if (self.labelText) {
+//            self.textLabel.text = self.labelText;
+//        }
+//        self.textLabel.textAlignment = NSTextAlignmentCenter;
+//        [self bringSubviewToFront:self.textLabel];
+//    }
+    
+    //CALayer *logoLayer = [[CALayer alloc] init];
+
+  
+    //logoLayer.zPosition = -1;
+    
+    CGRect logoRect = CGRectMake(0, 0, 40, 40);
+    logoRect.origin.x = (rect.size.width - logoRect.size.width)/2.0;
+    logoRect.origin.y = (rect.size.height - logoRect.size.height)/2.0;
+    _logoImageView.layer.cornerRadius = logoRect.size.width/2.0;
+    _logoImageView.layer.borderWidth = 1.0;
+    _logoImageView.layer.masksToBounds = YES;
+    _logoImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    _logoImageView.frame = logoRect;
+    
+    [self bringSubviewToFront:_logoImageView];
+
     
 }
 

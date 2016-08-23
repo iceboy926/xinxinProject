@@ -173,7 +173,7 @@ typedef enum {
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     
-        [button_sina sendActionsForControlEvents:UIControlEventTouchUpInside];
+        //[button_sina sendActionsForControlEvents:UIControlEventTouchUpInside];
     
     });
 }
@@ -244,6 +244,10 @@ typedef enum {
 {
     NSLog(@"loginwithqqzone");
     
+    MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
+    
+    [self presentViewController:tabBar animated:YES completion:nil];
+    
 //    [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error)
 //     {
 //         NSLog(@"%d", result);
@@ -265,7 +269,11 @@ typedef enum {
 -(void)LoginWithweixin
 {
     NSLog(@"LoginWithweixin");
-//    
+    
+    MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
+    
+    [self presentViewController:tabBar animated:YES completion:nil];
+//
 //    [ShareSDK getUserInfoWithType:ShareTypeWeixiFav authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error)
 //     {
 //         NSLog(@"%d", result);

@@ -6,8 +6,9 @@
 //  Copyright (c) 2015年 mit. All rights reserved.
 //
 
-#import "FansModel.h"
+#import "UserFans.h"
 
-@implementation FansModel
+@implementation UserFans
+
 
 @end

@@ -31,6 +31,8 @@
 @property (nonatomic, strong) NSString *labelText;      //提示文字
 @property (nonatomic, strong) UIView *pointsView;       //目标点视图
 @property (nonatomic, strong) XHRadarIndicatorView *indicatorView;      //指针
+@property (nonatomic, strong) UIImage *logoImage;
+@property (nonatomic, strong) UIImageView *logoImageView;
 
 @property (nonatomic, assign) id <XHRadarViewDataSource> dataSource;    //数据源
 @property (nonatomic, assign) id <XHRadarViewDelegate> delegate;        //委托
@@ -59,5 +61,7 @@
 @optional
 
 - (void)radarView:(XHRadarView *)radarView didSelectItemAtIndex:(NSUInteger)index; //点击事件
+
+- (void)refetchWeiBoUser;
 
 @end

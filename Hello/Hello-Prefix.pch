@@ -105,7 +105,7 @@
 
 #define SinaWeiBo_redirectUri @"http://www.myapp.com/login/callback"
 #define SinaWeiBo_URL_FriendsList @"https://api.weibo.com/2/friendships/friends.json"
-#define SinaWeiBo_URL_FollowsList @"https://api.weibo.com/2/friendships/followers.json"
+#define SinaWeiBo_URL_FollowsList @"https://api.weibo.com/2/friendships/followers/active.json"
 #define SinaWeiBo_URL_Statuses_public @"https://api.weibo.com/2/statuses/public_timeline.json"
 #define SinaWeiBo_URL_Statuses_friends @"https://api.weibo.com/2/statuses/friends_timeline.json"
 #define SinaWeiBo_URL_Statuses_home    @"https://api.weibo.com/2/statuses/home_timeline.json"

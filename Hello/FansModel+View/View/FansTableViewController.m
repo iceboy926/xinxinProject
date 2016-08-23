@@ -13,13 +13,16 @@
 #import "AppDelegate.h"
 #import "JSONKit.h"
 #import "NSString+Extension.h"
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+Easy.h"
+#import "CoreDateManager.h"
+
+#define UPDATE_KEY  @"update_time"
 
 
 @interface FansTableViewController ()
 {
     NSMutableArray *dataList;
-    MBProgressHUD *HUD;
+    CoreDateManager *coreMananger;
 }
 
 @end
@@ -28,33 +31,58 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+   [super viewDidLoad];
     
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-    [self.navigationController.view addSubview:HUD];
-    HUD.labelText = @"正在刷新，请等待...";
+    coreMananger = [[CoreDateManager alloc] init];
+
+    
+    [MBProgressHUD showMessage:@"正在刷新，请等待..."];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:20/255.0 green:155/255.0 blue:213/255.0 alpha:1.0]];
     self.navigationItem.title = @"粉丝列表";
     
     dataList = [[NSMutableArray alloc] init];
     
-    
-    [HUD showWhileExecuting:@selector(waitLoadData) onTarget:self withObject:nil animated:YES];
-    
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if([self needNewRequest]) //数据请求
+    {
+        [self SendRequst];
+    }
+    else //从数据库中读取相关数据
+    {
+        dataList = [[self readDataFromDB] mutableCopy];
+        [self.tableView reloadData];
+        [MBProgressHUD hideHUD];
+    }
 }
 
--(void)waitLoadData
+- (BOOL)needNewRequest
 {
-    [self SendRequst];
+    BOOL blRequest = YES;
     
+    NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+    
+    NSString *updateTimeStr = [defaultUser objectForKey:UPDATE_KEY];
+    
+    if(updateTimeStr)
+    {
+        NSTimeInterval  updateTime = updateTimeStr.doubleValue;
+        NSTimeInterval  nowTime = [NSDate timeIntervalSinceReferenceDate];
+        if((nowTime - updateTime) > 2*60*60)//大于2个小时
+        {
+            blRequest = YES;
+        }
+        else
+        {
+            blRequest = NO;
+        }
+    }
+    else
+    {
+        blRequest = YES;
+    }
+    
+    
+    return blRequest;
 }
 
 -(void)SendRequst
@@ -69,10 +97,12 @@
     [dicRequest setObject:appDelegate.wbtoken forKey:@"access_token"];
     [dicRequest setObject:@"200" forKey:@"count"];
     
+    __weak typeof(self) weakself = self;
+    
     
     [WBHttpRequest requestWithAccessToken:appDelegate.wbtoken url:SinaWeiBo_URL_FollowsList httpMethod:@"Get" params:dicRequest queue:nil withCompletionHandler:^(WBHttpRequest *httpRequest, id result, NSError *error)
      {
-         [self RequestHanlderRefresh:httpRequest :result :error];
+         [weakself RequestHanlderRefresh:httpRequest :result :error];
      }
      ];
     
@@ -80,29 +110,62 @@
 
 - (void)RequestHanlderRefresh:(WBHttpRequest *)httpRequest :(id)result : (NSError *)error
 {
-    
-    NSData *jsonData = [result JSONData];
-    
-    NSDictionary *dicResult = [jsonData objectFromJSONData];
-    
-    NSArray *userArray = [dicResult objectForKey:@"users"];
-    
-    
-    for (NSDictionary *userDic in userArray)
+    if(error == nil)
     {
-        FansModel *fansData = [[FansModel alloc] init];
-        fansData.IconUrl = [userDic objectForKey:@"avatar_large"];
-        fansData.Name = [NSString replaceUnicode:[userDic  objectForKey:@"screen_name"]];
-        fansData.Descript = [NSString stringWithFormat:@"简介：%@", [NSString replaceUnicode:[userDic  objectForKey:@"description"]]];
-        fansData.Source = [NSString replaceUnicode:[userDic objectForKey:@"location"]];
+        NSData *jsonData = [result JSONData];
         
-        [dataList addObject:fansData];
+        NSDictionary *dicResult = [jsonData objectFromJSONData];
+        
+        NSArray *userArray = [dicResult objectForKey:@"users"];
+        
+        
+        for (NSDictionary *userDic in userArray)
+        {
+            UserFans *fansData = [[UserFans alloc] init];
+            fansData.iconurl = [userDic objectForKey:@"avatar_large"];
+            fansData.name = [NSString replaceUnicode:[userDic  objectForKey:@"screen_name"]];
+            fansData.descript = [NSString stringWithFormat:@"简介：%@", [NSString replaceUnicode:[userDic  objectForKey:@"description"]]];
+            fansData.source = [NSString replaceUnicode:[userDic objectForKey:@"location"]];
+            
+            [dataList addObject:fansData];
+            
+        }
+        
+        [self clearDataBase];
+        
+        [self writeDataToDB:dataList];
+        
+        NSString *currentTimeStr = [NSString stringWithFormat:@"%f", [NSDate timeIntervalSinceReferenceDate]];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:currentTimeStr forKey:UPDATE_KEY];
         
     }
     
     
     [self.tableView reloadData];
     
+    [MBProgressHUD hideHUD];
+    
+}
+
+
+- (NSMutableArray *)readDataFromDB
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    array = [coreMananger readCoreData];
+
+    return array;
+}
+
+- (void)clearDataBase
+{
+    [coreMananger deleteData];
+}
+
+- (void)writeDataToDB:(NSMutableArray *)arrayData
+{
+    [coreMananger insertCoreData:arrayData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,7 +200,7 @@
         
     }
     
-    FansModel *fanData = [dataList objectAtIndex:[indexPath row]];
+    UserFans *fanData = [dataList objectAtIndex:[indexPath row]];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setFansFrame];

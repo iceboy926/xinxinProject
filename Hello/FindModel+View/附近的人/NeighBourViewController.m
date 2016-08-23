@@ -17,6 +17,7 @@
     RadarView *waterWaveView;
     XHRadarView *sectorView;
     NSMutableArray *personArray;
+    PersonViewModel *viewModel;
 }
 
 @end
@@ -34,10 +35,17 @@
     UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"radar_background"]];
     self.view.backgroundColor = bgColor;
 
+    viewModel = [[PersonViewModel alloc] init];
     
     [self InitSectorRadarView];
     
-    PersonViewModel *viewModel = [[PersonViewModel alloc] init];
+    [self RequestWeiboUser];
+
+}
+
+- (void)RequestWeiboUser
+{
+
     [viewModel requestWeiBoUserModelWithSuccess:^(id Value) {
         
         personArray = Value;
@@ -45,7 +53,7 @@
         
     } failure:^(NSError *error){
         
-    
+        
     }];
 }
 
@@ -78,6 +86,8 @@
     sectorView.dataSource = self;
     
     sectorView.delegate = self;
+    
+    sectorView.logoImage = [UIImage imageNamed:@"anddy926_avtar"];
     
     
     [self.view addSubview:sectorView];
@@ -154,6 +164,11 @@
 - (void)radarView:(XHRadarView *)radarView didSelectItemAtIndex:(NSUInteger)index //点击事件
 {
     
+}
+
+- (void)refetchWeiBoUser
+{
+    [self RequestWeiboUser];
 }
 
 

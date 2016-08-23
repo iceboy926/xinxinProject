@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AsynImageView.h"
-#import "FansModel.h"
+#import "UserFans.h"
 
 @interface FansTableViewCell : UITableViewCell
 
@@ -17,7 +17,7 @@
 @property (strong, nonatomic) UILabel *FansDescriptLabel;
 @property (strong, nonatomic) UILabel *FansSourceLabel;
 @property (strong, nonatomic) UIButton *FansfollowsBtn;
-@property(nonatomic)FansModel *fansData;
+@property(nonatomic)UserFans *fansData;
 
 -(void)setFansFrame;
 

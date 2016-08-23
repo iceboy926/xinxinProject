@@ -131,7 +131,7 @@
 		109B6A1D1CF7E8C60077FAFA /* ff_IconShowAlbum@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A101CF7E8C60077FAFA /* ff_IconShowAlbum@3x.png */; };
 		109B6A211CF7E8E30077FAFA /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A1F1CF7E8E30077FAFA /* FindViewController.m */; };
 		109B6A221CF7E8E30077FAFA /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A201CF7E8E30077FAFA /* FindViewController.xib */; };
-		109B6A271CF7E9600077FAFA /* FansModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A241CF7E9600077FAFA /* FansModel.m */; };
+		109B6A271CF7E9600077FAFA /* UserFans.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A241CF7E9600077FAFA /* UserFans.m */; };
 		109B6A2F1CF7E9700077FAFA /* FansTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A2A1CF7E9700077FAFA /* FansTableViewCell.m */; };
 		109B6A301CF7E9700077FAFA /* FansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109B6A2B1CF7E9700077FAFA /* FansTableViewCell.xib */; };
 		109B6A311CF7E9700077FAFA /* FansTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109B6A2D1CF7E9700077FAFA /* FansTableViewController.m */; };
@@ -299,6 +299,8 @@
 		10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
+		10D862C41D66DE0B004DD371 /* UserInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10D862C21D66DE0B004DD371 /* UserInfo.xcdatamodeld */; };
+		10D862CB1D66E417004DD371 /* CoreDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D862CA1D66E417004DD371 /* CoreDateManager.m */; };
 		10E1F3EA1D47315900107345 /* MineWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E1F3E91D47315900107345 /* MineWalletViewController.m */; };
 		10E1F3EF1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3EB1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png */; };
 		10E1F3F01D473F7800107345 /* ap_home_top_icon_pay_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F3EC1D473F7800107345 /* ap_home_top_icon_pay_new@2x.png */; };
@@ -632,8 +634,8 @@
 		109B6A1E1CF7E8E30077FAFA /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindViewController.h; path = "FindModel+View/FindViewController.h"; sourceTree = "<group>"; };
 		109B6A1F1CF7E8E30077FAFA /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindViewController.m; path = "FindModel+View/FindViewController.m"; sourceTree = "<group>"; };
 		109B6A201CF7E8E30077FAFA /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FindViewController.xib; path = "FindModel+View/FindViewController.xib"; sourceTree = "<group>"; };
-		109B6A231CF7E9600077FAFA /* FansModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FansModel.h; path = "FansModel+View/Model/FansModel.h"; sourceTree = "<group>"; };
-		109B6A241CF7E9600077FAFA /* FansModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FansModel.m; path = "FansModel+View/Model/FansModel.m"; sourceTree = "<group>"; };
+		109B6A231CF7E9600077FAFA /* UserFans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserFans.h; path = "FansModel+View/Model/UserFans.h"; sourceTree = "<group>"; };
+		109B6A241CF7E9600077FAFA /* UserFans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserFans.m; path = "FansModel+View/Model/UserFans.m"; sourceTree = "<group>"; };
 		109B6A291CF7E9700077FAFA /* FansTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FansTableViewCell.h; path = "FansModel+View/View/FansTableViewCell.h"; sourceTree = "<group>"; };
 		109B6A2A1CF7E9700077FAFA /* FansTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FansTableViewCell.m; path = "FansModel+View/View/FansTableViewCell.m"; sourceTree = "<group>"; };
 		109B6A2B1CF7E9700077FAFA /* FansTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FansTableViewCell.xib; path = "FansModel+View/View/FansTableViewCell.xib"; sourceTree = "<group>"; };
@@ -853,6 +855,9 @@
 		10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZLCWebView.m; path = Library/WebView/ZLCWebView.m; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
 		10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MRZoomScrollView.m; path = Library/ZoomScrollImage/MRZoomScrollView.m; sourceTree = "<group>"; };
+		10D862C31D66DE0B004DD371 /* UserInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfo.xcdatamodel; sourceTree = "<group>"; };
+		10D862C91D66E417004DD371 /* CoreDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDateManager.h; path = Library/CoreData/CoreDateManager.h; sourceTree = "<group>"; };
+		10D862CA1D66E417004DD371 /* CoreDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDateManager.m; path = Library/CoreData/CoreDateManager.m; sourceTree = "<group>"; };
 		10E1F3E81D47315900107345 /* MineWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineWalletViewController.h; path = "MineModel+View/我的钱包/MineWalletViewController.h"; sourceTree = "<group>"; };
 		10E1F3E91D47315900107345 /* MineWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineWalletViewController.m; path = "MineModel+View/我的钱包/MineWalletViewController.m"; sourceTree = "<group>"; };
 		10E1F3EB1D473F7800107345 /* ap_home_top_icon_pay_new_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ap_home_top_icon_pay_new_highlight@2x.png"; path = "Hello/image/ap_home_top_icon_pay_new_highlight@2x.png"; sourceTree = "<group>"; };
@@ -1634,8 +1639,10 @@
 		82B2CA321B6605AC00CDDA3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				109B6A231CF7E9600077FAFA /* FansModel.h */,
-				109B6A241CF7E9600077FAFA /* FansModel.m */,
+				10D862C91D66E417004DD371 /* CoreDateManager.h */,
+				10D862CA1D66E417004DD371 /* CoreDateManager.m */,
+				109B6A231CF7E9600077FAFA /* UserFans.h */,
+				109B6A241CF7E9600077FAFA /* UserFans.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1730,6 +1737,7 @@
 		82B612D21B2FBC61007E6D42 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10D862C21D66DE0B004DD371 /* UserInfo.xcdatamodeld */,
 				82E470231B4BCC4000EC1A59 /* friendsInfo.plist */,
 				82E470811B4F624B00EC1A59 /* messages.plist */,
 				82B612D31B2FBC61007E6D42 /* Hello-Info.plist */,
@@ -2481,7 +2489,7 @@
 				106205BC1D05477700E10485 /* MASConstraint.m in Sources */,
 				106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */,
 				109B69C71CF7E5AB0077FAFA /* AFURLSessionManager.m in Sources */,
-				109B6A271CF7E9600077FAFA /* FansModel.m in Sources */,
+				109B6A271CF7E9600077FAFA /* UserFans.m in Sources */,
 				107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */,
 				10C009C71D37661C003B6CF3 /* SDWebImageCompat.m in Sources */,
 				10C009C91D37661C003B6CF3 /* SDWebImageDownloader.m in Sources */,
@@ -2546,8 +2554,10 @@
 				10B0C3D81D586D2D0030FA8A /* XHRadarIndicatorView.m in Sources */,
 				82B612DC1B2FBC61007E6D42 /* AppDelegate.m in Sources */,
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
+				10D862CB1D66E417004DD371 /* CoreDateManager.m in Sources */,
 				82B612D81B2FBC61007E6D42 /* main.m in Sources */,
 				107C2F4E1D4F3AA7002987D9 /* NSString+Base64.m in Sources */,
+				10D862C41D66DE0B004DD371 /* UserInfo.xcdatamodeld in Sources */,
 				1050D0381D5C7550002EF5CB /* MBProgressHUD.m in Sources */,
 				10B24D171D509F800025D8BF /* UIImage+RoundedRectImage.m in Sources */,
 				109B69F01CF7E8150077FAFA /* FriendBaseModel.m in Sources */,
@@ -2912,6 +2922,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		10D862C21D66DE0B004DD371 /* UserInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				10D862C31D66DE0B004DD371 /* UserInfo.xcdatamodel */,
+			);
+			currentVersion = 10D862C31D66DE0B004DD371 /* UserInfo.xcdatamodel */;
+			path = UserInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 82B612C01B2FBC60007E6D42 /* Project object */;
 }

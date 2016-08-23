@@ -51,7 +51,7 @@
 
 - (void)sendRequestWithURL:(NSString *)url Location:(CLLocationCoordinate2D)coordinate2D Success:(void (^) (id result))success Failure:(void (^) (NSError *errorCode))failure
 {
-    __block typeof(self) blockself = self;
+    __weak typeof(self) weakself = self;
     
     
     
@@ -61,7 +61,7 @@
     [dicRequest setObject:appDelegate.wbtoken forKey:@"access_token"];
     [dicRequest setObject:[NSString stringWithFormat:@"%f",coordinate2D.latitude] forKey:@"lat"];
     [dicRequest setObject:[NSString stringWithFormat:@"%f",coordinate2D.longitude] forKey:@"long"];
-    [dicRequest setObject:@"3" forKey:@"count"];
+    [dicRequest setObject:@"5" forKey:@"count"];
     
     [WBHttpRequest requestWithAccessToken:appDelegate.wbtoken url:url httpMethod:@"Get" params:dicRequest queue:nil withCompletionHandler:^(WBHttpRequest *httpRequest, id result, NSError *error)
      {
@@ -71,11 +71,13 @@
          }
          else
          {
+             __strong typeof(self) strongself = weakself;
+             
              NSData *jsonData = [result JSONData];
              
              NSDictionary *dicResult = [jsonData objectFromJSONData];
              
-             [blockself processReturnValue:dicResult SuccessBlock:success];
+             [strongself processReturnValue:dicResult SuccessBlock:success];
          }
      }
      ];

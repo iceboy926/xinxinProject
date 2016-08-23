@@ -100,7 +100,7 @@
     }
     
     
-
+    //极光远程推送
     [JPushHelper setupWithOptions:launchOptions];
     
     
@@ -307,7 +307,7 @@
  */
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request
 {
-    
+    NSLog(@"did receiveWeiboRequest");
 }
 
 /**
