@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132C1D1A3A4100BA1273 /* CellToolBarView.m */; };
 		100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */; };
+		10256EAB1D6D9CFB00D136CF /* RXLSideSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */; };
+		10256EAC1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */; };
 		102D90AF1D1CC989005F0DEB /* FriendBaseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 102D90AE1D1CC989005F0DEB /* FriendBaseFrame.m */; };
 		104AB7531D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 104AB7521D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		1050D0381D5C7550002EF5CB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0371D5C7550002EF5CB /* MBProgressHUD.m */; };
@@ -415,6 +417,10 @@
 		100F132C1D1A3A4100BA1273 /* CellToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarView.m; path = "HomeModel+View/HomeView/CellToolBarView.m"; sourceTree = "<group>"; };
 		100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellToolBarModel.h; path = "HomeModel+View/HomeModel/CellToolBarModel.h"; sourceTree = "<group>"; };
 		100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarModel.m; path = "HomeModel+View/HomeModel/CellToolBarModel.m"; sourceTree = "<group>"; };
+		10256EA71D6D9CFB00D136CF /* RXLSideSlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RXLSideSlipViewController.h; path = MainTabPage/RXLSideSlipViewController.h; sourceTree = "<group>"; };
+		10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXLSideSlipViewController.m; path = MainTabPage/RXLSideSlipViewController.m; sourceTree = "<group>"; };
+		10256EA91D6D9CFB00D136CF /* UIViewController+RXLSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RXLSideMenu.h"; path = "MainTabPage/UIViewController+RXLSideMenu.h"; sourceTree = "<group>"; };
+		10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RXLSideMenu.m"; path = "MainTabPage/UIViewController+RXLSideMenu.m"; sourceTree = "<group>"; };
 		102D90AD1D1CC989005F0DEB /* FriendBaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendBaseFrame.h; path = "FindModel+View/朋友圈/Model/FriendBaseFrame.h"; sourceTree = "<group>"; };
 		102D90AE1D1CC989005F0DEB /* FriendBaseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendBaseFrame.m; path = "FindModel+View/朋友圈/Model/FriendBaseFrame.m"; sourceTree = "<group>"; };
 		104AB7511D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "Library/FullScreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -1029,6 +1035,17 @@
 			children = (
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		10256EA61D6D9CBA00D136CF /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				10256EA71D6D9CFB00D136CF /* RXLSideSlipViewController.h */,
+				10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */,
+				10256EA91D6D9CFB00D136CF /* UIViewController+RXLSideMenu.h */,
+				10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */,
+			);
+			name = SlideMenu;
 			sourceTree = "<group>";
 		};
 		104AB7501D07B82A00B81408 /* FullScreenPopGesture */ = {
@@ -1920,6 +1937,7 @@
 		82C1F9921B8EBE9800F2356B /* MainTabPage */ = {
 			isa = PBXGroup;
 			children = (
+				10256EA61D6D9CBA00D136CF /* SlideMenu */,
 				109B6A751CF7EC7A0077FAFA /* FileLogC.h */,
 				109B6A761CF7EC7A0077FAFA /* FileLogC.m */,
 				109B6A771CF7EC7A0077FAFA /* MainNavigateViewController.h */,
@@ -2475,6 +2493,7 @@
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
 				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
+				10256EAB1D6D9CFB00D136CF /* RXLSideSlipViewController.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
 				107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */,
@@ -2539,6 +2558,7 @@
 				1050D03B1D5C75A4002EF5CB /* MBProgressHUD+Easy.m in Sources */,
 				109B69F91CF7E84A0077FAFA /* FriendsViewController.m in Sources */,
 				109B695C1CF7E3490077FAFA /* JSONKit.m in Sources */,
+				10256EAC1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m in Sources */,
 				10B957381D12A6650024D640 /* UIImage+ResizeImage.m in Sources */,
 				10C009C81D37661C003B6CF3 /* SDWebImageDecoder.m in Sources */,
 				109B69441CF7E2CC0077FAFA /* TFHpple.m in Sources */,

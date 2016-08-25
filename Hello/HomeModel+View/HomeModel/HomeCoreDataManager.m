@@ -107,20 +107,25 @@
         
         HomeCellModel *homeModelInfo = [NSEntityDescription insertNewObjectForEntityForName:HomeTableName inManagedObjectContext:context];
         
-        homeModelInfo.icon = homeModel.icon;
-        homeModelInfo.name = homeModel.name;
-        homeModelInfo.timesource = homeModel.timesource;
-        homeModelInfo.detail = homeModel.detail;
-        homeModelInfo.pictureArray = [NSMutableArray arrayWithArray:homeModel.pictureArray];
-        
-        homeModelInfo.retweetPictureArray = [NSMutableArray arrayWithArray:homeModel.retweetPictureArray];
-        homeModelInfo.retweetDetail = homeModel.retweetDetail;
-        
-        homeModelInfo.repostCount = (homeModel.repostCount == 0) ? 0: homeModel.repostCount;
-        homeModelInfo.commentCount = (homeModel.commentCount == 0) ? 0: homeModel.commentCount;
-        homeModelInfo.atitudesCount = (homeModel.atitudesCount == 0) ? 0: homeModel.atitudesCount;
-        homeModelInfo.blVip = homeModel.blVip;
-        homeModelInfo.blretweet = homeModel.blretweet;
+//        homeModelInfo.icon = homeModel.icon;
+//        homeModelInfo.name = homeModel.name;
+//        homeModelInfo.timesource = homeModel.timesource;
+//        homeModelInfo.detail = homeModel.detail;
+//        homeModelInfo.pictureArray = [NSMutableArray arrayWithArray:homeModel.pictureArray];
+//        
+//        homeModelInfo.retweetPictureArray = [NSMutableArray arrayWithArray:homeModel.retweetPictureArray];
+//        homeModelInfo.retweetDetail = homeModel.retweetDetail;
+//        
+//        homeModelInfo.repostCount = (homeModel.repostCount == 0) ? 0: homeModel.repostCount;
+//        homeModelInfo.commentCount = (homeModel.commentCount == 0) ? 0: homeModel.commentCount;
+//        homeModelInfo.atitudesCount = (homeModel.atitudesCount == 0) ? 0: homeModel.atitudesCount;
+        if([homeModelInfo respondsToSelector:@selector(setBlVip:)])
+        {
+            [homeModelInfo setBlVip:YES];
+        }
+        //homeModelInfo.blVip = YES;//homeModel.blVip;
+        //BOOL blp = homeModel.blVip;
+        //homeModelInfo.blretweet = YES;//homeModel.blretweet;
     
         NSError *error;
         if(![context save:&error])
