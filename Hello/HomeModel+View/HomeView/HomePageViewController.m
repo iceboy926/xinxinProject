@@ -398,7 +398,7 @@
 
     }
     
-    [self WriteToDB:arrayData];
+    //[self WriteToDB:arrayData];
     
     
     [self.tableView reloadData];

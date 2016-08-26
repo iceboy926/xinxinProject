@@ -18,6 +18,7 @@
 #import <AVFoundation/AVAudioSession.h>
 //#import <ALBBSDK/ALBBSDK.h>
 #import "JPushHelper.h"
+#import "SlideMenu.h"
 
 @interface AppDelegate() <WeiboSDKDelegate>
 

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132C1D1A3A4100BA1273 /* CellToolBarView.m */; };
 		100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */; };
-		10256EAB1D6D9CFB00D136CF /* RXLSideSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */; };
-		10256EAC1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */; };
 		102D90AF1D1CC989005F0DEB /* FriendBaseFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 102D90AE1D1CC989005F0DEB /* FriendBaseFrame.m */; };
 		104AB7531D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 104AB7521D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		1050D0381D5C7550002EF5CB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D0371D5C7550002EF5CB /* MBProgressHUD.m */; };
@@ -300,6 +298,10 @@
 		10C009D21D37661C003B6CF3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009C11D37661C003B6CF3 /* UIImageView+WebCache.m */; };
 		10C009D31D37661C003B6CF3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009C31D37661C003B6CF3 /* UIView+WebCacheOperation.m */; };
 		10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
+		10C00BFA1D6FDEA400659ED3 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BF91D6FDEA400659ED3 /* menu@2x.png */; };
+		10C00C151D7034DE00659ED3 /* LLBlurSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */; };
+		10C00C181D7035D700659ED3 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C171D7035D700659ED3 /* SidebarViewController.m */; };
+		10C00C1A1D703AFD00659ED3 /* SlideLeftBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00C191D703AFD00659ED3 /* SlideLeftBackGround.png */; };
 		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
 		10D862C41D66DE0B004DD371 /* UserInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10D862C21D66DE0B004DD371 /* UserInfo.xcdatamodeld */; };
@@ -417,10 +419,6 @@
 		100F132C1D1A3A4100BA1273 /* CellToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarView.m; path = "HomeModel+View/HomeView/CellToolBarView.m"; sourceTree = "<group>"; };
 		100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellToolBarModel.h; path = "HomeModel+View/HomeModel/CellToolBarModel.h"; sourceTree = "<group>"; };
 		100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellToolBarModel.m; path = "HomeModel+View/HomeModel/CellToolBarModel.m"; sourceTree = "<group>"; };
-		10256EA71D6D9CFB00D136CF /* RXLSideSlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RXLSideSlipViewController.h; path = MainTabPage/RXLSideSlipViewController.h; sourceTree = "<group>"; };
-		10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXLSideSlipViewController.m; path = MainTabPage/RXLSideSlipViewController.m; sourceTree = "<group>"; };
-		10256EA91D6D9CFB00D136CF /* UIViewController+RXLSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RXLSideMenu.h"; path = "MainTabPage/UIViewController+RXLSideMenu.h"; sourceTree = "<group>"; };
-		10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RXLSideMenu.m"; path = "MainTabPage/UIViewController+RXLSideMenu.m"; sourceTree = "<group>"; };
 		102D90AD1D1CC989005F0DEB /* FriendBaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendBaseFrame.h; path = "FindModel+View/朋友圈/Model/FriendBaseFrame.h"; sourceTree = "<group>"; };
 		102D90AE1D1CC989005F0DEB /* FriendBaseFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendBaseFrame.m; path = "FindModel+View/朋友圈/Model/FriendBaseFrame.m"; sourceTree = "<group>"; };
 		104AB7511D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "Library/FullScreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -860,6 +858,13 @@
 		10C009C11D37661C003B6CF3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "Library/SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		10C009C21D37661C003B6CF3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "Library/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		10C009C31D37661C003B6CF3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "Library/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		10C00BF91D6FDEA400659ED3 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@2x.png"; path = "Hello/image/menu@2x.png"; sourceTree = "<group>"; };
+		10C00C101D7032B300659ED3 /* SlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SlideMenu.h; path = Library/SlideMenu/SlideMenu.h; sourceTree = "<group>"; };
+		10C00C131D7034DE00659ED3 /* LLBlurSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLBlurSidebar.h; path = Library/SlideMenu/LLBlurSidebar.h; sourceTree = "<group>"; };
+		10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLBlurSidebar.m; path = Library/SlideMenu/LLBlurSidebar.m; sourceTree = "<group>"; };
+		10C00C161D7035D700659ED3 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = MainTabPage/SidebarViewController.h; sourceTree = "<group>"; };
+		10C00C171D7035D700659ED3 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = MainTabPage/SidebarViewController.m; sourceTree = "<group>"; };
+		10C00C191D703AFD00659ED3 /* SlideLeftBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideLeftBackGround.png; path = Hello/image/SlideLeftBackGround.png; sourceTree = "<group>"; };
 		10CB8B941D34EE3A006B4D88 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZLCWebView.h; path = Library/WebView/ZLCWebView.h; sourceTree = "<group>"; };
 		10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZLCWebView.m; path = Library/WebView/ZLCWebView.m; sourceTree = "<group>"; };
 		10D1067E1CFBEDC2006E14E3 /* MRZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MRZoomScrollView.h; path = Library/ZoomScrollImage/MRZoomScrollView.h; sourceTree = "<group>"; };
@@ -1035,17 +1040,6 @@
 			children = (
 			);
 			name = ViewModel;
-			sourceTree = "<group>";
-		};
-		10256EA61D6D9CBA00D136CF /* SlideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				10256EA71D6D9CFB00D136CF /* RXLSideSlipViewController.h */,
-				10256EA81D6D9CFB00D136CF /* RXLSideSlipViewController.m */,
-				10256EA91D6D9CFB00D136CF /* UIViewController+RXLSideMenu.h */,
-				10256EAA1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m */,
-			);
-			name = SlideMenu;
 			sourceTree = "<group>";
 		};
 		104AB7501D07B82A00B81408 /* FullScreenPopGesture */ = {
@@ -1421,6 +1415,16 @@
 			name = SDWebImage;
 			sourceTree = "<group>";
 		};
+		10C00C091D70324100659ED3 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				10C00C131D7034DE00659ED3 /* LLBlurSidebar.h */,
+				10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */,
+				10C00C101D7032B300659ED3 /* SlideMenu.h */,
+			);
+			name = SlideMenu;
+			sourceTree = "<group>";
+		};
 		10CB8B931D34EE21006B4D88 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1789,6 +1793,8 @@
 		82B613001B302196007E6D42 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				10C00C191D703AFD00659ED3 /* SlideLeftBackGround.png */,
+				10C00BF91D6FDEA400659ED3 /* menu@2x.png */,
 				10B0C3C41D581F030030FA8A /* radar_background@2x.png */,
 				10B24D0D1D5079C60025D8BF /* anddy926_avtar.jpg */,
 				105C49651D4B410700EE398B /* coupon_common.png */,
@@ -1937,7 +1943,8 @@
 		82C1F9921B8EBE9800F2356B /* MainTabPage */ = {
 			isa = PBXGroup;
 			children = (
-				10256EA61D6D9CBA00D136CF /* SlideMenu */,
+				10C00C161D7035D700659ED3 /* SidebarViewController.h */,
+				10C00C171D7035D700659ED3 /* SidebarViewController.m */,
 				109B6A751CF7EC7A0077FAFA /* FileLogC.h */,
 				109B6A761CF7EC7A0077FAFA /* FileLogC.m */,
 				109B6A771CF7EC7A0077FAFA /* MainNavigateViewController.h */,
@@ -2065,6 +2072,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				10C00C091D70324100659ED3 /* SlideMenu */,
 				1050D0351D5C753D002EF5CB /* MBProgressHUD */,
 				10B0C3CA1D5833380030FA8A /* CBNetworking */,
 				10B0C3C61D5829DC0030FA8A /* ConnectServer */,
@@ -2422,6 +2430,7 @@
 				109B6B1A1CF7EE1F0077FAFA /* cute_boy_1.png in Resources */,
 				109B6B441CF7EE1F0077FAFA /* retina_1.jpeg in Resources */,
 				109B6B391CF7EE1F0077FAFA /* login_bj@2x.png in Resources */,
+				10C00BFA1D6FDEA400659ED3 /* menu@2x.png in Resources */,
 				10E1F42C1D47426900107345 /* 20000131.png in Resources */,
 				109B6AF51CF7EE1F0077FAFA /* addmore_7.png in Resources */,
 				109B6B191CF7EE1F0077FAFA /* chat_send_nor@2x.png in Resources */,
@@ -2444,6 +2453,7 @@
 				109B6A7F1CF7EC7A0077FAFA /* MainNavigateViewController.xib in Resources */,
 				10E1F42B1D47426900107345 /* 20000130.png in Resources */,
 				109B6A1A1CF7E8C60077FAFA /* ff_IconShake@3x.png in Resources */,
+				10C00C1A1D703AFD00659ED3 /* SlideLeftBackGround.png in Resources */,
 				109B6B3C1CF7EE1F0077FAFA /* map_located@2x.png in Resources */,
 				109B6B461CF7EE1F0077FAFA /* sinaweibo.png in Resources */,
 				10E1F41B1D47426900107345 /* 10000004.png in Resources */,
@@ -2493,7 +2503,6 @@
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
 				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
-				10256EAB1D6D9CFB00D136CF /* RXLSideSlipViewController.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
 				107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */,
@@ -2558,7 +2567,6 @@
 				1050D03B1D5C75A4002EF5CB /* MBProgressHUD+Easy.m in Sources */,
 				109B69F91CF7E84A0077FAFA /* FriendsViewController.m in Sources */,
 				109B695C1CF7E3490077FAFA /* JSONKit.m in Sources */,
-				10256EAC1D6D9CFB00D136CF /* UIViewController+RXLSideMenu.m in Sources */,
 				10B957381D12A6650024D640 /* UIImage+ResizeImage.m in Sources */,
 				10C009C81D37661C003B6CF3 /* SDWebImageDecoder.m in Sources */,
 				109B69441CF7E2CC0077FAFA /* TFHpple.m in Sources */,
@@ -2590,6 +2598,7 @@
 				10C009C51D37661C003B6CF3 /* NSData+ImageContentType.m in Sources */,
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
 				109B69381CF7E2840077FAFA /* MLTextAttachment.m in Sources */,
+				10C00C181D7035D700659ED3 /* SidebarViewController.m in Sources */,
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
 				10B0C3D91D586D2D0030FA8A /* XHRadarPointView.m in Sources */,
 				100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */,
@@ -2620,6 +2629,7 @@
 				109B69C21CF7E5AB0077FAFA /* AFNetworkReachabilityManager.m in Sources */,
 				106205BE1D05477700E10485 /* MASLayoutConstraint.m in Sources */,
 				106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */,
+				10C00C151D7034DE00659ED3 /* LLBlurSidebar.m in Sources */,
 				10C009C61D37661C003B6CF3 /* SDImageCache.m in Sources */,
 				107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */,
 				109B69C61CF7E5AB0077FAFA /* AFURLResponseSerialization.m in Sources */,
