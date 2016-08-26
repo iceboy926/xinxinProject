@@ -19,6 +19,7 @@
 //#import <ALBBSDK/ALBBSDK.h>
 #import "JPushHelper.h"
 #import "SlideMenu.h"
+#import "leftSettingVC.h"
 
 @interface AppDelegate() <WeiboSDKDelegate>
 
@@ -341,7 +342,12 @@
 
         MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
         
-        [self.window.rootViewController presentViewController:tabBar animated:YES completion:nil];
+        
+        leftSettingVC *leftVC = [[leftSettingVC alloc] init];
+        
+        LeftSlideViewController *leftSlide = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:tabBar];
+        
+        [self.window.rootViewController presentViewController:leftSlide animated:YES completion:nil];
     }
 
     

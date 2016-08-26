@@ -12,11 +12,9 @@
 #import "FindViewController.h" //发现
 #import "MineViewController.h" //我
 #import "MainNavigateViewController.h" //nav
-#import "SidebarViewController.h"
 
 @interface MainTabBarViewController ()
 
-@property (nonatomic, retain) SidebarViewController* sidebarVC;
 
 @end
 
@@ -47,24 +45,24 @@
     MineViewController *mineView = [[MineViewController alloc] init];
     [self addChildvc:mineView title:@"我" image:[UIImage imageNamed:@"user_normal"] SelectImage:[UIImage imageNamed:@"user_pressed"]];
     
-    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
-    [panGesture delaysTouchesBegan];
-    [self.view addGestureRecognizer:panGesture];
-    
-    self.sidebarVC = [[SidebarViewController alloc] init];
-    //[self.sidebarVC setBgRGB:0xFFFFF];
-    [self.view addSubview:self.sidebarVC.view];
-    self.sidebarVC.view.frame  = self.view.bounds;
+//    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+//    [panGesture delaysTouchesBegan];
+//    [self.view addGestureRecognizer:panGesture];
+//    
+//    self.sidebarVC = [[SidebarViewController alloc] init];
+//    //[self.sidebarVC setBgRGB:0xFFFFF];
+//    [self.view addSubview:self.sidebarVC.view];
+//    self.sidebarVC.view.frame  = self.view.bounds;
     
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)panDetected:(UIPanGestureRecognizer*)recoginzer
-{
-    [self.sidebarVC panDetected:recoginzer];
-    
-    
-}
+//- (void)panDetected:(UIPanGestureRecognizer*)recoginzer
+//{
+//    [self.sidebarVC panDetected:recoginzer];
+//    
+//    
+//}
 
 -(void)addChildvc:(UIViewController *)ChildVc title:(NSString *)title image:(UIImage *)image SelectImage:(UIImage *)SelectImage
 {

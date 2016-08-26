@@ -9,7 +9,7 @@
 #ifndef SlideMenu_h
 #define SlideMenu_h
 
-#import "LLBlurSidebar.h"
-
+//#import "LLBlurSidebar.h"
+#import "LeftSlideViewController.h"
 
 #endif /* SlideMenu_h */

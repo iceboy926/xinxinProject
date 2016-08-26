@@ -253,6 +253,9 @@
 		109B6B481CF7EE1F0077FAFA /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE41CF7EE1F0077FAFA /* weixin@2x.png */; };
 		109B6B491CF7EE1F0077FAFA /* weixin2.png in Resources */ = {isa = PBXBuildFile; fileRef = 109B6AE51CF7EE1F0077FAFA /* weixin2.png */; };
 		10A1B5441D6C326D00A3078D /* HomeCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */; };
+		10A9E78A1D7040B6002551BE /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A9E7871D7040B6002551BE /* LeftSlideViewController.m */; };
+		10A9E78B1D7040B6002551BE /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A9E7891D7040B6002551BE /* UIView_extra.m */; };
+		10A9E78E1D704137002551BE /* leftSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A9E78D1D704137002551BE /* leftSettingVC.m */; };
 		10B0C3C51D581F030030FA8A /* radar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B0C3C41D581F030030FA8A /* radar_background@2x.png */; };
 		10B0C3C91D582A320030FA8A /* httpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3C81D582A320030FA8A /* httpRequest.m */; };
 		10B0C3CF1D5833830030FA8A /* CBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B0C3CE1D5833830030FA8A /* CBNetworking.m */; };
@@ -300,7 +303,6 @@
 		10C009D61D388202003B6CF3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107C21B41D35DF2000792E3E /* WebKit.framework */; };
 		10C00BFA1D6FDEA400659ED3 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00BF91D6FDEA400659ED3 /* menu@2x.png */; };
 		10C00C151D7034DE00659ED3 /* LLBlurSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */; };
-		10C00C181D7035D700659ED3 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C00C171D7035D700659ED3 /* SidebarViewController.m */; };
 		10C00C1A1D703AFD00659ED3 /* SlideLeftBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 10C00C191D703AFD00659ED3 /* SlideLeftBackGround.png */; };
 		10CB8B961D34EE3A006B4D88 /* ZLCWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */; };
 		10D106801CFBEDC2006E14E3 /* MRZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D1067F1CFBEDC2006E14E3 /* MRZoomScrollView.m */; };
@@ -776,6 +778,12 @@
 		109B6AE51CF7EE1F0077FAFA /* weixin2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weixin2.png; path = Hello/image/weixin2.png; sourceTree = "<group>"; };
 		10A1B5421D6C326D00A3078D /* HomeCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCoreDataManager.h; path = "HomeModel+View/HomeModel/HomeCoreDataManager.h"; sourceTree = "<group>"; };
 		10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCoreDataManager.m; path = "HomeModel+View/HomeModel/HomeCoreDataManager.m"; sourceTree = "<group>"; };
+		10A9E7861D7040B6002551BE /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSlideViewController.h; path = Library/SlideMenu/LeftSlideViewController.h; sourceTree = "<group>"; };
+		10A9E7871D7040B6002551BE /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSlideViewController.m; path = Library/SlideMenu/LeftSlideViewController.m; sourceTree = "<group>"; };
+		10A9E7881D7040B6002551BE /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIView_extra.h; path = Library/SlideMenu/UIView_extra.h; sourceTree = "<group>"; };
+		10A9E7891D7040B6002551BE /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIView_extra.m; path = Library/SlideMenu/UIView_extra.m; sourceTree = "<group>"; };
+		10A9E78C1D704137002551BE /* leftSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftSettingVC.h; sourceTree = "<group>"; };
+		10A9E78D1D704137002551BE /* leftSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftSettingVC.m; sourceTree = "<group>"; };
 		10B0C3C41D581F030030FA8A /* radar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radar_background@2x.png"; path = "Hello/image/radar_background@2x.png"; sourceTree = "<group>"; };
 		10B0C3C71D582A320030FA8A /* httpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httpRequest.h; path = Library/ConnectServer/httpRequest.h; sourceTree = "<group>"; };
 		10B0C3C81D582A320030FA8A /* httpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = httpRequest.m; path = Library/ConnectServer/httpRequest.m; sourceTree = "<group>"; };
@@ -862,8 +870,6 @@
 		10C00C101D7032B300659ED3 /* SlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SlideMenu.h; path = Library/SlideMenu/SlideMenu.h; sourceTree = "<group>"; };
 		10C00C131D7034DE00659ED3 /* LLBlurSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLBlurSidebar.h; path = Library/SlideMenu/LLBlurSidebar.h; sourceTree = "<group>"; };
 		10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLBlurSidebar.m; path = Library/SlideMenu/LLBlurSidebar.m; sourceTree = "<group>"; };
-		10C00C161D7035D700659ED3 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = MainTabPage/SidebarViewController.h; sourceTree = "<group>"; };
-		10C00C171D7035D700659ED3 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = MainTabPage/SidebarViewController.m; sourceTree = "<group>"; };
 		10C00C191D703AFD00659ED3 /* SlideLeftBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlideLeftBackGround.png; path = Hello/image/SlideLeftBackGround.png; sourceTree = "<group>"; };
 		10CB8B941D34EE3A006B4D88 /* ZLCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZLCWebView.h; path = Library/WebView/ZLCWebView.h; sourceTree = "<group>"; };
 		10CB8B951D34EE3A006B4D88 /* ZLCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZLCWebView.m; path = Library/WebView/ZLCWebView.m; sourceTree = "<group>"; };
@@ -1418,6 +1424,10 @@
 		10C00C091D70324100659ED3 /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				10A9E7861D7040B6002551BE /* LeftSlideViewController.h */,
+				10A9E7871D7040B6002551BE /* LeftSlideViewController.m */,
+				10A9E7881D7040B6002551BE /* UIView_extra.h */,
+				10A9E7891D7040B6002551BE /* UIView_extra.m */,
 				10C00C131D7034DE00659ED3 /* LLBlurSidebar.h */,
 				10C00C141D7034DE00659ED3 /* LLBlurSidebar.m */,
 				10C00C101D7032B300659ED3 /* SlideMenu.h */,
@@ -1748,6 +1758,8 @@
 				82E46FE41B4A69EA00EC1A59 /* HomeModel+View */,
 				82F5F34A1B4666B50098C7FA /* NoUse */,
 				82B612DD1B2FBC61007E6D42 /* Main.storyboard */,
+				10A9E78C1D704137002551BE /* leftSettingVC.h */,
+				10A9E78D1D704137002551BE /* leftSettingVC.m */,
 				82B612DA1B2FBC61007E6D42 /* AppDelegate.h */,
 				82B612DB1B2FBC61007E6D42 /* AppDelegate.m */,
 				82D2B4231B43DB5F00C2174A /* GloabDef.h */,
@@ -1943,8 +1955,6 @@
 		82C1F9921B8EBE9800F2356B /* MainTabPage */ = {
 			isa = PBXGroup;
 			children = (
-				10C00C161D7035D700659ED3 /* SidebarViewController.h */,
-				10C00C171D7035D700659ED3 /* SidebarViewController.m */,
 				109B6A751CF7EC7A0077FAFA /* FileLogC.h */,
 				109B6A761CF7EC7A0077FAFA /* FileLogC.m */,
 				109B6A771CF7EC7A0077FAFA /* MainNavigateViewController.h */,
@@ -2527,6 +2537,7 @@
 				10C009C71D37661C003B6CF3 /* SDWebImageCompat.m in Sources */,
 				10C009C91D37661C003B6CF3 /* SDWebImageDownloader.m in Sources */,
 				109B69F61CF7E8260077FAFA /* FriendGridImageView.m in Sources */,
+				10A9E78E1D704137002551BE /* leftSettingVC.m in Sources */,
 				10C009CF1D37661C003B6CF3 /* UIImage+MultiFormat.m in Sources */,
 				109B69491CF7E2EC0077FAFA /* JSHpple.m in Sources */,
 				109B69EC1CF7E7910077FAFA /* ShakeViewController.m in Sources */,
@@ -2598,7 +2609,6 @@
 				10C009C51D37661C003B6CF3 /* NSData+ImageContentType.m in Sources */,
 				10B957441D138EEC0024D640 /* MineLocationView.m in Sources */,
 				109B69381CF7E2840077FAFA /* MLTextAttachment.m in Sources */,
-				10C00C181D7035D700659ED3 /* SidebarViewController.m in Sources */,
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
 				10B0C3D91D586D2D0030FA8A /* XHRadarPointView.m in Sources */,
 				100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */,
@@ -2607,6 +2617,7 @@
 				10C009A11D3765B8003B6CF3 /* SDWaitingView.m in Sources */,
 				10C009D21D37661C003B6CF3 /* UIImageView+WebCache.m in Sources */,
 				109B6A621CF7EB180077FAFA /* TableViewCell.m in Sources */,
+				10A9E78A1D7040B6002551BE /* LeftSlideViewController.m in Sources */,
 				109B696B1CF7E3A50077FAFA /* FCXRefreshHeaderView.m in Sources */,
 				107C2F4D1D4F3AA7002987D9 /* NSData+CommonCrypto.m in Sources */,
 				10C009CA1D37661C003B6CF3 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -2621,6 +2632,7 @@
 				109B69391CF7E2840077FAFA /* NSAttributedString+MLExpression.m in Sources */,
 				107D769C1D4071940065F2A5 /* UnlockPassWordVC.m in Sources */,
 				109B69371CF7E2840077FAFA /* MLLinkLabel.m in Sources */,
+				10A9E78B1D7040B6002551BE /* UIView_extra.m in Sources */,
 				109B6A2F1CF7E9700077FAFA /* FansTableViewCell.m in Sources */,
 				109B6A591CF7EB180077FAFA /* HomeDetailViewController.m in Sources */,
 				109B6A471CF7EA670077FAFA /* ZoomImage.m in Sources */,
