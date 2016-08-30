@@ -348,6 +348,16 @@
 		10E1F4371D47426900107345 /* app_item_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4141D47426900107345 /* app_item_bg.png */; };
 		10E1F4381D47426900107345 /* app_item_pressed_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4151D47426900107345 /* app_item_pressed_bg.png */; };
 		10E1F4391D47426900107345 /* bill_history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F4161D47426900107345 /* bill_history@2x.png */; };
+		10EDC6DE1D75642D00C8A69E /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6C61D75642D00C8A69E /* CLIColor.m */; };
+		10EDC6DF1D75642D00C8A69E /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6C91D75642D00C8A69E /* DDAbstractDatabaseLogger.m */; };
+		10EDC6E01D75642D00C8A69E /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6CB1D75642D00C8A69E /* DDASLLogCapture.m */; };
+		10EDC6E11D75642D00C8A69E /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6CD1D75642D00C8A69E /* DDASLLogger.m */; };
+		10EDC6E21D75642D00C8A69E /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6D01D75642D00C8A69E /* DDContextFilterLogFormatter.m */; };
+		10EDC6E31D75642D00C8A69E /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6D21D75642D00C8A69E /* DDDispatchQueueLogFormatter.m */; };
+		10EDC6E41D75642D00C8A69E /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6D41D75642D00C8A69E /* DDFileLogger.m */; };
+		10EDC6E51D75642D00C8A69E /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6D71D75642D00C8A69E /* DDLog.m */; };
+		10EDC6E61D75642D00C8A69E /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6DB1D75642D00C8A69E /* DDMultiFormatter.m */; };
+		10EDC6E71D75642D00C8A69E /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EDC6DD1D75642D00C8A69E /* DDTTYLogger.m */; };
 		10FEB08D1D3F229B00F342CF /* MoreExpressionShops.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07C1D3F229B00F342CF /* MoreExpressionShops.png */; };
 		10FEB08E1D3F229B00F342CF /* MoreExpressionShops@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07D1D3F229B00F342CF /* MoreExpressionShops@2x.png */; };
 		10FEB08F1D3F229B00F342CF /* MoreExpressionShops@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10FEB07E1D3F229B00F342CF /* MoreExpressionShops@3x.png */; };
@@ -919,6 +929,32 @@
 		10E1F4141D47426900107345 /* app_item_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_item_bg.png; path = Hello/image/MyWalletIcon/app_item_bg.png; sourceTree = "<group>"; };
 		10E1F4151D47426900107345 /* app_item_pressed_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_item_pressed_bg.png; path = Hello/image/MyWalletIcon/app_item_pressed_bg.png; sourceTree = "<group>"; };
 		10E1F4161D47426900107345 /* bill_history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bill_history@2x.png"; path = "Hello/image/MyWalletIcon/bill_history@2x.png"; sourceTree = "<group>"; };
+		10EDC6C51D75642D00C8A69E /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLIColor.h; path = Library/LumberjackLogo/CLIColor.h; sourceTree = "<group>"; };
+		10EDC6C61D75642D00C8A69E /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLIColor.m; path = Library/LumberjackLogo/CLIColor.m; sourceTree = "<group>"; };
+		10EDC6C71D75642D00C8A69E /* CocoaLumberjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Library/LumberjackLogo/CocoaLumberjack.h; sourceTree = "<group>"; };
+		10EDC6C81D75642D00C8A69E /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Library/LumberjackLogo/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		10EDC6C91D75642D00C8A69E /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Library/LumberjackLogo/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		10EDC6CA1D75642D00C8A69E /* DDASLLogCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Library/LumberjackLogo/DDASLLogCapture.h; sourceTree = "<group>"; };
+		10EDC6CB1D75642D00C8A69E /* DDASLLogCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Library/LumberjackLogo/DDASLLogCapture.m; sourceTree = "<group>"; };
+		10EDC6CC1D75642D00C8A69E /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Library/LumberjackLogo/DDASLLogger.h; sourceTree = "<group>"; };
+		10EDC6CD1D75642D00C8A69E /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Library/LumberjackLogo/DDASLLogger.m; sourceTree = "<group>"; };
+		10EDC6CE1D75642D00C8A69E /* DDAssertMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Library/LumberjackLogo/DDAssertMacros.h; sourceTree = "<group>"; };
+		10EDC6CF1D75642D00C8A69E /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Library/LumberjackLogo/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		10EDC6D01D75642D00C8A69E /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Library/LumberjackLogo/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		10EDC6D11D75642D00C8A69E /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Library/LumberjackLogo/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		10EDC6D21D75642D00C8A69E /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Library/LumberjackLogo/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		10EDC6D31D75642D00C8A69E /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Library/LumberjackLogo/DDFileLogger.h; sourceTree = "<group>"; };
+		10EDC6D41D75642D00C8A69E /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Library/LumberjackLogo/DDFileLogger.m; sourceTree = "<group>"; };
+		10EDC6D51D75642D00C8A69E /* DDLegacyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Library/LumberjackLogo/DDLegacyMacros.h; sourceTree = "<group>"; };
+		10EDC6D61D75642D00C8A69E /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Library/LumberjackLogo/DDLog.h; sourceTree = "<group>"; };
+		10EDC6D71D75642D00C8A69E /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Library/LumberjackLogo/DDLog.m; sourceTree = "<group>"; };
+		10EDC6D81D75642D00C8A69E /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Library/LumberjackLogo/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		10EDC6D91D75642D00C8A69E /* DDLogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Library/LumberjackLogo/DDLogMacros.h; sourceTree = "<group>"; };
+		10EDC6DA1D75642D00C8A69E /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Library/LumberjackLogo/DDMultiFormatter.h; sourceTree = "<group>"; };
+		10EDC6DB1D75642D00C8A69E /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Library/LumberjackLogo/DDMultiFormatter.m; sourceTree = "<group>"; };
+		10EDC6DC1D75642D00C8A69E /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Library/LumberjackLogo/DDTTYLogger.h; sourceTree = "<group>"; };
+		10EDC6DD1D75642D00C8A69E /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Library/LumberjackLogo/DDTTYLogger.m; sourceTree = "<group>"; };
+		10EDC6E91D7564F000C8A69E /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		10FEB07C1D3F229B00F342CF /* MoreExpressionShops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MoreExpressionShops.png; path = Hello/image/MoreExpressionShops.png; sourceTree = "<group>"; };
 		10FEB07D1D3F229B00F342CF /* MoreExpressionShops@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MoreExpressionShops@2x.png"; path = "Hello/image/MoreExpressionShops@2x.png"; sourceTree = "<group>"; };
 		10FEB07E1D3F229B00F342CF /* MoreExpressionShops@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MoreExpressionShops@3x.png"; path = "Hello/image/MoreExpressionShops@3x.png"; sourceTree = "<group>"; };
@@ -939,7 +975,6 @@
 		10FEB09F1D3F494E00F342CF /* UIImage+CircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CircleImage.h"; path = "Library/ThirdLib/UIImage+CircleImage.h"; sourceTree = "<group>"; };
 		10FEB0A01D3F494E00F342CF /* UIImage+CircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CircleImage.m"; path = "Library/ThirdLib/UIImage+CircleImage.m"; sourceTree = "<group>"; };
 		10FEB0A21D3F4B4500F342CF /* xhr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xhr.png; path = Hello/image/xhr.png; sourceTree = "<group>"; };
-		4AC579A362C5D34E1437E0F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		823454F21B832B07002A36D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		823454F41B832B17002A36D6 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		823454F61B832B2F002A36D6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -1498,6 +1533,46 @@
 			name = MyWalletIcon;
 			sourceTree = "<group>";
 		};
+		10EDC6C41D7563ED00C8A69E /* LumberJackLogo */ = {
+			isa = PBXGroup;
+			children = (
+				10EDC6C51D75642D00C8A69E /* CLIColor.h */,
+				10EDC6C61D75642D00C8A69E /* CLIColor.m */,
+				10EDC6C71D75642D00C8A69E /* CocoaLumberjack.h */,
+				10EDC6C81D75642D00C8A69E /* DDAbstractDatabaseLogger.h */,
+				10EDC6C91D75642D00C8A69E /* DDAbstractDatabaseLogger.m */,
+				10EDC6CA1D75642D00C8A69E /* DDASLLogCapture.h */,
+				10EDC6CB1D75642D00C8A69E /* DDASLLogCapture.m */,
+				10EDC6CC1D75642D00C8A69E /* DDASLLogger.h */,
+				10EDC6CD1D75642D00C8A69E /* DDASLLogger.m */,
+				10EDC6CE1D75642D00C8A69E /* DDAssertMacros.h */,
+				10EDC6CF1D75642D00C8A69E /* DDContextFilterLogFormatter.h */,
+				10EDC6D01D75642D00C8A69E /* DDContextFilterLogFormatter.m */,
+				10EDC6D11D75642D00C8A69E /* DDDispatchQueueLogFormatter.h */,
+				10EDC6D21D75642D00C8A69E /* DDDispatchQueueLogFormatter.m */,
+				10EDC6D31D75642D00C8A69E /* DDFileLogger.h */,
+				10EDC6D41D75642D00C8A69E /* DDFileLogger.m */,
+				10EDC6D51D75642D00C8A69E /* DDLegacyMacros.h */,
+				10EDC6D61D75642D00C8A69E /* DDLog.h */,
+				10EDC6D71D75642D00C8A69E /* DDLog.m */,
+				10EDC6D81D75642D00C8A69E /* DDLog+LOGV.h */,
+				10EDC6D91D75642D00C8A69E /* DDLogMacros.h */,
+				10EDC6DA1D75642D00C8A69E /* DDMultiFormatter.h */,
+				10EDC6DB1D75642D00C8A69E /* DDMultiFormatter.m */,
+				10EDC6DC1D75642D00C8A69E /* DDTTYLogger.h */,
+				10EDC6DD1D75642D00C8A69E /* DDTTYLogger.m */,
+			);
+			name = LumberJackLogo;
+			sourceTree = "<group>";
+		};
+		10EDC6E81D7564CF00C8A69E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				10EDC6E91D7564F000C8A69E /* Macro.h */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		8216718D1B3949380099A38D /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1740,7 +1815,6 @@
 				82B612CD1B2FBC61007E6D42 /* CoreGraphics.framework */,
 				82B612CF1B2FBC61007E6D42 /* UIKit.framework */,
 				82B612EA1B2FBC61007E6D42 /* XCTest.framework */,
-				4AC579A362C5D34E1437E0F8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1748,8 +1822,9 @@
 		82B612D11B2FBC61007E6D42 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
+				10EDC6E81D7564CF00C8A69E /* Config */,
 				82C1F9921B8EBE9800F2356B /* MainTabPage */,
-				82FB5CFE1B86F8FF00C7CB07 /* Library */,
+				82FB5CFE1B86F8FF00C7CB07 /* Vendor */,
 				823454E71B817578002A36D6 /* GuidePage */,
 				82E46FEB1B4A6A9200EC1A59 /* LoginView */,
 				107D76901D4061600065F2A5 /* MineModel+View */,
@@ -2079,9 +2154,10 @@
 			name = NoUse;
 			sourceTree = "<group>";
 		};
-		82FB5CFE1B86F8FF00C7CB07 /* Library */ = {
+		82FB5CFE1B86F8FF00C7CB07 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				10EDC6C41D7563ED00C8A69E /* LumberJackLogo */,
 				10C00C091D70324100659ED3 /* SlideMenu */,
 				1050D0351D5C753D002EF5CB /* MBProgressHUD */,
 				10B0C3CA1D5833380030FA8A /* CBNetworking */,
@@ -2103,7 +2179,7 @@
 				82F5F3491B45267B0098C7FA /* ThirdLib */,
 				8216718D1B3949380099A38D /* AFNetworking */,
 			);
-			name = Library;
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 		B32C90451CABB4FE00869A53 /* ViewController */ = {
@@ -2227,6 +2303,7 @@
 				ORGANIZATIONNAME = mit;
 				TargetAttributes = {
 					82B612C71B2FBC61007E6D42 = {
+						DevelopmentTeam = S4D7MKJMYK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -2235,7 +2312,7 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -2511,6 +2588,7 @@
 			files = (
 				107282391D54377800A20E0D /* NeighBourViewController.m in Sources */,
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
+				10EDC6DE1D75642D00C8A69E /* CLIColor.m in Sources */,
 				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
 				10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */,
 				109B69C51CF7E5AB0077FAFA /* AFURLRequestSerialization.m in Sources */,
@@ -2536,16 +2614,21 @@
 				107D76991D4071550065F2A5 /* MineSettingViewController.m in Sources */,
 				10C009C71D37661C003B6CF3 /* SDWebImageCompat.m in Sources */,
 				10C009C91D37661C003B6CF3 /* SDWebImageDownloader.m in Sources */,
+				10EDC6DF1D75642D00C8A69E /* DDAbstractDatabaseLogger.m in Sources */,
 				109B69F61CF7E8260077FAFA /* FriendGridImageView.m in Sources */,
 				10A9E78E1D704137002551BE /* leftSettingVC.m in Sources */,
+				10EDC6E41D75642D00C8A69E /* DDFileLogger.m in Sources */,
 				10C009CF1D37661C003B6CF3 /* UIImage+MultiFormat.m in Sources */,
+				10EDC6E11D75642D00C8A69E /* DDASLLogger.m in Sources */,
 				109B69491CF7E2EC0077FAFA /* JSHpple.m in Sources */,
 				109B69EC1CF7E7910077FAFA /* ShakeViewController.m in Sources */,
+				10EDC6E21D75642D00C8A69E /* DDContextFilterLogFormatter.m in Sources */,
 				10C009CD1D37661C003B6CF3 /* UIButton+WebCache.m in Sources */,
 				104AB7531D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				109B696A1CF7E3A50077FAFA /* FCXRefreshFooterView.m in Sources */,
 				109B69851CF7E4870077FAFA /* Reachability.m in Sources */,
 				107D76A21D40A5480065F2A5 /* GestureLockView.m in Sources */,
+				10EDC6E61D75642D00C8A69E /* DDMultiFormatter.m in Sources */,
 				10FEB0A11D3F494E00F342CF /* UIImage+CircleImage.m in Sources */,
 				10861A3D1D29FFA30092B1DF /* FriendOperationMenu.m in Sources */,
 				10B0C3DA1D586D2D0030FA8A /* XHRadarView.m in Sources */,
@@ -2588,6 +2671,7 @@
 				109B6A431CF7EA670077FAFA /* HomeCellModel.m in Sources */,
 				106205C01D05477700E10485 /* MASViewConstraint.m in Sources */,
 				109B6A721CF7EC0A0077FAFA /* MainPageTabBarController.m in Sources */,
+				10EDC6E31D75642D00C8A69E /* DDDispatchQueueLogFormatter.m in Sources */,
 				106205BB1D05477700E10485 /* MASCompositeConstraint.m in Sources */,
 				10A1B5441D6C326D00A3078D /* HomeCoreDataManager.m in Sources */,
 				10C009D01D37661C003B6CF3 /* UIImage+WebP.m in Sources */,
@@ -2595,6 +2679,7 @@
 				107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */,
 				109B6A211CF7E8E30077FAFA /* FindViewController.m in Sources */,
 				10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */,
+				10EDC6E01D75642D00C8A69E /* DDASLLogCapture.m in Sources */,
 				109B69C11CF7E5AB0077FAFA /* AFHTTPSessionManager.m in Sources */,
 				10B0C3D81D586D2D0030FA8A /* XHRadarIndicatorView.m in Sources */,
 				82B612DC1B2FBC61007E6D42 /* AppDelegate.m in Sources */,
@@ -2612,6 +2697,7 @@
 				109B69451CF7E2CC0077FAFA /* TFHppleElement.m in Sources */,
 				10B0C3D91D586D2D0030FA8A /* XHRadarPointView.m in Sources */,
 				100F13301D1A3B9800BA1273 /* CellToolBarModel.m in Sources */,
+				10EDC6E71D75642D00C8A69E /* DDTTYLogger.m in Sources */,
 				10C009C41D37661C003B6CF3 /* MKAnnotationView+WebCache.m in Sources */,
 				109B693C1CF7E2840077FAFA /* NSString+MLExpression.m in Sources */,
 				10C009A11D3765B8003B6CF3 /* SDWaitingView.m in Sources */,
@@ -2638,6 +2724,7 @@
 				109B6A471CF7EA670077FAFA /* ZoomImage.m in Sources */,
 				105C49591D49EF3F00EE398B /* TicketModel.m in Sources */,
 				10B957371D12A6650024D640 /* UIImage+ImageSize.m in Sources */,
+				10EDC6E51D75642D00C8A69E /* DDLog.m in Sources */,
 				109B69C21CF7E5AB0077FAFA /* AFNetworkReachabilityManager.m in Sources */,
 				106205BE1D05477700E10485 /* MASLayoutConstraint.m in Sources */,
 				106205C41D05477700E10485 /* ViewController+MASAdditions.m in Sources */,
@@ -2835,7 +2922,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "df2b4abd-9798-4972-ae63-b5b61029c344";
+				PROVISIONING_PROFILE = "8e04a3f9-d468-4fc6-9fb5-934e5c1b86ec";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
@@ -2891,7 +2978,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "df2b4abd-9798-4972-ae63-b5b61029c344";
+				PROVISIONING_PROFILE = "8e04a3f9-d468-4fc6-9fb5-934e5c1b86ec";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";

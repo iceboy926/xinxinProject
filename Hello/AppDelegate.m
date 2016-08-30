@@ -123,6 +123,7 @@
     {
         
         [user setBool:YES forKey: @"FirstLaunch"];
+        [user synchronize];
         
         //开始引导页
         [self UIGuidPageMakeInLive];
@@ -148,6 +149,7 @@
     {
         //NSLog(@"不是第一次加载");
         [user setBool:NO forKey:@"FirstLaunch"];
+        [user synchronize];
         [self UIMainPageShow];
     }
     return YES;
@@ -187,6 +189,7 @@
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
+#pragma mark  应用程序退出
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     //NSLog(@"applicationWillTerminate");

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "XMPPManager.h"
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
 

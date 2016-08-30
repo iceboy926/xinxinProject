@@ -7,14 +7,9 @@
 //
 
 #import "LoginViewController.h"
-#import "MBProgressHUD.h"
-#import "Reachability.h"
 #import "LineView.h"
-//#import <ShareSDK/ShareSDK.h>
-//#import "WXApi.h"
 #import "MainTabBarViewController.h"
-#import "WeiboSDK.h"
-#import "WeiboUser.h"
+
 
 typedef enum {
     UIImageRoundedCornerTopLeft = 1,
@@ -162,18 +157,10 @@ typedef enum {
     [self.view addSubview:button_weixin];
     
     
-//    UILabel *lable_sina = [[UILabel alloc] initWithFrame:CGRectMake(button_sina.frame.origin.x, button_sina.frame.origin.y + button_sina.frame.size.height, button_sina.frame.size.width, 20)];
-//    
-//    lable_sina.text = @"微博";
-//    
-//    [self.view addSubview:lable_sina];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     
-    // Do any additional setup after loading the view.
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    
-        //[button_sina sendActionsForControlEvents:UIControlEventTouchUpInside];
+        [button_sina sendActionsForControlEvents:UIControlEventTouchUpInside];
     
     });
 }
@@ -204,40 +191,6 @@ typedef enum {
     
     [WeiboSDK sendRequest:wbHttp];
     
-    
-//    [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error)
-//    {
-//        NSLog(@"%d", result);
-//        if(result) //授权成功后，跳转到主页面
-//        {
-//            NSMutableDictionary *dicuser = [[NSMutableDictionary alloc] initWithCapacity:20];
-//            
-//            //NSLog(@"nickname = %@", [userInfo nickname]);
-//            //NSLog(@"imageurl = %@", [userInfo profileImage]);
-//            
-//            [dicuser setObject:[userInfo uid] forKey:@"uid"];
-//            [dicuser setObject:[userInfo nickname] forKey:@"nickname"];
-//            [dicuser setObject:[userInfo profileImage] forKey:@"headImageurl"];
-//            [dicuser setObject:[userInfo aboutMe] forKey:@"aboutme"];
-//            [dicuser setObject:[userInfo url] forKey:@"url"];
-//            
-//            [[NSUserDefaults standardUserDefaults] setObject:dicuser forKey:@"sinaweibo"];
-//            
-//            MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
-//            
-//            [self presentViewController:tabBar animated:YES completion:nil];
-//            
-//            
-//            
-//            //[self performSegueWithIdentifier:@"GoToMainViewSegue" sender:self];
-//            
-//        }
-//        else
-//        {
-//            
-//        }
-//    }];
-    
 }
 
 -(void)LoginWithqq
@@ -247,21 +200,6 @@ typedef enum {
     MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
     
     [self presentViewController:tabBar animated:YES completion:nil];
-    
-//    [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error)
-//     {
-//         NSLog(@"%d", result);
-//         if(result) //成功登录后
-//         {
-//             //[userInfo ]
-//             
-//             
-//         }
-//         else
-//         {
-//             
-//         }
-//     }];
     
 }
 
@@ -273,25 +211,6 @@ typedef enum {
     MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
     
     [self presentViewController:tabBar animated:YES completion:nil];
-//
-//    [ShareSDK getUserInfoWithType:ShareTypeWeixiFav authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error)
-//     {
-//         NSLog(@"%d", result);
-//         if(result) //成功登录后
-//         {
-//             
-//             
-//             
-//         }
-//     }];
-//
-    
-//    BOOL blret = [WXApi openWXApp];
-//    
-//    if(blret)
-//    {
-//        NSLog(@"open WXApp");
-//    }
     
 }
 
