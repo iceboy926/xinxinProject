@@ -1285,6 +1285,82 @@
 			name = MineExpressionShop;
 			sourceTree = "<group>";
 		};
+		108B59F01D75846300E138CF /* FileLog */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A751CF7EC7A0077FAFA /* FileLogC.h */,
+				109B6A761CF7EC7A0077FAFA /* FileLogC.m */,
+			);
+			name = FileLog;
+			sourceTree = "<group>";
+		};
+		108B59F11D7584CE00E138CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A371CF7EA670077FAFA /* HomeCellModel.h */,
+				109B6A381CF7EA670077FAFA /* HomeCellModel.m */,
+				100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */,
+				100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */,
+				109B6A351CF7EA670077FAFA /* HomeCellFrame.h */,
+				109B6A361CF7EA670077FAFA /* HomeCellFrame.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		108B59F21D7584DA00E138CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A3F1CF7EA670077FAFA /* ZoomImage.h */,
+				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
+				10A1B5421D6C326D00A3078D /* HomeCoreDataManager.h */,
+				10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		108B59F31D7584E300E138CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				108B59F61D75850B00E138CF /* SubView */,
+				108B59F51D75850500E138CF /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		108B59F41D7584EA00E138CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A481CF7EB180077FAFA /* HomeDetailViewController.h */,
+				109B6A491CF7EB180077FAFA /* HomeDetailViewController.m */,
+				109B6A4A1CF7EB180077FAFA /* HomeDetailViewController.xib */,
+				109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */,
+				109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */,
+				109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		108B59F51D75850500E138CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A561CF7EB180077FAFA /* TableViewCell.h */,
+				109B6A571CF7EB180077FAFA /* TableViewCell.m */,
+				109B6A581CF7EB180077FAFA /* TableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		108B59F61D75850B00E138CF /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				109B6A331CF7EA670077FAFA /* AsynImageView.h */,
+				109B6A341CF7EA670077FAFA /* AsynImageView.m */,
+				100F132B1D1A3A4100BA1273 /* CellToolBarView.h */,
+				100F132C1D1A3A4100BA1273 /* CellToolBarView.m */,
+			);
+			name = SubView;
+			sourceTree = "<group>";
+		};
 		109995AB1D640B0100C29A70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2130,8 +2206,6 @@
 		82C1F9921B8EBE9800F2356B /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
-				109B6A751CF7EC7A0077FAFA /* FileLogC.h */,
-				109B6A761CF7EC7A0077FAFA /* FileLogC.m */,
 				109B6A771CF7EC7A0077FAFA /* MainNavigateViewController.h */,
 				109B6A781CF7EC7A0077FAFA /* MainNavigateViewController.m */,
 				109B6A791CF7EC7A0077FAFA /* MainNavigateViewController.xib */,
@@ -2142,48 +2216,13 @@
 			name = MainTab;
 			sourceTree = "<group>";
 		};
-		82C1F9B71B8F13AD00F2356B /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-				109B6A481CF7EB180077FAFA /* HomeDetailViewController.h */,
-				109B6A491CF7EB180077FAFA /* HomeDetailViewController.m */,
-				109B6A4A1CF7EB180077FAFA /* HomeDetailViewController.xib */,
-				109B6A4B1CF7EB180077FAFA /* HomePageViewController.h */,
-				109B6A4C1CF7EB180077FAFA /* HomePageViewController.m */,
-				109B6A4D1CF7EB180077FAFA /* HomePageViewController.xib */,
-				109B6A561CF7EB180077FAFA /* TableViewCell.h */,
-				109B6A571CF7EB180077FAFA /* TableViewCell.m */,
-				109B6A581CF7EB180077FAFA /* TableViewCell.xib */,
-				100F132B1D1A3A4100BA1273 /* CellToolBarView.h */,
-				100F132C1D1A3A4100BA1273 /* CellToolBarView.m */,
-			);
-			name = HomeView;
-			sourceTree = "<group>";
-		};
-		82C1F9B81B8F13B600F2356B /* HomeModel */ = {
-			isa = PBXGroup;
-			children = (
-				109B6A331CF7EA670077FAFA /* AsynImageView.h */,
-				109B6A341CF7EA670077FAFA /* AsynImageView.m */,
-				109B6A351CF7EA670077FAFA /* HomeCellFrame.h */,
-				109B6A361CF7EA670077FAFA /* HomeCellFrame.m */,
-				109B6A371CF7EA670077FAFA /* HomeCellModel.h */,
-				109B6A381CF7EA670077FAFA /* HomeCellModel.m */,
-				109B6A3F1CF7EA670077FAFA /* ZoomImage.h */,
-				109B6A401CF7EA670077FAFA /* ZoomImage.m */,
-				100F132E1D1A3B9800BA1273 /* CellToolBarModel.h */,
-				100F132F1D1A3B9800BA1273 /* CellToolBarModel.m */,
-				10A1B5421D6C326D00A3078D /* HomeCoreDataManager.h */,
-				10A1B5431D6C326D00A3078D /* HomeCoreDataManager.m */,
-			);
-			name = HomeModel;
-			sourceTree = "<group>";
-		};
 		82E46FE41B4A69EA00EC1A59 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				82C1F9B81B8F13B600F2356B /* HomeModel */,
-				82C1F9B71B8F13AD00F2356B /* HomeView */,
+				108B59F41D7584EA00E138CF /* Controller */,
+				108B59F31D7584E300E138CF /* View */,
+				108B59F21D7584DA00E138CF /* ViewModel */,
+				108B59F11D7584CE00E138CF /* Model */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2259,6 +2298,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				108B59F01D75846300E138CF /* FileLog */,
 				10EDC6C41D7563ED00C8A69E /* LumberJackLogo */,
 				10C00C091D70324100659ED3 /* SlideMenu */,
 				1050D0351D5C753D002EF5CB /* MBProgressHUD */,

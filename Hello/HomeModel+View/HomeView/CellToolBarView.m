@@ -8,7 +8,6 @@
 
 #import "CellToolBarView.h"
 #import "CellToolBarModel.h"
-#import "Masonry.h"
 
 @implementation CellToolBarView
 
