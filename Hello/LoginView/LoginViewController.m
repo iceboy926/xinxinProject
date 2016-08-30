@@ -19,10 +19,6 @@ typedef enum {
     UIImageRoundedCornerAll = 1|1<<1|1<<2|1<<3
 } UIImageRoundedCorner;
 
-#define SCREEN_FRAME ([UIScreen mainScreen].bounds)
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 @interface LoginViewController () <WBHttpRequestDelegate,WeiboSDKDelegate>
 
 @end
@@ -51,25 +47,16 @@ typedef enum {
     [super viewDidLoad];
     
     self.title = @"登录";
-    // Custom initialization
-    //[[XMPPManager ShareManager].xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
 	[self.view addSubview:HUD];
-    //	HUD.delegate = self;
-	HUD.labelText = @"登录中...";
+	HUD.label.text = @"登录中...";
     
-    UIImageView *bgView = [[UIImageView alloc] initWithFrame:SCREEN_FRAME];
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.frame];
     bgView.backgroundColor = [UIColor clearColor];
     bgView.image = [UIImage imageNamed:@"login_bj"];
     
-    //[self.view addSubview:bgView];
     [self.view insertSubview:bgView atIndex:0];
-
-    
-    
-    
-    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_bj"]];
 	
    
     [self.uiLogInBT setBackgroundImage:[[UIImage imageNamed:@"LoginGreenBigBtn_HI"] stretchableImageWithLeftCapWidth:10 topCapHeight:15] forState:UIControlStateDisabled];
@@ -77,21 +64,9 @@ typedef enum {
     [self.uiLogInBT setBackgroundImage:[[UIImage imageNamed:@"LoginGreenBigBtn"] stretchableImageWithLeftCapWidth:10 topCapHeight:15] forState:UIControlStateNormal];
     
     
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(DidLogStatus:) name:XMPP_LOGIN_STATUS object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardDidChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardwillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil]; //home 键是否被挂起
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil]; //监听是否重新进入程序程序
-    
-    
-    
-    //
-    
-    
+
 
 
     LineView *lineView1 = [[LineView alloc] initWithFrame:CGRectMake(30, SCREEN_HEIGHT - 50, 100, 0.5)];
@@ -166,17 +141,10 @@ typedef enum {
 }
 
 
--(void)applicationWillResignActive:(NSNotification*)notification
+- (void)applicationWillResignActive:(UIApplication *)application
 {
- 
-    printf("\n home pressed ! \n");
+    
 }
-
--(void)applicationDidBecomeActive:(NSNotification *)notification
-{
-    printf("\n app return !\n");
-}
-
 
 //使用第三方登录界面 sinaweibo 登录
 
@@ -414,17 +382,8 @@ typedef enum {
 
 - (IBAction)LogIn:(id)sender {
     
-    //[self performSegueWithIdentifier:@"GoToMainViewSegue" sender:self];
-    //return ;
-    
     if([self CheckInputVaild])
     {
-        //[self SetField:self.uiUserNameTF forkey: XMPP_USER_ID];
-        //[self SetField:self.uiPassWordTF forkey: XMPP_PASSWORD];
-        
-        //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
-        //id mainstoryboard = [storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
         
         Reachability *reach = [Reachability reachabilityForInternetConnection];
         if([reach currentReachabilityStatus] == NotReachable)
@@ -433,9 +392,6 @@ typedef enum {
         }
         else
         {
-            //[[XMPPManager ShareManager] ConnectThenLogin];
-            
-            //[[NSNotificationCenter defaultCenter] postNotificationName:XMPP_LOGIN_STATUS object:self userInfo:@{XMPP_LOGIN_KEY:[NSNumber numberWithBool:YES]}];
             
         }
         
@@ -454,28 +410,6 @@ typedef enum {
     
 }
 
-
-//-(void)DidLogStatus:(NSNotification *) notification
-//{
-//    NSDictionary *dic = [notification userInfo];
-//    
-//    NSNumber *number = [dic objectForKey:XMPP_LOGIN_KEY];
-//    
-//    BOOL blLoginStatus = [number boolValue];
-//    
-//    if(blLoginStatus == YES)
-//    {
-//        //[self performSegueWithIdentifier:@"GoToMainViewSegue" sender:self];
-//        
-//        [self LoginWithSinabo];
-//    }
-//    else
-//    {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败，请重新输入" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
-//        
-//        [alert show];
-//    }
-//}
 
 // 子线程中
 -(void) waitlogin {
@@ -551,108 +485,7 @@ typedef enum {
      }];
 }
 
-#pragma mark -
-#pragma WeiBoSDKDelegate
 
-/**
- 收到一个来自微博客户端程序的请求
- 
- 收到微博的请求后，第三方应用应该按照请求类型进行处理，处理完后必须通过 [WeiboSDK sendResponse:] 将结果回传给微博
- @param request 具体的请求对象
- */
-- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
-{
-    
-}
-
-/**
- 收到一个来自微博客户端程序的响应
- 
- 收到微博的响应后，第三方应用可以通过响应类型、响应的数据和 WBBaseResponse.userInfo 中的数据完成自己的功能
- @param response 具体的响应对象
- */
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
-{
-    if([response isKindOfClass:WBAuthorizeRequest.class]) //
-    {
-        self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
-        self.wbCurrentUserID = [(WBAuthorizeResponse *)response userID];
-        
-        NSMutableDictionary *dicuser = [[NSMutableDictionary alloc] initWithCapacity:20];
-    
-        NSLog(@"access_token is %@", self.wbtoken);
-        
-    
-        [dicuser setObject:self.wbtoken forKey:@"access_token"];
-        [dicuser setObject:self.wbCurrentUserID forKey:@"userID"];
-     
-        [[NSUserDefaults standardUserDefaults] setObject:dicuser forKey:@"sinaweibo"];
-        
-        MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] initWithNibName:@"MainTabBarViewController" bundle:nil];
-        
-        [self presentViewController:tabBar animated:YES completion:nil];
-    }
-}
-
-
-
-#pragma mark -
-#pragma WBHttpRequestDelegate
-
-///**
-// 收到一个来自微博Http请求的响应
-// 
-// @param response 具体的响应对象
-// */
-//
-//- (void)request:(WBHttpRequest *)request didReceiveResponse:(NSURLResponse *)response
-//{
-//    
-//}
-//
-///**
-// 收到一个来自微博Http请求失败的响应
-// 
-// @param error 错误信息
-// */
-//
-//- (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error
-//{
-//    
-//}
-//
-///**
-// 收到一个来自微博Http请求的网络返回
-// 
-// @param result 请求返回结果
-// */
-//
-//- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
-//{
-//    
-//}
-//
-///**
-// 收到一个来自微博Http请求的网络返回
-// 
-// @param data 请求返回结果
-// */
-//
-//- (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data
-//{
-//    
-//}
-//
-///**
-// 收到快速SSO授权的重定向
-// 
-// @param URI
-// */
-//
-//- (void)request:(WBHttpRequest *)request didReciveRedirectResponseWithURI:(NSURL *)redirectUrl
-//{
-//    
-//}
 
 
 @end

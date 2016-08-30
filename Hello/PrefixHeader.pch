@@ -1,21 +1,18 @@
 //
-//  Prefix header
+//  PrefixHeader.pch
+//  Hello
 //
-//  The contents of this file are implicitly included at the beginning of every source file.
+//  Created by 金玉衡 on 16/8/30.
+//  Copyright © 2016年 mit. All rights reserved.
 //
 
-#import <Availability.h>
-
-#ifndef __IPHONE_5_0
-#warning "This project uses features only available in iOS SDK 5.0 and later."
-#endif
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
-
-
 
 #import "Masonry.h"
 #import "Macro.h"
@@ -30,6 +27,9 @@
 #import "Reachability.h"
 #import "PPLabel.h"
 #import "AESCrypt.h"
+#import "AsynImageView.h"
+#import "SDPhotoBrowser.h"
+#import "SlideMenu.h"
 
 #import "NSString+Base64.h"
 #import "NSString+Extension.h"
@@ -41,10 +41,7 @@
 
 
 
+#import "MLLinkLabel.h"
+#import "MLLabel+Size.h"
 
-
-
-
-
-
-
+#endif /* PrefixHeader_pch */

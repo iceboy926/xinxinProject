@@ -7,9 +7,6 @@
 //
 
 #import "FriendGridImageView.h"
-#import "AsynImageView.h"
-//#import "ZoomImage.h"
-#import "SDPhotoBrowser.h"
 
 #define padding 2
 

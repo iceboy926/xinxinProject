@@ -8,12 +8,8 @@
 
 #import "ShakeViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import "WeiboSDK.h"
-#import "WeiboUser.h"
 #import "AppDelegate.h"
-#import "JSONKit.h"
 #import <CoreLocation/CoreLocation.h>
-#import "NSString+Extension.h"
 
 static SystemSoundID shake_sound_male_id = 0;
 
@@ -139,9 +135,8 @@ static SystemSoundID shake_sound_male_id = 0;
 
 -(void)SendRequest
 {
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate =[AppDelegate globalDelegate];
     NSMutableDictionary *dicRequest = [NSMutableDictionary dictionary];
-    //NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"sinaweibo"];
     
     [dicRequest setObject:appDelegate.wbtoken forKey:@"access_token"];
     [dicRequest setObject:[NSString stringWithFormat:@"%f",currentLatitude] forKey:@"lat"];
@@ -271,17 +266,7 @@ static SystemSoundID shake_sound_male_id = 0;
 
 -(void)ImageInit
 {
-//    NSDictionary *Viewdic = NSDictionaryOfVariableBindings(imageViewUp, imageViewDown);
-    
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageViewUp]"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:Viewdic]];
-//    
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageViewUp]"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:Viewdic]];
+
     
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:imageViewUp

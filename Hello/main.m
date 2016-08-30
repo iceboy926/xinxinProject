@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "AppDelegate.h"
-//#import "LoggerClient.h"
 
 
 

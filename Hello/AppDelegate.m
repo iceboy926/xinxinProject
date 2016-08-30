@@ -7,18 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "GloabDef.h"
 #import "LoginViewController.h"
-//#import "WeiboApi.h"
 #import "MainTabBarViewController.h"
-#import "WeiboSDK.h"
-#import "WeiboUser.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioToolbox/AudioSession.h>
 #import <AVFoundation/AVAudioSession.h>
-//#import <ALBBSDK/ALBBSDK.h>
-#import "JPushHelper.h"
-#import "SlideMenu.h"
 #import "leftSettingVC.h"
 
 @interface AppDelegate() <WeiboSDKDelegate>

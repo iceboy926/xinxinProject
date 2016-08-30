@@ -10,7 +10,6 @@
 
 @interface FriendGridImageView : UIView
 
-
 @property(nonatomic, strong) NSMutableArray *srcImageArray;
 
 -(void)setGridImageFrame:(CGRect)frame;

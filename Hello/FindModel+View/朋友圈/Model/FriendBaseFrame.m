@@ -8,8 +8,7 @@
 
 #import "FriendBaseFrame.h"
 #import "FriendBaseModel.h"
-#import "MLLinkLabel.h"
-#import "MLLabel+Size.h"
+
 
 #define margin 15
 #define padding 10

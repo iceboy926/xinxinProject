@@ -73,6 +73,8 @@
 #define  MAX_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
 #define  MAX_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
+#define  SCREEN_WIDTH MAX_WIDTH
+#define  SCREEN_HEIGHT MAX_HEIGHT
 
 #pragma mark ImageInfo
 #define  ICON_IMAGE_TAG         1000
@@ -90,5 +92,7 @@
 #define ISIOS8 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=8)
 #define ISIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
 #define ISIOS6 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=6)
+
+#define XMPP_USER_ID        @"XMPP_USER_ID"
 
 #endif /* Macro_h */

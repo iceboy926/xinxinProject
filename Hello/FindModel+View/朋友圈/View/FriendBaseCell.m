@@ -7,15 +7,12 @@
 //
 
 #import "FriendBaseCell.h"
-#import "AsynImageView.h"
-#import "MLLinkLabel.h"
-#import "MLLabel+Size.h"
+
 #import "FriendGridImageView.h"
 #import "FriendBaseModel.h"
 #import "FriendBaseFrame.h"
 #import "FriendOperationMenu.h"
 #import "FriendCommentView.h"
-#import "NSString+Extension.h"
 
 
 

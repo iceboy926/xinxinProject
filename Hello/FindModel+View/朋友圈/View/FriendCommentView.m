@@ -7,7 +7,7 @@
 //
 
 #import "FriendCommentView.h"
-#import "MLLinkLabel.h"
+
 
 @interface FriendCommentView()
 
