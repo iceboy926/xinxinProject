@@ -8,11 +8,8 @@
 
 #import "PersonViewModel.h"
 #import "NearbyPersonModel.h"
-#import "WeiboSDK.h"
 #import "AppDelegate.h"
-#import "JSONKit.h"
 #import <CoreLocation/CoreLocation.h>
-#import "NSString+Extension.h"
 
 @interface PersonViewModel() <CLLocationManagerDelegate>
 {
@@ -55,7 +52,7 @@
     
     
     
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = [AppDelegate globalDelegate];
     NSMutableDictionary *dicRequest = [NSMutableDictionary dictionary];
     
     [dicRequest setObject:appDelegate.wbtoken forKey:@"access_token"];

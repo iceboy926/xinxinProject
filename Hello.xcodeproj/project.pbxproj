@@ -1290,15 +1290,6 @@
 			name = MineExpressionShop;
 			sourceTree = "<group>";
 		};
-		109995A71D63FBF600C29A70 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				109995AB1D640B0100C29A70 /* Model */,
-				109995AC1D640B3400C29A70 /* ViewModel */,
-			);
-			name = MVVM;
-			sourceTree = "<group>";
-		};
 		109995AB1D640B0100C29A70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1382,11 +1373,10 @@
 		10B9573C1D138E430024D640 /* 附近的人 */ = {
 			isa = PBXGroup;
 			children = (
-				109995A71D63FBF600C29A70 /* MVVM */,
-				10B0C3D11D586CA20030FA8A /* SectorRadar */,
-				10B0C3D01D586C760030FA8A /* WaterWaveRadar */,
-				107282371D54377800A20E0D /* NeighBourViewController.h */,
-				107282381D54377800A20E0D /* NeighBourViewController.m */,
+				10EDC6EB1D756EA600C8A69E /* View */,
+				10EDC6EA1D756E8500C8A69E /* Controller */,
+				109995AC1D640B3400C29A70 /* ViewModel */,
+				109995AB1D640B0100C29A70 /* Model */,
 			);
 			name = "附近的人";
 			sourceTree = "<group>";
@@ -1571,6 +1561,24 @@
 				10EDC6E91D7564F000C8A69E /* Macro.h */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		10EDC6EA1D756E8500C8A69E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				107282371D54377800A20E0D /* NeighBourViewController.h */,
+				107282381D54377800A20E0D /* NeighBourViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		10EDC6EB1D756EA600C8A69E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10B0C3D11D586CA20030FA8A /* SectorRadar */,
+				10B0C3D01D586C760030FA8A /* WaterWaveRadar */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		8216718D1B3949380099A38D /* AFNetworking */ = {

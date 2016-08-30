@@ -7,7 +7,6 @@
 //
 
 #import "MinePackageViewController.h"
-#import "JSONKit.h"
 
 @interface MinePackageViewController()
 {

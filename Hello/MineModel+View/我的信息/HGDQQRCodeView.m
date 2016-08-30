@@ -7,7 +7,6 @@
 //
 
 #import "HGDQQRCodeView.h"
-#import <CoreImage/CoreImage.h>
 
 @implementation HGDQQRCodeView
 /**

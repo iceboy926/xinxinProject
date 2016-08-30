@@ -24,4 +24,7 @@ CFAbsoluteTime startTime;
 @property (retain, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) NSString *wbtoken;
 @property (strong, nonatomic) NSString *wbCurrentUserID;
+
++ (AppDelegate *)globalDelegate;
+
 @end

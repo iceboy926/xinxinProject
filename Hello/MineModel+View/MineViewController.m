@@ -7,7 +7,6 @@
 //
 
 #import "MineViewController.h"
-#import "UIImage+CircleImage.h"
 #import "MineSettingViewController.h"
 #import "MineDetailInfoVC.h"
 #import "UnlockPassWordVC.h"

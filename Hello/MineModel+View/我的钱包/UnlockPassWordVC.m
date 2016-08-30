@@ -9,7 +9,7 @@
 #import "UnlockPassWordVC.h"
 #import "GestureLockView.h"
 #import "MineWalletViewController.h"
-#import "AESCrypt.h"
+
 
 #define  LOCKPATH  @"lockpath"
 

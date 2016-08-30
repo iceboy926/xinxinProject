@@ -7,14 +7,14 @@
 //
 
 #import "NeighBourViewController.h"
-#import "RadarView.h"
+//#import "RadarView.h"
 #import "XHRadarView.h"
 #import "PersonViewModel.h"
 #import "NearbyPersonModel.h"
 
 @interface NeighBourViewController() <XHRadarViewDataSource, XHRadarViewDelegate>
 {
-    RadarView *waterWaveView;
+    //RadarView *waterWaveView;
     XHRadarView *sectorView;
     NSMutableArray *personArray;
     PersonViewModel *viewModel;
@@ -58,18 +58,18 @@
 }
 
 
-- (void)InitWaterRadarView
-{
-    
-    CGRect radarFrame = CGRectMake(0, (MAX_HEIGHT - MAX_WIDTH)/2.0, MAX_WIDTH, MAX_WIDTH);
-    
-    waterWaveView = [[RadarView alloc] initWithFrame:radarFrame LogoImage:@"anddy926_avtar.jpg"];
-    
-    [self.view addSubview:waterWaveView];
-    
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:waterWaveView selector:@selector(findResultItem) userInfo:nil repeats:YES];
-    
-}
+//- (void)InitWaterRadarView
+//{
+//    
+//    CGRect radarFrame = CGRectMake(0, (MAX_HEIGHT - MAX_WIDTH)/2.0, MAX_WIDTH, MAX_WIDTH);
+//    
+//    waterWaveView = [[RadarView alloc] initWithFrame:radarFrame LogoImage:@"anddy926_avtar.jpg"];
+//    
+//    [self.view addSubview:waterWaveView];
+//    
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:waterWaveView selector:@selector(findResultItem) userInfo:nil repeats:YES];
+//    
+//}
 
 - (void)InitSectorRadarView
 {
@@ -95,15 +95,9 @@
     [sectorView scan];
 }
 
-/**
- *
- *
- *  @param radarViewDataSourceDelegate
- *
- *  @return
- */
 
 
+#pragma mark sectionView Delegate
 - (NSInteger)numberOfSectionsInRadarView:(XHRadarView *)radarView
 {
     return 4;

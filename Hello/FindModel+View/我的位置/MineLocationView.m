@@ -7,15 +7,10 @@
 //
 
 #import "MineLocationView.h"
-#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "KCAnnotation.h"
-//#import "AppDelegate.h"
 
 #define SYSTEM_NAVIBAR_COLOR [UIColor colorWithRed:0 green:0 blue:0 alpha:1]
-#define ISIOS8 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=8)
-#define ISIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
-#define ISIOS6 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=6)
 #define STATUS_BAR_H 20
 #define NAV_BAT_H 44
 
