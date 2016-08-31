@@ -1,5 +1,5 @@
 #import "NSURLConnection+AnyPromise.h"
-#import "OMGHTTPURLRQ/OMGHTTPURLRQ.h"  // github "mxcl/OMGHTTPURLRQ" ~> 3.2
+#import <OMGHTTPURLRQ/OMGHTTPURLRQ.h>  // github "mxcl/OMGHTTPURLRQ" ~> 3.2
 #import <Foundation/NSOperation.h>
 #import <dispatch/once.h>
 
