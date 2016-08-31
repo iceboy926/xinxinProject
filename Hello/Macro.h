@@ -75,6 +75,7 @@
 
 #define  SCREEN_WIDTH MAX_WIDTH
 #define  SCREEN_HEIGHT MAX_HEIGHT
+#define  SCREEN_FRAME  [[UIScreen mainScreen] bounds]
 
 #pragma mark ImageInfo
 #define  ICON_IMAGE_TAG         1000

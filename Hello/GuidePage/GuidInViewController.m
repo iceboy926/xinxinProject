@@ -9,10 +9,6 @@
 #import "GuidInViewController.h"
 
 
-#define SCREEN_FRAME ([UIScreen mainScreen].bounds)
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
 @interface GuidInViewController () <UIScrollViewDelegate, UIPageViewControllerDelegate>
 {
     BOOL blOut;
@@ -21,14 +17,6 @@
 
 @implementation GuidInViewController
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
 
 -(id)initWithBackGroundImage :(NSArray *)imageArray
 {
@@ -112,14 +100,12 @@
 {
     for (int i = 0; i < [self.arryImage count]; i++)
     {
-        //UIView *View = [[UIView alloc] initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)/*SCREEN_FRAME*/];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
         imageView.contentMode = UIViewContentModeScaleToFill;
         
         imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"img_index_0%ibg", (i+1)]];
-        
         
         [_scrollView addSubview:imageView];
         
@@ -135,12 +121,10 @@
     if(CGSizeEqualToSize(Size, CGSizeZero))
     {
         Size = CGSizeMake(SCREEN_WIDTH*0.4, 30);
-        //NSLog(@"Size = %@", Size);
     }
     
     rect = CGRectMake(SCREEN_WIDTH/2 - Size.width/2, SCREEN_HEIGHT - 40, Size.width, Size.height);
     
-    //NSLog(@"rect = %@", rect);
     return rect;
 }
 
@@ -181,9 +165,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    //NSLog(@"scrollViewDisScroll");
-    
-    //NSLog(@"scrollView.contentOffset.x = %f", scrollView.contentOffset.x);
     
     if(scrollView.contentOffset.x > (([self.arryImage count] - 1)*SCREEN_WIDTH+30))
     {
@@ -194,7 +175,6 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;      // called when scroll view grinds to a halt
 {
-    //NSLog(@"scrollViewDidEndDecelarating");
     int index = scrollView.contentOffset.x/SCREEN_WIDTH;
     
     _pageView.currentPage = index;
@@ -206,15 +186,5 @@
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -39,9 +39,10 @@
 #import "UIImage+ResizeImage.h"
 #import "UIImage+RoundedRectImage.H"
 
-
-
 #import "MLLinkLabel.h"
 #import "MLLabel+Size.h"
+
+#import <PromiseKit/PromiseKit.h>
+
 
 #endif /* PrefixHeader_pch */

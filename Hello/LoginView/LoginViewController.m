@@ -132,7 +132,6 @@ typedef enum {
     [self.view addSubview:button_weixin];
     
     
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     
         [button_sina sendActionsForControlEvents:UIControlEventTouchUpInside];
@@ -415,9 +414,6 @@ typedef enum {
 -(void) waitlogin {
     // 显示进度条
     sleep(5);
-    
-    // 返回主线程执行
-    //[self  performSelectorOnMainThread:@selector(goToMainView:) withObject:Data waitUntilDone:YES];
 }
 
 
@@ -436,7 +432,6 @@ typedef enum {
 
 - (IBAction)clickBackground:(id)sender
 {
-    //DEBUG_LOG(@"click background .....");
     
     [sender endEditing:YES];
 }

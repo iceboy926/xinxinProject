@@ -44,6 +44,8 @@
     
     MineViewController *mineView = [[MineViewController alloc] init];
     [self addChildvc:mineView title:@"我" image:[UIImage imageNamed:@"user_normal"] SelectImage:[UIImage imageNamed:@"user_pressed"]];
+    
+    [self.tabBar setTintColor:[UIColor colorWithRed:0.413 green:0.789 blue:0.139 alpha:1.000]];
 }
 
 -(void)addChildvc:(UIViewController *)ChildVc title:(NSString *)title image:(UIImage *)image SelectImage:(UIImage *)SelectImage
