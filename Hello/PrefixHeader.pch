@@ -43,6 +43,5 @@
 #import "MLLabel+Size.h"
 
 #import <PromiseKit/PromiseKit.h>
-#import "UIView+AnyPromise.h"
 
 #endif /* PrefixHeader_pch */

@@ -6,7 +6,7 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		MxLvXGhfbiqlUP7cSgIJGoCLcs4=
+		I+m4XcKR3WcekXQVpu8AG8XizhQ=
 		</data>
 		<key>Headers/AnyPromise.h</key>
 		<data>
@@ -26,27 +26,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ohMvfqlcuBrVdx7276HzWGvJi/s=
-		</data>
-		<key>Modules/.DS_Store</key>
-		<data>
-		I1YV0TwHi16Icmktkgdhx0htMCg=
+		FJRxiaakauhRL5WTci/pLd7TNyA=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm.swiftdoc</key>
 		<data>
-		E/kVWfeVb5kFnSJQvILxSJtRUuo=
+		verNnYon24n7haog4EVHAyIS40A=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		T+yxcN9Si1jOoEIZLNiNQhcXG/U=
+		n1Xz/jM97UeXayLmp/te4Q8w+Mo=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		EsO8pnez6pgiMHoZUjCkR661BAY=
+		MDxRx/7CrsiifiX5uvkAaybuppg=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		rV5eysTaEJwNAjk96MpD4C9SAPU=
+		yAhyH+hDbV3oFIqPKMK3zr5E24M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -77,19 +73,19 @@
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm.swiftdoc</key>
 		<data>
-		E/kVWfeVb5kFnSJQvILxSJtRUuo=
+		verNnYon24n7haog4EVHAyIS40A=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		T+yxcN9Si1jOoEIZLNiNQhcXG/U=
+		n1Xz/jM97UeXayLmp/te4Q8w+Mo=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		EsO8pnez6pgiMHoZUjCkR661BAY=
+		MDxRx/7CrsiifiX5uvkAaybuppg=
 		</data>
 		<key>Modules/PromiseKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		rV5eysTaEJwNAjk96MpD4C9SAPU=
+		yAhyH+hDbV3oFIqPKMK3zr5E24M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

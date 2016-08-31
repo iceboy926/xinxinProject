@@ -138,27 +138,28 @@ static CGRect oldRect;
         [background addSubview:imageView];
         
         
-        [UIView promiseWithDuration:0.3 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
+                
             CGFloat x = 0.0;
             CGFloat y = 0.0;
             CGFloat width = 0.0;
             CGFloat height = 0.0;
-            
-            
-            
+                
+                
+                
             if(image.size.width > MAX_WIDTH || image.size.height > MAX_HEIGHT)
             {
-                
+                    
                 CGFloat widthScal = image.size.width/MAX_WIDTH;
                 CGFloat heightScal = image.size.height/MAX_HEIGHT;
-                
+                    
                 CGFloat Scal = MAX(widthScal, heightScal);
-                
-                
+                    
+                    
                 width = image.size.width/Scal;
                 height = image.size.height/Scal;
-                
-                
+                    
+                    
                 x = MAX_WIDTH/2 - width/2;
                 y = MAX_HEIGHT/2 -height/2;
             }
@@ -169,52 +170,12 @@ static CGRect oldRect;
                 width = image.size.width;
                 height = image.size.height;
             }
-            
+                
             imageView.frame = CGRectMake(x, y, width, height);
-            
+                
             background.alpha = 1;
-
-        
+                
         }];
-        
-//        [UIView animateWithDuration:0.3 animations:^{
-//                
-//            CGFloat x = 0.0;
-//            CGFloat y = 0.0;
-//            CGFloat width = 0.0;
-//            CGFloat height = 0.0;
-//                
-//                
-//                
-//            if(image.size.width > MAX_WIDTH || image.size.height > MAX_HEIGHT)
-//            {
-//                    
-//                CGFloat widthScal = image.size.width/MAX_WIDTH;
-//                CGFloat heightScal = image.size.height/MAX_HEIGHT;
-//                    
-//                CGFloat Scal = MAX(widthScal, heightScal);
-//                    
-//                    
-//                width = image.size.width/Scal;
-//                height = image.size.height/Scal;
-//                    
-//                    
-//                x = MAX_WIDTH/2 - width/2;
-//                y = MAX_HEIGHT/2 -height/2;
-//            }
-//            else
-//            {
-//                x = MAX_WIDTH/2 - image.size.width/2;
-//                y = MAX_HEIGHT/2 - image.size.height/2;
-//                width = image.size.width;
-//                height = image.size.height;
-//            }
-//                
-//            imageView.frame = CGRectMake(x, y, width, height);
-//                
-//            background.alpha = 1;
-//                
-//        }];
 
         
     }];

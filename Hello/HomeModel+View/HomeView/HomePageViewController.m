@@ -619,7 +619,7 @@
 
 -(void)DidTouchUserIcon:(UIImageView *)UserIcon Index:(NSInteger)UseIndex
 {
-    [ZoomImage ShowImage:UserIcon];
+    [ZoomImage ShowZoomWithImageView:UserIcon];
 }
 
 -(void)DidTouchPicAsyView:(AsynImageView *)asyImageView
@@ -631,7 +631,7 @@
     
     if(range.length > 0)
     {
-        [ZoomImage ShowImageWithUrl:[strimageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"]];
+        [ZoomImage ShowZoomWithImageURL:[strimageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"]];
     }
     
 }

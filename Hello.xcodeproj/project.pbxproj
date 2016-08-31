@@ -36,18 +36,10 @@
 		106FB15D1D76B969009FED01 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB15C1D76B969009FED01 /* libsqlite3.tbd */; };
 		106FB15F1D76B9FC009FED01 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB15E1D76B9FC009FED01 /* libxml2.tbd */; };
 		106FB1611D76BA65009FED01 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB1601D76BA65009FED01 /* libz.1.2.5.tbd */; };
-		106FB1631D76BC72009FED01 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB1581D76B6FD009FED01 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		106FB1661D76BC7E009FED01 /* OMGHTTPURLRQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB15A1D76B817009FED01 /* OMGHTTPURLRQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		106FB1701D76C24B009FED01 /* UIActionSheet+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB1691D76C24B009FED01 /* UIActionSheet+AnyPromise.m */; };
-		106FB1711D76C24B009FED01 /* UIAlertView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB16B1D76C24B009FED01 /* UIAlertView+AnyPromise.m */; };
-		106FB1721D76C24B009FED01 /* UIView+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB16D1D76C24B009FED01 /* UIView+AnyPromise.m */; };
-		106FB1731D76C24B009FED01 /* UIViewController+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB16F1D76C24B009FED01 /* UIViewController+AnyPromise.m */; };
-		106FB1771D76C2DA009FED01 /* CALayer+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB1761D76C2DA009FED01 /* CALayer+AnyPromise.m */; };
-		106FB17F1D76C313009FED01 /* NSNotificationCenter+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB17A1D76C313009FED01 /* NSNotificationCenter+AnyPromise.m */; };
-		106FB1801D76C313009FED01 /* NSURLConnection+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB17C1D76C313009FED01 /* NSURLConnection+AnyPromise.m */; };
-		106FB1811D76C313009FED01 /* NSURLSession+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 106FB17E1D76C313009FED01 /* NSURLSession+AnyPromise.m */; };
 		107282361D542B1B00A20E0D /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282351D542B1B00A20E0D /* RadarView.m */; };
 		107282391D54377800A20E0D /* NeighBourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282381D54377800A20E0D /* NeighBourViewController.m */; };
+		107501551D76DBE9009211B5 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 107501471D76D86C009211B5 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		107501561D76DD4F009211B5 /* PromiseKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 107501501D76DAAD009211B5 /* PromiseKit.framework */; };
 		107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 107AD8B81D48AC010028EDA6 /* CustomGrid.m */; };
 		107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F441D4F3AA7002987D9 /* AESCrypt.m */; };
 		107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F461D4F3AA7002987D9 /* NSData+Base64.m */; };
@@ -430,16 +422,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		106FB1641D76BC72009FED01 /* Embed Frameworks */ = {
+		107501531D76DBCE009211B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				106FB1631D76BC72009FED01 /* PromiseKit.framework in Embed Frameworks */,
-				106FB1661D76BC7E009FED01 /* OMGHTTPURLRQ.framework in Embed Frameworks */,
+				107501551D76DBE9009211B5 /* PromiseKit.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -499,31 +489,17 @@
 		106205B81D05477700E10485 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Library/Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		106205B91D05477700E10485 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Library/Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		106205BA1D05477700E10485 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Library/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		106FB1581D76B6FD009FED01 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
-		106FB15A1D76B817009FED01 /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OMGHTTPURLRQ.framework; path = Hello/Library/PromiseKit/OMGHTTPURLRQ.framework; sourceTree = "<group>"; };
 		106FB15C1D76B969009FED01 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		106FB15E1D76B9FC009FED01 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		106FB1601D76BA65009FED01 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		106FB1681D76C24B009FED01 /* UIActionSheet+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+AnyPromise.h"; path = "Library/PromiseKit/Categories/UIKit/UIActionSheet+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB1691D76C24B009FED01 /* UIActionSheet+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+AnyPromise.m"; path = "Library/PromiseKit/Categories/UIKit/UIActionSheet+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB16A1D76C24B009FED01 /* UIAlertView+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AnyPromise.h"; path = "Library/PromiseKit/Categories/UIKit/UIAlertView+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB16B1D76C24B009FED01 /* UIAlertView+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AnyPromise.m"; path = "Library/PromiseKit/Categories/UIKit/UIAlertView+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB16C1D76C24B009FED01 /* UIView+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AnyPromise.h"; path = "Library/PromiseKit/Categories/UIKit/UIView+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB16D1D76C24B009FED01 /* UIView+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AnyPromise.m"; path = "Library/PromiseKit/Categories/UIKit/UIView+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB16E1D76C24B009FED01 /* UIViewController+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AnyPromise.h"; path = "Library/PromiseKit/Categories/UIKit/UIViewController+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB16F1D76C24B009FED01 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Library/PromiseKit/Categories/UIKit/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB1751D76C2DA009FED01 /* CALayer+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+AnyPromise.h"; path = "Library/PromiseKit/Categories/QuartzCore/CALayer+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB1761D76C2DA009FED01 /* CALayer+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+AnyPromise.m"; path = "Library/PromiseKit/Categories/QuartzCore/CALayer+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB1791D76C313009FED01 /* NSNotificationCenter+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AnyPromise.h"; path = "Library/PromiseKit/Categories/Foundation/NSNotificationCenter+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB17A1D76C313009FED01 /* NSNotificationCenter+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AnyPromise.m"; path = "Library/PromiseKit/Categories/Foundation/NSNotificationCenter+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB17B1D76C313009FED01 /* NSURLConnection+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+AnyPromise.h"; path = "Library/PromiseKit/Categories/Foundation/NSURLConnection+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB17C1D76C313009FED01 /* NSURLConnection+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+AnyPromise.m"; path = "Library/PromiseKit/Categories/Foundation/NSURLConnection+AnyPromise.m"; sourceTree = "<group>"; };
-		106FB17D1D76C313009FED01 /* NSURLSession+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+AnyPromise.h"; path = "Library/PromiseKit/Categories/Foundation/NSURLSession+AnyPromise.h"; sourceTree = "<group>"; };
-		106FB17E1D76C313009FED01 /* NSURLSession+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+AnyPromise.m"; path = "Library/PromiseKit/Categories/Foundation/NSURLSession+AnyPromise.m"; sourceTree = "<group>"; };
 		107282341D542B1B00A20E0D /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadarView.h; path = "FindModel+View/附近的人/RadarView.h"; sourceTree = "<group>"; };
 		107282351D542B1B00A20E0D /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadarView.m; path = "FindModel+View/附近的人/RadarView.m"; sourceTree = "<group>"; };
 		107282371D54377800A20E0D /* NeighBourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NeighBourViewController.h; path = "FindModel+View/附近的人/NeighBourViewController.h"; sourceTree = "<group>"; };
 		107282381D54377800A20E0D /* NeighBourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeighBourViewController.m; path = "FindModel+View/附近的人/NeighBourViewController.m"; sourceTree = "<group>"; };
+		107501441D76D854009211B5 /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OMGHTTPURLRQ.framework; path = Hello/Library/PromiseKit/OMGHTTPURLRQ.framework; sourceTree = "<group>"; };
+		107501471D76D86C009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
+		1075014B1D76DA14009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
+		107501501D76DAAD009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
 		107AD8B71D48AC010028EDA6 /* CustomGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGrid.h; path = "MineModel+View/我的钱包/CustomGrid.h"; sourceTree = "<group>"; };
 		107AD8B81D48AC010028EDA6 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGrid.m; path = "MineModel+View/我的钱包/CustomGrid.m"; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -1222,14 +1198,6 @@
 		106FB1671D76C236009FED01 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				106FB1681D76C24B009FED01 /* UIActionSheet+AnyPromise.h */,
-				106FB1691D76C24B009FED01 /* UIActionSheet+AnyPromise.m */,
-				106FB16A1D76C24B009FED01 /* UIAlertView+AnyPromise.h */,
-				106FB16B1D76C24B009FED01 /* UIAlertView+AnyPromise.m */,
-				106FB16C1D76C24B009FED01 /* UIView+AnyPromise.h */,
-				106FB16D1D76C24B009FED01 /* UIView+AnyPromise.m */,
-				106FB16E1D76C24B009FED01 /* UIViewController+AnyPromise.h */,
-				106FB16F1D76C24B009FED01 /* UIViewController+AnyPromise.m */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -1237,8 +1205,6 @@
 		106FB1741D76C2BD009FED01 /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
-				106FB1751D76C2DA009FED01 /* CALayer+AnyPromise.h */,
-				106FB1761D76C2DA009FED01 /* CALayer+AnyPromise.m */,
 			);
 			name = QuartzCore;
 			sourceTree = "<group>";
@@ -1246,12 +1212,6 @@
 		106FB1781D76C2FC009FED01 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				106FB1791D76C313009FED01 /* NSNotificationCenter+AnyPromise.h */,
-				106FB17A1D76C313009FED01 /* NSNotificationCenter+AnyPromise.m */,
-				106FB17B1D76C313009FED01 /* NSURLConnection+AnyPromise.h */,
-				106FB17C1D76C313009FED01 /* NSURLConnection+AnyPromise.m */,
-				106FB17D1D76C313009FED01 /* NSURLSession+AnyPromise.h */,
-				106FB17E1D76C313009FED01 /* NSURLSession+AnyPromise.m */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -2011,6 +1971,10 @@
 		82B612BF1B2FBC60007E6D42 = {
 			isa = PBXGroup;
 			children = (
+				107501501D76DAAD009211B5 /* PromiseKit.framework */,
+				1075014B1D76DA14009211B5 /* PromiseKit.framework */,
+				107501471D76D86C009211B5 /* PromiseKit.framework */,
+				107501441D76D854009211B5 /* OMGHTTPURLRQ.framework */,
 				82B612D11B2FBC61007E6D42 /* Hello */,
 				82B612F01B2FBC61007E6D42 /* HelloTests */,
 				82B612CA1B2FBC61007E6D42 /* Frameworks */,
@@ -2033,8 +1997,6 @@
 				106FB1601D76BA65009FED01 /* libz.1.2.5.tbd */,
 				106FB15E1D76B9FC009FED01 /* libxml2.tbd */,
 				106FB15C1D76B969009FED01 /* libsqlite3.tbd */,
-				106FB15A1D76B817009FED01 /* OMGHTTPURLRQ.framework */,
-				106FB1581D76B6FD009FED01 /* PromiseKit.framework */,
 				108C99931D3E2269002BF0D5 /* libUMSocial_Sdk.a */,
 				107C21B41D35DF2000792E3E /* WebKit.framework */,
 				109B69C81CF7E5EB0077FAFA /* libidn.a */,
@@ -2462,7 +2424,7 @@
 				82B612C41B2FBC61007E6D42 /* Sources */,
 				82B612C51B2FBC61007E6D42 /* Frameworks */,
 				82B612C61B2FBC61007E6D42 /* Resources */,
-				106FB1641D76BC72009FED01 /* Embed Frameworks */,
+				107501531D76DBCE009211B5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -2543,6 +2505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107501561D76DD4F009211B5 /* PromiseKit.framework in Resources */,
 				105C496A1D4B563F00EE398B /* MyPackage.geojson in Resources */,
 				109B6B2B1CF7EE1F0077FAFA /* Default@2x.png in Resources */,
 				109B6B1F1CF7EE1F0077FAFA /* cute_boy_6.png in Resources */,
@@ -2782,7 +2745,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				107282391D54377800A20E0D /* NeighBourViewController.m in Sources */,
-				106FB1731D76C24B009FED01 /* UIViewController+AnyPromise.m in Sources */,
 				109B69CC1CF7E62F0077FAFA /* GuidInViewController.m in Sources */,
 				10EDC6DE1D75642D00C8A69E /* CLIColor.m in Sources */,
 				105C495F1D49FDFA00EE398B /* MinePackageViewController.m in Sources */,
@@ -2791,7 +2753,6 @@
 				106205C31D05477700E10485 /* View+MASAdditions.m in Sources */,
 				107D769F1D4074550065F2A5 /* MineDetailInfoVC.m in Sources */,
 				107282361D542B1B00A20E0D /* RadarView.m in Sources */,
-				106FB1811D76C313009FED01 /* NSURLSession+AnyPromise.m in Sources */,
 				109B6A001CF7E8760077FAFA /* QRResultViewController.m in Sources */,
 				109B69D11CF7E67A0077FAFA /* LineView.m in Sources */,
 				10C009D31D37661C003B6CF3 /* UIView+WebCacheOperation.m in Sources */,
@@ -2805,7 +2766,6 @@
 				109B69D81CF7E6D60077FAFA /* MineViewController.m in Sources */,
 				109995AF1D640E0D00C29A70 /* PersonViewModel.m in Sources */,
 				106205BC1D05477700E10485 /* MASConstraint.m in Sources */,
-				106FB1711D76C24B009FED01 /* UIAlertView+AnyPromise.m in Sources */,
 				106205BD1D05477700E10485 /* MASConstraintMaker.m in Sources */,
 				109B69C71CF7E5AB0077FAFA /* AFURLSessionManager.m in Sources */,
 				109B6A271CF7E9600077FAFA /* UserFans.m in Sources */,
@@ -2821,7 +2781,6 @@
 				109B69491CF7E2EC0077FAFA /* JSHpple.m in Sources */,
 				109B69EC1CF7E7910077FAFA /* ShakeViewController.m in Sources */,
 				10EDC6E21D75642D00C8A69E /* DDContextFilterLogFormatter.m in Sources */,
-				106FB1701D76C24B009FED01 /* UIActionSheet+AnyPromise.m in Sources */,
 				10C009CD1D37661C003B6CF3 /* UIButton+WebCache.m in Sources */,
 				104AB7531D07B84600B81408 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				109B696A1CF7E3A50077FAFA /* FCXRefreshFooterView.m in Sources */,
@@ -2879,10 +2838,8 @@
 				109B6A211CF7E8E30077FAFA /* FindViewController.m in Sources */,
 				10B957191D0FAEA90024D640 /* UIColor+FlatUI.m in Sources */,
 				10EDC6E01D75642D00C8A69E /* DDASLLogCapture.m in Sources */,
-				106FB17F1D76C313009FED01 /* NSNotificationCenter+AnyPromise.m in Sources */,
 				109B69C11CF7E5AB0077FAFA /* AFHTTPSessionManager.m in Sources */,
 				10B0C3D81D586D2D0030FA8A /* XHRadarIndicatorView.m in Sources */,
-				106FB1721D76C24B009FED01 /* UIView+AnyPromise.m in Sources */,
 				82B612DC1B2FBC61007E6D42 /* AppDelegate.m in Sources */,
 				109B693A1CF7E2840077FAFA /* NSAttributedString+MLLabel.m in Sources */,
 				10D862CB1D66E417004DD371 /* CoreDateManager.m in Sources */,
@@ -2903,13 +2860,11 @@
 				109B693C1CF7E2840077FAFA /* NSString+MLExpression.m in Sources */,
 				10C009A11D3765B8003B6CF3 /* SDWaitingView.m in Sources */,
 				10C009D21D37661C003B6CF3 /* UIImageView+WebCache.m in Sources */,
-				106FB1771D76C2DA009FED01 /* CALayer+AnyPromise.m in Sources */,
 				109B6A621CF7EB180077FAFA /* TableViewCell.m in Sources */,
 				10A9E78A1D7040B6002551BE /* LeftSlideViewController.m in Sources */,
 				109B696B1CF7E3A50077FAFA /* FCXRefreshHeaderView.m in Sources */,
 				107C2F4D1D4F3AA7002987D9 /* NSData+CommonCrypto.m in Sources */,
 				10C009CA1D37661C003B6CF3 /* SDWebImageDownloaderOperation.m in Sources */,
-				106FB1801D76C313009FED01 /* NSURLConnection+AnyPromise.m in Sources */,
 				100F132D1D1A3A4100BA1273 /* CellToolBarView.m in Sources */,
 				10C009CE1D37661C003B6CF3 /* UIImage+GIF.m in Sources */,
 				105C49561D49E27300EE398B /* UIBarButtonItem+Badge.m in Sources */,
@@ -3107,13 +3062,12 @@
 				GCC_PREFIX_HEADER = Hello/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SDKDIR)/usr/include/libxml2";
 				INFOPLIST_FILE = "Hello/Hello-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Hello/Vendor/libidn",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Hello/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Hello/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/Hello/libWeiboSDK",
@@ -3124,7 +3078,7 @@
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/WeChat",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/TencentOpenAPI",
 					"$(PROJECT_DIR)/Hello/Library/JPush",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit",
+					"$(PROJECT_DIR)/Hello/Library/PromiseKit/**",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
@@ -3167,13 +3121,12 @@
 				GCC_PREFIX_HEADER = Hello/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SDKDIR)/usr/include/libxml2";
 				INFOPLIST_FILE = "Hello/Hello-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Hello/Vendor/libidn",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Hello/ShareSDK/Extend/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Hello/ShareSDK/Extend/WeChatSDK",
 					"$(PROJECT_DIR)/Hello/libWeiboSDK",
@@ -3184,7 +3137,7 @@
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/WeChat",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/TencentOpenAPI",
 					"$(PROJECT_DIR)/Hello/Library/JPush",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit",
+					"$(PROJECT_DIR)/Hello/Library/PromiseKit/**",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;

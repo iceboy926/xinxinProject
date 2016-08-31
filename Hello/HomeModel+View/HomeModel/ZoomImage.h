@@ -15,9 +15,9 @@
 
 @property (nonatomic, strong) UIImageView *imageView;
 
-+(void)ShowImage:(UIImageView *)avatarImage;
++(void)ShowZoomWithImageView:(UIImageView *)avatarImage;
 
-+(void)ShowImageWithUrl:(NSString *)avatarImageUrl;
++(void)ShowZoomWithImageURL:(NSString *)avatarImageUrl;
 
 
 +(void)HideImage:(UITapGestureRecognizer *)tap;
