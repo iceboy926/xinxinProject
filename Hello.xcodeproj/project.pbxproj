@@ -38,8 +38,6 @@
 		106FB1611D76BA65009FED01 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 106FB1601D76BA65009FED01 /* libz.1.2.5.tbd */; };
 		107282361D542B1B00A20E0D /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282351D542B1B00A20E0D /* RadarView.m */; };
 		107282391D54377800A20E0D /* NeighBourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107282381D54377800A20E0D /* NeighBourViewController.m */; };
-		107501551D76DBE9009211B5 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 107501471D76D86C009211B5 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		107501561D76DD4F009211B5 /* PromiseKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 107501501D76DAAD009211B5 /* PromiseKit.framework */; };
 		107AD8B91D48AC010028EDA6 /* CustomGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 107AD8B81D48AC010028EDA6 /* CustomGrid.m */; };
 		107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F441D4F3AA7002987D9 /* AESCrypt.m */; };
 		107C2F4C1D4F3AA7002987D9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 107C2F461D4F3AA7002987D9 /* NSData+Base64.m */; };
@@ -428,7 +426,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				107501551D76DBE9009211B5 /* PromiseKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,10 +493,6 @@
 		107282351D542B1B00A20E0D /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadarView.m; path = "FindModel+View/附近的人/RadarView.m"; sourceTree = "<group>"; };
 		107282371D54377800A20E0D /* NeighBourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NeighBourViewController.h; path = "FindModel+View/附近的人/NeighBourViewController.h"; sourceTree = "<group>"; };
 		107282381D54377800A20E0D /* NeighBourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NeighBourViewController.m; path = "FindModel+View/附近的人/NeighBourViewController.m"; sourceTree = "<group>"; };
-		107501441D76D854009211B5 /* OMGHTTPURLRQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OMGHTTPURLRQ.framework; path = Hello/Library/PromiseKit/OMGHTTPURLRQ.framework; sourceTree = "<group>"; };
-		107501471D76D86C009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
-		1075014B1D76DA14009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
-		107501501D76DAAD009211B5 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Hello/Library/PromiseKit/PromiseKit.framework; sourceTree = "<group>"; };
 		107AD8B71D48AC010028EDA6 /* CustomGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGrid.h; path = "MineModel+View/我的钱包/CustomGrid.h"; sourceTree = "<group>"; };
 		107AD8B81D48AC010028EDA6 /* CustomGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomGrid.m; path = "MineModel+View/我的钱包/CustomGrid.m"; sourceTree = "<group>"; };
 		107C21B41D35DF2000792E3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -1971,10 +1964,6 @@
 		82B612BF1B2FBC60007E6D42 = {
 			isa = PBXGroup;
 			children = (
-				107501501D76DAAD009211B5 /* PromiseKit.framework */,
-				1075014B1D76DA14009211B5 /* PromiseKit.framework */,
-				107501471D76D86C009211B5 /* PromiseKit.framework */,
-				107501441D76D854009211B5 /* OMGHTTPURLRQ.framework */,
 				82B612D11B2FBC61007E6D42 /* Hello */,
 				82B612F01B2FBC61007E6D42 /* HelloTests */,
 				82B612CA1B2FBC61007E6D42 /* Frameworks */,
@@ -2505,7 +2494,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				107501561D76DD4F009211B5 /* PromiseKit.framework in Resources */,
 				105C496A1D4B563F00EE398B /* MyPackage.geojson in Resources */,
 				109B6B2B1CF7EE1F0077FAFA /* Default@2x.png in Resources */,
 				109B6B1F1CF7EE1F0077FAFA /* cute_boy_6.png in Resources */,
