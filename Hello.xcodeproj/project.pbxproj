@@ -282,6 +282,9 @@
 		10B9573B1D138DBA0024D640 /* PPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573A1D138DBA0024D640 /* PPLabel.m */; };
 		10B957431D138EEC0024D640 /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9573F1D138EEC0024D640 /* KCAnnotation.m */; };
 		10B957441D138EEC0024D640 /* MineLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B957411D138EEC0024D640 /* MineLocationView.m */; };
+		10BCEFEA1D91179C00F8A1B1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BCEFE81D9116AB00F8A1B1 /* Realm.framework */; };
+		10BCEFEC1D9117AC00F8A1B1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BCEFEB1D9117AC00F8A1B1 /* libc++.tbd */; };
+		10BCEFEF1D911E5200F8A1B1 /* persons.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BCEFEE1D911E5200F8A1B1 /* persons.m */; };
 		10C009911D363686003B6CF3 /* FriendsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009901D363686003B6CF3 /* FriendsInfoViewController.m */; };
 		10C009941D363692003B6CF3 /* FriendCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009931D363692003B6CF3 /* FriendCommentView.m */; };
 		10C0099F1D3765B8003B6CF3 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C009991D3765B8003B6CF3 /* SDBrowserImageView.m */; };
@@ -838,6 +841,10 @@
 		10B9573F1D138EEC0024D640 /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KCAnnotation.m; path = "FindModel+View/我的位置/KCAnnotation.m"; sourceTree = "<group>"; };
 		10B957401D138EEC0024D640 /* MineLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineLocationView.h; path = "FindModel+View/我的位置/MineLocationView.h"; sourceTree = "<group>"; };
 		10B957411D138EEC0024D640 /* MineLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineLocationView.m; path = "FindModel+View/我的位置/MineLocationView.m"; sourceTree = "<group>"; };
+		10BCEFE81D9116AB00F8A1B1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Hello/Library/Realm/Realm.framework; sourceTree = "<group>"; };
+		10BCEFEB1D9117AC00F8A1B1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		10BCEFED1D911E5200F8A1B1 /* persons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persons.h; sourceTree = "<group>"; };
+		10BCEFEE1D911E5200F8A1B1 /* persons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = persons.m; sourceTree = "<group>"; };
 		10C0098F1D363686003B6CF3 /* FriendsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsInfoViewController.h; path = "FindModel+View/朋友圈/FriendsInfoViewController.h"; sourceTree = "<group>"; };
 		10C009901D363686003B6CF3 /* FriendsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsInfoViewController.m; path = "FindModel+View/朋友圈/FriendsInfoViewController.m"; sourceTree = "<group>"; };
 		10C009921D363692003B6CF3 /* FriendCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCommentView.h; path = "FindModel+View/朋友圈/View/FriendCommentView.h"; sourceTree = "<group>"; };
@@ -1021,6 +1028,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BCEFEC1D9117AC00F8A1B1 /* libc++.tbd in Frameworks */,
+				10BCEFEA1D91179C00F8A1B1 /* Realm.framework in Frameworks */,
 				106FB1611D76BA65009FED01 /* libz.1.2.5.tbd in Frameworks */,
 				106FB15F1D76B9FC009FED01 /* libxml2.tbd in Frameworks */,
 				106FB15D1D76B969009FED01 /* libsqlite3.tbd in Frameworks */,
@@ -1483,6 +1492,13 @@
 				10B957411D138EEC0024D640 /* MineLocationView.m */,
 			);
 			name = "我的位置";
+			sourceTree = "<group>";
+		};
+		10BCEFE71D9115E100F8A1B1 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		10C009971D376595003B6CF3 /* SDPhotoBrowser */ = {
@@ -1955,6 +1971,8 @@
 			children = (
 				10D862C91D66E417004DD371 /* CoreDateManager.h */,
 				10D862CA1D66E417004DD371 /* CoreDateManager.m */,
+				10BCEFED1D911E5200F8A1B1 /* persons.h */,
+				10BCEFEE1D911E5200F8A1B1 /* persons.m */,
 				109B6A231CF7E9600077FAFA /* UserFans.h */,
 				109B6A241CF7E9600077FAFA /* UserFans.m */,
 			);
@@ -1983,6 +2001,8 @@
 		82B612CA1B2FBC61007E6D42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10BCEFEB1D9117AC00F8A1B1 /* libc++.tbd */,
+				10BCEFE81D9116AB00F8A1B1 /* Realm.framework */,
 				106FB1601D76BA65009FED01 /* libz.1.2.5.tbd */,
 				106FB15E1D76B9FC009FED01 /* libxml2.tbd */,
 				106FB15C1D76B969009FED01 /* libsqlite3.tbd */,
@@ -2309,6 +2329,7 @@
 		82FB5CFE1B86F8FF00C7CB07 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				10BCEFE71D9115E100F8A1B1 /* Realm */,
 				106FB0ED1D76AA7C009FED01 /* PromiseKit */,
 				108B59F01D75846300E138CF /* FileLog */,
 				10EDC6C41D7563ED00C8A69E /* LumberJackLogo */,
@@ -2881,6 +2902,7 @@
 				109B69F51CF7E8260077FAFA /* FriendBaseCell.m in Sources */,
 				102D90AF1D1CC989005F0DEB /* FriendBaseFrame.m in Sources */,
 				107C2F4B1D4F3AA7002987D9 /* AESCrypt.m in Sources */,
+				10BCEFEF1D911E5200F8A1B1 /* persons.m in Sources */,
 				109B696C1CF7E3A50077FAFA /* UIScrollView+FCXRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3043,8 +3065,7 @@
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/TencentOpenAPI",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit/**",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit",
+					"$(PROJECT_DIR)/Hello/Library/Realm",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Hello/PrefixHeader.pch;
@@ -3071,7 +3092,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "8e04a3f9-d468-4fc6-9fb5-934e5c1b86ec";
+				PROVISIONING_PROFILE = "1e072157-c5c2-408b-8147-7c04a4330019";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";
@@ -3102,8 +3123,7 @@
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK",
 					"$(PROJECT_DIR)/Hello/Library/ALBBaiChuanSDK/TencentOpenAPI",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit/**",
-					"$(PROJECT_DIR)/Hello/Library/PromiseKit",
+					"$(PROJECT_DIR)/Hello/Library/Realm",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Hello/PrefixHeader.pch;
@@ -3130,7 +3150,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kingyh.KYHAPDUTool;
 				PRODUCT_NAME = chaoxin;
-				PROVISIONING_PROFILE = "8e04a3f9-d468-4fc6-9fb5-934e5c1b86ec";
+				PROVISIONING_PROFILE = "1e072157-c5c2-408b-8147-7c04a4330019";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7";

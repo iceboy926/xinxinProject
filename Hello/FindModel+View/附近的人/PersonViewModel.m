@@ -50,8 +50,6 @@
 {
     __weak typeof(self) weakself = self;
     
-    
-    
     AppDelegate *appDelegate = [AppDelegate globalDelegate];
     NSMutableDictionary *dicRequest = [NSMutableDictionary dictionary];
     

@@ -278,7 +278,7 @@
 -(void)InitAllPlatform
 {
     
-    dispatch_promise(^{}).then(^{});
+    //dispatch_promise(^{}).then(^{});
     //
     
     [WeiboSDK enableDebugMode:YES];
