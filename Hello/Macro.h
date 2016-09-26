@@ -90,9 +90,12 @@
 #define ALBBaiChuan_AppKey      @"23412306"
 #define ALBBaiChuan_AppSecret   @"60d094448b7362b7f714a916a4f85e4d"
 
-#define ISIOS8 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=8)
-#define ISIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
-#define ISIOS6 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=6)
+#define ISIOS10 ([[[UIDevice currentDevice] sysytemVersion] doubleValue]>=10.0)
+#define ISIOS9 ([[[UIDevice currentDevice] systemVersion] doubleValue]>=9.0)
+#define ISIOS8 ([[[UIDevice currentDevice] systemVersion] doubleValue]>=8.0)
+#define ISIOS7 ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)
+#define ISIOS6 ([[[UIDevice currentDevice] systemVersion] doubleValue]>=6.0)
+
 
 #define XMPP_USER_ID        @"XMPP_USER_ID"
 

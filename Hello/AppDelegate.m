@@ -14,7 +14,7 @@
 #import <AVFoundation/AVAudioSession.h>
 #import "leftSettingVC.h"
 
-@interface AppDelegate() <WeiboSDKDelegate>
+@interface AppDelegate() <WeiboSDKDelegate, CLLocationManagerDelegate>
 
 @end
 
@@ -26,8 +26,6 @@
 //告诉代理进程启动但还没进入状态保存
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //DEBUG_LOG(@"willFinishLaunchingWithOptions");
-    
     return YES;
 }
 
@@ -38,20 +36,49 @@
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    
-    //if (![[ALBBSDK sharedInstance] handleOpenURL:url]) {
-        // 处理其他app跳转到自己的app
-        return [WeiboSDK handleOpenURL:url delegate:self];
-    //}
-
-    //return YES;
+    return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
 
 #pragma mark 应用程序加载完毕
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+//    _blJobExpired = NO;
+//    _blBackground = YES;
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    __weak AppDelegate *weakself = self;
+    
+    self._expiredHandler = ^{
+    
+        [app endBackgroundTask:weakself.backgroundID];
+        
+        weakself.backgroundID = [app beginBackgroundTaskWithExpirationHandler:weakself._expiredHandler];
+//        
+        NSLog(@"expired job");
+//        
+//        weakself.blJobExpired = YES;
+//        
+//        while (weakself.blJobExpired) {
+//            NSLog(@"等待180s循环进程的结束");
+//            [NSThread sleepForTimeInterval:1];
+//        }
+//    
+        [weakself startBackGroundTask];
+    };
+    
+    if(ISIOS9)
+    {
+        [self shareLocationManager];
+    }
+    else
+    {
+        _locationManager = [[CLLocationManager alloc] init];
+    }
+    
+    _locationManager.delegate = self;
+    
     
     //LaunchOptions 为app的启动方式
     //如果为用户直接启动：launchOptions 为nil 或者无数据
@@ -114,7 +141,6 @@
     
     if(![user boolForKey:@"FirstLaunch"])
     {
-        
         [user setBool:YES forKey: @"FirstLaunch"];
         [user synchronize];
         
@@ -136,16 +162,44 @@
             }];
         };
         
-        //[self.window makeKeyAndVisible];
     }
     else
     {
-        //NSLog(@"不是第一次加载");
         [user setBool:NO forKey:@"FirstLaunch"];
         [user synchronize];
         [self UIMainPageShow];
     }
+    
     return YES;
+}
+
+- (void)monitorBatteryStateInBackground
+{
+    self.blBackground = YES;
+    [self startBackGroundTask];
+}
+
+- (CLLocationManager *)shareLocationManager
+{
+    @synchronized(self) {
+        if(_locationManager == nil)
+        {
+            _locationManager = [[CLLocationManager alloc] init];
+            if([_locationManager respondsToSelector:@selector(allowsBackgroundLocationUpdates)])
+            {
+                [_locationManager setAllowsBackgroundLocationUpdates:YES];
+            }
+            
+            if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+            {
+                [_locationManager requestWhenInUseAuthorization];
+            }
+            
+            _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        }
+    }
+    
+    return _locationManager;
 }
 
 #pragma mark    失去焦点
@@ -158,9 +212,11 @@
 #pragma mark    进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    
-    
-    
+
+    self.backgroundID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:self._expiredHandler];
+    NSLog(@"程序进入后台");
+    [self monitorBatteryStateInBackground];
+        
     //NSLog(@"applicationDidEnterBackground");
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -169,14 +225,20 @@
 #pragma mark    进入前台
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    //NSLog(@"applicationWillEnterForeground");
+    NSLog(@"applicationWillEnterForeground");
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 #pragma mark    获得焦点
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    //NSLog(@"applicationDidBecomeActive");
+    [_locationManager stopUpdatingLocation];
+    self.blBackground = NO;
+    
+    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundID];
+
+    
+    NSLog(@"applicationDidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
@@ -193,11 +255,8 @@
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
-    
     [JPushHelper registerDeviceToken:deviceToken];
-    
-    NSLog(@"registrationID is %@", [JPushHelper getRegisterID]);
+
 }
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
@@ -219,14 +278,6 @@
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
     [JPushHelper handleRemoteNotification:userInfo completion:completionHandler];
-    //    if (application.applicationState == UIApplicationStateActive) {
-    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"收到推送消息"
-    //                                                        message:userInfo[@"aps"][@"alert"]
-    //                                                       delegate:nil
-    //                                              cancelButtonTitle:@"取消"
-    //                                              otherButtonTitles:@"确定", nil];
-    //        [alert show];
-    //    }
 }
 
 
@@ -278,25 +329,9 @@
 -(void)InitAllPlatform
 {
     
-    //dispatch_promise(^{}).then(^{});
-    //
-    
     [WeiboSDK enableDebugMode:YES];
     //1、注册AppKey
     [WeiboSDK registerApp:SinaWeiBo_AppKey];
-
-    
-    
-    //
-//    [[ALBBSDK sharedInstance] setDebugLogOpen:NO];
-//    [[ALBBSDK sharedInstance] setUseTaobaoNativeDetail:NO];
-//    [[ALBBSDK sharedInstance] setViewType:ALBB_ITEM_VIEWTYPE_TAOBAO];
-//    [[ALBBSDK sharedInstance] asyncInit:^{
-//        NSLog(@"ALBBSDK success");
-//    } failure:^(NSError *error) {
-//        NSLog(@"ALBBSDK failure, %@", error);
-//    }];
-
 }
 
 /**
@@ -354,6 +389,79 @@
 + (AppDelegate *)globalDelegate
 {
     return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+    NSLog(@"need do something to change location");
+    
+    CLLocation *location = [locations lastObject];
+    
+    //float la = location.coordinate.latitude; //N
+    //float lo = location.coordinate.longitude; //W
+    
+}
+
+- (void)startBackGroundTask
+{
+    NSLog(@"开启后台任务...");
+    NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
+    
+    NSLog(@"background remaining time is %f", backgroundTimeRemaining);
+//    if(YES)
+//    {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            NSInteger count = 0;
+//            BOOL noticeBackground = NO;
+//            BOOL flushBackgroundTime = NO;
+//            
+//            _locationManager.distanceFilter = kCLDistanceFilterNone;
+//            _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+//            while (self.blBackground && !self.blJobExpired)
+//            {
+//                
+//                [NSThread sleepForTimeInterval:1];
+//                count++;
+//                if(count > 60)
+//                {
+//                    count = 0;
+//                    [_locationManager startUpdatingLocation];
+//                    
+//                    [NSThread sleepForTimeInterval:1.0];
+//                    
+//                    [_locationManager stopUpdatingLocation];
+//                    
+//                    flushBackgroundTime = YES;
+//                }
+//                
+//                if(NO)
+//                {
+//                    NSLog(@"后台进程退出");
+//                    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundID];
+//                }
+//                
+//                NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
+//                
+//                NSLog(@"background remaining time is %f", backgroundTimeRemaining);
+//                
+//                if((backgroundTimeRemaining < 30) && (noticeBackground== NO))
+//                {
+//                    noticeBackground = YES;
+//                }
+//                
+//                if((backgroundTimeRemaining > 180) && (flushBackgroundTime == NO))
+//                {
+//                    [[NSNotificationCenter defaultCenter] postNotificationName:@"MessageUpdate" object:@"刷新后台时间成功\n"];
+//                    flushBackgroundTime = YES;
+//                }
+//                
+//                
+//            }
+//            
+//            self.blJobExpired = NO;
+//        
+//        });
+//    }
 }
 
 @end

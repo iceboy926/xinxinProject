@@ -42,6 +42,8 @@
 #import "MLLinkLabel.h"
 #import "MLLabel+Size.h"
 
+#import "MJExtension.h"
+
 //#import <PromiseKit/PromiseKit.h>
 
 #endif /* PrefixHeader_pch */

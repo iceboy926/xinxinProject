@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GuidInViewController.h"
-
+#import <CoreLocation/CoreLocation.h>
 
 CFAbsoluteTime startTime;
 
@@ -24,6 +24,12 @@ CFAbsoluteTime startTime;
 @property (retain, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) NSString *wbtoken;
 @property (strong, nonatomic) NSString *wbCurrentUserID;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgroundID;
+@property (nonatomic, strong) dispatch_block_t _expiredHandler;
+@property (nonatomic, assign) BOOL blJobExpired;
+@property (nonatomic, assign) BOOL blBackground;
 
 + (AppDelegate *)globalDelegate;
 
