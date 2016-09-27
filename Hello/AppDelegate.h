@@ -33,4 +33,6 @@ CFAbsoluteTime startTime;
 
 + (AppDelegate *)globalDelegate;
 
+-(void)UIMainPageShow;
+
 @end

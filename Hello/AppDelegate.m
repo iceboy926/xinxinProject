@@ -13,6 +13,7 @@
 #import <AudioToolbox/AudioSession.h>
 #import <AVFoundation/AVAudioSession.h>
 #import "leftSettingVC.h"
+#import "LaunchingViewController.h"
 
 @interface AppDelegate() <WeiboSDKDelegate, CLLocationManagerDelegate>
 
@@ -43,9 +44,6 @@
 #pragma mark 应用程序加载完毕
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    _blJobExpired = NO;
-//    _blBackground = YES;
-    
     UIApplication *app = [UIApplication sharedApplication];
     
     __weak AppDelegate *weakself = self;
@@ -55,72 +53,21 @@
         [app endBackgroundTask:weakself.backgroundID];
         
         weakself.backgroundID = [app beginBackgroundTaskWithExpirationHandler:weakself._expiredHandler];
-//        
         NSLog(@"expired job");
-//        
-//        weakself.blJobExpired = YES;
-//        
-//        while (weakself.blJobExpired) {
-//            NSLog(@"等待180s循环进程的结束");
-//            [NSThread sleepForTimeInterval:1];
-//        }
-//    
         [weakself startBackGroundTask];
     };
-    
-    if(ISIOS9)
-    {
-        [self shareLocationManager];
-    }
-    else
-    {
-        _locationManager = [[CLLocationManager alloc] init];
-    }
-    
-    _locationManager.delegate = self;
-    
-    
-    //LaunchOptions 为app的启动方式
-    //如果为用户直接启动：launchOptions 为nil 或者无数据
-    if(launchOptions == nil || launchOptions.count == 0)
-    {
-        
-    }
-    else
-    {
-        //如果由其他应用程序通过openurl 启动则url为对应的对象URL
-        NSURL *url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
-        if(url)
-        {
-            
-        }
-        
-        //对应源程序的bundleid
-        NSString *bundleId = [launchOptions objectForKey:UIApplicationLaunchOptionsSourceApplicationKey];
-        if(bundleId)
-        {
-            
-        }
-        
-        //如果为本地通知启动，为本地启动应用程序的的本地通知对象
-        UILocalNotification * localNotify = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-        if(localNotify)
-        {
-            
-        }
-        
-        
-        //若由远程通知启动,为启动应用程序的的远程通知信息
-        NSDictionary * userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        if(userInfo)
-        {
-            NSDictionary *dict = [userInfo valueForKey:@"aps"];
-            
-            //do something you want
-            
-        }
-    }
-    
+//
+//    if(ISIOS9)
+//    {
+//        [self shareLocationManager];
+//    }
+//    else
+//    {
+//        _locationManager = [[CLLocationManager alloc] init];
+//    }
+//    
+//    _locationManager.delegate = self;
+//    
     
     //极光远程推送
     [JPushHelper setupWithOptions:launchOptions];
@@ -134,41 +81,46 @@
     [self InitAllPlatform];
     
     
-  
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    
+    LaunchingViewController *launchVC = [[LaunchingViewController alloc] init];
+    
+    self.window.rootViewController = launchVC;
+    
+    [self.window makeKeyAndVisible];
     
     
-    if(![user boolForKey:@"FirstLaunch"])
-    {
-        [user setBool:YES forKey: @"FirstLaunch"];
-        [user synchronize];
-        
-        //开始引导页
-        [self UIGuidPageMakeInLive];
-        
-        __weak AppDelegate *weakself = self;
-        
-        self.GuidView.gotoMainPage = ^(){
-        
-            //添加动画
-            [UIView animateWithDuration:0.5 animations:^(){
-                
-                [weakself.GuidView DisappearScroll];
-            }
-            completion:^(BOOL blfinished)
-            {
-                [weakself UIMainPageShow];
-            }];
-        };
-        
-    }
-    else
-    {
-        [user setBool:NO forKey:@"FirstLaunch"];
-        [user synchronize];
-        [self UIMainPageShow];
-    }
+//    if(![user boolForKey:@"FirstLaunch"])
+//    {
+//        [user setBool:YES forKey: @"FirstLaunch"];
+//        [user synchronize];
+//        
+//        //开始引导页
+//        [self UIGuidPageMakeInLive];
+//        
+//        __weak AppDelegate *weakself = self;
+//        
+//        self.GuidView.gotoMainPage = ^(){
+//        
+//            //添加动画
+//            [UIView animateWithDuration:0.5 animations:^(){
+//                
+//                [weakself.GuidView DisappearScroll];
+//            }
+//            completion:^(BOOL blfinished)
+//            {
+//                [weakself UIMainPageShow];
+//            }];
+//        };
+//        
+//    }
+//    else
+//    {
+//        [user setBool:NO forKey:@"FirstLaunch"];
+//        [user synchronize];
+//        [self UIMainPageShow];
+//    }
     
     return YES;
 }
@@ -295,7 +247,6 @@
     
     self.GuidView = [[GuidInViewController alloc] initWithBackGroundImage:arrayImage];
     
-    //[self.window addSubview:self.GuidView.view];
     self.window.rootViewController = self.GuidView;
     [self.window addSubview:self.GuidView.view];
     [self.window makeKeyAndVisible];
@@ -306,13 +257,13 @@
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *username = [user objectForKey:XMPP_USER_ID];
     
-    if(username != nil)
-    {
-        LoginViewController *loginView = [[LoginViewController alloc] init];
-        self.window.rootViewController = loginView;
-        [loginView LoginWithSinabo];
-    }
-    else
+//    if(username != nil)
+//    {
+//        LoginViewController *loginView = [[LoginViewController alloc] init];
+//        self.window.rootViewController = loginView;
+//        [loginView LoginWithSinabo];
+//    }
+//    else
     {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         
@@ -408,60 +359,6 @@
     NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
     
     NSLog(@"background remaining time is %f", backgroundTimeRemaining);
-//    if(YES)
-//    {
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            NSInteger count = 0;
-//            BOOL noticeBackground = NO;
-//            BOOL flushBackgroundTime = NO;
-//            
-//            _locationManager.distanceFilter = kCLDistanceFilterNone;
-//            _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-//            while (self.blBackground && !self.blJobExpired)
-//            {
-//                
-//                [NSThread sleepForTimeInterval:1];
-//                count++;
-//                if(count > 60)
-//                {
-//                    count = 0;
-//                    [_locationManager startUpdatingLocation];
-//                    
-//                    [NSThread sleepForTimeInterval:1.0];
-//                    
-//                    [_locationManager stopUpdatingLocation];
-//                    
-//                    flushBackgroundTime = YES;
-//                }
-//                
-//                if(NO)
-//                {
-//                    NSLog(@"后台进程退出");
-//                    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundID];
-//                }
-//                
-//                NSTimeInterval backgroundTimeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
-//                
-//                NSLog(@"background remaining time is %f", backgroundTimeRemaining);
-//                
-//                if((backgroundTimeRemaining < 30) && (noticeBackground== NO))
-//                {
-//                    noticeBackground = YES;
-//                }
-//                
-//                if((backgroundTimeRemaining > 180) && (flushBackgroundTime == NO))
-//                {
-//                    [[NSNotificationCenter defaultCenter] postNotificationName:@"MessageUpdate" object:@"刷新后台时间成功\n"];
-//                    flushBackgroundTime = YES;
-//                }
-//                
-//                
-//            }
-//            
-//            self.blJobExpired = NO;
-//        
-//        });
-//    }
 }
 
 @end
