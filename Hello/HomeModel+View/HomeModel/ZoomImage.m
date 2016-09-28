@@ -17,7 +17,7 @@
 static CGRect oldRect;
 
 //显示大图
-+(void)ShowImage:(UIImageView *)avatarImage
++(void)ShowZoomWithImageView:(UIImageView *)avatarImage
 {
     UIImage *image = avatarImage.image;
     UIWindow *windows = [UIApplication sharedApplication].keyWindow;
@@ -84,7 +84,7 @@ static CGRect oldRect;
     }];
 }
 
-+(void)ShowImageWithUrl:(NSString *)avatarImageUrl
++(void)ShowZoomWithImageURL:(NSString *)avatarImageUrl
 {
 
     UIWindow *windows = [UIApplication sharedApplication].keyWindow;
