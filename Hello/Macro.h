@@ -29,6 +29,8 @@
 #define HomePage_AvatarImage_URL        @"http://tva3.sinaimg.cn/crop.0.0.180.180.50/66375ce9jw1e8qgp5bmzyj2050050aa8.jpg"
 #define HomePage_BackgroundImage_URL    @"http://ww1.sinaimg.cn/crop.0.0.640.640.750/549d0121tw1egm1kjly3jj20hs0hsq4f.jpg"
 
+#define Git_URL                         @"https://github.com/iceboy926"
+
 
 #pragma mark Font
 #define kWBCellNameFont         [UIFont systemFontOfSize:16]    // 名字字体大小

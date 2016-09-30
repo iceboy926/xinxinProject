@@ -29,7 +29,7 @@
     
     myQRView.userInteractionEnabled = YES;
     
-    UIImage *qrimage = [HGDQQRCodeView creatQRCodeWithURLString:SinaWeiBo_HomePage_URL ViewSize:myQRView.frame.size logoImage:image logoImageSize:CGSizeMake(40, 40) logoImageWithCornerRadius:10.0];
+    UIImage *qrimage = [HGDQQRCodeView creatQRCodeWithURLString:Git_URL ViewSize:myQRView.frame.size logoImage:image logoImageSize:CGSizeMake(40, 40) logoImageWithCornerRadius:10.0];
 
     [myQRView setImage:qrimage];
     

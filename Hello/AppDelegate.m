@@ -254,9 +254,8 @@
 
 -(void)UIMainPageShow
 {
-    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-    NSString *username = [user objectForKey:XMPP_USER_ID];
-    
+//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+//    NSString *username = [user objectForKey:XMPP_USER_ID];
 //    if(username != nil)
 //    {
 //        LoginViewController *loginView = [[LoginViewController alloc] init];
