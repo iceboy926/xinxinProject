@@ -42,6 +42,13 @@
 #import "MLLinkLabel.h"
 #import "MLLabel+Size.h"
 #import "MJExtension.h"
+#import "FileLogC.h"
+
+#ifdef DEBUG
+# define DebugLog(fmt, ...) NSLog((@"\n[文件名:%s]\n""[函数名:%s]\n""[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DebugLog(...);
+#endif
 
 
 #endif /* PrefixHeader_pch */

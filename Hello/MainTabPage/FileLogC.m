@@ -60,10 +60,17 @@ void writeFileLog(char* szSubject ,char * szFormat , ...)
         }
         s_end =mach_absolute_time();
         
+        NSDate *currentDate = [NSDate date];//获取当前时间，日期
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"YYYY/MM/dd hh:mm:ss SS"];
+        NSString *dateString = [dateFormatter stringFromDate:currentDate];
+        
+        char *szdate = [dateString UTF8String];
+        
        // double spendtime = MachTimeToSecs(s_end - s_begin);
         if(NULL != szSubject)
         {
-            sprintf(szMsg,"%s ",szSubject);
+            sprintf(szMsg,"%s %s ",szdate, szSubject);
         }
         
     

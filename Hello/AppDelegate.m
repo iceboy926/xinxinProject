@@ -56,6 +56,8 @@
         NSLog(@"expired job");
         [weakself startBackGroundTask];
     };
+    
+    writeFileLog(__FUNCTION__, " 应用程序加载完成");
 //
 //    if(ISIOS9)
 //    {
@@ -158,6 +160,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     //NSLog(@"applicationWillResignActive");
+    writeFileLog(__FUNCTION__, "即将结束后台运行，程序即将被挂起");
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
@@ -167,6 +170,7 @@
 
     self.backgroundID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:self._expiredHandler];
     NSLog(@"程序进入后台");
+    writeFileLog(__FUNCTION__, "程序进入后台,开始后台任务>.....");
     [self monitorBatteryStateInBackground];
         
     //NSLog(@"applicationDidEnterBackground");
@@ -189,6 +193,7 @@
     
     [[UIApplication sharedApplication] endBackgroundTask:self.backgroundID];
 
+    writeFileLog(__FUNCTION__, "应用程序进入前台，获得焦点");
     
     NSLog(@"applicationDidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -200,6 +205,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     //NSLog(@"applicationWillTerminate");
+    
+    writeFileLog(__FUNCTION__, "程序进入后台,结束后台任务，程序挂起");
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

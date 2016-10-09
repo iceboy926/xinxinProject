@@ -237,5 +237,29 @@
     });
 }
 
+- (NSArray *)sortFileArray
+{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *diskImageCacheStr = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"imageCache"];//获取ImageCache目录
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray *imageFilesArray = [fileManager subpathsAtPath:diskImageCacheStr];//取得文件列表
+    NSArray *sortedFilesArray = [imageFilesArray sortedArrayUsingComparator:^(NSString * firstPath, NSString* secondPath) {//
+        NSString *firstUrl = [diskImageCacheStr stringByAppendingPathComponent:firstPath];//获取前一个文件完整路径
+        NSString *secondUrl = [diskImageCacheStr stringByAppendingPathComponent:secondPath];//获取后一个文件完整路径
+        NSDictionary *firstFileInfo = [[NSFileManager defaultManager] attributesOfItemAtPath:firstUrl error:nil];//获取前一个文件信息
+        NSDictionary *secondFileInfo = [[NSFileManager defaultManager] attributesOfItemAtPath:secondUrl error:nil];//获取后一个文件信息
+        id firstData = [firstFileInfo objectForKey:NSFileModificationDate];//获取前一个文件修改时间
+        id secondData = [secondFileInfo objectForKey:NSFileModificationDate];//获取后一个文件修改时间
+        return [firstData compare:secondData];//升序
+        // return [secondData compare:firstData];//降序
+    }];
+    
+    
+    return sortedFilesArray;
+}
+
 
 @end
