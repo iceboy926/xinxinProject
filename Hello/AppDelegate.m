@@ -343,6 +343,12 @@
     
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window
+{
+    return self.mask;
+}
+
+
 + (AppDelegate *)globalDelegate
 {
     return (AppDelegate *)[UIApplication sharedApplication].delegate;

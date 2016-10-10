@@ -88,16 +88,28 @@
                 case 0:
                 {
                     cell.textLabel.text = @"清空缓存";
+                    //cell.imageView.image = [UIImage imageNamed:@"trash"];
                     UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
                     activityView.center = [cell.contentView center];
                     [cell.contentView addSubview:activityView];
                     
                     activityIndicator_ = activityView;
                     
-                    [activityView startAnimating];
                     
-                    cell.detailTextLabel.text = [NSString stringWithFormat:@"缓存大小(%.2fM)", [self GetCacheSize]];
-                    cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
+                    __block NSString *stringDetail = nil;
+                    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    
+                        [activityIndicator_ startAnimating];
+                        
+                        stringDetail = [NSString stringWithFormat:@"缓存大小(%.2fM)", [self GetCacheSize]];
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                            cell.detailTextLabel.text = stringDetail;
+                            cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
+                        });
+                    
+                    });
                 }
                     break;
                 case 1:
@@ -207,6 +219,8 @@
 
 -(void)clearCache
 {
+    [activityIndicator_ startAnimating];
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
         NSString *strCachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];

@@ -13,6 +13,7 @@
 #import "FriendsViewController.h"
 #import "MineLocationView.h"
 #import "NeighBourViewController.h"
+#import "LivePushViewController.h"
 
 @interface FindViewController ()
 
@@ -49,7 +50,7 @@
 {
 
     // Return the number of sections.
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,7 +58,7 @@
 
     // Return the number of rows in the section.
     NSInteger Count = 0;
-    if(section == 0)
+    if(section == 0 || section == 3)
     {
         Count = 1;
     }
@@ -112,6 +113,11 @@
             cell.imageView.image = [UIImage imageNamed:@"CardPack"];
         }
 
+    }
+    else if(section == 3)
+    {
+        cell.textLabel.text = @"我的直播间";
+        cell.imageView.image = [UIImage imageNamed:@"addmore_video"];
     }
 
     
@@ -225,6 +231,11 @@
             
             [self.navigationController pushViewController:locationView animated:YES];
         }
+    }
+    else if([indexPath section] == 3)
+    {
+        LivePushViewController *livePushVC = [[LivePushViewController alloc] init];
+        [self presentViewController:livePushVC animated:YES completion:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

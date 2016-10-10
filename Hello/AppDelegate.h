@@ -31,6 +31,8 @@ CFAbsoluteTime startTime;
 @property (nonatomic, assign) BOOL blJobExpired;
 @property (nonatomic, assign) BOOL blBackground;
 
+@property (nonatomic, assign) NSInteger mask;
+
 + (AppDelegate *)globalDelegate;
 
 -(void)UIMainPageShow;
