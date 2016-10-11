@@ -6,7 +6,6 @@
 //  Copyright © 2016年 mit. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
 
 @interface MBProgressHUD (Easy)
 
