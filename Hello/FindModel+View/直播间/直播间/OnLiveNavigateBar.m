@@ -39,18 +39,21 @@
 {
     [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        
+        make.left.top.bottom.equalTo(self).with.insets(UIEdgeInsetsMake(20, 0, 0, 0));
+        make.width.mas_equalTo(60);
     }];
     
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(20, 0, 0, 0));
         
     }];
     
     [self.switchFrameBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        
+        make.right.top.bottom.equalTo(self).with.insets(UIEdgeInsetsMake(20, 0, 0, 0));
+        make.width.mas_equalTo(150);
     }];
 }
 
@@ -88,7 +91,8 @@
     if(_switchFrameBtn == nil)
     {
         _switchFrameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        
+        [_switchFrameBtn setTitle:@"高清" forState:UIControlStateNormal];
+        [_switchFrameBtn addTarget:self action:@selector(switchFrame:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _switchFrameBtn;
@@ -96,7 +100,18 @@
 
 - (void)backup
 {
-    
+    if(self.onLiveNavigateBackBtn)
+    {
+        self.onLiveNavigateBackBtn();
+    }
+}
+
+- (void)switchFrame:(id)sender
+{
+    if(self.onLiveNavigateSwitchFrame)
+    {
+        self.onLiveNavigateSwitchFrame();
+    }
 }
 
 @end

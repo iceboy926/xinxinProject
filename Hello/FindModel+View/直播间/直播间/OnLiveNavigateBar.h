@@ -12,5 +12,8 @@
 
 @property (nonatomic, copy) NSString *titleString;
 
+@property (nonatomic, copy) void (^onLiveNavigateBackBtn)();
+
+@property (nonatomic, copy) void (^onLiveNavigateSwitchFrame)();
 
 @end

@@ -9,6 +9,7 @@
 #import "LivePushViewController.h"
 #import "DemonstrationView.h"
 #import "AppDelegate.h"
+#import "OnLineLiveViewController.h"
 
 @interface LivePushViewController()
 
@@ -34,11 +35,31 @@
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
         [AppDelegate globalDelegate].mask = UIInterfaceOrientationMaskLandscape | UIInterfaceOrientationMaskPortrait;
+    [self HideTabBar:YES];
+    [self HideNavigateBar:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    [self HideTabBar:NO];
+    [self HideNavigateBar:NO];
+}
+
+-(void)HideTabBar:(BOOL)blret
+{
+    for (UIView *view in [self.tabBarController.view subviews]) {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            [view setHidden:blret];
+            break;
+        }
+    }
+}
+
+- (void)HideNavigateBar:(BOOL)blHide
+{
+    self.navigationController.navigationBarHidden = blHide;
 }
 
 - (void)setup
@@ -59,9 +80,14 @@
     if(_midView == nil)
     {
         _midView = [[DemonstrationView alloc] init];
+        
+        __weak typeof(self)weakself = self;
 
         [_midView setDemonstrationBlock:^{
-            NSLog(@"跳转到直播页面");
+            
+            OnLineLiveViewController *onliveVC = [[OnLineLiveViewController alloc] init];
+            [weakself.navigationController pushViewController:onliveVC animated:YES];
+            
         }];
         
     }

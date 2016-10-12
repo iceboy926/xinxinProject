@@ -235,7 +235,7 @@
     else if([indexPath section] == 3)
     {
         LivePushViewController *livePushVC = [[LivePushViewController alloc] init];
-        [self presentViewController:livePushVC animated:YES completion:nil];
+        [self.navigationController pushViewController:livePushVC animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
