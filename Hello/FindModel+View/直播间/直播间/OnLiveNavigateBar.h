@@ -14,6 +14,6 @@
 
 @property (nonatomic, copy) void (^onLiveNavigateBackBtn)();
 
-@property (nonatomic, copy) void (^onLiveNavigateSwitchFrame)();
+@property (nonatomic, copy) void (^onLiveNavigateSwitchFrame)(id sender);
 
 @end

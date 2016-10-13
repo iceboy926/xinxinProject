@@ -10,4 +10,6 @@
 
 @interface OnLiveTabBarViewModel : NSObject
 
+@property (nonatomic, copy) void(^liveTabBarEvent)(int code);
+
 @end

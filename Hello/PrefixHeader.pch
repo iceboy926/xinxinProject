@@ -48,6 +48,8 @@
 #import "MJExtension.h"
 #import "FileLogC.h"
 
+#import "MBProgressHUD+Easy.h"
+
 
 
 #ifdef DEBUG

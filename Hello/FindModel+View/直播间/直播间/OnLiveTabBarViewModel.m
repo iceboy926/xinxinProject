@@ -10,4 +10,15 @@
 
 @implementation OnLiveTabBarViewModel
 
+- (instancetype)init
+{
+    self = [super self];
+    if(self)
+    {
+        
+    }
+    
+    return self;
+}
+
 @end

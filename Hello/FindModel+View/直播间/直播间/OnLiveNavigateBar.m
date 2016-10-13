@@ -110,7 +110,7 @@
 {
     if(self.onLiveNavigateSwitchFrame)
     {
-        self.onLiveNavigateSwitchFrame();
+        self.onLiveNavigateSwitchFrame(sender);
     }
 }
 
