@@ -148,29 +148,45 @@
     return _screenshotsBtn;
 }
 
-- (void)microphoneAction:(id)sender
+- (void)microphoneAction:(UIButton *)sender
 {
+    if(self.microphoneBtnBlock)
+    {
+        self.microphoneBtnBlock(sender);
+    }
+}
+
+- (void)changeCameraAction:(UIButton *)sender
+{
+    if(self.changeCamerBtnBlock)
+    {
+        self.changeCamerBtnBlock(sender);
+    }
     
 }
 
-- (void)changeCameraAction:(id)sender
+- (void)recordingAction:(UIButton *)sender
 {
-    
+    if(self.recordingBtnBlock)
+    {
+        self.recordingBtnBlock(sender);
+    }
 }
 
-- (void)recordingAction:(id)sender
+- (void)photoflashAction:(UIButton *)sender
 {
-    
+    if(self.photoflashBtnBlock)
+    {
+        self.photoflashBtnBlock(sender);
+    }
 }
 
-- (void)photoflashAction:(id)sender
+- (void)screenshotsAction:(UIButton *)sender
 {
-    
-}
-
-- (void)screenshotsAction:(id)sender
-{
-    
+    if(self.screenshotBtnBlock)
+    {
+        self.screenshotBtnBlock(sender);
+    }
 }
 
 

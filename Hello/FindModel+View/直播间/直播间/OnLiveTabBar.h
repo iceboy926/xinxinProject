@@ -10,4 +10,10 @@
 
 @interface OnLiveTabBar : UIView
 
+@property (nonatomic, copy) void (^microphoneBtnBlock)(UIButton *sender);
+@property (nonatomic, copy) void (^changeCamerBtnBlock)(UIButton *sender);
+@property (nonatomic, copy) void (^recordingBtnBlock)(UIButton *sender);
+@property (nonatomic, copy) void (^photoflashBtnBlock)(UIButton *sender);
+@property (nonatomic, copy) void (^screenshotBtnBlock)(UIButton *sender);
+
 @end

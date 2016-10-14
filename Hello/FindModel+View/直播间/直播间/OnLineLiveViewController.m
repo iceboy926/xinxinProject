@@ -126,7 +126,44 @@
 {
     if(_liveTabView == nil)
     {
+        __weak typeof(self)weakself = self;
+        
         _liveTabView = [[OnLiveTabBar alloc] init];
+        
+        [_liveTabView setMicrophoneBtnBlock:^(UIButton *sender) {
+            
+            if(sender.tag == 0)
+            {
+                sender.tag = 1;
+                [weakself animationChangeButton:sender Image:@"icon_microphone_off"];
+            }
+            else
+            {
+                sender.tag = 0;
+                [weakself animationChangeButton:sender Image:@"icon_microphone_on"];
+            }
+            
+        }];
+        
+        [_liveTabView setChangeCamerBtnBlock:^(UIButton *sender) {
+            
+            
+        }];
+        
+        [_liveTabView setRecordingBtnBlock:^(UIButton *sender) {
+            
+            
+        }];
+        
+        [_liveTabView setPhotoflashBtnBlock:^(UIButton *sender) {
+            
+            
+        }];
+        
+        [_liveTabView setScreenshotBtnBlock:^(UIButton *sender) {
+            
+            
+        }];
         
     }
     
@@ -151,6 +188,16 @@
     [_livepublisher startPreview:self.view
                            camId:CAMERA_BACK
                      frontMirror:YES];
+}
+
+
+- (void)animationChangeButton:(UIButton *)sender Image:(NSString *)imageStr
+{
+    [UIView transitionWithView:sender duration:0.3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    
+        [sender setImage:[UIImage imageNamed:imageStr] forState:UIControlStateNormal];
+    
+    } completion:nil];
 }
 
 

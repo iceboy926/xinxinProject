@@ -58,6 +58,8 @@
     };
     
     writeFileLog(__FUNCTION__, " 应用程序加载完成");
+    
+    [IQKeyboardManager sharedManager].enable = YES;
 //
 //    if(ISIOS9)
 //    {
